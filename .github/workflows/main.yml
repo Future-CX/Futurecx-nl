@@ -8,15 +8,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code                        # Checkout the latest code
-        uses: actions/checkout@v1
-
-      - name: 📂 SFTP uploader                          # Upload to SFTP 
+        uses: actions/checkout@v2
+        
+      - name: 📂 ftp-action
         uses: Future-CX/Futurecx-nl@v1
         with:
-          host: ${{ secrets.HOST }}                     # Recommended to put the credentials in github secrets.
-          username: ${{ secrets.USER }}
+          # FTP host
+          host: ${{ secrets.HOST }}
+          # FTP user
+          user: ${{ secrets.USER }}
+          # FTP password
           password: ${{ secrets.PASS }}
-          forceUpload: true                             # Optional, Force uploading all files, Default to false(upload only newer files).
-          localDir: '.'                                 # Required, Absolute or relative to cwd.
-          remoteDir: '/domains/futurecx.nl/public_html' # Required, Absolute path only.
-          exclude: '.git*,.DS_Store'                    # Optional. exclude patterns (glob), use ',' to split, Default to ''.
+          # Force SSL encryption
+          forceSsl: false
+          # Local directory
+          localDir: '.'
+          # Remote directory
+          remoteDir: '/domains/futurecx.nl/public_html'
