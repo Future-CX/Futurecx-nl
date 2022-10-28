@@ -1,0 +1,17 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 457">
+    <defs>
+        <style>
+        .cls-1 {
+            font-size: 374.29px;
+            font-family: Futura-Bold, Futura;
+            font-weight: 700;
+            color: #ff0000;
+        }
+        @media ( prefers-color-scheme: dark ) {
+            .cls-1 {
+                color: #00ff00;
+            }
+        }
+        </style>
+    </defs><text class="cls-1" transform="translate(0 328.25) scale(0.93 1)">CX</text>
+</svg>

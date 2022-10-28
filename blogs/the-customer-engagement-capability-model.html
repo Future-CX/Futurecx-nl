@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The Customer Engagement Capability Model | Future CX  | Martijn van Deel</title>
+    <meta name="description" content="The Customer Engagement Capability Model | Future CX | Martijn van Deel">
+    <meta name="keywords" content="customer engagement, customer experience, customer engagement, capability model">
+    <meta name="author" content="Martijn van Deel">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest"> 
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+    <link rel="alternate icon" sizes="16x16" href="/assets/favicon/favicon.ico">
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#ffffff">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" media="screen" href="/assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="/assets/vendor/lightgallery/css/lightgallery-bundle.min.css"/>
+    <link rel="stylesheet" media="screen" href="/assets/vendor/swiper/swiper-bundle.min.css"/>  
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/assisfery/SocialShareJS@1.4/social-share.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" media="screen" href="/assets/css/theme.min.css">
+    <style>
+      .page-loading {position: fixed;top: 0;right: 0;bottom: 0;left: 0;width: 100%;height: 100%;-webkit-transition: all .4s .2s ease-in-out;transition: all .4s .2s ease-in-out;background-color: #fff;opacity: 0;visibility: hidden;z-index: 9999;}
+      .dark-mode .page-loading {background-color: #0b0f19;}
+      .page-loading.active {opacity: 1;visibility: visible;}
+      .page-loading-inner {position: absolute;top: 50%;left: 0;width: 100%;text-align: center;-webkit-transform: translateY(-50%);transform: translateY(-50%);-webkit-transition: opacity .2s ease-in-out;transition: opacity .2s ease-in-out;opacity: 0;}
+      .page-loading.active > .page-loading-inner {opacity: 1;}
+      .page-loading-inner > span {display: block;font-size: 1rem;font-weight: normal;color: #9397ad;}
+      .dark-mode .page-loading-inner > span {color: #fff;opacity: .6;}
+      .page-spinner {display: inline-block;width: 2.75rem;height: 2.75rem;margin-bottom: .75rem;vertical-align: text-bottom;border: .15em solid #b4b7c9;border-right-color: transparent;border-radius: 50%;-webkit-animation: spinner .75s linear infinite;animation: spinner .75s linear infinite;}
+      .dark-mode .page-spinner {border-color: rgba(255,255,255,.4);border-right-color: transparent;}
+      @-webkit-keyframes spinner {100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}}
+      @keyframes spinner {100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}}
+    </style>
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== null && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4R2D7JRCEJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4R2D7JRCEJ');
+    </script>
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+    <main class="page-wrapper">
+      <header class="header navbar navbar-expand-lg navbar-light position-absolute navbar-sticky">
+        <div class="container px-3">
+          <a href="/" class="navbar-brand pe-3 text-primary">
+            Future CX
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end text-dark">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="/#top" data-scroll data-scroll-offset="100" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/#about" data-scroll data-scroll-offset="0" class="nav-link">About me</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/#services" data-scroll data-scroll-offset="50" class="nav-link">What I do</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/#contact" data-scroll data-scroll-offset="100" class="nav-link">Contact</a>
+                </li>
+              </ul>
+            </div>    
+          </div>
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode">
+          </div>
+          <button id="toggle" type="button" class="navbar-toggler d-none" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </header>
+      <nav class="container mt-lg-4 pt-5" aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item">
+            <a href="/"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/blogs.html">Blogs</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">The Customer Engagement Capability Model</li>
+        </ol> 
+      </nav>
+
+
+      <!-- Post title + Meta  -->
+      <section class="container mt-4 pt-lg-2 pb-3">
+        <h1 class="pb-3 text-dark" style="max-width: 970px;">The Customer Engagement Capability Model</h1>
+        <div class="d-flex flex-md-row flex-column align-items-md-center justify-content-md-between mb-3">
+          <div class="d-flex align-items-center flex-wrap text-muted mb-md-0 mb-4">
+            <div class="fs-xs border-end pe-3 me-3 mb-2">
+              <span class="badge bg-faded-primary text-primary fs-base">Capability Model</span>
+            </div>
+            <div class="fs-sm pe-3 me-3 mb-2">October 25, 2022</div>
+          </div>
+          <div class="d-flex align-items-center position-relative ps-md-3 pe-lg-5 mb-2">
+            <img src="/assets/img/profile-XS.png" class="rounded-circle" width="60" alt="Martijn van Deel">
+            <div class="ps-3">
+              <h6 class="mb-1">Author</h6>
+              <a href="/#about" class="fw-semibold stretched-link text-reset">Martijn van Deel</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Post image (parallax) -->
+      <div class="jarallax mb-lg-5 m-0 p-0 mb-4" data-jarallax data-speed="0.35" style="height: 36.45vw; min-height: 300px;">
+        <div class="jarallax-img" style="background-image: url(/assets/img/blog/single/midjourney-women_in_a_shopping_street.png);"></div>
+        <div class="container"><img src="/assets/img/blog/single/logo-midjourney-white.png" width="150" class="rounded-circle" alt="Midjourney AI Image Generator"></div>
+        <div class="position-absolute bottom-0 start-0 text-center w-100 bg-dark text-white m-0 p-0"><small>This image was generated using <a href="https://www.midjourney.com/home/" target="_blank">Midjourney</a>, an AI-based image generator, using the following statements: "women in a shopping street carry bags, blue sky, realistic, detailed 4k --ar 16:9". <a href="https://www.futurecx.nl/assets/img/blog/single/midjourney-women_in_a_shopping_street.png" target="_blank">High-res</a></small></div>
+      </div>
+
+
+      <!-- Post content + Sharing -->
+      <section class="container mb-5 pt-4 pb-2 py-mg-4">
+        <div class="row gy-4">
+
+          <!-- Content -->
+          <div class="col-lg-9">
+            <p class="h5 mb-4 pb-2 fw-medium">I have come across many capability models from different consultancy companies, but none gave a good overview of the capabilities for Customer Engagement. It was lacking capabilities or had ambiguous capabilities that were more themes or initiatives, like Unify Frontend or Personalisation. In most capability models, a clear description of the capabilities was missing, which led to a further internal discussion of why and if we needed that capability. And the capability models were only having high-level capabilities, which resulted in more workshops required to deep dive into the capability model to make it more concrete and actionable.</p>
+            <p class="h5 mb-4 pb-2 fw-medium">So, I decided to build a capability model myself, that focus on Customer Engagement.</p>
+            
+            <h2 data-toc-text="How does a Capability Model help" class="h2">How does a Capability Model help</h2>
+            <p class="mb-4 pb-2">A capability model is a tool to give guidance and steering for strategic planning. Capability models provide a visual representation of business functions, activities, and outcomes that help to create focus when building strategic plans. For each capability in your organization define ownership and discuss the vision, ambition, and plan for that capability. Not only business but also IT and architecture. Therefore, a capability model is an essential tool for understanding organizational strengths and priorities, as well as guiding strategic decisions.</p>
+            <p class="mb-4 pb-2">To prioritize and focus, it is crucial to score and rate the capabilities. </p>
+            
+            <h3 data-toc-text="Defining layers with principles" class="h3">Defining layers with principles</h3>
+            <p class="mb-2 pb-2">As an architect, I like to create layers to a capability model. Some capabilities focus on the best customer interaction, like Product Selling, Customer Service, and Digital Marketing. Other capabilities focus on core business processes and activities, like Product Management, Order Management, and Delivery or Supply Chain. And in the Enterprise Foundation layer we define capabilities with shared business functions like Finance, Procurement, HR, etc.</p>
+            <img src="/assets/img/blog/single/capability-model-layers.png" class="mb-4 pb-2" alt="Layers defined in a Capability Model">
+            
+            <div class="row">
+              <div class="col-8">
+                <p class="mb-4 pb-2">Each layer has different characteristics. For <strong>Customer Engagement</strong>, we need easy, adaptable, and flexible solutions since customer behavior changes rapidly. Some solutions should be standard and preferable SaaS, like Customer Service solutions, other solutions are differentiating for your organization and should be self-build custom, like website and mobile apps.</p>
+              </div>
+              <div class="col-4">
+                <p class="mb-4 pb-2 text-primary">FLEXIBLE<br/>SAAS<br/>DIFFERENTIATING = SELF-BUILD<br/>STANDARD = BUY </p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-8">
+                <p class="mb-4 pb-2"><strong>Business Service</strong> solutions focus on business processes. And since business processes do not change often, these solutions should be robust, secure, and performing. You need standard solutions that are cloud-hosted, with possibilities for light customizations, easy integrations, and standardized data models. I strongly advise you to search for solutions that fit your business model and not try to fit a business process into a solution. But that is a whole other topic.</p>
+              </div>
+              <div class="col-4">
+                <p class="mb-4 pb-2 text-primary">ROBUST<br/>PERFORMING<br/>STANDARD<br/>CLOUD-HOSTED<br/>EASY INTEGRATIONS<br/>STANDARD DATAMODELS</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-8">
+                <p class="mb-4 pb-2"><strong>Enterprise Foundation</strong> solutions support the organization to operate and shared across the entire organization. Solutions for HR, Finance, Procurement, etc. should be standard, robust, secure, and performing.</p>
+              </div>
+              <div class="col-4">
+                <p class="mb-4 pb-2 text-primary">ROBUST<br/>PERFORMING<br/>STANDARD<br/>SHARED</p>
+              </div>
+            </div>
+            
+            <h2 data-toc-text="Examples that I like" class="h2">Examples that I like</h2>
+            <p class="mb-2 pb-2">There are a few good capability models that I like. Some for their visual representation and others for their content and level of detail. </p>
+           
+            <div class="row my-5">
+              <div class="col-md-5 pb-2 pb-md-0 mb-4 mb-md-0 d-sm-none d-md-block">
+                <div class="px-5">
+                  <img src="https://www.leanix.net/hs-fs/hubfs/Imported%20images/Best-practices-to-define-business-capability-maps.png" class="rounded-3" alt="LeanIX Business Capability Model">
+                </div>
+              </div>
+              <div class="col-md-7">
+                <h3 data-toc-text="LeanIX" class="h3">LeanIX</h3>
+                <p class="mb-2 pb-2">I like the visual design of the LeanIX capability model. The use of colors, the grouping of capabilities, and the level of detail. I believe this is a great starting point for building your organization's capability model.</p>
+                <a href="https://www.leanix.net/en/wiki/ea/business-capability" class="btn btn-dark mb-3 mb-sm-0 me-sm-3" target="_blank">LeanIX</a>
+                <p class="mb-2 pb-2"></p>
+              </div>
+            </div>
+
+            <div class="row my-5">
+              <div class="col-md-5 pb-2 pb-md-0 mb-4 mb-md-0 d-sm-none d-md-block">
+                <div class="px-5">
+                  <img src="/assets/img/blog/single/csa-capability-framework.png" class="rounded-3" alt="Cloud Security Alliance capability framework">
+                </div>
+              </div>
+              <div class="col-md-7">
+                <h3 data-toc-text="Cloud Security Alliance" class="h3">Cloud Security Alliance</h3>
+                <p class="mb-2 pb-2">Not visually strong, but strong in content is the Cloud Security Alliance capability framework. It is an interactive capability model with L1 and L2 capabilities and their definitions. I like how this capability model is publicly available, is extensive with many capabilities, and has clear definitions of the capabilities.</p>
+                <p class="mb-2 pb-2">Later in this article, I explain why it is crucial to have clear descriptions.</p>
+                <a href="https://ea.cloudsecurityalliance.org/index.php/explore/security_risk_management/" class="btn btn-dark mb-3 mb-sm-0 me-sm-3" target="_blank">Cloud Security Alliance</a>
+              </div>
+            </div>
+
+            <div class="row my-5">
+              <div class="col-md-5 pb-2 pb-md-0 mb-4 mb-md-0 d-sm-none d-md-block">
+                <div class="px-5">
+                  <img src="/assets/img/blog/single/midjourney-inside-a-supermarket.png" class="rounded-top rounded-3" alt="Midjourney AI generated image: inside a supermarket">
+                  <p class="bg-dark text-white m-0 mt-n2 p-2 rounded-bottom rounded--3"><small>This image was generated using <a href="https://www.midjourney.com/home/" target="_blank">Midjourney</a>, an AI-based image generator.</small></p>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <h3 data-toc-text="A Dutch supermarket" class="h3">A Dutch supermarket</h3>
+                <p class="mb-2 pb-2">I have seen a strong example of a capability model of a Dutch supermarket. I like how they added the Products and Services they deliver to their customers into the model. And the labels they deliver the services from.</p>
+                <p class="mb-2 pb-2">They offer groceries: private label products and 3rd-party products. But also, meal inspiration, home delivery and pickup point services, photo services, recycling services, and loyalty products. Services you know they have, but when put on a capability model, it helps in discussions on a strategic level.</p>
+                <p class="mb-2 pb-2 fst-italic">Unfortunately, I cannot share the Capability Model of this Dutch supermarket as it is not publicly available.</p>
+              </div>
+            </div>
+
+
+            
+            <h2 data-toc-text="How to better describe capabilities" class="h2">How to better describe capabilities</h2>
+            <p class="mb-4 pb-2">Building a capability model requires coordination and discussion. To streamline the discussion and come to a consensus on the model company-wide it is crucial to define the capabilities with the correct level of detail, a clear description, and a model to assess and prioritize capabilities for improvement.</p>
+            
+            <h3 data-toc-text="A clear definition" class="h3">A clear definition</h3>
+            <p class="mb-4 pb-2">The first thing you need to focus on when building a capability model is to create a clear definition of the capabilities. I was too many times involved in discussions to create the capability model where capabilities were 'created' without a clear definition, which led to endless discussions about what the capability was about and where it should land in the model.</p>
+            <p class="mb-4 pb-2">When you are new to an organization it helps to understand what the organization means with for example 'Service Management' – is this Customer Service or internal IT Service Management - or 'Knowledge Management' – is this knowledge articles like FAQ or training mechanics in the organization. </p>
+            <p class="mb-4 pb-2">At the <a href="#mymodel">end of this article</a>, I have created an overview of capabilities in the Customer Engagement domain with their definitions for you to use as a starting point. There is no right or wrong answer if everyone in the organization agrees on the definition and it is documented for everyone to read.</p>
+
+            <h3 data-toc-text="Levels of detail" class="h3">Levels of detail</h3>
+            <p class="mb-2 pb-2">It is common to create first a high-level capability model. We call this level 1. And then dive deeper into the model and its capabilities for more details.</p>
+            
+            
+            <div class="row row-cols-3 mb-2">
+              <div class="col-md-1 col-sm-0"></div>
+              <div class="col-md-9 col-sm-12">
+                <h4 data-toc-text="Level 1" class="h4 mb-0">Level 1</h4>
+                <p class="mb-2 pb-2">The high-level capability model, or the level 1 capability model, gives an overview of all capabilities in the organization. It is a model that everyone in the organization will understand and feel comfortable with. The example that I mentioned earlier are all level 1 capability models.</p>
+                <p class="mb-2 pb-2">Level 1 capability models can be shared, or reused, by companies in the same branch. For example, a capability model for travel can be used by most travel agencies, as the business model is the same.</p>
+                <p class="mb-2 pb-2">Capabilities in this level 1 capability model are defined at a high level, like Customer Service, Commerce, Marketing, Content Management, Search, etc. At the <a href="#mymodel">end of this article</a>, I have created an overview of capabilities in the Customer Engagement domain with their definitions for you to use as a starting point.</p>
+              </div>
+              <div class="col-md-2 col-sm-0"></div>
+            </div>
+            
+            <div class="row row-cols-3 mb-2">
+              <div class="col-md-2 col-sm-0"></div>
+              <div class="col-md-9 col-sm-12">
+                <h4 data-toc-text="Level 2" class="h4 mb-0">Level 2</h4>
+                <p class="mb-2 pb-2">It requires more detail to the capability model to use the model for strategic decisions and directional to the IT landscape. Level 2 capabilities can be plotted to business processes and applications. This then helps to prioritize based on business processes and identify what applications need to be improved or deduplicated in line with the architecture vision.</p>
+                <p class="mb-2 pb-2">For example, level 2 capabilities of Commerce are Cart & Checkout, Quotes, Up and Cross-sell, etc. Level 2 capabilities of Content Management are Digital Asset Management, Knowledge Management, Product Catalog, etc. At the <a href="#mymodel">end of this article</a>, I have created an overview of capabilities in the Customer Engagement domain with their definitions for you to use as a starting point.</p>
+              </div>
+              <div class="col-md-1 col-sm-0"></div>
+            </div>
+            
+            <div class="row row-cols-3 mb-2">
+              <div class="col-md-3 col-sm-0"></div>
+              <div class="col-md-9 col-sm-12">
+                <h4 data-toc-text="Level 3" class="h4 mb-0">Level 3</h4>
+                <p class="mb-2 pb-2">I don't think a capability model needs more details than level 2. Level 3 often shows the capabilities of a solution or application, which can help to build solution architecture diagrams or rate the capabilities of solutions for selection purposes. But to align the IT landscape to the architecture vision I believe level 2 is enough.</p>
+              </div>
+            </div>
+
+            <h2 id="mymodel" data-toc-text="My Customer Engagement Capability Model" class="h2">My Customer Engagement Capability Model</h2>
+
+            <div class="row my-5">
+              <div class="col-md-5 pb-2 pb-md-0 mb-4 mb-md-0">
+                <div class="px-5">
+                  <img src="/assets/img/blog/single/future-cx-capability-model-customer-engagement.png" class="rounded-3" alt="Future CX Capability Model Customer Engagement">
+                  </div>
+              </div>
+              <div class="col-md-7">
+                <p class="mb-2 pb-2">I haven't seen a capability model that focuses on Customer Engagement with definitions and the right level of detail. So, I decided to create my own!</p>
+                <p class="mb-4 pb-2">Use the following link to access my Customer Engagement Capability model with two levels of detail and clear definitions. I appreciate any form of feedback on this model as I will constantly improve this capability model over time. Feel free to use the form below.</p>
+                <a href="https://futurecx.nl/capability-model-cx/capability-model-cx.html" class="btn btn-primary mb-3 mb-sm-0 me-sm-3" target="_blank">My Customer Engagement Capability Model</a>    
+              </div>
+            </div>
+
+            <hr class="mb-4">
+          </div>
+
+          <!-- Sharing -->
+          <div class="col-lg-3 position-relative">
+            <div class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4" style="top: 105px !important;">
+              <span class="d-block mb-3"><small>7:11 minute read<br/>based on <a href="https://www.sciencedirect.com/science/article/abs/pii/S0749596X19300786" target="_blank" title="ScienceDirect: How many words do we read per minute? A review and meta-analysis of reading rate" class="text-reset">183 words per minute</a></small></span>
+              <h6 class="mt-4">Table of Content</h6>
+              <nav id="toc" data-toggle="toc"></nav>  
+              <h6 class="mt-4">Share this post:</h6>
+              <div class="mb-4 pb-lg-3">
+                <div class="ss-box ss-outline ss-grow" data-ss-link="https://www.futurecx.nl/blogs/the-customer-engagement-capability-model.html" data-ss-social="linkedin, twitter, email" data-ss-content="false" data-ss-email="subject:Read 'The Customer Engagement Capability Model' on Futurecx.nl by Martijn van Deel"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container mb-4 pb-2 mb-md-5 pb-lg-5">
+        <div class="row gy-5">
+          <div class="col-lg-3 position-relative">
+            <div class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4" style="top: 70px !important;">
+              <div class="row gy-lg-5 gy-4 justify-content-center text-lg-start text-center">
+                <div class="col-lg-12 col-sm-7 col-11">
+                  <h6 class="fs-lg">Don’t forget to share it</h6>
+                  <div class="mb-4 pb-lg-3">
+                    <div class="ss-box ss-outline ss-grow" data-ss-link="https://www.futurecx.nl/blogs/the-customer-engagement-capability-model.html" data-ss-social="linkedin, twitter, email" data-ss-content="false" data-ss-email="subject:Read 'The Customer Engagement Capability Model' on Futurecx.nl by Martijn van Deel"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="contactsuccess" class="card bg-primary border-light shadow-lg py-3 p-sm-4 p-md-5 d-none">
+          <h3>Thank you for your message.</h3>
+          <p>As promised I will send you a reply as soon as possible.</p>
+        </div>
+        
+        <div id="contactform" class="row bg-gray-200 border-light shadow-lg pt-md-2 pt-lg-5 pb-2 pb-md-4">
+          <div class="col-xxl-4 col-xl-5 col-lg-6 pt-3 mt-3">
+            <h3 class="h3 mb-2"><a id="success"></a>Any feedback or questions?</h3>
+            <h2 class="display-3 text-primary pb-sm-2 pb-md-3 mb-3">Let's connect!</h2>
+            <div class="d-flex align-items-center position-relative ps-md-3 pe-lg-5 mb-2">
+              <img src="/assets/img/profile-XS.png" class="rounded-circle" width="60" alt="Martijn van Deel">
+              <div class="ps-3">
+                <h6 class="mb-1">Author</h6>
+                <a href="/#about" class="fw-semibold stretched-link text-reset">Martijn van Deel</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-6 offset-xl-1 offset-xxl-2 pt-3 pt-md-4 pt-lg-3 mt-3">
+            <form class="needs-validation" novalidate id="contact-form" name="contact-form" action="mail.php" method="POST" enctype="multipart/form-data">
+              <div class="row g-4">
+                <div class="col-sm-6">
+                  <label for="fn" class="form-label fs-base">Full name</label>
+                  <input id="Name" name="Name" type="text" class="form-control form-control-lg"  required>
+                  <div class="invalid-feedback">Please enter your full name!</div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="email" class="form-label fs-base">Email</label>
+                  <input id="Email" name="Email" type="email" class="form-control form-control-lg"  required>
+                  <div class="invalid-feedback">Please provide a valid email address!</div>
+                </div>
+                <div class="col-12 pb-2">
+                  <label for="message" class="form-label fs-base">Message</label>
+                  <textarea id="Message" name="Message" class="form-control form-control-lg" rows="3" required></textarea>
+                  <div class="invalid-feedback">Please provide a valid email address!</div>
+                </div>
+                <div class="col-12">
+                  <button id="Submit" name="Submit" type="submit" class="btn btn-lg btn-primary w-100 w-sm-auto">Contact Me</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      </section>
+    </main>
+
+    <footer class="footer pt-5 pb-4 pb-lg-5 mt-2 mt-md-0">
+      <div class="container pt-lg-4">
+        <div class="row pb-5">       
+          <div class="col-lg-5 col-md-12">
+            <div class="navbar-brand text-dark p-0 me-0 mb-2">
+              Future CX
+            </div>
+            <p class="fs-sm pb-lg-3 mb-4">The technology in the Customer Experience domain is rapidly changing. It requires flexibility and adaptability to keep up with the latest trends and customer demands. Both in technology and people. <br/>This is why Customer Experience is at my heart, as it requires constant change, new technology, and ways of working. Whilst keeping the customer at the center.</p>
+          </div>
+          <div class="col-lg-3 col-md-6 offset-lg-1m mb-3">
+            <h6 class="mb-3">Connect</h6>
+            <p>I am looking forward to connect and build the community on Customer Experience.</p>
+            <div id="social-links" class="d-flex flex-column flex-sm-row">
+              <a id="lnkLinkedin" href="https://www.linkedin.com/in/jmvandeel/" target="blank" class="fw-medium btn btn-primary shadow-primary btn-lg"><i class='bx bxl-linkedin-square me-3'></i>LinkedIn</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-3">
+            <h6 class="mb-3">Questions</h6>
+            <p>Send me an email and I promise to send a reply as soon as possible.</p>
+            <div class="d-flex flex-column flex-sm-row">
+            <a id="lnkEmail" href="mailto:m.van.deel@futurecx.nl" class="fw-medium btn btn-primary shadow-primary btn-lg"><i class='bx bx-mail-send me-2'></i>m.van.deel@futurecx.nl</a>
+          </div>
+        </div>
+      </div>
+      <div id="footer-links" class="row py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="/#top" data-scroll data-scroll-offset="100" class="nav-link d-inline-block px-2 pt-1 pb-2">Home</a></li>
+            <li class="nav-item"><a href="/#about" data-scroll data-scroll-offset="0" class="nav-link d-inline-block px-2 pt-1 pb-2">About me</a></li>
+            <li class="nav-item"><a href="/#services" data-scroll data-scroll-offset="50" class="nav-link d-inline-block px-2 pt-1 pb-2">What I do</a></li>
+            <li class="nav-item"><a href="/#contact" data-scroll data-scroll-offset="100" class="nav-link d-inline-block px-2 pt-1 pb-2">Contact</a></li>
+          </ul>
+          <div class="col-12 p-0 p-md-3">
+            <p class="text-center text-muted">© 2022 Future CX by Martijn van Deel</p>
+          </div>
+          <div class="col-lg-4 col-md-4 p-0 p-md-3">
+            <p class="text-center text-md-end text-muted">KVK: 86444042</p>
+          </div>
+          <div class="col-lg-4 col-md-4 p-0 p-md-3">
+            <p class="text-center text-md-center text-muted">VAT number: NL86 3969 379 B01</p>
+          </div>
+          <div class="col-lg-4 col-md-4 p-0 p-md-3">
+            <p class="text-center text-md-start text-muted">IBAN: NL46 RABO 0197 6522 47</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="/assets/vendor/lightgallery/lightgallery.min.js"></script>
+    <script src="/assets/vendor/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="/assets/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+    <script src="/assets/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script src="/assets/js/theme.min.js"></script>
+    <script src="/assets/js/user.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/assisfery/SocialShareJS@1.4/social-share.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+  </body>
+</html>
