@@ -4,9 +4,9 @@ on:
     branches:
       - main
 jobs:
-  - upload:
-      - name: Upload build to hosting environment
-        uses: Future-CX/Futurecx-nl
-        with:
-          url: sftp://u65709p127161:Johannes3:16@futurecx.nl/domains/futurecx.nl/public_html
-          local-directory: build-output
+  upload:
+     name: Upload build to hosting environment
+     uses: Future-CX/Futurecx-nl
+     with:
+      url: sftp://u65709p127161:Johannes3:16@futurecx.nl/domains/futurecx.nl/public_html
+      local-directory: build-output
