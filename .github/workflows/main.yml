@@ -4,9 +4,19 @@ on:
     branches:
       - main
 jobs:
-  upload:
-     name: Upload build to hosting environment
-     uses: Future-CX/Futurecx-nl
-     with:
-      url: sftp://u65709p127161:Johannes3:16@futurecx.nl/domains/futurecx.nl/public_html
-      local-directory: build-output
+  Upload-to-SFTP:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code                        # Checkout the latest code
+        uses: actions/checkout@v2
+
+      - name: 📂 SFTP uploader                          # Upload to SFTP 
+        uses: Future-CX/Futurecx-nl@v1
+        with:
+          host: ${{ secrets.HOST }}                     # Recommended to put the credentials in github secrets.
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASS }}
+          forceUpload: true                             # Optional, Force uploading all files, Default to false(upload only newer files).
+          localDir: '.'                                 # Required, Absolute or relative to cwd.
+          remoteDir: '/domains/futurecx.nl/public_html' # Required, Absolute path only.
+          exclude: '.git*,.DS_Store'                    # Optional. exclude patterns (glob), use ',' to split, Default to ''.
