@@ -1,0 +1,19 @@
+name: deploy-to-server
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+     - name: Simple SFTP
+      # You may pin to the exact commit or the version.
+      # uses: Atyn/simple-sftp-action@a684a17fdd2b79d23101d568d9e8b5070f58e685
+      uses: Future-CX/Futurecx-nl
+      with:
+        # URL to the SFTP server. Example: sftp://USERNAME:PASSWORD@example.com/remote-directory
+        url: sftp://u65709p127161:Johannes3:16@futurecx.nl/domains/futurecx.nl/public_html
+        # The directory that should be uploaded
+        localdir: # optional
