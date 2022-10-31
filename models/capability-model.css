@@ -2,69 +2,57 @@
 	max-width: 100%;
 }
 
-.layer,
-.sublayer,
-.capabilityl1,
-.capabilityl2{
-	position: relative;
-	border: solid 2px #ffc000;
-	background-color: #ffffff;
-	margin: 2px;
-	padding: 10px;
-}
 
+
+.domain,
 .layer{
 	z-index: 1;
+  background-color: #2196F3;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 2px;
 }
 
+.subdomain,
 .sublayer{
 	z-index: 2;
-}
-
-.capabilityl1{
-	z-index: 3;
-	background-color: #eeeeee;
-}
-
-.capabilityl2{
-	z-index: 4;
-	background-color: #dddddd;
+  margin: 2px;
 }
 
 .capability{
 	cursor: pointer;
+  margin: 0px;
+  color: #0E0E0E;
 }
 
-.name{
-
+.capabilityl1{
+	position: relative;
+	background-color: #ffffff;
+  z-index: 3;
+  font-weight: bold;;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 0px;
+  padding-bottom: 5px;
+  min-height: 32px;
 }
 
-#layer-channels,
-#layer-channels .sublayer,
-#layer-channels .capabilityl1,
-#layer-channels .capabilityl2{
-	border: solid 2px #dddddd;
+.capabilityl2{
+	z-index: 4;
+	border-top: solid 1px #0E0E0E;
+  background-color: #ffffff;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
-#layer-integration,
-#layer-integration .sublayer,
-#layer-integration .capabilityl1,
-#layer-integration .capabilityl2{
-	border: solid 2px #dddddd;
-}
 
-#layer-foundation,
-#layer-foundation .sublayer,
-#layer-foundation .capabilityl1,
-#layer-foundation .capabilityl2{
-	border: solid 2px #dddddd;
-}
 
 
 h4,
-div.description-layer,
-div.description-sublayer{
+div.description-container,
+div.description-subcontainer{
 	font-size: 90%;
+  color: #ffffff;
 }
 
 h5,h6{
@@ -74,13 +62,48 @@ h5,h6{
 h4,h5,h6{
 	margin-bottom: 0px;
 }
-
+h5{
+  font-weight: bold;;
+}
 h6{
 	min-height: 32px;
+  font-weight: normal;
+  padding-top: 3px;
 }
 
+.name{
+  min-height: 32px;
+}
 .description{
 
+}
+
+#domain-actors{
+  background-color: #e3342f;
+}
+#domain-channels{
+  background-color: #f6993f;
+}
+#domain-products-services{
+  background-color: #ffed4a;
+}
+#domain-customer{
+  background-color: #38c172;
+}
+#domain-marketing{
+  background-color: #4dc0b5;
+}
+#domain-sales{
+  background-color: #3490dc;
+}
+#domain-service{
+  background-color: #6574cd;
+}
+#domain-loyalty{
+  background-color: #9561e2;
+}
+#domain-content{
+  background-color: #f66d9b;
 }
 
 
