@@ -10,4 +10,18 @@ jobs:
       - name: 🚚 Get latest code                        # Checkout the latest code
         uses: actions/checkout@v3
         
-      
+      - name: 📂 ftp-action
+        uses: sebastianpopp/ftp-action@v2.0.0
+        with:
+          # FTP host
+          host: ${{ secrets.HOST }}
+          # FTP user
+          user: ${{ secrets.USER }}
+          # FTP password
+          password: ${{ secrets.PASS }}
+          # Force SSL encryption
+          forceSsl: false
+          # Local directory
+          localDir: '.'
+          # Remote directory
+          remoteDir: '/domains/futurecx.nl/public_html'
