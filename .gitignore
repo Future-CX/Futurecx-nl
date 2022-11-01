@@ -1,1 +1,40 @@
-capability-model-*.js
+.env
+.env-development
+.env-production
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+/packages
+
+# Optional npm cache directory
+.npm
+
+# Random crap
+trash
+.DS_Store
+Thumbs.db
+.sass-cache
+.tmp
+.rvmrc
+.trashes
+*~
+.lock
+
+# Editor
+.vscode
+.vscode-test
+*.sublime-project
+*.sublime-workspace
+sftp-config.json
+
+#project specific
+capability-model-?.js
+*.docx
