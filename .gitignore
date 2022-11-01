@@ -36,5 +36,5 @@ Thumbs.db
 sftp-config.json
 
 #project specific
-capability-model-?.js
+capability-model-*.js
 *.docx
