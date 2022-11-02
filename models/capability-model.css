@@ -43,11 +43,19 @@
 	padding-right: 0px;
 }
 
+h3 {
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
 h4,
 div.description-container,
 div.description-subcontainer {
 	font-size: 90%;
 	color: #ffffff;
+	margin-bottom: 20px;
+}
+div.capability-description h4 {
+	color: #0e0e0e;
 }
 
 h5,
@@ -68,19 +76,30 @@ h6 {
 	font-weight: normal;
 	padding-top: 3px;
 }
+span.comingsoon {
+	background-color: crimson;
+	width: 10px;
+	height: 10px;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	/*border-radius: 0px 5px 0px 0px;*/
+}
 
 .name {
 	min-height: 32px;
+	position: relative;
 }
 
 #domain-actors {
-	background-color: #e3342f;
+	background-color: #ffa159;
 }
 #domain-channels {
-	background-color: #f6993f;
+	background-color: #ff8426;
 }
 #domain-products-services {
-	background-color: #ffed4a;
+	background-color: #ff760d;
 }
 #domain-customer {
 	background-color: #38c172;

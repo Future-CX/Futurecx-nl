@@ -1,519 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Future CX | Content Overview | Martijn van Deel</title>
+	<head>
+		<meta charset="utf-8" />
+		<title>Future CX | Content Overview | Martijn van Deel</title>
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Future CX | Martijn van Deel">
-    <meta name="keywords" content="Architecture, Enterprise Architecture, Capability Model, Future State Architecture, Customer Engagement, Vendor Selection, RFP proces">
-    <meta name="author" content="Martijn van Deel">
+		<!-- SEO Meta Tags -->
+		<meta name="description" content="Future CX | Martijn van Deel" />
+		<meta
+			name="keywords"
+			content="Architecture, Enterprise Architecture, Capability Model, Future State Architecture, Customer Engagement, Vendor Selection, RFP proces"
+		/>
+		<meta name="author" content="Martijn van Deel" />
 
-    <!-- Viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Favicon and Touch Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/assets/favicon/site.webmanifest"> 
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
-    <link rel="alternate icon" sizes="16x16" href="/assets/favicon/favicon.ico">
-    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#ffffff">
-    <meta name="msapplication-TileColor" content="#080032">
-    <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+		<!-- Favicon and Touch Icons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+		<link rel="manifest" href="/assets/favicon/site.webmanifest" />
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+		<link rel="alternate icon" sizes="16x16" href="/assets/favicon/favicon.ico" />
+		<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#ffffff" />
+		<meta name="msapplication-TileColor" content="#080032" />
+		<meta name="msapplication-config" content="/assets/favicon/browserconfig.xml" />
+		<meta name="theme-color" content="#ffffff" />
 
-    <!-- Vendor Styles -->
-    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
-    <!-- Main Theme Styles + Bootstrap -->
-    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+		<!-- Vendor Styles -->
+		<link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
+		<!-- Main Theme Styles + Bootstrap -->
+		<link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
 
-    <!-- Page loading styles -->
-    <style>
-      .page-loading {position: fixed;top: 0;right: 0;bottom: 0;left: 0;width: 100%;height: 100%;-webkit-transition: all .4s .2s ease-in-out;transition: all .4s .2s ease-in-out;background-color: #fff;opacity: 0;visibility: hidden;z-index: 9999;}
-      .dark-mode .page-loading {background-color: #0b0f19;}
-      .page-loading.active {opacity: 1;visibility: visible;}
-      .page-loading-inner {position: absolute;top: 50%;left: 0;width: 100%;text-align: center;-webkit-transform: translateY(-50%);transform: translateY(-50%);-webkit-transition: opacity .2s ease-in-out;transition: opacity .2s ease-in-out;opacity: 0;}
-      .page-loading.active > .page-loading-inner {opacity: 1;}
-      .page-loading-inner > span {display: block;font-size: 1rem;font-weight: normal;color: #9397ad;}
-      .dark-mode .page-loading-inner > span {color: #fff;opacity: .6;}
-      .page-spinner {display: inline-block;width: 2.75rem;height: 2.75rem;margin-bottom: .75rem;vertical-align: text-bottom;border: .15em solid #b4b7c9;border-right-color: transparent;border-radius: 50%;-webkit-animation: spinner .75s linear infinite;animation: spinner .75s linear infinite;}
-      .dark-mode .page-spinner {border-color: rgba(255,255,255,.4);border-right-color: transparent;}
-      @-webkit-keyframes spinner {100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}}
-      @keyframes spinner {100% {-webkit-transform: rotate(360deg);transform: rotate(360deg);}}
-    </style>
+		<!-- Page loading styles -->
+		<style>
+			.page-loading {
+				position: fixed;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				-webkit-transition: all 0.4s 0.2s ease-in-out;
+				transition: all 0.4s 0.2s ease-in-out;
+				background-color: #fff;
+				opacity: 0;
+				visibility: hidden;
+				z-index: 9999;
+			}
+			.dark-mode .page-loading {
+				background-color: #0b0f19;
+			}
+			.page-loading.active {
+				opacity: 1;
+				visibility: visible;
+			}
+			.page-loading-inner {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
+				text-align: center;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+				-webkit-transition: opacity 0.2s ease-in-out;
+				transition: opacity 0.2s ease-in-out;
+				opacity: 0;
+			}
+			.page-loading.active > .page-loading-inner {
+				opacity: 1;
+			}
+			.page-loading-inner > span {
+				display: block;
+				font-size: 1rem;
+				font-weight: normal;
+				color: #9397ad;
+			}
+			.dark-mode .page-loading-inner > span {
+				color: #fff;
+				opacity: 0.6;
+			}
+			.page-spinner {
+				display: inline-block;
+				width: 2.75rem;
+				height: 2.75rem;
+				margin-bottom: 0.75rem;
+				vertical-align: text-bottom;
+				border: 0.15em solid #b4b7c9;
+				border-right-color: transparent;
+				border-radius: 50%;
+				-webkit-animation: spinner 0.75s linear infinite;
+				animation: spinner 0.75s linear infinite;
+			}
+			.dark-mode .page-spinner {
+				border-color: rgba(255, 255, 255, 0.4);
+				border-right-color: transparent;
+			}
+			@-webkit-keyframes spinner {
+				100% {
+					-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+				}
+			}
+			@keyframes spinner {
+				100% {
+					-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+				}
+			}
+		</style>
 
-    <!-- Theme mode -->
-    <script>
-      let mode = window.localStorage.getItem('mode'),
-          root = document.getElementsByTagName('html')[0];
-      if (mode !== null && mode === 'dark') {
-        root.classList.add('dark-mode');
-      } else {
-        root.classList.remove('dark-mode');
-      }
-    </script>
+		<!-- Theme mode -->
+		<script>
+			let mode = window.localStorage.getItem('mode'),
+				root = document.getElementsByTagName('html')[0];
+			if (mode !== null && mode === 'dark') {
+				root.classList.add('dark-mode');
+			} else {
+				root.classList.remove('dark-mode');
+			}
+		</script>
 
-    <!-- Page loading scripts -->
-    <script>
-      (function () {
-        window.onload = function () {
-          const preloader = document.querySelector('.page-loading');
-          preloader.classList.remove('active');
-          setTimeout(function () {
-            preloader.remove();
-          }, 1000);
-        };
-      })();
-    </script>
-  </head>
+		<!-- Page loading scripts -->
+		<script>
+			(function () {
+				window.onload = function () {
+					const preloader = document.querySelector('.page-loading');
+					preloader.classList.remove('active');
+					setTimeout(function () {
+						preloader.remove();
+					}, 1000);
+				};
+			})();
+		</script>
+	</head>
 
+	<!-- Body -->
+	<body>
+		<!-- Page loading spinner -->
+		<div class="page-loading active">
+			<div class="page-loading-inner">
+				<div class="page-spinner"></div>
+				<span>Loading...</span>
+			</div>
+		</div>
 
-  <!-- Body -->
-  <body>
+		<!-- Page wrapper for sticky footer -->
+		<!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+		<main class="page-wrapper">
+			<!-- Navbar -->
+			<header class="header navbar navbar-expand-lg navbar-light position-absolute navbar-sticky">
+				<div class="container px-3">
+					<a href="index.html" class="navbar-brand pe-3 text-primary"> Future CX </a>
+					<div id="navbarNav" class="offcanvas offcanvas-end text-dark">
+						<div class="offcanvas-header border-bottom">
+							<h5 class="offcanvas-title">Menu</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+						</div>
+						<div class="offcanvas-body">
+							<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+								<li class="nav-item">
+									<a href="index.html#top" data-scroll data-scroll-offset="100" class="nav-link">Home</a>
+								</li>
+								<li class="nav-item">
+									<a href="index.html#about" data-scroll data-scroll-offset="0" class="nav-link">About me</a>
+								</li>
+								<li class="nav-item">
+									<a href="index.html#services" data-scroll data-scroll-offset="50" class="nav-link">What I do</a>
+								</li>
+								<li class="nav-item">
+									<a href="index.html#contact" data-scroll data-scroll-offset="100" class="nav-link">Contact</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+						<input type="checkbox" class="form-check-input" id="theme-mode" />
+					</div>
+					<button
+						id="toggle"
+						type="button"
+						class="navbar-toggler d-none"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#navbarNav"
+						aria-controls="navbarNav"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+			</header>
 
-    <!-- Page loading spinner -->
-    <div class="page-loading active">
-      <div class="page-loading-inner">
-        <div class="page-spinner"></div><span>Loading...</span>
-      </div>
-    </div>
+			<!-- Breadcrumb -->
+			<nav class="container mt-lg-4 pt-5" aria-label="breadcrumb">
+				<ol class="breadcrumb mb-0 pt-5">
+					<li class="breadcrumb-item">
+						<a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+					</li>
+					<li class="breadcrumb-item active" aria-current="page">Content Overview</li>
+				</ol>
+			</nav>
 
+			<!-- Page content -->
+			<section class="container mt-4 mb-lg-5 pt-lg-2 pb-5">
+				<div id="filters">
+					<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none active" onclick="filterSelection('all')">Show all</a>
+					<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection('ea')">Enterprise Architecture</a>
+					<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection('cm')">Capability Modelling</a>
+				</div>
+				<!-- ITEM -->
+				<article class="card shadow-sm overflow-hidden mb-4 filter ea">
+					<div class="row g-0">
+						<div
+							class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover"
+							style="background-image: url(assets/img/blog/01.jpg); min-height: 15rem"
+						>
+							<a
+								href="/content/how-to-build-your-future-state-architecture.html"
+								class="position-absolute top-0 start-0 w-100 h-100"
+								aria-label="Read more"
+							></a>
+						</div>
+						<div class="col-sm-8">
+							<div class="card-body">
+								<div class="d-flex align-items-center mb-3">
+									<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection('ea')">Enterprise Architecture</a>
+									<span class="fs-sm text-muted border-start ps-3 ms-3">Sep 3, 2021</span>
+								</div>
+								<h3 class="h4">
+									<a href="/content/how-to-build-your-future-state-architecture.html">How to build your Future State Architecture</a>
+								</h3>
+								<p>
+									Tellus sagittis dolor pellentesque vel porttitor magna aliquet arcu. Interdum risus mauris pulvinar et vel. Morbi tellus,
+									scelerisque vel metus. Scelerisque arcu egestas ac commodo, ac nibh. Pretium ac elit sed nulla nec.
+								</p>
+								<hr class="my-4" />
+								<div class="d-flex align-items-center justify-content-between">
+									<a href="/#about" class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3">
+										<img src="/assets/img/profile-XS.png" class="rounded-circle me-3" width="48" alt="Martijn van Deel" />
+										Martijn van Deel
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				<!--END ITEM-->
+				<!-- ITEM -->
+				<article class="card shadow-sm overflow-hidden mb-4 filter cm">
+					<div class="row g-0">
+						<div
+							class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover"
+							style="background-image: url(assets/img/blog/01.jpg); min-height: 15rem"
+						>
+							<a
+								href="/content/how-to-build-your-future-state-architecture.html"
+								class="position-absolute top-0 start-0 w-100 h-100"
+								aria-label="Read more"
+							></a>
+						</div>
+						<div class="col-sm-8">
+							<div class="card-body">
+								<div class="d-flex align-items-center mb-3">
+									<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection('cm')">Capability Modelling</a>
+									<span class="fs-sm text-muted border-start ps-3 ms-3">Sep 3, 2021</span>
+								</div>
+								<h3 class="h4">
+									<a href="/content/how-to-build-your-future-state-architecture.html">How to build your Future State Architecture</a>
+								</h3>
+								<p>
+									Tellus sagittis dolor pellentesque vel porttitor magna aliquet arcu. Interdum risus mauris pulvinar et vel. Morbi tellus,
+									scelerisque vel metus. Scelerisque arcu egestas ac commodo, ac nibh. Pretium ac elit sed nulla nec.
+								</p>
+								<hr class="my-4" />
+								<div class="d-flex align-items-center justify-content-between">
+									<a href="/#about" class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3">
+										<img src="/assets/img/profile-XS.png" class="rounded-circle me-3" width="48" alt="Martijn van Deel" />
+										Martijn van Deel
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				<!--END ITEM-->
+			</section>
+		</main>
 
-    <!-- Page wrapper for sticky footer -->
-    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
-    <main class="page-wrapper">
+		<!-- Footer -->
+		<footer class="footer pt-5 pb-4 pb-lg-5 mt-2 mt-md-0">
+			<div class="container pt-lg-4">
+				<div class="row pb-5">
+					<div class="col-lg-5 col-md-12">
+						<div class="navbar-brand text-dark p-0 me-0 mb-2">Future CX</div>
+						<p class="fs-sm pb-lg-3 mb-4">
+							The technology in the Customer Experience domain is rapidly changing. It requires flexibility and adaptability to keep up with the
+							latest trends and customer demands. Both in technology and people. <br />This is why Customer Experience is at my heart, as it requires
+							constant change, new technology, and ways of working. Whilst keeping the customer at the center.
+						</p>
+					</div>
 
+					<div class="col-lg-3 col-md-6 offset-lg-1m mb-3">
+						<h6 class="mb-3">Connect</h6>
+						<p>I am looking forward to connect and build the community on Customer Experience.</p>
+						<div id="social-links" class="d-flex flex-column flex-sm-row">
+							<a id="lnkLinkedin" href="https://www.linkedin.com/in/jmvandeel/" target="blank" class="fw-medium btn btn-primary shadow-primary btn-lg"
+								><i class="bx bxl-linkedin-square me-3"></i>LinkedIn</a
+							>
+						</div>
+					</div>
 
-      <!-- Navbar -->
-      <header class="header navbar navbar-expand-lg navbar-light position-absolute navbar-sticky">
-        <div class="container px-3">
-          <a href="index.html" class="navbar-brand pe-3 text-primary">
-            Future CX
-          </a>
-          <div id="navbarNav" class="offcanvas offcanvas-end text-dark">
-            <div class="offcanvas-header border-bottom">
-              <h5 class="offcanvas-title">Menu</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a href="index.html#top" data-scroll data-scroll-offset="100" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a href="index.html#about" data-scroll data-scroll-offset="0" class="nav-link">About me</a>
-                </li>
-                <li class="nav-item">
-                  <a href="index.html#services" data-scroll data-scroll-offset="50" class="nav-link">What I do</a>
-                </li>
-                <li class="nav-item">
-                  <a href="index.html#contact" data-scroll data-scroll-offset="100" class="nav-link">Contact</a>
-                </li>
-              </ul>
-            </div>    
-          </div>
-          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
-            <input type="checkbox" class="form-check-input" id="theme-mode">
-          </div>
-          <button id="toggle" type="button" class="navbar-toggler d-none" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </header>
+					<div class="col-lg-3 col-md-6 mb-3">
+						<h6 class="mb-3">Questions</h6>
+						<p>Send me an email and I promise to send a reply as soon as possible.</p>
+						<div class="d-flex flex-column flex-sm-row">
+							<a id="lnkEmail" href="mailto:m.van.deel@futurecx.nl" class="fw-medium btn btn-primary shadow-primary btn-lg"
+								><i class="bx bx-mail-send me-2"></i>m.van.deel@futurecx.nl</a
+							>
+						</div>
+					</div>
+				</div>
+				<div id="footer-links" class="row py-3 my-4">
+					<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+						<li class="nav-item">
+							<a href="index.html/#top" data-scroll data-scroll-offset="100" class="nav-link d-inline-block px-2 pt-1 pb-2">Home</a>
+						</li>
+						<li class="nav-item">
+							<a href="index.html/#about" data-scroll data-scroll-offset="0" class="nav-link d-inline-block px-2 pt-1 pb-2">About me</a>
+						</li>
+						<li class="nav-item">
+							<a href="index.html/#services" data-scroll data-scroll-offset="50" class="nav-link d-inline-block px-2 pt-1 pb-2">What I do</a>
+						</li>
+						<li class="nav-item">
+							<a href="index.html/#contact" data-scroll data-scroll-offset="100" class="nav-link d-inline-block px-2 pt-1 pb-2">Contact</a>
+						</li>
+					</ul>
 
+					<div class="col-12 p-0 p-md-3">
+						<p class="text-center text-muted">© 2022 Future CX by Martijn van Deel</p>
+					</div>
 
-      <!-- Breadcrumb -->
-      <nav class="container mt-lg-4 pt-5" aria-label="breadcrumb">
-        <ol class="breadcrumb mb-0 pt-5">
-          <li class="breadcrumb-item">
-            <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
-          </li>
-          <li class="breadcrumb-item active" aria-current="page">Content Overview</li>
-        </ol>
-      </nav>
+					<div class="col-lg-4 col-md-4 p-0 p-md-3">
+						<p class="text-center text-md-end text-muted">KVK: 86444042</p>
+					</div>
 
+					<div class="col-lg-4 col-md-4 p-0 p-md-3">
+						<p class="text-center text-md-center text-muted">VAT number: NL86 3969 379 B01</p>
+					</div>
 
-      <!-- Page content -->
-      <section class="container mt-4 mb-lg-5 pt-lg-2 pb-5">
+					<div class="col-lg-4 col-md-4 p-0 p-md-3">
+						<p class="text-center text-md-start text-muted">IBAN: NL46 RABO 0197 6522 47</p>
+					</div>
+				</div>
+			</div>
+		</footer>
 
-        <!-- Item -->
-        <article class="card shadow-sm overflow-hidden mb-4">
-          <div class="row g-0">
-            <div class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(assets/img/blog/01.jpg); min-height: 15rem;">
-              <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-              <a href="#" class="btn btn-icon btn-primary bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                <i class="bx bx-bookmark"></i>
-              </a>
-            </div>
-            <div class="col-sm-8">
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-3">
-                  <a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none">Processes &amp; Tools</a>
-                  <span class="fs-sm text-muted border-start ps-3 ms-3">Sep 3, 2021</span>
-                </div>
-                <h3 class="h4">
-                  <a href="blog-single.html">5 Bad Landing Page Examples &amp; How We Would Fix Them</a>
-                </h3>
-                <p>Tellus sagittis dolor pellentesque vel porttitor magna aliquet arcu. Interdum risus mauris pulvinar et vel. Morbi tellus, scelerisque vel metus. Scelerisque arcu egestas ac commodo, ac nibh. Pretium ac elit sed nulla nec.</p>
-                <hr class="my-4">
-                <div class="d-flex align-items-center justify-content-between">
-                  <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3">
-                    <img src="assets/img/avatar/01.jpg" class="rounded-circle me-3" width="48" alt="Avatar">
-                    Jerome Bell
-                  </a>
-                  <div class="d-flex align-items-center text-muted">
-                    <div class="d-flex align-items-center me-3">
-                      <i class="bx bx-like fs-lg me-1"></i>
-                      <span class="fs-sm">8</span>
-                    </div>
-                    <div class="d-flex align-items-center me-3">
-                      <i class="bx bx-comment fs-lg me-1"></i>
-                      <span class="fs-sm">7</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <i class="bx bx-share-alt fs-lg me-1"></i>
-                      <span class="fs-sm">4</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
+		<!-- Back to top button -->
+		<a href="#top" class="btn-scroll-top" data-scroll>
+			<span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+			<i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+		</a>
 
-        <!-- Item -->
-        <article class="card shadow-sm overflow-hidden mb-4">
-          <div class="card-body">
-            <div class="d-flex justify-content-between mb-3">
-              <a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none">Business</a>
-              <a href="#" class="btn btn-icon btn-primary bg-light btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                <i class="bx bx-bookmark"></i>
-              </a>
-            </div>
-            <h3 class="h4">
-              <a href="blog-single.html">A Study on Smartwatch Design Qualities and People’s Preferences</a>
-            </h3>
-            <p class="mb-4">Sed parturient in faucibus porttitor morbi rutrum in. Amet fermentum, scelerisque suspendisse nisi faucibus quis lacus. Convallis eget pretium leo, egestas nisl, congue quam et ultrices. Pharetra, elementum pulvinar massa mattis sapien, sit. Id sollicitudin viverra morbi vitae ac tempor bibendum pulvinar vel. Integer non mattis ultrices est morbi ullamcorper scelerisque hac mi. Id semper ut dui sit magna.</p>
-            <div class="d-flex align-items-center text-muted">
-              <div class="fs-sm border-end pe-3 me-3">Sep 3, 2021</div>
-              <div class="d-flex align-items-center me-3">
-                <i class="bx bx-like fs-lg me-1"></i>
-                <span class="fs-sm">8</span>
-              </div>
-              <div class="d-flex align-items-center me-3">
-                <i class="bx bx-comment fs-lg me-1"></i>
-                <span class="fs-sm">7</span>
-              </div>
-              <div class="d-flex align-items-center">
-                <i class="bx bx-share-alt fs-lg me-1"></i>
-                <span class="fs-sm">3</span>
-              </div>
-            </div>
-          </div>
-        </article>
+		<!-- Vendor Scripts -->
+		<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
-        <div class="pb-2 pb-lg-3"></div>
-
-        <!-- Item -->
-        <article class="card border-0 shadow-sm overflow-hidden mb-4">
-          <div class="row g-0">
-            <div class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(assets/img/blog/06.jpg); min-height: 15rem;">
-              <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-              <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                <i class="bx bx-bookmark"></i>
-              </a>
-            </div>
-            <div class="col-sm-8">
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-3">
-                  <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Startups</a>
-                  <span class="fs-sm text-muted border-start ps-3 ms-3">Sep 10, 2021</span>
-                </div>
-                <h3 class="h4">
-                  <a href="blog-single.html">How Agile is Your Forecasting Process?</a>
-                </h3>
-                <p>Nulla fringilla arcu justo augue fringilla in nunc volutpat sit. Dui diam, faucibus vitae ultricies vitae mollis nunc elementum. Et, habitasse porta neque tempor tellus ut. Sagittis odio porttitor erat viverra erat neque.</p>
-                <hr class="my-4">
-                <div class="d-flex align-items-center justify-content-between">
-                  <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3">
-                    <img src="assets/img/avatar/05.jpg" class="rounded-circle me-3" width="48" alt="Avatar">
-                    Albert Flores
-                  </a>
-                  <div class="d-flex align-items-center text-muted">
-                    <div class="d-flex align-items-center me-3">
-                      <i class="bx bx-like fs-lg me-1"></i>
-                      <span class="fs-sm">3</span>
-                    </div>
-                    <div class="d-flex align-items-center me-3">
-                      <i class="bx bx-comment fs-lg me-1"></i>
-                      <span class="fs-sm">6</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <i class="bx bx-share-alt fs-lg me-1"></i>
-                      <span class="fs-sm">0</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Item -->
-        <article class="card border-0 shadow-sm overflow-hidden mb-4">
-          <div class="row g-0">
-            <div class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(assets/img/blog/05.jpg); min-height: 15rem;">
-              <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-              <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                <i class="bx bx-bookmark"></i>
-              </a>
-            </div>
-            <div class="col-sm-8">
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-3">
-                  <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Digital</a>
-                  <span class="fs-sm text-muted border-start ps-3 ms-3">Oct 9, 2021</span>
-                </div>
-                <h3 class="h4">
-                  <a href="blog-single.html">Inclusive Marketing: Why and How Does it Work?</a>
-                </h3>
-                <p>Nunc aliquet scelerisque pellentesque imperdiet tortor elit, dictum. Tristique odio at dignissim viverra aliquet eleifend erat. Tellus, at arcu, egestas praesent. Varius aliquet pharetra adipiscing tincidunt orci nec neque.</p>
-                <hr class="my-4">
-                <div class="d-flex align-items-center justify-content-between">
-                  <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3">
-                    <img src="assets/img/avatar/04.jpg" class="rounded-circle me-3" width="48" alt="Avatar">
-                    Jane Cooper
-                  </a>
-                  <div class="d-flex align-items-center text-muted">
-                    <div class="d-flex align-items-center me-3">
-                      <i class="bx bx-like fs-lg me-1"></i>
-                      <span class="fs-sm">5</span>
-                    </div>
-                    <div class="d-flex align-items-center me-3">
-                      <i class="bx bx-comment fs-lg me-1"></i>
-                      <span class="fs-sm">0</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <i class="bx bx-share-alt fs-lg me-1"></i>
-                      <span class="fs-sm">2</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Item -->
-        <article class="card border-0 shadow-sm overflow-hidden mb-4">
-          <div class="row g-0">
-            <div class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(assets/img/blog/09.jpg); min-height: 15rem;">
-              <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-              <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                <i class="bx bx-bookmark"></i>
-              </a>
-            </div>
-            <div class="col-sm-8">
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-3">
-                  <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Strategy</a>
-                  <span class="fs-sm text-muted border-start ps-3 ms-3">Sep 3, 2021</span>
-                </div>
-                <h3 class="h4">
-                  <a href="blog-single.html">This Long-Awaited Technology May Finally Change the World</a>
-                </h3>
-                <p>Sapien, nulla placerat in at. Vitae tincidunt quam ornare massa porttitor. Neque a vitae feugiat in sit habitant integer. Cursus et at pulvinar sed neque vitae. Aliquam vitae hac phasellus purus lectus facilisi. Vitae vel ac quam.</p>
-                <hr class="my-4">
-                <div class="d-flex align-items-center justify-content-between">
-                  <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3">
-                    <img src="assets/img/avatar/02.jpg" class="rounded-circle me-3" width="48" alt="Avatar">
-                    Ralph Edwards
-                  </a>
-                  <div class="d-flex align-items-center text-muted">
-                    <div class="d-flex align-items-center me-3">
-                      <i class="bx bx-like fs-lg me-1"></i>
-                      <span class="fs-sm">8</span>
-                    </div>
-                    <div class="d-flex align-items-center me-3">
-                      <i class="bx bx-comment fs-lg me-1"></i>
-                      <span class="fs-sm">7</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <i class="bx bx-share-alt fs-lg me-1"></i>
-                      <span class="fs-sm">4</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Item -->
-        <article class="card border-0 shadow-sm overflow-hidden mb-4">
-          <div class="row g-0">
-            <div class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(assets/img/blog/03.jpg); min-height: 15rem;">
-              <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-              <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                <i class="bx bx-bookmark"></i>
-              </a>
-            </div>
-            <div class="col-sm-8">
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-3">
-                  <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Business</a>
-                  <span class="fs-sm text-muted border-start ps-3 ms-3">Sep 16, 2021</span>
-                </div>
-                <h3 class="h4">
-                  <a href="blog-single.html">This Week in Search: New Limits and Exciting Features</a>
-                </h3>
-                <p>Aliquet donec cras amet orci in in neque. Ut sed diam quis consectetur purus lorem eu, sit. Aliquam eget arcu sed urna feugiat. In integer nisl at dui malesuada. Diam pellentesque lobortis elementum lacus at in lectus.</p>
-                <hr class="my-4">
-                <div class="d-flex align-items-center justify-content-between">
-                  <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3">
-                    <img src="assets/img/avatar/02.jpg" class="rounded-circle me-3" width="48" alt="Avatar">
-                    Ralph Edwards
-                  </a>
-                  <div class="d-flex align-items-center text-muted">
-                    <div class="d-flex align-items-center me-3">
-                      <i class="bx bx-like fs-lg me-1"></i>
-                      <span class="fs-sm">5</span>
-                    </div>
-                    <div class="d-flex align-items-center me-3">
-                      <i class="bx bx-comment fs-lg me-1"></i>
-                      <span class="fs-sm">8</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <i class="bx bx-share-alt fs-lg me-1"></i>
-                      <span class="fs-sm">4</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <!-- Item -->
-        <article class="card border-0 shadow-sm overflow-hidden mb-4">
-          <div class="row g-0">
-            <div class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url(assets/img/blog/02.jpg); min-height: 15rem;">
-              <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-              <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
-                <i class="bx bx-bookmark"></i>
-              </a>
-            </div>
-            <div class="col-sm-8 col-md-7">
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-3">
-                  <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Digital</a>
-                  <span class="fs-sm text-muted border-start ps-3 ms-3">Aug 19, 2021</span>
-                </div>
-                <h3 class="h4">
-                  <a href="blog-single.html">Why UX Design Matters and How it Affects Ranking</a>
-                </h3>
-                <p>In mauris porttitor tincidunt mauris massa sit lorem sed scelerisque. Fringilla pharetra vel massa enim sollicitudin cras. At pulvinar eget sociis adipiscing eget donec ultricies nibh tristique. Adipiscing dui orci ac purus lacus.</p>
-                <hr class="my-4">
-                <div class="d-flex align-items-center justify-content-between">
-                  <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3">
-                    <img src="assets/img/avatar/01.jpg" class="rounded-circle me-3" width="48" alt="Avatar">
-                    Jerome Bell
-                  </a>
-                  <div class="d-flex align-items-center text-muted">
-                    <div class="d-flex align-items-center me-3">
-                      <i class="bx bx-like fs-lg me-1"></i>
-                      <span class="fs-sm">5</span>
-                    </div>
-                    <div class="d-flex align-items-center me-3">
-                      <i class="bx bx-comment fs-lg me-1"></i>
-                      <span class="fs-sm">3</span>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <i class="bx bx-share-alt fs-lg me-1"></i>
-                      <span class="fs-sm">9</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      
-    </main>
-
-
-    <!-- Footer -->
-    <footer class="footer pt-5 pb-4 pb-lg-5 mt-2 mt-md-0">
-      <div class="container pt-lg-4">
-        <div class="row pb-5">
-          
-          <div class="col-lg-5 col-md-12">
-            <div class="navbar-brand text-dark p-0 me-0 mb-2">
-              Future CX
-            </div>
-            <p class="fs-sm pb-lg-3 mb-4">The technology in the Customer Experience domain is rapidly changing. It requires flexibility and adaptability to keep up with the latest trends and customer demands. Both in technology and people. <br/>This is why Customer Experience is at my heart, as it requires constant change, new technology, and ways of working. Whilst keeping the customer at the center.</p>
-          </div>
-          
-          <div class="col-lg-3 col-md-6 offset-lg-1m mb-3">
-            <h6 class="mb-3">Connect</h6>
-            <p>I am looking forward to connect and build the community on Customer Experience.</p>
-            <div id="social-links" class="d-flex flex-column flex-sm-row">
-              <a id="lnkLinkedin" href="https://www.linkedin.com/in/jmvandeel/" target="blank" class="fw-medium btn btn-primary shadow-primary btn-lg"><i class='bx bxl-linkedin-square me-3'></i>LinkedIn</a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mb-3">
-            <h6 class="mb-3">Questions</h6>
-            <p>Send me an email and I promise to send a reply as soon as possible.</p>
-            <div class="d-flex flex-column flex-sm-row">
-            <a id="lnkEmail" href="mailto:m.van.deel@futurecx.nl" class="fw-medium btn btn-primary shadow-primary btn-lg"><i class='bx bx-mail-send me-2'></i>m.van.deel@futurecx.nl</a>
-          </div>
-        </div>
-      </div>
-      <div id="footer-links" class="row py-3 my-4">
-          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="index.html/#top" data-scroll data-scroll-offset="100" class="nav-link d-inline-block px-2 pt-1 pb-2">Home</a></li>
-            <li class="nav-item"><a href="index.html/#about" data-scroll data-scroll-offset="0" class="nav-link d-inline-block px-2 pt-1 pb-2">About me</a></li>
-            <li class="nav-item"><a href="index.html/#services" data-scroll data-scroll-offset="50" class="nav-link d-inline-block px-2 pt-1 pb-2">What I do</a></li>
-            <li class="nav-item"><a href="index.html/#contact" data-scroll data-scroll-offset="100" class="nav-link d-inline-block px-2 pt-1 pb-2">Contact</a></li>
-          </ul>
-
-          <div class="col-12 p-0 p-md-3">
-            <p class="text-center text-muted">© 2022 Future CX by Martijn van Deel</p>
-          </div>
-
-          <div class="col-lg-4 col-md-4 p-0 p-md-3">
-            <p class="text-center text-md-end text-muted">KVK: 86444042</p>
-          </div>
-
-          <div class="col-lg-4 col-md-4 p-0 p-md-3">
-            <p class="text-center text-md-center text-muted">VAT number: NL86 3969 379 B01</p>
-          </div>
-
-          <div class="col-lg-4 col-md-4 p-0 p-md-3">
-            <p class="text-center text-md-start text-muted">IBAN: NL46 RABO 0197 6522 47</p>
-          </div>
-
-        </div>
-
-      </div>
-    </footer>
-
-
-    <!-- Back to top button -->
-    <a href="#top" class="btn-scroll-top" data-scroll>
-      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
-      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
-    </a>
-
-
-    <!-- Vendor Scripts -->
-    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-
-    <!-- Main Theme Script -->
-    <script src="assets/js/theme.min.js"></script>
-  </body>
+		<!-- Main Theme Script -->
+		<script src="assets/js/theme.min.js"></script>
+		<script src="assets/js/user.js"></script>
+	</body>
 </html>

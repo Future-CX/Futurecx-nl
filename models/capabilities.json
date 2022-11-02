@@ -1,978 +1,974 @@
 {
-    "capabilities": [
-        {
-            "id": "3rdparty",
-            "name": "3rd Party",
-            "containerid": "channels",
-            "parent": "non-owned",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "apis",
-            "name": "API's",
-            "containerid": "channels",
-            "parent": "digital-channels",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "app",
-            "name": "App",
-            "containerid": "channels",
-            "parent": "digital-channels",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "audience-mgt",
-            "name": "Audience Management",
-            "containerid": "customer",
-            "parent": "cxm",
-            "level": "2",
-            "short_description": "Short Description",
-            "description": "Audience Management is the process of sourcing, managing, analyzing, defining, and activating customer data for crosschannel campaigns. The objective is that the right message reaches the right audience at the right moment on the right channel, and therefor optimizing campaign's result."
-        },
-        {
-            "id": "bpm",
-            "name": "BPM",
-            "containerid": "foundation",
-            "parent": "task-workflow-mgt",
-            "level": "2",
-            "short_description": "Short Description",
-            "description": "Business process management (BPM) is a discipline that uses various methods to discover, model, analyze, measure, improve and optimize business processes. A business process coordinates the behavior of people, systems, information and things to produce business outcomes in support of a business strategy."
-        },
-        {
-            "id": "brand-mgt",
-            "name": "Brand Management",
-            "containerid": "customer",
-            "parent": "cxm",
-            "level": "2",
-            "short_description": "Short Description",
-            "description": "Brand Management includes analysis on how the brand is currently perceived by customers, a strategic plan how the brand should be perceived and ensuring that the brand is perceived as planned and secures its objectives. Developing a good relationship with customer is essential for Brand Management. With Brand management an organisation can centralize their brand management activities, content, and messaging. Like its mission statement, visual elements (“look & feel”, logo), tone of voice and “personality” and target audience."
-        },
-        {
-            "id": "call-center",
-            "name": "Call Center",
-            "containerid": "channels",
-            "parent": "contact-channels",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "campaigns",
-            "name": "Campaigns",
-            "containerid": "marketing",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description",
-            "description": "(Marketing) Campaign Management is the planning, executing, tracking and analysis of direct marketing campaigns. These tasks span the entire lifecycle of a marketing campaign, from inception to launch to evaluation of result."
-        },
-        {
-            "id": "cart",
-            "name": "Cart & Checkout",
-            "containerid": "sales",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description",
-            "description": "Checkout is the point in the shopping /buying process where customer finalize their purchases and pay for products or services. It is where the customer finalizes choices about the product, selects any add-ons, confirms shipping options, then provides payment."
-        },
-        {
-            "id": "case-mgt",
-            "name": "Case Management",
-            "containerid": "service",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "channel-routing",
-            "name": "Channel Management & Routing",
-            "containerid": "customer",
-            "parent": "contact-management",
-            "level": "2",
-            "short_description": "Short Description",
-            "description": "Via a smart routing (rule) engine the customer is routed or directed to correct resource. That could be a service agent with the requested expertise or a self-service portal or a chatbot that can quickly respond to the of the customer."
-        },
-        {
-            "id": "chat",
-            "name": "Chat",
-            "containerid": "channels",
-            "parent": "contact-channels",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "chatbot",
-            "name": "Chatbot",
-            "containerid": "customer",
-            "parent": "contact-management",
-            "level": "2",
-            "short_description": "Short Description",
-            "description": "At the most basic level, a chatbot is a computer program that simulates and processes human conversation (either written or spoken), allowing humans to interact with digital devices as if they were communicating with a real person. Chatbots can be as simple as rudimentary programs that answer a simple query with a single-line response, or as sophisticated as digital assistants that learn and evolve to deliver increasing levels of personalization as they gather and process information. They allow companies to easily resolve many types of customer queries and issues while reducing the need for human interaction."
-        },
-        {
-            "id": "ciam",
-            "name": "CIAM",
-            "containerid": "customer",
-            "parent": "customer-management",
-            "level": "2",
-            "short_description": "Short Description",
-            "description": "Customer identity and access management (CIAM) ensures that customers are allowed to access certain areas of your network or an application and manages their identification information within your system."
-        },
-        {
-            "id": "community-mgt",
-            "name": "Community Management",
-            "containerid": "customer",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description",
-            "description": "Community management is building an authentic community among a business's customers, employees, and partners through various types of interaction. It's how a brand interact with their audience to create a network in which they can connect, share, and grow. Nurturing groups of people around ANWB brand or organization, and stimulating interaction between community members and generation of user content."
-        },
-        {
-            "id": "consent",
-            "name": "Consent Management",
-            "containerid": "customer",
-            "parent": "customer-management",
-            "level": "2",
-            "short_description": "Short Description",
-            "description": "Consent management helps ensure compliance by informing customers about a company’s data collection and usage practices and honouring those choices. Consent and preference management can keep companies compliant with current and emerging data privacy regulations, reducing the chances of being fined. Companies that practice consent and preference management can create brand trust and credibility by letting their customers have a say in if, how, and when their personal data can be used. Companies can also improve their marketing efforts when customers request particular information about products and services."
-        },
-        {
-            "id": "consumers",
-            "name": "Consumers",
-            "containerid": "customers",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "contact-channels",
-            "name": "Contact Channels",
-            "containerid": "channels",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description",
-            "description": "Capabilities for touchpoints where human interaction is applicable like call and social messaging."
-        },
-        {
-            "id": "contact-management",
-            "name": "Contact Management",
-            "containerid": "customer",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "content-hub",
-            "name": "Content Hub",
-            "containerid": "sales",
-            "parent": "content-mgt",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "content-mgt",
-            "name": "Content Management",
-            "containerid": "content",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description",
-            "description": "Content Management is collection, delivery, retrieval, governance and overall management of information in any format. Having a Content Management solution for your organisation allows you to have control of your content. It means having the ability to update, change or delete any images, text, video, or audio. Content Management includes text, rich media, graphics, photos, video and audio for any channel. To create a consistent message via all channels it is crucial to place Content Management from one single source to all channels, online and offline. The Content Management solution will deliver content to web, app, email marketing, social marketing, customer service agents, workforce, shops, field mechanics, etc. A Content Manager is a professional who has a unique role in developing the company's brand and establishing its online presence."
-        },
-        {
-            "id": "content-recommend",
-            "name": "Content Recommendation",
-            "containerid": "loyalty",
-            "parent": "recommendation",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "content-search",
-            "name": "Content Search",
-            "containerid": "content",
-            "parent": "search",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "conversational",
-            "name": "Conversational",
-            "containerid": "customer",
-            "parent": "contact-management",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "conversational-ai",
-            "name": "Conversational AI",
-            "containerid": "engagement",
-            "parent": "conversational",
-            "level": "2",
-            "short_description": "Short Description",
-            "description": "Conversational AI enables customers to interact with IT applications the way they would with other humans. Conversational AI has primarily taken the form of advanced chatbots via both speech and text. It includes managing the output of the dialogue (content, tone-of-voice, ..), but also natural language processing (NLP) and intent and sentiment recognition. With Conversational AI a lot of customer data is gathered and analysed by listening to the customer and from their perspective. Other then just the factual complaint itself, also the emotions and reasoning is captured."
-        },
-        {
-            "id": "customer-journey-design",
-            "name": "Customer Journey Design",
-            "containerid": "engagement",
-            "parent": "customer-journey-mgt",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "customer-journey-mgt",
-            "name": "Customer Journey Management",
-            "containerid": "customer",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "customer-journey-orchestration",
-            "name": "Customer Journey Orchestration",
-            "containerid": "engagement",
-            "parent": "customer-journey-mgt",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "customer-management",
-            "name": "Customer Management",
-            "containerid": "customer",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "customer-mdm",
-            "name": "Customer (Master) Data Management",
-            "containerid": "customer",
-            "parent": "customer-management",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "cxm",
-            "name": "Customer Experience Management",
-            "containerid": "customer",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description",
-            "description": "Customer Experience Management (CXM) is the discipline of understanding customers and deploying strategic plans that enable cross functional efforts and customercentric culture to improve satisfaction, loyalty and advocacy. The goal of customer experience management is to build customer loyalty and to reduce customer churn."
-        },
-        {
-            "id": "dam",
-            "name": "Digital Asset Management",
-            "containerid": "sales",
-            "parent": "content-mgt",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "dam-search",
-            "name": "Digital Assets Search",
-            "containerid": "content",
-            "parent": "search",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "digital-channels",
-            "name": "Digital Channels",
-            "containerid": "channels",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description",
-            "description": "Capabilities for digital channels, like web and app, to enable conversations and experiences like a design system, webshop, chat and others."
-        },
-        {
-            "id": "email",
-            "name": "Email",
-            "containerid": "channels",
-            "parent": "contact-channels",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "feedback",
-            "name": "Customer Feedback",
-            "containerid": "service",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description",
-            "description": "Customer feedback is information provided by customers about their experience with a product or service. Its purpose is to reveal their level of satisfaction and help product, customer success, and marketing teams understand where there is room for improvement. Customer Feedback Management (CFM) is the process of gathering, analysing and taking action on customer feedback with the goal of optimising the online customer experience."
-        },
-        {
-            "id": "forum",
-            "name": "Forum",
-            "containerid": "customer-management",
-            "parent": "community-mgt",
-            "level": "2",
-            "short_description": "Short Description",
-            "description": "An (Internet) Forum, or message board, is an online discussion site where people can hold conversations in the form of posted messages. It provides an online exchange of information, ask questions, between people about a particular topic. The forum is monitored by the organisation to keep the content appropriate."
-        },
-        {
-            "id": "franchises",
-            "name": "Franchises",
-            "containerid": "partners",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "funnel-mgt",
-            "name": "Funnel Management",
-            "containerid": "sales",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "gift-card",
-            "name": "Gift Cards",
-            "containerid": "services",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "home-delivery",
-            "name": "Home Delivery",
-            "containerid": "services",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "interest-groups",
-            "name": "Interest Groups",
-            "containerid": "stakeholders",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "joint-promotions",
-            "name": "Joint Promotions",
-            "containerid": "platform-services",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "kiosk",
-            "name": "Kiosk",
-            "containerid": "channels",
-            "parent": "physical-channels",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "km",
-            "name": "Knowledge Management",
-            "containerid": "sales",
-            "parent": "content-mgt",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "knowledge-search",
-            "name": "Knowledge Search (FAQ)",
-            "containerid": "content",
-            "parent": "search",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "labour-unions",
-            "name": "Labour Unions",
-            "containerid": "stakeholders",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "large-business",
-            "name": "Large Business",
-            "containerid": "customers",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "letters",
-            "name": "Letters",
-            "containerid": "engagement",
-            "parent": "outbound-messaging",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "livechat",
-            "name": "Live chat",
-            "containerid": "service",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "loyalty",
-            "name": "Loyalty & Rewards",
-            "containerid": "loyalty",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description",
-            "description": "Providing a loyalty program to strengthen the relation with customer, retain customers and encourage customers to continue buying products and services of your organisation, rather than competitors. It helps your brand target the right audience and then provides benefits, experiences, and rewards that drive long-term engagement."
-        },
-        {
-            "id": "loyalty-services",
-            "name": "Loyalty Services",
-            "containerid": "services",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "magazine",
-            "name": "Magazine",
-            "containerid": "channels",
-            "parent": "print-channels",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "marketplace",
-            "name": "Marketplace",
-            "containerid": "sales",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "mass-media",
-            "name": "Mass Media",
-            "containerid": "channels",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "merchandising",
-            "name": "Merchandising",
-            "containerid": "content",
-            "parent": "search",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "my-profile",
-            "name": "My Profile",
-            "containerid": "customer",
-            "parent": "customer-management",
-            "level": "2",
-            "short_description": "Short Description",
-            "description": "Allows the customer to see and change all profile data that is stored by the company of that customer. It often is a portal that also allow the customer to start service process, like moving or start a service request or process."
-        },
-        {
-            "id": "nba",
-            "name": "Next Best Action",
-            "containerid": "loyalty",
-            "parent": "personalisation",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "non-owned-channels",
-            "name": "Non-owned Channels",
-            "containerid": "channels",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "offer-management",
-            "name": "Offer / Proposition Management",
-            "containerid": "marketing",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "outbound-messaging",
-            "name": "Outbound Messaging",
-            "containerid": "contact-management",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "partners",
-            "name": "Partners",
-            "containerid": "channels",
-            "parent": "non-owned",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "personalisation",
-            "name": "Personalisation",
-            "containerid": "loyalty",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description",
-            "description": "Personalization is tailoring an interaction or conversation based on information a company has learned about an individual. Just like you may tailor a gift for a good friend, companies can tailor content, product offerings and promotions based on information they learn about their customers. Personalization is especially effective at driving repeat engagement and loyalty over time. Recurring interactions create more data from which brands can design ever-more relevant experiences— creating a flywheel effect that generates strong, long-term customer lifetime value and loyalty."
-        },
-        {
-            "id": "physical-channels",
-            "name": "Physical Channels",
-            "containerid": "channels",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description",
-            "description": "Capabilities for personell, like store employees, local agents, service engineers and other 1-to-1 conversations."
-        },
-        {
-            "id": "pick-up-in-store",
-            "name": "Pick-up In Store",
-            "containerid": "services",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "post",
-            "name": "Post",
-            "containerid": "channels",
-            "parent": "print-channels",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "preferences",
-            "name": "Preference Management",
-            "containerid": "customer",
-            "parent": "customer-management",
-            "level": "2",
-            "short_description": "Short Description",
-            "description": "Preference management allowing customers to choose how companies communicate with them and the frequency of communications. For instance, customers can notify companies of their preferences on how often and where to receive communications including newsletters, updates about new products and services and marketing emails. Additionally, preference management can also include personal preferences about content, products or services. For instance, how they like to travel or what locations they are interested for vacation."
-        },
-        {
-            "id": "print-channels",
-            "name": "Print Channels",
-            "containerid": "channels",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description",
-            "description": "Capabilities to deliver printed material, like magazines, brochures and printed ads to customers and partners."
-        },
-        {
-            "id": "private-label-product",
-            "name": "Private Label Products",
-            "containerid": "products",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "product-recommend",
-            "name": "Product Recommendation",
-            "containerid": "loyalty",
-            "parent": "recommendation",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "product-search",
-            "name": "Product Search",
-            "containerid": "content",
-            "parent": "search",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "promotions",
-            "name": "Promotions",
-            "containerid": "marketing",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description",
-            "description": "(Product) Promotions are used to encourage customers to buy their products. It can be exclusive deals, discounts and other opportunities for a limited amount of time, enticing customers to purchase products or services."
-        },
-        {
-            "id": "propositions",
-            "name": "Propositions",
-            "containerid": "marketing",
-            "parent": "marketing",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "push-messaging",
-            "name": "Push Messages",
-            "containerid": "engagement",
-            "parent": "outbound-messaging",
-            "level": "2",
-            "short_description": "Short Description",
-            "description": "Push notifications are messages that pop up on a user’s mobile phone or desktop device via their chosen web browser. These little banners slide into view — whether or not your app or website is open. Before viewing these messages from companies, a user must have downloaded the mobile app and opted into notifications. Push notifications are received prominently and can convey real-time updates, transactional messages, reminders, and more."
-        },
-        {
-            "id": "quote-management",
-            "name": "Quote Management",
-            "containerid": "sales",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "radio",
-            "name": "Radio",
-            "containerid": "channels",
-            "parent": "mass-media",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "ranking",
-            "name": "Optimize Search Results",
-            "containerid": "content",
-            "parent": "search",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "recommendation",
-            "name": "Recommendation",
-            "containerid": "loyalty",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "reviews-rating",
-            "name": "Reviews & Rating",
-            "containerid": "customer",
-            "parent": "customers-success-management",
-            "level": "2",
-            "short_description": "Short Description",
-            "description": "Reviews and Ratings allow customers to share their experience with a product or service, and give it an overall star rating. Customers often rely on this content to make more informed purchase decisions."
-        },
-        {
-            "id": "search",
-            "name": "Search",
-            "containerid": "content",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description",
-            "description": "Search allows customers to better seek information on products and services the organisation offers and help customers make better decisions what product or service they need. An Enterprise Search is connected to many data sources, like Product Data, Content, Knowledge Articles, Digital Assets, etc. Search can be personalized using customer data, like interests, browsing behavior, previous bought products or services or profile data. A search query can be executed by inputting text in a search field or, when connected to a conversational platform, via chatbot or voicebot.A strong benefit of a good search is to avoid customers calling Customer Service Agents with their questions and enable more self-service for the customers."
-        },
-        {
-            "id": "segmentation",
-            "name": "Segmentation",
-            "containerid": "marketing",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "service-messages",
-            "name": "Service Messages",
-            "containerid": "engagement",
-            "parent": "outbound-messaging",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "shareholders",
-            "name": "Shareholders",
-            "containerid": "stakeholders",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "small-business",
-            "name": "Small Business",
-            "containerid": "customers",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "smart-routing",
-            "name": "Smart Routing",
-            "containerid": "contact-management",
-            "parent": "channel-routing",
-            "level": "2",
-            "short_description": "Short Description",
-            "description": "With Smart Routing the customer is directed to the right source of information using the right channel. It makes sure the customer get the correct response as soon as possible and avoid the customer being redirected many times before the right agent can help."
-        },
-        {
-            "id": "smtp",
-            "name": "Email SMTP",
-            "containerid": "engagement",
-            "parent": "outbound-messaging",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "social",
-            "name": "Social",
-            "containerid": "channels",
-            "parent": "non-owned",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "social-messaging",
-            "name": "Social Direct Messaging",
-            "containerid": "channels",
-            "parent": "contact-channels",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "social-media-mgt",
-            "name": "Social Media Management",
-            "containerid": "customer",
-            "parent": "cxm",
-            "level": "2",
-            "short_description": "Short Description",
-            "description": "Social media management is analysing social media audiences and developing a strategy that’s tailored to them, creating and distributing content for social media profiles, monitoring online conversations, collaborating with influencers, providing community service, and monitoring, measuring, and reporting on social media performance and ROI."
-        },
-        {
-            "id": "store",
-            "name": "Store",
-            "containerid": "channels",
-            "parent": "physical-channels",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "suppliers",
-            "name": "Suppliers",
-            "containerid": "customers",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "surveys",
-            "name": "Surveys",
-            "containerid": "service",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description",
-            "description": "A survey is a method of gathering customer feedback using relevant questions from a (selected) group of customer to understand how they perceive a product or service from the company. Surveys consist of pre-defined questions by the company to measure a specific goal or validate a specific objective. Survey can be face-toface, via telephone conversation or online. Customers are likely to respond faster to your online survey because they can be completed with a few clicks. It’s often necessary to code and adjust the data before analysing, particularly if openended questions were asked. Customers want to give their opinions, not personal details. If you already have a customer's information, don’t ask for it again. If you’re collecting sensitive data, make sure you’ re complying with internal policies, local laws, and GDPR."
-        },
-        {
-            "id": "task-automation",
-            "name": "Task Automation",
-            "containerid": "foundation",
-            "parent": "task-workflow-mgt",
-            "level": "2",
-            "short_description": "Short Description",
-            "description": "Task automation is the use of software to reduce the manual handling of simple tasks or a series of more complex tasks with the goal of making processes more efficient and employees more productive."
-        },
-        {
-            "id": "task-workflow-mgt",
-            "name": "Task & Workflow Management",
-            "containerid": "foundation",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "third-party-products",
-            "name": "Third party Products",
-            "containerid": "products",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "tv",
-            "name": "TV",
-            "containerid": "channels",
-            "parent": "mass-media",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "up-cross-sell",
-            "name": "Up and Cross sell",
-            "containerid": "sales",
-            "parent": "null",
-            "level": "1",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "voicebot",
-            "name": "Voicebot",
-            "containerid": "engagement",
-            "parent": "conversational",
-            "level": "2",
-            "short_description": "Short Description",
-            "description": "A voicebot enables its user to interact with a device or a service simply by speaking. Powered by artificial intelligence and Natural Language Processing (NLP), a voicebot can understand a spoken question or request and structure a fitting audio response. Voice is the quickest form of human communication - faster than typing or navigating drop down menus with a mouse."
-        },
-        {
-            "id": "vraag-aanbod",
-            "name": "Vraag & Aanbod",
-            "containerid": " ",
-            "parent": "community-mgt",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "web",
-            "name": "Web",
-            "containerid": "channels",
-            "parent": "digital-channels",
-            "level": "2",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "workflow-management",
-            "name": "Workflow Management",
-            "containerid": "foundation",
-            "parent": "task-workflow-mgt",
-            "level": "2",
-            "short_description": "Short Description",
-            "description": "Workflow management is the discipline of creating, documenting, monitoring and improving upon the series of steps, or workflow, that is required to complete a specific task. The aim of workflow management is to optimize the steps in the workflow to ensure the task is completed correctly, consistently and efficiently."
-        }
-    ],
-    "domains": [
-        {
-            "id": "actors",
-            "name": "Actors",
-            "parent": "null",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "customers",
-            "name": "Customers",
-            "parent": "actors",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "partners",
-            "name": "Partners",
-            "parent": "actors",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "stakeholders",
-            "name": "Stakeholders",
-            "parent": "actors",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "channels",
-            "name": "Channels",
-            "parent": "null",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "products-services",
-            "name": "Products & Services",
-            "parent": "null",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "products",
-            "name": "Products",
-            "parent": "products-services",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "services",
-            "name": "Services",
-            "parent": "products-services",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "platform-services",
-            "name": "Platform Services",
-            "parent": "products-services",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "customer",
-            "name": "Customer",
-            "parent": "null",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "marketing",
-            "name": "Marketing",
-            "parent": "null",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "sales",
-            "name": "Sales",
-            "parent": "null",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "service",
-            "name": "Service",
-            "parent": "null",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "loyalty",
-            "name": "Loyalty",
-            "parent": "null",
-            "short_description": "Short Description"
-        },
-        {
-            "id": "content",
-            "name": "Content",
-            "parent": "null",
-            "short_description": "Short Description"
-        },
-        {
-            "parent": " "
-        }
-    ],
-    "layers": [
-        {
-            "id": "channels",
-            "name": "Engagement channels",
-            "parent": "null"
-        },
-        {
-            "id": "owned",
-            "name": "Owned channels",
-            "parent": "channels",
-            "short_description": "The Owned channels are Digital channels like websites and apps, Contact channels like  call centre, Print channels like a magazine or flyer and Physical channels like stores and their employees and service engineers. For the Owned Channels we can create, manage, measure and improve the interaction with our customers. We have full control of these channels.",
-            "description": "The Owned channels are Digital channels like websites and apps, Contact channels like  call centre, Print channels like a magazine or flyer and Physical channels like stores and their employees and service engineers. For the Owned Channels we can create, manage, measure and improve the interaction with our customers. We have full control of these channels."
-        },
-        {
-            "id": "notowned",
-            "name": "Non-owned channels",
-            "parent": "channels",
-            "short_description": "The Non-owned channels are channels we use, but do not own. We do not have full control of these channels, but can use them for conversations and interaction with our customers. For these channels we have to follow their requirements and guidelines for content, interaction and measurement of customer experiences.",
-            "description": "The Non-owned channels are channels we use, but do not own. We do not have full control of these channels, but can use them for conversations and interaction with our customers. For these channels we have to follow their requirements and guidelines for content, interaction and measurement of customer experiences."
-        },
-        {
-            "id": "engagement",
-            "name": "Engagement services",
-            "parent": "null",
-            "short_description": "The Engagement Services layer consists of all capabilities to engage with our customers and partners, add value in the interaction, and sell & service our products & services from all organisation departments via an omni-channel approach delivering one face to our customers and partners.",
-            "description": "The Engagement Services layer consists of all capabilities to engage with our customers and partners, add value in the interaction, and sell & service our products & services from all organisation departments via an omni-channel approach delivering one face to our customers and partners."
-        },
-        {
-            "id": "integration",
-            "name": "Integration",
-            "parent": "null"
-        },
-        {
-            "id": "foundation",
-            "name": "Enterprise Foundation",
-            "parent": "null"
-        }
-    ]
+	"capabilities": [
+		{
+			"id": "vraag-aanbod",
+			"name": "Vraag & Aanbod",
+			"containerid": " ",
+			"parent": "community-mgt",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "3rdparty",
+			"name": "3rd Party",
+			"containerid": "channels",
+			"parent": "non-owned-channels",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "apis",
+			"name": "API's",
+			"containerid": "channels",
+			"parent": "digital-channels",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "app",
+			"name": "App",
+			"containerid": "channels",
+			"parent": "digital-channels",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "call-center",
+			"name": "Call Center",
+			"containerid": "channels",
+			"parent": "contact-channels",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "chat",
+			"name": "Chat",
+			"containerid": "channels",
+			"parent": "contact-channels",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "contact-channels",
+			"name": "Contact Channels",
+			"containerid": "channels",
+			"parent": "null",
+			"level": "1",
+			"description": "Touchpoints where human interaction is applicable like call and social messaging."
+		},
+		{
+			"id": "digital-channels",
+			"name": "Digital Channels",
+			"containerid": "channels",
+			"parent": "null",
+			"level": "1",
+			"description": "Digital channels, like web and app, to enable conversations and experiences like a design system, webshop, chat and others."
+		},
+		{
+			"id": "email",
+			"name": "Email",
+			"containerid": "channels",
+			"parent": "contact-channels",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "kiosk",
+			"name": "Kiosk",
+			"containerid": "channels",
+			"parent": "physical-channels",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "magazine",
+			"name": "Magazine",
+			"containerid": "channels",
+			"parent": "print-channels",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "mass-media",
+			"name": "Mass Media",
+			"containerid": "channels",
+			"parent": "null",
+			"level": "1",
+			"description": "Mass Media is any channel for communication to larger audiences like TV or Radio."
+		},
+		{
+			"id": "non-owned-channels",
+			"name": "Non-owned Channels",
+			"containerid": "channels",
+			"parent": "null",
+			"level": "1",
+			"description": "Channels not owner by your organisation but used your customers and partners."
+		},
+		{
+			"id": "partners",
+			"name": "Partners",
+			"containerid": "channels",
+			"parent": "non-owned-channels",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "physical-channels",
+			"name": "Physical Channels",
+			"containerid": "channels",
+			"parent": "null",
+			"level": "1",
+			"description": "Channels that interact physically with customers and partners, like store employees, local agents, service engineers, etc."
+		},
+		{
+			"id": "post",
+			"name": "Post",
+			"containerid": "channels",
+			"parent": "print-channels",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "print-channels",
+			"name": "Print Channels",
+			"containerid": "channels",
+			"parent": "null",
+			"level": "1",
+			"description": "Printed channels, like magazines, brochures and printed ads to show your products and services to customers and partners."
+		},
+		{
+			"id": "radio",
+			"name": "Radio",
+			"containerid": "channels",
+			"parent": "mass-media",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "social",
+			"name": "Social",
+			"containerid": "channels",
+			"parent": "non-owned-channels",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "social-messaging",
+			"name": "Social Direct Messaging",
+			"containerid": "channels",
+			"parent": "contact-channels",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "store",
+			"name": "Store",
+			"containerid": "channels",
+			"parent": "physical-channels",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "tv",
+			"name": "TV",
+			"containerid": "channels",
+			"parent": "mass-media",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "web",
+			"name": "Web",
+			"containerid": "channels",
+			"parent": "digital-channels",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "outbound-messaging",
+			"name": "Outbound Messaging",
+			"containerid": "contact-management",
+			"parent": "null",
+			"level": "1",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "smart-routing",
+			"name": "Smart Routing",
+			"containerid": "contact-management",
+			"parent": "channel-routing",
+			"level": "2",
+			"description": "With Smart Routing the customer is directed to the right source of information using the right channel. It makes sure the customer get the correct response as soon as possible and avoid the customer being redirected many times before the right agent can help."
+		},
+		{
+			"id": "content-mgt",
+			"name": "Content Management",
+			"containerid": "content",
+			"parent": "null",
+			"level": "1",
+			"description": "Content Management is collection, delivery, retrieval, governance and overall management of information in any format. Having a Content Management solution for your organisation allows you to have control of your content. It means having the ability to update, change or delete any images, text, video, or audio. Content Management includes text, rich media, graphics, photos, video and audio for any channel. To create a consistent message via all channels it is crucial to place Content Management from one single source to all channels, online and offline. The Content Management solution will deliver content to web, app, email marketing, social marketing, customer service agents, workforce, shops, field mechanics, etc. A Content Manager is a professional who has a unique role in developing the company's brand and establishing its online presence."
+		},
+		{
+			"id": "content-search",
+			"name": "Content Search",
+			"containerid": "content",
+			"parent": "search",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "dam-search",
+			"name": "Digital Assets Search",
+			"containerid": "content",
+			"parent": "search",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "knowledge-search",
+			"name": "Knowledge Search (FAQ)",
+			"containerid": "content",
+			"parent": "search",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "merchandising",
+			"name": "Merchandising",
+			"containerid": "content",
+			"parent": "search",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "product-search",
+			"name": "Product Search",
+			"containerid": "content",
+			"parent": "search",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "ranking",
+			"name": "Optimize Search Results",
+			"containerid": "content",
+			"parent": "search",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "search",
+			"name": "Search",
+			"containerid": "content",
+			"parent": "null",
+			"level": "1",
+			"description": "Search allows customers to better seek information on products and services the organisation offers and help customers make better decisions what product or service they need. An Enterprise Search is connected to many data sources, like Product Data, Content, Knowledge Articles, Digital Assets, etc. Search can be personalized using customer data, like interests, browsing behavior, previous bought products or services or profile data. A search query can be executed by inputting text in a search field or, when connected to a conversational platform, via chatbot or voicebot.A strong benefit of a good search is to avoid customers calling Customer Service Agents with their questions and enable more self-service for the customers."
+		},
+		{
+			"id": "audience-mgt",
+			"name": "Audience Management",
+			"containerid": "customer",
+			"parent": "cxm",
+			"level": "2",
+			"description": "Audience Management is the process of sourcing, managing, analyzing, defining, and activating customer data for crosschannel campaigns. The objective is that the right message reaches the right audience at the right moment on the right channel, and therefor optimizing campaign's result."
+		},
+		{
+			"id": "brand-mgt",
+			"name": "Brand Management",
+			"containerid": "customer",
+			"parent": "cxm",
+			"level": "2",
+			"description": "Brand Management includes analysis on how the brand is currently perceived by customers, a strategic plan how the brand should be perceived and ensuring that the brand is perceived as planned and secures its objectives. Developing a good relationship with customer is essential for Brand Management. With Brand management an organisation can centralize their brand management activities, content, and messaging. Like its mission statement, visual elements (“look & feel”, logo), tone of voice and “personality” and target audience."
+		},
+		{
+			"id": "channel-routing",
+			"name": "Channel Management & Routing",
+			"containerid": "customer",
+			"parent": "contact-management",
+			"level": "2",
+			"description": "Via a smart routing (rule) engine the customer is routed or directed to correct resource. That could be a service agent with the requested expertise or a self-service portal or a chatbot that can quickly respond to the of the customer."
+		},
+		{
+			"id": "chatbot",
+			"name": "Chatbot",
+			"containerid": "customer",
+			"parent": "contact-management",
+			"level": "2",
+			"description": "At the most basic level, a chatbot is a computer program that simulates and processes human conversation (either written or spoken), allowing humans to interact with digital devices as if they were communicating with a real person. Chatbots can be as simple as rudimentary programs that answer a simple query with a single-line response, or as sophisticated as digital assistants that learn and evolve to deliver increasing levels of personalization as they gather and process information. They allow companies to easily resolve many types of customer queries and issues while reducing the need for human interaction."
+		},
+		{
+			"id": "ciam",
+			"name": "CIAM",
+			"containerid": "customer",
+			"parent": "customer-management",
+			"level": "2",
+			"description": "Customer identity and access management (CIAM) ensures that customers are allowed to access certain areas of your network or an application and manages their identification information within your system."
+		},
+		{
+			"id": "community-mgt",
+			"name": "Community Management",
+			"containerid": "customer",
+			"parent": "null",
+			"level": "1",
+			"description": "Community management is building an authentic community among a business's customers, employees, and partners through various types of interaction. It's how a brand interact with their audience to create a network in which they can connect, share, and grow. Nurturing groups of people around ANWB brand or organization, and stimulating interaction between community members and generation of user content."
+		},
+		{
+			"id": "consent",
+			"name": "Consent Management",
+			"containerid": "customer",
+			"parent": "customer-management",
+			"level": "2",
+			"description": "Consent management helps ensure compliance by informing customers about a company’s data collection and usage practices and honouring those choices. Consent and preference management can keep companies compliant with current and emerging data privacy regulations, reducing the chances of being fined. Companies that practice consent and preference management can create brand trust and credibility by letting their customers have a say in if, how, and when their personal data can be used. Companies can also improve their marketing efforts when customers request particular information about products and services."
+		},
+		{
+			"id": "contact-management",
+			"name": "Contact Management",
+			"containerid": "customer",
+			"parent": "null",
+			"level": "1",
+			"description": "Contact Management records interactions between a company and its customers, partners, or other contacts, such as phone calls, emails, and meetings. This information can be helpful for sales and marketing purposes, as it can help identify potential customers and track the progress of sales opportunities. "
+		},
+		{
+			"id": "conversational",
+			"name": "Conversational",
+			"containerid": "customer",
+			"parent": "contact-management",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "customer-journey-mgt",
+			"name": "Customer Journey Management",
+			"containerid": "customer",
+			"parent": "null",
+			"level": "1",
+			"description": "Understand and manage the customer journey of your customers over your channels. Know when customers are happy, when they need attention or when the journey is broken to act quickly, engage with the customer in their journey and increase customer satisfaction."
+		},
+		{
+			"id": "customer-management",
+			"name": "Customer Management",
+			"containerid": "customer",
+			"parent": "null",
+			"level": "1",
+			"description": "Customer data management is the ways in which organisations keep track of their customer information and create a single source of truth across the organisation. It deliver all operational customer data to other systems in the organisation IT landscape."
+		},
+		{
+			"id": "customer-mdm",
+			"name": "Customer (Master) Data Management",
+			"containerid": "customer",
+			"parent": "customer-management",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "cxm",
+			"name": "Customer Experience Management",
+			"containerid": "customer",
+			"parent": "null",
+			"level": "1",
+			"description": "Customer Experience Management (CXM) is the discipline of understanding customers and deploying strategic plans that enable cross functional efforts and customercentric culture to improve satisfaction, loyalty and advocacy. The goal of customer experience management is to build customer loyalty and to reduce customer churn."
+		},
+		{
+			"id": "my-profile",
+			"name": "My Profile",
+			"containerid": "customer",
+			"parent": "customer-management",
+			"level": "2",
+			"description": "Allows the customer to see and change all profile data that is stored by the company of that customer. It often is a portal that also allow the customer to start service process, like moving or start a service request or process."
+		},
+		{
+			"id": "preferences",
+			"name": "Preference Management",
+			"containerid": "customer",
+			"parent": "customer-management",
+			"level": "2",
+			"description": "Preference management allowing customers to choose how companies communicate with them and the frequency of communications. For instance, customers can notify companies of their preferences on how often and where to receive communications including newsletters, updates about new products and services and marketing emails. Additionally, preference management can also include personal preferences about content, products or services. For instance, how they like to travel or what locations they are interested for vacation."
+		},
+		{
+			"id": "reviews-rating",
+			"name": "Reviews & Rating",
+			"containerid": "customer",
+			"parent": "customers-success-management",
+			"level": "2",
+			"description": "Reviews and Ratings allow customers to share their experience with a product or service, and give it an overall star rating. Customers often rely on this content to make more informed purchase decisions."
+		},
+		{
+			"id": "social-media-mgt",
+			"name": "Social Media Management",
+			"containerid": "customer",
+			"parent": "cxm",
+			"level": "2",
+			"description": "Social media management is analysing social media audiences and developing a strategy that’s tailored to them, creating and distributing content for social media profiles, monitoring online conversations, collaborating with influencers, providing community service, and monitoring, measuring, and reporting on social media performance and ROI."
+		},
+		{
+			"id": "forum",
+			"name": "Forum",
+			"containerid": "customer-management",
+			"parent": "community-mgt",
+			"level": "2",
+			"description": "An (Internet) Forum, or message board, is an online discussion site where people can hold conversations in the form of posted messages. It provides an online exchange of information, ask questions, between people about a particular topic. The forum is monitored by the organisation to keep the content appropriate."
+		},
+		{
+			"id": "consumers",
+			"name": "Consumers",
+			"containerid": "customers",
+			"parent": "null",
+			"level": "1",
+			"short_description": "Individuals that buy or consume your products and services",
+			"description": "Individuals that buy or consume your products and services"
+		},
+		{
+			"id": "large-business",
+			"name": "Large Business",
+			"containerid": "customers",
+			"parent": "null",
+			"level": "1",
+			"short_description": "Large enterprises that buy or consume your products and services",
+			"description": "Large enterprises that buy or consume your products and services"
+		},
+		{
+			"id": "small-business",
+			"name": "Small Business",
+			"containerid": "customers",
+			"parent": "null",
+			"level": "1",
+			"short_description": "Small businesses that buy or consume your products and services",
+			"description": "Small businesses that buy or consume your products and services"
+		},
+		{
+			"id": "suppliers",
+			"name": "Suppliers",
+			"containerid": "customers",
+			"parent": "null",
+			"level": "1",
+			"short_description": "Suppliers that sells your products and services to customers.",
+			"description": "Suppliers that sells your products and services to customers."
+		},
+		{
+			"id": "conversational-ai",
+			"name": "Conversational AI",
+			"containerid": "engagement",
+			"parent": "conversational",
+			"level": "2",
+			"description": "Conversational AI enables customers to interact with IT applications the way they would with other humans. Conversational AI has primarily taken the form of advanced chatbots via both speech and text. It includes managing the output of the dialogue (content, tone-of-voice, ..), but also natural language processing (NLP) and intent and sentiment recognition. With Conversational AI a lot of customer data is gathered and analysed by listening to the customer and from their perspective. Other then just the factual complaint itself, also the emotions and reasoning is captured."
+		},
+		{
+			"id": "customer-journey-design",
+			"name": "Customer Journey Design",
+			"containerid": "engagement",
+			"parent": "customer-journey-mgt",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "customer-journey-orchestration",
+			"name": "Customer Journey Orchestration",
+			"containerid": "engagement",
+			"parent": "customer-journey-mgt",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "letters",
+			"name": "Letters",
+			"containerid": "engagement",
+			"parent": "outbound-messaging",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "push-messaging",
+			"name": "Push Messages",
+			"containerid": "engagement",
+			"parent": "outbound-messaging",
+			"level": "2",
+			"description": "Push notifications are messages that pop up on a user’s mobile phone or desktop device via their chosen web browser. These little banners slide into view — whether or not your app or website is open. Before viewing these messages from companies, a user must have downloaded the mobile app and opted into notifications. Push notifications are received prominently and can convey real-time updates, transactional messages, reminders, and more."
+		},
+		{
+			"id": "service-messages",
+			"name": "Service Messages",
+			"containerid": "engagement",
+			"parent": "outbound-messaging",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "smtp",
+			"name": "Email SMTP",
+			"containerid": "engagement",
+			"parent": "outbound-messaging",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "voicebot",
+			"name": "Voicebot",
+			"containerid": "engagement",
+			"parent": "conversational",
+			"level": "2",
+			"description": "A voicebot enables its user to interact with a device or a service simply by speaking. Powered by artificial intelligence and Natural Language Processing (NLP), a voicebot can understand a spoken question or request and structure a fitting audio response. Voice is the quickest form of human communication - faster than typing or navigating drop down menus with a mouse."
+		},
+		{
+			"id": "bpm",
+			"name": "BPM",
+			"containerid": "foundation",
+			"parent": "task-workflow-mgt",
+			"level": "2",
+			"description": "Business process management (BPM) is a discipline that uses various methods to discover, model, analyze, measure, improve and optimize business processes. A business process coordinates the behavior of people, systems, information and things to produce business outcomes in support of a business strategy."
+		},
+		{
+			"id": "task-automation",
+			"name": "Task Automation",
+			"containerid": "foundation",
+			"parent": "task-workflow-mgt",
+			"level": "2",
+			"description": "Task automation is the use of software to reduce the manual handling of simple tasks or a series of more complex tasks with the goal of making processes more efficient and employees more productive."
+		},
+		{
+			"id": "task-workflow-mgt",
+			"name": "Task & Workflow Management",
+			"containerid": "foundation",
+			"parent": "null",
+			"level": "1",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "workflow-management",
+			"name": "Workflow Management",
+			"containerid": "foundation",
+			"parent": "task-workflow-mgt",
+			"level": "2",
+			"description": "Workflow management is the discipline of creating, documenting, monitoring and improving upon the series of steps, or workflow, that is required to complete a specific task. The aim of workflow management is to optimize the steps in the workflow to ensure the task is completed correctly, consistently and efficiently."
+		},
+		{
+			"id": "content-recommend",
+			"name": "Content Recommendation",
+			"containerid": "loyalty",
+			"parent": "recommendation",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "loyalty",
+			"name": "Loyalty & Rewards",
+			"containerid": "loyalty",
+			"parent": "null",
+			"level": "1",
+			"description": "Providing a loyalty program to strengthen the relation with customer, retain customers and encourage customers to continue buying products and services of your organisation, rather than competitors. It helps your brand target the right audience and then provides benefits, experiences, and rewards that drive long-term engagement."
+		},
+		{
+			"id": "nba",
+			"name": "Next Best Action",
+			"containerid": "loyalty",
+			"parent": "personalisation",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "personalisation",
+			"name": "Personalisation",
+			"containerid": "loyalty",
+			"parent": "null",
+			"level": "1",
+			"description": "Personalization is tailoring an interaction or conversation based on information a company has learned about an individual. Just like you may tailor a gift for a good friend, companies can tailor content, product offerings and promotions based on information they learn about their customers. Personalization is especially effective at driving repeat engagement and loyalty over time. Recurring interactions create more data from which brands can design ever-more relevant experiences— creating a flywheel effect that generates strong, long-term customer lifetime value and loyalty."
+		},
+		{
+			"id": "product-recommend",
+			"name": "Product Recommendation",
+			"containerid": "loyalty",
+			"parent": "recommendation",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "recommendations",
+			"name": "Recommendations",
+			"containerid": "loyalty",
+			"parent": "null",
+			"level": "1",
+			"description": "Recommendations of content, products or services based on behaviour data. When a customer requested content or bought a product, or added to the shopping cart, that data can be used to recommend other content or products that might be relevant and interesting."
+		},
+		{
+			"id": "campaign-management",
+			"name": "Campaign Management",
+			"containerid": "marketing",
+			"parent": "null",
+			"level": "1",
+			"description": "(Marketing) Campaign Management is the planning, executing, tracking and analysis of direct marketing campaigns. These tasks span the entire lifecycle of a marketing campaign, from inception to launch to evaluation of result."
+		},
+		{
+			"id": "proposition-management",
+			"name": "Proposition Management",
+			"containerid": "marketing",
+			"parent": "null",
+			"level": "1",
+			"description": "With Proposition Management you can create propositions for customers that include one or multiple products or services. A proposition is often an offering to a group of target customers, or market segment, who have a particular market problem."
+		},
+		{
+			"id": "promotions",
+			"name": "Promotions",
+			"containerid": "marketing",
+			"parent": "null",
+			"level": "1",
+			"description": "(Product) Promotions are used to encourage customers to buy their products. It can be exclusive deals, discounts and other opportunities for a limited amount of time, enticing customers to purchase products or services."
+		},
+		{
+			"id": "propositions",
+			"name": "Propositions",
+			"containerid": "marketing",
+			"parent": "marketing",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "segmentation",
+			"name": "Segmentation",
+			"containerid": "marketing",
+			"parent": "null",
+			"level": "1",
+			"description": "Segmentation is a marketing strategy in which groups of consumers with common needs are identified so that certain products or services can be presented to them in a way that appeals to their interests. Markets can be segmented in several ways such as geographically, demographically, or behaviorally. Market segmentation helps companies minimize risk by figuring out which products are the most likely to earn a share of a target market and the best ways to market and deliver those products to the market."
+		},
+		{
+			"id": "franchises",
+			"name": "Franchises",
+			"containerid": "partners",
+			"parent": "null",
+			"level": "1",
+			"short_description": "Partners and/or stores that (re)sell your products and services under your brand name.",
+			"description": "Partners and/or stores that (re)sell your products and services under your brand name."
+		},
+		{
+			"id": "resellers",
+			"name": "Resellers",
+			"containerid": "partners",
+			"parent": "null",
+			"level": "1",
+			"short_description": "Partners and/or stores that (re)sell your products and services under their own brand name.",
+			"description": "Partners and/or stores that (re)sell your products and services under their own brand name."
+		},
+		{
+			"id": "joint-promotions",
+			"name": "Joint Promotions",
+			"containerid": "platform-services",
+			"parent": "null",
+			"level": "1",
+			"description": "Your organisation and it channels can be used as a platform to partners and suppliers to promote their products and services. These promotions can be jointly offering a proposition for example combining a product from a partner together with a services from your organisation."
+		},
+		{
+			"id": "private-label-product",
+			"name": "Private Label Products",
+			"containerid": "products",
+			"parent": "null",
+			"level": "1",
+			"description": "A private label product is one that your organisations gets produced by a third-party but sells under your own brand name."
+		},
+		{
+			"id": "third-party-products",
+			"name": "Third party Products",
+			"containerid": "products",
+			"parent": "null",
+			"level": "1",
+			"description": "A third party product is one that your organisation buys from a partner and resells using your channels. In this case you are the reseller."
+		},
+		{
+			"id": "cart",
+			"name": "Cart & Checkout",
+			"containerid": "sales",
+			"parent": "null",
+			"level": "1",
+			"description": "Checkout is the point in the shopping /buying process where customer finalize their purchases and pay for products or services. It is where the customer finalizes choices about the product, selects any add-ons, confirms shipping options, then provides payment."
+		},
+		{
+			"id": "content-hub",
+			"name": "Content Hub",
+			"containerid": "sales",
+			"parent": "content-mgt",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "dam",
+			"name": "Digital Asset Management",
+			"containerid": "sales",
+			"parent": "content-mgt",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "funnel-mgt",
+			"name": "Funnel Management",
+			"containerid": "sales",
+			"parent": "null",
+			"level": "1",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "km",
+			"name": "Knowledge Management",
+			"containerid": "sales",
+			"parent": "content-mgt",
+			"level": "2",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "marketplace",
+			"name": "Marketplace",
+			"containerid": "sales",
+			"parent": "null",
+			"level": "1",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "quote-management",
+			"name": "Quote Management",
+			"containerid": "sales",
+			"parent": "null",
+			"level": "1",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "up-cross-sell",
+			"name": "Up and Cross sell",
+			"containerid": "sales",
+			"parent": "null",
+			"level": "1",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "case-mgt",
+			"name": "Case Management",
+			"containerid": "service",
+			"parent": "null",
+			"level": "1",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "feedback",
+			"name": "Customer Feedback",
+			"containerid": "service",
+			"parent": "null",
+			"level": "1",
+			"description": "Customer feedback is information provided by customers about their experience with a product or service. Its purpose is to reveal their level of satisfaction and help product, customer success, and marketing teams understand where there is room for improvement. Customer Feedback Management (CFM) is the process of gathering, analysing and taking action on customer feedback with the goal of optimising the online customer experience."
+		},
+		{
+			"id": "livechat",
+			"name": "Live chat",
+			"containerid": "service",
+			"parent": "null",
+			"level": "1",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "surveys",
+			"name": "Surveys",
+			"containerid": "service",
+			"parent": "null",
+			"level": "1",
+			"description": "A survey is a method of gathering customer feedback using relevant questions from a (selected) group of customer to understand how they perceive a product or service from the company. Surveys consist of pre-defined questions by the company to measure a specific goal or validate a specific objective. Survey can be face-toface, via telephone conversation or online. Customers are likely to respond faster to your online survey because they can be completed with a few clicks. It’s often necessary to code and adjust the data before analysing, particularly if openended questions were asked. Customers want to give their opinions, not personal details. If you already have a customer's information, don’t ask for it again. If you’re collecting sensitive data, make sure you’ re complying with internal policies, local laws, and GDPR."
+		},
+		{
+			"id": "gift-card",
+			"name": "Gift Cards",
+			"containerid": "services",
+			"parent": "null",
+			"level": "1",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "home-delivery",
+			"name": "Home Delivery",
+			"containerid": "services",
+			"parent": "null",
+			"level": "1",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "loyalty-services",
+			"name": "Loyalty Services",
+			"containerid": "services",
+			"parent": "null",
+			"level": "1",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "pick-up-in-store",
+			"name": "Pick-up In Store",
+			"containerid": "services",
+			"parent": "null",
+			"level": "1",
+			"description": "Description to come soon!"
+		},
+		{
+			"id": "interest-groups",
+			"name": "Interest Groups",
+			"containerid": "stakeholders",
+			"parent": "null",
+			"level": "1",
+			"short_description": "A group of individuals or organisations in close relation to your products or services that attempts to influence public policy in its favour.",
+			"description": "A group of individuals or organisations in close relation to your products or services that attempts to influence public policy in its favour."
+		},
+		{
+			"id": "labour-unions",
+			"name": "Labour Unions",
+			"containerid": "stakeholders",
+			"parent": "null",
+			"level": "1",
+			"short_description": "A labor union is an organization formed by workers in your organisation or market sector for the purpose of improving pay, benefits, and working conditions.",
+			"description": "A labor union is an organization formed by workers in your organisation or market sector for the purpose of improving pay, benefits, and working conditions."
+		},
+		{
+			"id": "shareholders",
+			"name": "Shareholders",
+			"containerid": "stakeholders",
+			"parent": "null",
+			"level": "1",
+			"short_description": "A shareholder is a person or institution that has invested money in your organisation in exchange for a “share” of the ownership. That ownership is represented by shares issued by the company and held by the shareholder.",
+			"description": "A shareholder is a person or institution that has invested money in your organisation in exchange for a “share” of the ownership. That ownership is represented by shares issued by the company and held by the shareholder."
+		}
+	],
+	"domains": [
+		{
+			"id": "actors",
+			"name": "Actors",
+			"parent": "null",
+			"short_description": "People or organisations that interact with your organsation, each with their own interest.",
+			"description": "People or organisations that interact with your organsation, each with their own interest."
+		},
+		{
+			"id": "customers",
+			"name": "Customers",
+			"parent": "actors",
+			"short_description": "Indivuals or businesses that buy or consume your products or services",
+			"description": "Indivuals or businesses that buy or consume your products or services"
+		},
+		{
+			"id": "partners",
+			"name": "Partners",
+			"parent": "actors",
+			"short_description": "Partners that (re)sell your products and services.",
+			"description": "Partners that (re)sell your products and services."
+		},
+		{
+			"id": "stakeholders",
+			"name": "Stakeholders",
+			"parent": "actors",
+			"short_description": "People or organisations that have interest in your organsation.",
+			"description": "People or organisations that have interest in your organsation."
+		},
+		{
+			"id": "channels",
+			"name": "Channels",
+			"parent": "null",
+			"short_description": "All digital and physical channels to connect with your customers, partners and stakeholders to sell or consume your products and services.",
+			"description": "All digital and physical channels to connect with your customers, partners and stakeholders to sell or consume your products and services."
+		},
+		{
+			"id": "products-services",
+			"name": "Products & Services",
+			"parent": "null",
+			"short_description": "A high-level overview of all products and services your organisation offers to customers and partners to buy or consume.",
+			"description": "A high-level overview of all products and services your organisation offers to customers and partners to buy or consume."
+		},
+		{
+			"id": "products",
+			"name": "Products",
+			"parent": "products-services",
+			"short_description": "A high-level overview of all products your organisation offers to customers and partners to buy or consume.",
+			"description": "A high-level overview of all products your organisation offers to customers and partners to buy or consume."
+		},
+		{
+			"id": "services",
+			"name": "Services",
+			"parent": "products-services",
+			"short_description": "A high-level overview of all services your organisation offers to customers and partners to buy or consume.",
+			"description": "A high-level overview of all services your organisation offers to customers and partners to buy or consume."
+		},
+		{
+			"id": "platform-services",
+			"name": "Platform Services",
+			"parent": "products-services",
+			"short_description": "A high-level overview of the platform services you can offer to partners to promote or resell their products or services.",
+			"description": "A high-level overview of the platform services you can offer to partners to promote or resell their products or services."
+		},
+		{
+			"id": "customer",
+			"name": "Customer",
+			"parent": "null",
+			"short_description": "Managing your customers, their interactions and their sentiment with your organisation.",
+			"description": "Managing your customers, their interactions and their sentiment with your organisation."
+		},
+		{
+			"id": "marketing",
+			"name": "Marketing",
+			"parent": "null",
+			"short_description": "Bring your offers, campaigns and promotions of your products and services to customers and partners.",
+			"description": "Bring your offers, campaigns and promotions of your products and services to customers and partners."
+		},
+		{
+			"id": "sales",
+			"name": "Sales",
+			"parent": "null",
+			"short_description": "Sell your products and services to customers and partners.",
+			"description": "Sell your products and services to customers and partners."
+		},
+		{
+			"id": "service",
+			"name": "Service",
+			"parent": "null",
+			"short_description": "Service your customers and partners via their prefered channel with the right message.",
+			"description": "Service your customers and partners via their prefered channel with the right message."
+		},
+		{
+			"id": "loyalty",
+			"name": "Loyalty",
+			"parent": "null",
+			"short_description": "Increase retention and customer value lifetime with loyalty and personalisation.",
+			"description": "Increase retention and customer value lifetime with loyalty and personalisation."
+		},
+		{
+			"id": "content",
+			"name": "Content",
+			"parent": "null",
+			"short_description": "Deliver meaningfull and consistent content to your customers and partners via all channels.",
+			"description": "Deliver meaningfull and consistent content to your customers and partners via all channels."
+		}
+	],
+	"layers": [
+		{
+			"id": "channels",
+			"name": "Engagement channels",
+			"parent": "null"
+		},
+		{
+			"id": "owned",
+			"name": "Owned channels",
+			"parent": "channels",
+			"short_description": "The Owned channels are Digital channels like websites and apps, Contact channels like  call centre, Print channels like a magazine or flyer and Physical channels like stores and their employees and service engineers. For the Owned Channels we can create, manage, measure and improve the interaction with our customers. We have full control of these channels.",
+			"description": "The Owned channels are Digital channels like websites and apps, Contact channels like  call centre, Print channels like a magazine or flyer and Physical channels like stores and their employees and service engineers. For the Owned Channels we can create, manage, measure and improve the interaction with our customers. We have full control of these channels."
+		},
+		{
+			"id": "notowned",
+			"name": "Non-owned channels",
+			"parent": "channels",
+			"short_description": "The Non-owned channels are channels we use, but do not own. We do not have full control of these channels, but can use them for conversations and interaction with our customers. For these channels we have to follow their requirements and guidelines for content, interaction and measurement of customer experiences.",
+			"description": "The Non-owned channels are channels we use, but do not own. We do not have full control of these channels, but can use them for conversations and interaction with our customers. For these channels we have to follow their requirements and guidelines for content, interaction and measurement of customer experiences."
+		},
+		{
+			"id": "engagement",
+			"name": "Engagement services",
+			"parent": "null",
+			"short_description": "The Engagement Services layer consists of all capabilities to engage with our customers and partners, add value in the interaction, and sell & service our products & services from all organisation departments via an omni-channel approach delivering one face to our customers and partners.",
+			"description": "The Engagement Services layer consists of all capabilities to engage with our customers and partners, add value in the interaction, and sell & service our products & services from all organisation departments via an omni-channel approach delivering one face to our customers and partners."
+		},
+		{
+			"id": "integration",
+			"name": "Integration",
+			"parent": "null"
+		},
+		{
+			"id": "foundation",
+			"name": "Enterprise Foundation",
+			"parent": "null"
+		}
+	]
 }

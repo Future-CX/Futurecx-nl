@@ -1,20 +1,19 @@
 let html = '';
 let capabilityDescription = '';
 let allData = [];
-let allLevelOneLayers = [];
-let allLevelTwoLayers = [];
-let allLevelOneDomains = [];
-let allLevelTwoDomains = [];
-let allLevelOneCapabilities = [];
-let allLevelTwoCapabilities = [];
+const allLevelOneLayers = [];
+const allLevelTwoLayers = [];
+const allLevelOneDomains = [];
+const allLevelTwoDomains = [];
+const allLevelOneCapabilities = [];
+const allLevelTwoCapabilities = [];
 let enableHover = false;
 let enableClick = true;
 let showLevel2 = true;
 
-(function () {
-	var jsonfile = 'capabilities.json';
-	$.getJSON(jsonfile)
-		.done(function (data) {
+{
+	$.getJSON('capabilities.json')
+		.done((data) => {
 			allData = data;
 			//console.log( "Request Done." );
 			//console.log( allData );
@@ -24,13 +23,13 @@ let showLevel2 = true;
 			//JSON.parse(allData);
 			capabilityModel('initiate');
 		})
-		.fail(function (jqxhr, textStatus, error) {
-			var err = textStatus + ', ' + error;
-			console.log('Request Failed: ' + err);
+		.fail((jqxhr, textStatus, error) => {
+			const err = `${textStatus}, ${error}`;
+			console.log(`Request Failed: ${err}`);
 		});
-})();
+}
 
-document.addEventListener('DOMContentLoaded', function (event) {
+document.addEventListener('DOMContentLoaded', (event) => {
 	//capabilityModel('update');
 });
 
@@ -73,22 +72,22 @@ function capabilityModel(method) {
 
 function createContainers() {
 	html = '';
-	var stringLayerOrDomain = 'domain';
-	var stringRowOrColumn = 'col';
-	var stringContainer =
+	const stringLayerOrDomain = 'domain';
+	const stringRowOrColumn = 'col';
+	const stringContainer =
 		'<div id="' +
 		stringLayerOrDomain +
 		'-%containerid%" class="%roworcolumn% ' +
 		stringLayerOrDomain +
 		'"><div class="name name-container"><h4>%name%</h4></div><div class="description description-container"><p>%description%</p></div>';
-	var stringSubContainer =
+	const stringSubContainer =
 		'<div id="sub' +
 		stringLayerOrDomain +
 		'-%containerid%" class="row col sub' +
 		stringLayerOrDomain +
 		'"><div class="name name-subcontainer"><h4>%name%</h4></div>';
 
-	jQuery.each(allLevelOneDomains, function (i, container) {
+	jQuery.each(allLevelOneDomains, (i, container) => {
 		html += stringContainer
 			.replace('%roworcolumn%', stringRowOrColumn)
 			.replace('%containerid%', container.id)
@@ -98,9 +97,9 @@ function createContainers() {
 		createCapabilities(container);
 
 		if (hasSubs(container) === true) {
-			jQuery.each(allLevelTwoDomains, function (i, subcontainer) {
+			jQuery.each(allLevelTwoDomains, (i, subcontainer) => {
 				if (subcontainer.parent === container.id) {
-					console.log(container.id + ' / ' + subcontainer.id);
+					console.log(`${container.id} / ${subcontainer.id}`);
 					html += stringSubContainer
 						.replace('%containerid%', subcontainer.id)
 						.replace('%name%', subcontainer.name)
@@ -126,23 +125,34 @@ function createCapabilities(container) {
 		'<div id="capability-l2-%id%" class="row capabilityl2" onmouseover="setDescription(\'%id%\', \'hover\')" onclick="setDescription(\'%id%\', \'click\')"><div class="name name-capabilityl2"><h6>%name%</h6></div></div>';
 
 	var stringCapabilityL1 =
-		'<div id="capability-l1-%id%" class="row capability capabilityl1 align-middle" data-capability="%id%"><div class="name name-capabilityl1 align-middle"><h5>%name%</h5></div>';
+		'<div id="capability-l1-%id%" class="row capability capabilityl1 align-middle" data-capability="%id%"><div class="name name-capabilityl1 align-middle"><h5>%name%</h5>%comingsoon%</div>';
 	var stringCapabilityL2 =
-		'<div id="capability-l2-%id%" class="row capability capabilityl2 align-middle" data-capability="%id%"><div class="name name-capabilityl2 align-middle"><h6>%name%</h6></div></div>';
+		'<div id="capability-l2-%id%" class="row capability capabilityl2 align-middle" data-capability="%id%"><div class="name name-capabilityl2 align-middle"><h6>%name%</h6>%comingsoon%</div></div>';
 
-	jQuery.each(allLevelOneCapabilities, function (i, capabilityl1) {
+	jQuery.each(allLevelOneCapabilities, (i, capabilityl1) => {
 		//console.log(capabilityl1.containerid + " - " + container.id);
 		if (capabilityl1.containerid == container.id) {
+			let comingsoon = '';
+			if (capabilityl1.description == 'Description to come soon!' || capabilityl1.description == '') {
+				comingsoon = "<span class='comingsoon'></span>";
+			}
+
 			html += stringCapabilityL1
 				.replaceAll('%id%', capabilityl1.id)
+				.replaceAll('%comingsoon%', comingsoon)
 				.replaceAll('%name%', capabilityl1.name)
 				.replaceAll('%description%', capabilityl1.name);
 
 			if (showLevel2) {
-				jQuery.each(allLevelTwoCapabilities, function (i, capabilityl2) {
+				jQuery.each(allLevelTwoCapabilities, (i, capabilityl2) => {
 					if (capabilityl2.parent == capabilityl1.id) {
+						capabilityName = capabilityl2.name;
+						if (capabilityl2.description == 'Description to come soon!' || capabilityl2.description == '') {
+							comingsoon = "<span class='comingsoon'></span>";
+						}
 						html += stringCapabilityL2
 							.replaceAll('%id%', capabilityl2.id)
+							.replaceAll('%comingsoon%', comingsoon)
 							.replaceAll('%name%', capabilityl2.name)
 							.replaceAll('%description%', capabilityl2.name);
 					}
@@ -155,7 +165,7 @@ function createCapabilities(container) {
 }
 
 function sortDomains() {
-	jQuery.each(allData.domains, function (i, domain) {
+	jQuery.each(allData.domains, (i, domain) => {
 		//console.log(domain.parent);
 		if (domain.parent == null || domain.parent == 'null') {
 			allLevelOneDomains.push(domain);
@@ -174,7 +184,7 @@ function sortDomains() {
 }
 
 function sortLayers() {
-	jQuery.each(allData.layers, function (i, layer) {
+	jQuery.each(allData.layers, (i, layer) => {
 		//console.log(layer.parent);
 		if (layer.parent == null || layer.parent == 'null') {
 			allLevelOneLayers.push(layer);
@@ -193,7 +203,7 @@ function sortLayers() {
 }
 
 function sortCapabilities() {
-	jQuery.each(allData.capabilities, function (i, capability) {
+	jQuery.each(allData.capabilities, (i, capability) => {
 		//console.log(capability.parent);
 		if (capability.parent == null || capability.parent == 'null') {
 			allLevelOneCapabilities.push(capability);
@@ -218,25 +228,23 @@ function setDescription(capabilityId, event) {
 		return;
 	}
 
-	var result = allData.capabilities.filter(function (data) {
-		return data.id == capabilityId;
-	});
+	const result = allData.capabilities.filter((data) => data.id == capabilityId);
 
 	capabilityName = result[0].name;
 	capabilityDescription = result[0].description;
 
-	document.getElementById('capability-description').innerHTML = '<h4>' + capabilityName + '</h4><p>' + capabilityDescription + '</p>';
+	document.getElementById('capability-description').innerHTML = `<h4>${capabilityName}</h4><p>${capabilityDescription}</p>`;
 }
 
 function setClickEvents() {
-	var elements = document.getElementsByClassName('capability');
-	for (var i = 0; i < elements.length; i++) {
-		elements[i].onclick = function (event) {
+	const elements = document.getElementsByClassName('capability');
+	for (const element of elements) {
+		element.onclick = function (event) {
 			//console.log(this.dataset.capability);
 			event.stopPropagation();
 			setDescription(this.dataset.capability, 'click');
 		};
-		elements[i].onmouseover = function (event) {
+		element.onmouseover = function (event) {
 			//console.log(this.dataset.capability);
 			event.stopPropagation();
 			setDescription(this.dataset.capability, 'hover');
@@ -245,10 +253,10 @@ function setClickEvents() {
 }
 
 function hasSubs(container) {
-	var hassubs = false;
+	let hassubs = false;
 
 	//console.log(container.id);
-	jQuery.each(allLevelTwoLayers, function (i, sub) {
+	jQuery.each(allLevelTwoLayers, (i, sub) => {
 		//console.log(container.id + ": " + sub.id + " = " + sub.parent);
 
 		if (sub.parent === container.id) {
@@ -257,7 +265,7 @@ function hasSubs(container) {
 		}
 	});
 
-	jQuery.each(allLevelTwoDomains, function (i, sub) {
+	jQuery.each(allLevelTwoDomains, (i, sub) => {
 		//console.log(container.id + ": " + sub.id + " = " + sub.parent);
 
 		if (sub.parent === container.id) {
@@ -271,7 +279,8 @@ function hasSubs(container) {
 
 function addStyling() {
 	/* EQUAL HEIGHT */
-	$(function () {
+	$(() => {
 		$('h5').matchHeight();
+		$('div.description-container').matchHeight();
 	});
 }

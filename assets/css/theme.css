@@ -16221,6 +16221,19 @@ caption {
   color: #ffffff;
 }
 
+/* Filter Content */
+.filter {
+  display: none; /* Hidden by default */
+}
+
+.show {
+  display: block;
+}
+
+/*.active {
+	background-color: #666;
+	color: white;
+}*/
 @media (max-width: 767.98px) {
   /* X-Small devices (portrait phones, less than 576px) */
   html section.hero,
