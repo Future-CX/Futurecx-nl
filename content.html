@@ -205,36 +205,33 @@
 
 			<!-- Page content -->
 			<section class="container mt-4 mb-lg-5 pt-lg-2 pb-5">
-				<div id="filters">
-					<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none active" onclick="filterSelection('all')">Show all</a>
+				<div id="filters" class="mb-3">
+					<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none selected" onclick="filterSelection('all')">Show all</a>
 					<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection('ea')">Enterprise Architecture</a>
 					<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection('cm')">Capability Modelling</a>
+					<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection('vs')">Vendor Selection</a>
 				</div>
 				<!-- ITEM -->
-				<article class="card shadow-sm overflow-hidden mb-4 filter ea">
+				<article class="card shadow-sm overflow-hidden mb-4 filter cm">
 					<div class="row g-0">
 						<div
 							class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover"
-							style="background-image: url(assets/img/blog/01.jpg); min-height: 15rem"
+							style="background-image: url(/assets/img/blog/single/midjourney-women_in_a_shopping_street.png); min-height: 15rem"
 						>
-							<a
-								href="/content/how-to-build-your-future-state-architecture.html"
-								class="position-absolute top-0 start-0 w-100 h-100"
-								aria-label="Read more"
-							></a>
+							<a href="/content/create-a-better-capability-model.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
 						</div>
 						<div class="col-sm-8">
 							<div class="card-body">
 								<div class="d-flex align-items-center mb-3">
-									<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection('ea')">Enterprise Architecture</a>
-									<span class="fs-sm text-muted border-start ps-3 ms-3">Sep 3, 2021</span>
+									<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection('cm')">Capability Modelling</a>
+									<span class="fs-sm text-muted border-start ps-3 ms-3">Nov 23, 2022</span>
 								</div>
 								<h3 class="h4">
-									<a href="/content/how-to-build-your-future-state-architecture.html">How to build your Future State Architecture</a>
+									<a href="/content/create-a-better-capability-model.html">Create a better Capability Model</a>
 								</h3>
 								<p>
-									Tellus sagittis dolor pellentesque vel porttitor magna aliquet arcu. Interdum risus mauris pulvinar et vel. Morbi tellus,
-									scelerisque vel metus. Scelerisque arcu egestas ac commodo, ac nibh. Pretium ac elit sed nulla nec.
+									A good Capability Model have capabilities grouped in business domains with the two levels of detail and clear descriptions of the
+									capabilities to avoid ambiguity and length internal discssions.
 								</p>
 								<hr class="my-4" />
 								<div class="d-flex align-items-center justify-content-between">
@@ -253,10 +250,82 @@
 					<div class="row g-0">
 						<div
 							class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover"
-							style="background-image: url(assets/img/blog/01.jpg); min-height: 15rem"
+							style="background-image: url(/assets/img/blog/single/future-cx-capability-model-customer-engagement.png); min-height: 15rem"
+						>
+							<a href="/models/capability-model-cx.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+						</div>
+						<div class="col-sm-8">
+							<div class="card-body">
+								<div class="d-flex align-items-center mb-3">
+									<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection('cm')">Capability Modelling</a>
+									<span class="fs-sm text-muted border-start ps-3 ms-3">Nov 23, 2022</span>
+								</div>
+								<h3 class="h4">
+									<a href="/models/capability-model-cx.html">My Capability Model for Customer Engagement</a>
+								</h3>
+								<p>
+									I haven't seen a capability model that focuses on Customer Engagement with definitions and the right level of detail. So, I decided
+									to create my own! Interactive, with two levels of detail and clear definitions.
+								</p>
+								<hr class="my-4" />
+								<div class="d-flex align-items-center justify-content-between">
+									<a href="/#about" class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3">
+										<img src="/assets/img/profile-XS.png" class="rounded-circle me-3" width="48" alt="Martijn van Deel" />
+										Martijn van Deel
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				<!--END ITEM-->
+				<!-- ITEM -->
+				<article class="card shadow-sm overflow-hidden mb-4 filter ea">
+					<div class="row g-0">
+						<div
+							class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover"
+							style="background-image: url(assets/img/blog/03.jpg); min-height: 15rem"
+						>
+							<a href="#" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+							<span class="wip">Work In Progress</span>
+						</div>
+						<div class="col-sm-8">
+							<div class="card-body">
+								<div class="d-flex align-items-center mb-3">
+									<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection('ea')">Enterprise Architecture</a>
+									<span class="fs-sm text-muted border-start ps-3 ms-3">Dec, 2022</span>
+								</div>
+								<h3 class="h4">
+									<a href="#">How to build your Future State Architecture</a>
+								</h3>
+								<p>
+									Tellus sagittis dolor pellentesque vel porttitor magna aliquet arcu. Interdum risus mauris pulvinar et vel. Morbi tellus,
+									scelerisque vel metus. Scelerisque arcu egestas ac commodo, ac nibh. Pretium ac elit sed nulla nec.
+								</p>
+								<hr class="my-4" />
+								<div class="d-flex align-items-center justify-content-between">
+									<a href="/#about" class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3">
+										<img src="/assets/img/profile-XS.png" class="rounded-circle me-3" width="48" alt="Martijn van Deel" />
+										Martijn van Deel
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				<!--END ITEM-->
+				<!-- ITEM -->
+				<article class="card shadow-sm overflow-hidden mb-4 filter vs">
+					<div class="row g-0">
+						<div
+							class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover"
+							style="
+								background-image: url(/assets/img/blog/single/midjourney_future_customer_experience_questions_improve_humans-min.webp);
+								min-height: 15rem;
+							"
 						>
 							<a
-								href="/content/how-to-build-your-future-state-architecture.html"
+								href="/content/use-open-questions-and-context-for-a-better-rfp.html"
 								class="position-absolute top-0 start-0 w-100 h-100"
 								aria-label="Read more"
 							></a>
@@ -264,15 +333,16 @@
 						<div class="col-sm-8">
 							<div class="card-body">
 								<div class="d-flex align-items-center mb-3">
-									<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection('cm')">Capability Modelling</a>
-									<span class="fs-sm text-muted border-start ps-3 ms-3">Sep 3, 2021</span>
+									<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection('vs')">Vendor Selection</a>
+									<span class="fs-sm text-muted border-start ps-3 ms-3">Sep 3, 2022</span>
 								</div>
 								<h3 class="h4">
-									<a href="/content/how-to-build-your-future-state-architecture.html">How to build your Future State Architecture</a>
+									<a href="/content/use-open-questions-and-context-for-a-better-rfp.html">Use open questions and context for a better RFP</a>
 								</h3>
 								<p>
-									Tellus sagittis dolor pellentesque vel porttitor magna aliquet arcu. Interdum risus mauris pulvinar et vel. Morbi tellus,
-									scelerisque vel metus. Scelerisque arcu egestas ac commodo, ac nibh. Pretium ac elit sed nulla nec.
+									I strongly believe in asking open questions to software and implementation partners as it will give more insight into the potential
+									solution. And by providing more context on the business ambition and architectural vision and principles will turn the RFP from a
+									Request for a Solution into a Request for a Partner to achieve that ambition.
 								</p>
 								<hr class="my-4" />
 								<div class="d-flex align-items-center justify-content-between">

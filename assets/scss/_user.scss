@@ -119,16 +119,28 @@ caption {
 }
 
 /* Filter Content */
+
 .filter {
 	display: none; /* Hidden by default */
 }
 .show {
 	display: block;
 }
-/*.active {
-	background-color: #666;
-	color: white;
-}*/
+.selected {
+	background-color: #666 !important;
+	color: white !important;
+	font-weight: normal !important;
+}
+
+span.wip {
+	float: right;
+	padding: 2px 5px;
+	background-color: #ffb347;
+	color: #000;
+	font-size: 12px;
+	font-style: italic;
+	border-bottom-left-radius: 10px;
+}
 
 @include media-breakpoint-down(md) {
 	/* X-Small devices (portrait phones, less than 576px) */
