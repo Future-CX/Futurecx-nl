@@ -9,13 +9,13 @@ body::after {
 	height: 0;
 	overflow: hidden;
 	z-index: -1; // hide images
-	/*content:url(../../assets/img/cover-dark-full.jpg) url(img2.png) url(img3.gif) url(img4.jpg);*/ // load images
-	/*content:url(../../assets/img/cover-dark-s.png) url(../../assets/img/cover-s.png);*/
+	/*content:url(../../assets/img/cover/cover-dark-full.jpg) url(img2.png) url(img3.gif) url(img4.jpg);*/ // load images
+	/*content:url(../../assets/img/cover/cover-dark-s.png) url(../../assets/img/cover/cover-s.png);*/
 }
 
 html section.hero,
 html.dark-mode section.hero {
-	background: url(../../assets/img/cover-s.jpg) no-repeat center center fixed;
+	background: url(../../assets/img/cover/cover-s.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -24,7 +24,7 @@ html.dark-mode section.hero {
 }
 
 html.dark-mode section.hero {
-	background-image: url(../../assets/img/cover-dark-s.jpg) !important;
+	background-image: url(../../assets/img/cover/cover-dark-s.jpg) !important;
 }
 
 html h1 {
@@ -151,12 +151,12 @@ span.wip {
 		background-position: 65%;
 	}
 	html section.hero {
-		background-image: url(../../assets/img/cover-xxl.jpg) !important;
+		background-image: url(../../assets/img/cover/cover-xxl.jpg) !important;
 		/*background-image: url('https://dummyimage.com/576x324') !important;*/
 	}
 
 	html.dark-mode section.hero {
-		background-image: url(../../assets/img/cover-dark-xxl.jpg) !important;
+		background-image: url(../../assets/img/cover/cover-dark-xxl.jpg) !important;
 	}
 
 	nav[data-toggle='toc'] {
@@ -172,13 +172,13 @@ span.wip {
 @include media-breakpoint-up(md) {
 	/*  Small devices (landscape phones, portrait tablets, 576px and up) */
 	html section.hero {
-		background-image: url(../../assets/img/cover-xxl.jpg) !important;
+		background-image: url(../../assets/img/cover/cover-xxl.jpg) !important;
 		/*background-image: url('https://dummyimage.com/768x432') !important;*/
 		background-attachment: local;
 	}
 
 	html.dark-mode section.hero {
-		background-image: url(../../assets/img/cover-dark-xxl.jpg) !important;
+		background-image: url(../../assets/img/cover/cover-dark-xxl.jpg) !important;
 		background-attachment: local;
 	}
 
@@ -201,35 +201,35 @@ span.wip {
 @include media-breakpoint-up(lg) {
 	/*  Medium devices (landscape tablets, 768px and up) */
 	html section.hero {
-		background-image: url(../../assets/img/cover-xxl.jpg) !important;
+		background-image: url(../../assets/img/cover/cover-xxl.jpg) !important;
 		/*background-image: url('https://dummyimage.com/992x558') !important;*/
 	}
 
 	html.dark-mode section.hero {
-		background-image: url(../../assets/img/cover-dark-xxl.jpg) !important;
+		background-image: url(../../assets/img/cover/cover-dark-xxl.jpg) !important;
 	}
 }
 
 @include media-breakpoint-up(xl) {
 	/*  Large devices (desktops, 992px and up) */
 	html section.hero {
-		background-image: url(../../assets/img/cover-xxl.jpg) !important;
+		background-image: url(../../assets/img/cover/cover-xxl.jpg) !important;
 		/*background-image: url('https://dummyimage.com/1200x675') !important;*/
 	}
 
 	html.dark-mode section.hero {
-		background-image: url(../../assets/img/cover-dark-xxl.jpg) !important;
+		background-image: url(../../assets/img/cover/cover-dark-xxl.jpg) !important;
 	}
 }
 
 @include media-breakpoint-up(xxl) {
 	/*  X-Large devices (large desktops, 1200px and up) */
 	html section.hero {
-		background-image: url(../../assets/img/cover-xxl.jpg) !important;
+		background-image: url(../../assets/img/cover/cover-xxl.jpg) !important;
 		/*background-image: url('https://dummyimage.com/1400x16:9') !important;*/
 	}
 
 	html.dark-mode section.hero {
-		background-image: url(../../assets/img/cover-dark-xxl.jpg) !important;
+		background-image: url(../../assets/img/cover/cover-dark-xxl.jpg) !important;
 	}
 }

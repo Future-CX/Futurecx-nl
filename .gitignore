@@ -38,3 +38,24 @@ sftp-config.json
 #project specific
 capability-model-*.js
 *.docx
+*.drawio
+/audio
+/scss
+
+#img, except
+/img
+!*/img/404/*
+!*/img/blog/single/*
+!*/img/cover/*
+!*/img/profile/*
+
+
+
+#vendor, ignore everything except
+/vendor
+!*/vendor/bootstrap/dist/js/bootstrap.bundle.min.js
+!*/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js
+!*/vendor/jarallax/dist/jarallax.min.js
+!*/vendor/swiper/swiper-bundle.min.js
+!*/vendor/imagesloaded/imagesloaded.pkgd.min.js
+!*/vendor/swiper/swiper-bundle.min.js
