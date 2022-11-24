@@ -39,16 +39,7 @@ sftp-config.json
 capability-model-*.js
 *.docx
 *.drawio
-/audio
 /scss
-
-#img, except
-/img
-!*/img/404/*
-!*/img/blog/single/*
-!*/img/cover/*
-!*/img/profile/*
-
 
 
 #vendor, ignore everything except
