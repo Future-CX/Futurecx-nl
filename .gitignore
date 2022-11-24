@@ -35,18 +35,20 @@ Thumbs.db
 *.sublime-workspace
 sftp-config.json
 
+#vendor, ignore everything except
+/assets/vendor
+!*/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js
+!*/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js
+!*/assets/vendor/jarallax/dist/jarallax.min.js
+!*/assets/vendor/swiper/swiper-bundle.min.js
+!*/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js
+!*/assets/vendor/swiper/swiper-bundle.min.js
+
 #project specific
 capability-model-*.js
 *.docx
 *.drawio
 scss/
-
-
-#vendor, ignore everything except
-vendor/
-!*/vendor/bootstrap/dist/js/bootstrap.bundle.min.js
-!*/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js
-!*/vendor/jarallax/dist/jarallax.min.js
-!*/vendor/swiper/swiper-bundle.min.js
-!*/vendor/imagesloaded/imagesloaded.pkgd.min.js
-!*/vendor/swiper/swiper-bundle.min.js
+/content/blog-single.html
+/models/capabilities-*.json
+/models/capability-model-*.js
