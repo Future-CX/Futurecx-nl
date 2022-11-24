@@ -3,19 +3,26 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Future CX | Martijn van Deel</title>
-
-		<!-- SEO Meta Tags -->
-		<meta name="description" content="Future CX | Martijn van Deel" />
+		<meta property="og:title" content="Future CX | Martijn van Deel" />
+		<link rel="canonical" href="https://futurecx.nl" />
+		<meta property="og:url" content="https://futurecx.nl" />
+		<meta
+			name="description"
+			content="Customer Experience is at my heart, as it requires constant change and apapt new technology. I want to use my knowledge and experience to transform your organisation to Customer First."
+		/>
+		<meta
+			property="og:description"
+			content="Customer Experience is at my heart, as it requires constant change and apapt new technology. I want to use my knowledge and experience to transform your organisation to Customer First."
+		/>
 		<meta
 			name="keywords"
-			content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative"
+			content="customer experience, customer engagement, future, enterprise architecture, business capability modelling, IT strategy and roadmap, vendor selection, composable architecture, DevOps"
 		/>
 		<meta name="author" content="Martijn van Deel" />
-
-		<!-- Viewport -->
+		<meta property="og:type" content="website" />
+		<meta property="og:locale" content="en_GB" />
+		<meta property="og:image" content="https://www.futurecx.nl/assets/img/cover/cover-xxl.jpg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-		<!-- Favicon and Touch Icons -->
 		<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
@@ -26,14 +33,9 @@
 		<meta name="msapplication-TileColor" content="#080032" />
 		<meta name="msapplication-config" content="assets/favicon/browserconfig.xml" />
 		<meta name="theme-color" content="#ffffff" />
-
-		<!-- Vendor Styles -->
 		<link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-		<!-- Main Theme Styles + Bootstrap -->
 		<link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
-
-		<!-- Page loading styles -->
 		<style>
 			.page-loading {
 				position: fixed;
@@ -111,8 +113,6 @@
 				}
 			}
 		</style>
-
-		<!-- Theme mode -->
 		<script>
 			let mode = window.localStorage.getItem('mode'),
 				root = document.getElementsByTagName('html')[0];
@@ -132,8 +132,6 @@
 			gtag('js', new Date());
 			gtag('config', 'G-4R2D7JRCEJ');
 		</script>
-
-		<!-- Page loading scripts -->
 		<script>
 			(function () {
 				window.onload = function () {
@@ -146,24 +144,17 @@
 			})();
 		</script>
 	</head>
-
-	<!-- Body -->
 	<body>
-		<!-- Page loading spinner -->
 		<div class="page-loading active">
 			<div class="page-loading-inner">
 				<div class="page-spinner"></div>
 				<span>Loading...</span>
 			</div>
 		</div>
-
-		<!-- Page wrapper for sticky footer -->
-		<!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
 		<main class="page-wrapper">
-			<!-- Navbar -->
 			<header class="header navbar navbar-expand-lg navbar-light position-absolute navbar-sticky">
 				<div class="container px-3">
-					<a href="index.html" class="navbar-brand pe-3 text-primary"> Future CX </a>
+					<a href="/" class="navbar-brand pe-3 text-primary"> Future CX </a>
 					<div id="navbarNav" class="offcanvas offcanvas-end text-dark">
 						<div class="offcanvas-header border-bottom">
 							<h5 class="offcanvas-title">Menu</h5>
@@ -179,6 +170,9 @@
 								</li>
 								<li class="nav-item">
 									<a href="#services" data-scroll data-scroll-offset="50" class="nav-link">What I do</a>
+								</li>
+								<li class="nav-item">
+									<a href="/content.html" class="nav-link">Content</a>
 								</li>
 								<li class="nav-item">
 									<a href="#contact" data-scroll data-scroll-offset="100" class="nav-link">Contact</a>
@@ -204,7 +198,6 @@
 				</div>
 			</header>
 
-			<!-- Hero -->
 			<section
 				class="jarallax position-relative d-flex align-items-center min-vh-100 bg-light mb-5 py-lg-5 pt-5 hero"
 				data-img-position="0% 100%"
@@ -214,7 +207,6 @@
 					<div class="row justify-content-md-start justify-content-center">
 						<div class="col-md-6 col-sm-8 order-md-1 order-2 d-flex flex-column justify-content-between mt-4 pt-2 text-md-start text-center">
 							<div class="mb-md-5 pb-xl-5 mb-4">
-								<!-- Text -->
 								<h1 class="display-2 mb-md-5 mb-3 pb-3"><span class="text-primary">Transform</span> your Organisation to Customer First</h1>
 								<div class="d-flex flex-column flex-sm-row">
 									<a href="#about" data-scroll data-scroll-offset="0" class="btn btn-primary btn-lg mb-3 mb-sm-0 me-sm-4"> About me</a>
@@ -231,7 +223,6 @@
 
 					<div class="row justify-content-md-center justify-content-center">
 						<div class="col d-flex justify-content-center">
-							<!-- Scroll down btn -->
 							<div class="d-inline-flex align-items-center justify-content-center justify-content-md-center position-relative">
 								<a
 									href="#about"
@@ -247,10 +238,8 @@
 				</div>
 			</section>
 
-			<!-- About Me -->
 			<section id="about" class="mb-5 py-lg-5 pt-5">
 				<div class="position-relative overflow-hidden">
-					<!-- Image -->
 					<div class="container-fluid position-relative position-lg-absolute top-0 start-0 h-100">
 						<div class="row h-100 me-n4 me-n2">
 							<div class="col-lg-7 position-relative">
@@ -270,7 +259,6 @@
 					<div class="container position-relative zindex-5 pt-lg-5 px-0 px-lg-3">
 						<div class="row pt-lg-5 mx-n4 mx-lg-n3">
 							<div class="col-xl-6 col-lg-7 offset-lg-5 offset-xl-6 pb-5">
-								<!-- Card -->
 								<div class="card bg-dark border-light overflow-hidden py-4 px-2 p-sm-4">
 									<span class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255, 255, 255, 0.05)"></span>
 									<div class="card-body position-relative zindex-5">
@@ -302,7 +290,6 @@
 				</div>
 			</section>
 
-			<!-- Services -->
 			<section id="services" class="container mb-5 py-lg-5 pt-5">
 				<div class="row">
 					<div class="col-lg-5 text-start pb-3 pb-lg-0 mb-4 mb-lg-0">
@@ -415,12 +402,9 @@
 				</div>
 			</section>
 
-			<!-- Brands (Carousel) -->
 			<section id="contact" class="container pb-4 pb-lg-5 mb-3">
 				<div class="d-flex align-items-center justify-content-md-between justify-content-center mb-md-4 mb-3">
 					<h2 class="mb-0">Clients I worked with</h2>
-
-					<!-- Slider prev/next buttons + Quotation mark -->
 					<div class="d-md-flex d-none ms-4">
 						<button type="button" id="prev-brand" class="btn btn-prev btn-icon btn-sm me-2">
 							<i class="bx bx-chevron-left"></i>
@@ -1271,12 +1255,10 @@
 							</a>
 						</div>
 					</div>
-					<!-- Pagination (bullets) -->
 					<div class="swiper-pagination mt-4"></div>
 				</div>
 			</section>
 
-			<!-- Contact CTA -->
 			<section class="container contact-cta pt-3 pb-4 pb-md-5" style="margin-top: -156px; margin-bottom: 120px; transform: translateY(156px)">
 				<div class="card border-0 bg-primary bg-dark-secondary">
 					<div class="card-body p-md-5 p-4 bg-size-cover">
@@ -1289,7 +1271,6 @@
 			</section>
 		</main>
 
-		<!-- Footer -->
 		<footer class="footer pt-5 pb-4 pb-lg-5 mt-2 mt-md-0">
 			<div class="container pt-lg-4">
 				<div class="row pb-5">
@@ -1330,6 +1311,9 @@
 							<a href="/#services" data-scroll data-scroll-offset="50" class="nav-link d-inline-block px-2 pt-1 pb-2">What I do</a>
 						</li>
 						<li class="nav-item">
+							<a href="/content.html" class="nav-link d-inline-block px-2 pt-1 pb-2">Content</a>
+						</li>
+						<li class="nav-item">
 							<a href="/#contact" data-scroll data-scroll-offset="100" class="nav-link d-inline-block px-2 pt-1 pb-2">Contact</a>
 						</li>
 					</ul>
@@ -1353,22 +1337,17 @@
 			</div>
 		</footer>
 
-		<!-- Back to top button -->
 		<a href="#top" class="btn-scroll-top" data-scroll>
 			<span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
 			<i class="btn-scroll-top-icon bx bx-chevron-up"></i>
 		</a>
 
-		<!-- Vendor Scripts -->
 		<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 		<script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
 		<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 		<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-
-		<!-- Main Theme Script -->
 		<script src="assets/js/theme.min.js"></script>
-
 		<script>
 			var swiper = new Swiper('.mySwiper', {
 				slidesPerView: 2,
@@ -1405,7 +1384,6 @@
 				},
 			});
 		</script>
-
 		<script>
 			gtag('set', 'screen_resolution', '800x600');
 			gtag('set', 'language', 'en-us');
