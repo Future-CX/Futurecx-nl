@@ -45,12 +45,16 @@ function w3RemoveClass(element, name) {
 }
 
 // Add active class to the current control button (highlight it)
-var btnContainer = document.getElementById('filters');
-var btns = btnContainer.getElementsByClassName('badge');
-for (var i = 0; i < btns.length; i++) {
-	btns[i].addEventListener('click', function () {
-		var current = document.getElementsByClassName('selected');
-		current[0].className = current[0].className.replace(' selected', '');
-		this.className += ' selected';
-	});
+setActive();
+function setActive() {
+	var btnContainer = document.getElementById('filters');
+	if (!btnContainer) return;
+	var btns = btnContainer.getElementsByClassName('badge');
+	for (var i = 0; i < btns.length; i++) {
+		btns[i].addEventListener('click', function () {
+			var current = document.getElementsByClassName('selected');
+			current[0].className = current[0].className.replace(' selected', '');
+			this.className += ' selected';
+		});
+	}
 }
