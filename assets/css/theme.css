@@ -466,11 +466,6 @@ legend + * {
   padding: 0;
 }
 
-::-webkit-file-upload-button {
-  font: inherit;
-  -webkit-appearance: button;
-}
-
 ::file-selector-button {
   font: inherit;
   -webkit-appearance: button;
@@ -1965,22 +1960,6 @@ progress {
   background-color: #f3f6ff;
   opacity: 1;
 }
-.form-control::-webkit-file-upload-button {
-  padding: 0.625rem 1rem;
-  margin: -0.625rem -1rem;
-  -webkit-margin-end: 1rem;
-  margin-inline-end: 1rem;
-  color: #585c7b;
-  background-color: #fff;
-  pointer-events: none;
-  border-color: inherit;
-  border-style: solid;
-  border-width: 0;
-  border-inline-end-width: 1px;
-  border-radius: 0;
-  -webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-}
 .form-control::file-selector-button {
   padding: 0.625rem 1rem;
   margin: -0.625rem -1rem;
@@ -1997,16 +1976,9 @@ progress {
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
-  .form-control::-webkit-file-upload-button {
-    -webkit-transition: none;
-    transition: none;
-  }
   .form-control::file-selector-button {
     transition: none;
   }
-}
-.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
-  background-color: #f2f2f2;
 }
 .form-control:hover:not(:disabled):not([readonly])::file-selector-button {
   background-color: #f2f2f2;
@@ -2034,12 +2006,6 @@ progress {
   font-size: 0.75rem;
   border-radius: 0.25rem;
 }
-.form-control-sm::-webkit-file-upload-button {
-  padding: 0.475rem 0.875rem;
-  margin: -0.475rem -0.875rem;
-  -webkit-margin-end: 0.875rem;
-  margin-inline-end: 0.875rem;
-}
 .form-control-sm::file-selector-button {
   padding: 0.475rem 0.875rem;
   margin: -0.475rem -0.875rem;
@@ -2052,12 +2018,6 @@ progress {
   padding: 0.785rem 1.125rem;
   font-size: 1rem;
   border-radius: 0.5rem;
-}
-.form-control-lg::-webkit-file-upload-button {
-  padding: 0.785rem 1.125rem;
-  margin: -0.785rem -1.125rem;
-  -webkit-margin-end: 1.125rem;
-  margin-inline-end: 1.125rem;
 }
 .form-control-lg::file-selector-button {
   padding: 0.785rem 1.125rem;
@@ -15754,15 +15714,7 @@ img-comparison-slider:focus {
 .dark-mode .form-control::placeholder {
   color: rgba(255, 255, 255, 0.4);
 }
-.dark-mode .form-control::-webkit-file-upload-button {
-  background-color: rgba(255, 255, 255, 0.02);
-  color: rgba(255, 255, 255, 0.7);
-}
 .dark-mode .form-control::file-selector-button {
-  background-color: rgba(255, 255, 255, 0.02);
-  color: rgba(255, 255, 255, 0.7);
-}
-.dark-mode .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
   background-color: rgba(255, 255, 255, 0.02);
   color: rgba(255, 255, 255, 0.7);
 }
@@ -15777,10 +15729,6 @@ img-comparison-slider:focus {
 .dark-mode .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
   background-color: rgba(255, 255, 255, 0.02);
   color: rgba(255, 255, 255, 0.7);
-}
-.dark-mode .form-control:focus:not(:disabled):not([readonly])::-webkit-file-upload-button {
-  background-color: #f2f2f2;
-  color: #585c7b;
 }
 .dark-mode .form-control:focus:not(:disabled):not([readonly])::file-selector-button {
   background-color: #f2f2f2;
