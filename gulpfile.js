@@ -141,11 +141,11 @@ gulp.task('cssBundle', () => {
 gulp.task('jsBundle', () => {
 	return gulp
 		.src([
-			'assets/js/bootstrap.bundle.min.js',
-			'assets/js/smooth-scroll.polyfills.min.js',
-			'assets/js/jarallax.min.js',
-			'assets/js/swiper-bundle.min.js',
-			'assets/js/imagesloaded.pkgd.min.js',
+			'assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js',
+			'assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js',
+			'assets/vendor/jarallax/dist/jarallax.min.js',
+			'assets/vendor/swiper/swiper-bundle.min.js',
+			'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js',
 		])
 		.pipe(concat('vendors.js'))
 		.pipe(gulp.dest(path.js))
