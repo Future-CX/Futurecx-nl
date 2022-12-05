@@ -94,30 +94,41 @@ span.comingsoon {
 
 #domain-actors {
 	background-color: #ffa159;
+	padding-right: 30px;
 }
 #domain-channels {
 	background-color: #ff8426;
+	margin: 10px 0px 10px -20px;
+	padding-right: 30px;
 }
 #domain-products-services {
 	background-color: #ff760d;
+	margin: 20px 10px 20px -20px;
+	padding-right: 30px;
 }
 #domain-customer {
 	background-color: #38c172;
+	margin: 30px 3px;
 }
 #domain-marketing {
 	background-color: #4dc0b5;
+	margin: 30px 3px;
 }
 #domain-sales {
 	background-color: #3490dc;
+	margin: 30px 3px;
 }
 #domain-service {
 	background-color: #6574cd;
+	margin: 30px 3px;
 }
 #domain-loyalty {
 	background-color: #9561e2;
+	margin: 30px 3px;
 }
 #domain-content {
 	background-color: #f66d9b;
+	margin: 30px 3px;
 }
 
 /* Switch */

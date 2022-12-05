@@ -102,7 +102,7 @@
 			"containerid": "channels",
 			"parent": "null",
 			"level": "1",
-			"description": "Channels not owner by your organisation but used your customers and partners."
+			"description": "Channels not owner by your organization but used your customers and partners."
 		},
 		{
 			"id": "partners",
@@ -206,7 +206,7 @@
 			"containerid": "content",
 			"parent": "null",
 			"level": "1",
-			"description": "Content Management is collection, delivery, retrieval, governance and overall management of information in any format. Having a Content Management solution for your organisation allows you to have control of your content. It means having the ability to update, change or delete any images, text, video, or audio. Content Management includes text, rich media, graphics, photos, video and audio for any channel. To create a consistent message via all channels it is crucial to place Content Management from one single source to all channels, online and offline. The Content Management solution will deliver content to web, app, email marketing, social marketing, customer service agents, workforce, shops, field mechanics, etc. A Content Manager is a professional who has a unique role in developing the company's brand and establishing its online presence."
+			"description": "Content Management is collection, delivery, retrieval, governance and overall management of information in any format. Having a Content Management solution for your organization allows you to have control of your content. It means having the ability to update, change or delete any images, text, video, or audio. Content Management includes text, rich media, graphics, photos, video and audio for any channel. To create a consistent message via all channels it is crucial to place Content Management from one single source to all channels, online and offline. The Content Management solution will deliver content to web, app, email marketing, social marketing, customer service agents, workforce, shops, field mechanics, etc. A Content Manager is a professional who has a unique role in developing the company's brand and establishing its online presence."
 		},
 		{
 			"id": "content-search",
@@ -262,7 +262,7 @@
 			"containerid": "content",
 			"parent": "null",
 			"level": "1",
-			"description": "Search allows customers to better seek information on products and services the organisation offers and help customers make better decisions what product or service they need. An Enterprise Search is connected to many data sources, like Product Data, Content, Knowledge Articles, Digital Assets, etc. Search can be personalized using customer data, like interests, browsing behavior, previous bought products or services or profile data. A search query can be executed by inputting text in a search field or, when connected to a conversational platform, via chatbot or voicebot.A strong benefit of a good search is to avoid customers calling Customer Service Agents with their questions and enable more self-service for the customers."
+			"description": "Search allows customers to better seek information on products and services the organization offers and help customers make better decisions what product or service they need. An Enterprise Search is connected to many data sources, like Product Data, Content, Knowledge Articles, Digital Assets, etc. Search can be personalized using customer data, like interests, browsing behavior, previous bought products or services or profile data. A search query can be executed by inputting text in a search field or, when connected to a conversational platform, via chatbot or voicebot. A strong benefit of a good search is to avoid customers calling Customer Service Agents with their questions and enable more self-service for the customers."
 		},
 		{
 			"id": "audience-mgt",
@@ -270,7 +270,7 @@
 			"containerid": "customer",
 			"parent": "cxm",
 			"level": "2",
-			"description": "Audience Management is the process of sourcing, managing, analyzing, defining, and activating customer data for crosschannel campaigns. The objective is that the right message reaches the right audience at the right moment on the right channel, and therefor optimizing campaign's result."
+			"description": "Audience Management is the process of sourcing, managing, analyzing, defining, and activating customer data for cross channel campaigns. The objective is that the right message reaches the right audience at the right moment on the right channel, and therefor optimizing campaign's result."
 		},
 		{
 			"id": "brand-mgt",
@@ -278,7 +278,7 @@
 			"containerid": "customer",
 			"parent": "cxm",
 			"level": "2",
-			"description": "Brand Management includes analysis on how the brand is currently perceived by customers, a strategic plan how the brand should be perceived and ensuring that the brand is perceived as planned and secures its objectives. Developing a good relationship with customer is essential for Brand Management. With Brand management an organisation can centralize their brand management activities, content, and messaging. Like its mission statement, visual elements (“look & feel”, logo), tone of voice and “personality” and target audience."
+			"description": "Brand Management includes analysis on how the brand is currently perceived by customers, a strategic plan how the brand should be perceived and ensuring that the brand is perceived as planned and secures its objectives. Developing a good relationship with customer is essential for Brand Management. With Brand management an organization can centralize their brand management activities, content, and messaging. Like its mission statement, visual elements (“look & feel”, logo), tone of voice and “personality” and target audience."
 		},
 		{
 			"id": "channel-routing",
@@ -318,7 +318,7 @@
 			"containerid": "customer",
 			"parent": "customer-management",
 			"level": "2",
-			"description": "Consent management helps ensure compliance by informing customers about a company’s data collection and usage practices and honouring those choices. Consent and preference management can keep companies compliant with current and emerging data privacy regulations, reducing the chances of being fined. Companies that practice consent and preference management can create brand trust and credibility by letting their customers have a say in if, how, and when their personal data can be used. Companies can also improve their marketing efforts when customers request particular information about products and services."
+			"description": "Consent management helps ensure compliance by informing customers about a company’s data collection and usage practices and honoring those choices. Consent and preference management can keep companies compliant with current and emerging data privacy regulations, reducing the chances of being fined. Companies that practice consent and preference management can create brand trust and credibility by letting their customers have a say in if, how, and when their personal data can be used. Companies can also improve their marketing efforts when customers request particular information about products and services."
 		},
 		{
 			"id": "contact-management",
@@ -350,7 +350,7 @@
 			"containerid": "customer",
 			"parent": "null",
 			"level": "1",
-			"description": "Customer data management is the ways in which organisations keep track of their customer information and create a single source of truth across the organisation. It deliver all operational customer data to other systems in the organisation IT landscape."
+			"description": "Customer data management is the ways in which organizations keep track of their customer information and create a single source of truth across the organization. It deliver all operational customer data to other systems in the organization IT landscape."
 		},
 		{
 			"id": "customer-mdm",
@@ -366,7 +366,7 @@
 			"containerid": "customer",
 			"parent": "null",
 			"level": "1",
-			"description": "Customer Experience Management (CXM) is the discipline of understanding customers and deploying strategic plans that enable cross functional efforts and customercentric culture to improve satisfaction, loyalty and advocacy. The goal of customer experience management is to build customer loyalty and to reduce customer churn."
+			"description": "Customer Experience Management (CXM) is the discipline of understanding customers and deploying strategic plans that enable cross functional efforts and customer centric culture to improve satisfaction, loyalty and advocacy. The goal of customer experience management is to build customer loyalty and to reduce customer churn."
 		},
 		{
 			"id": "my-profile",
@@ -398,7 +398,7 @@
 			"containerid": "customer",
 			"parent": "cxm",
 			"level": "2",
-			"description": "Social media management is analysing social media audiences and developing a strategy that’s tailored to them, creating and distributing content for social media profiles, monitoring online conversations, collaborating with influencers, providing community service, and monitoring, measuring, and reporting on social media performance and ROI."
+			"description": "Social media management is analyzing social media audiences and developing a strategy that’s tailored to them, creating and distributing content for social media profiles, monitoring online conversations, collaborating with influencers, providing community service, and monitoring, measuring, and reporting on social media performance and ROI."
 		},
 		{
 			"id": "forum",
@@ -406,7 +406,7 @@
 			"containerid": "customer-management",
 			"parent": "community-mgt",
 			"level": "2",
-			"description": "An (Internet) Forum, or message board, is an online discussion site where people can hold conversations in the form of posted messages. It provides an online exchange of information, ask questions, between people about a particular topic. The forum is monitored by the organisation to keep the content appropriate."
+			"description": "An (Internet) Forum, or message board, is an online discussion site where people can hold conversations in the form of posted messages. It provides an online exchange of information, ask questions, between people about a particular topic. The forum is monitored by the organization to keep the content appropriate."
 		},
 		{
 			"id": "consumers",
@@ -450,7 +450,7 @@
 			"containerid": "engagement",
 			"parent": "conversational",
 			"level": "2",
-			"description": "Conversational AI enables customers to interact with IT applications the way they would with other humans. Conversational AI has primarily taken the form of advanced chatbots via both speech and text. It includes managing the output of the dialogue (content, tone-of-voice, ..), but also natural language processing (NLP) and intent and sentiment recognition. With Conversational AI a lot of customer data is gathered and analysed by listening to the customer and from their perspective. Other then just the factual complaint itself, also the emotions and reasoning is captured."
+			"description": "Conversational AI enables customers to interact with IT applications the way they would with other humans. Conversational AI has primarily taken the form of advanced chatbots via both speech and text. It includes managing the output of the dialogue (content, tone-of-voice, ..), but also natural language processing (NLP) and intent and sentiment recognition. With Conversational AI a lot of customer data is gathered and analyzed by listening to the customer and from their perspective. Other then just the factual complaint itself, also the emotions and reasoning is captured."
 		},
 		{
 			"id": "customer-journey-design",
@@ -554,19 +554,19 @@
 			"containerid": "loyalty",
 			"parent": "null",
 			"level": "1",
-			"description": "Providing a loyalty program to strengthen the relation with customer, retain customers and encourage customers to continue buying products and services of your organisation, rather than competitors. It helps your brand target the right audience and then provides benefits, experiences, and rewards that drive long-term engagement."
+			"description": "Providing a loyalty program to strengthen the relation with customer, retain customers and encourage customers to continue buying products and services of your organization, rather than competitors. It helps your brand target the right audience and then provides benefits, experiences, and rewards that drive long-term engagement."
 		},
 		{
 			"id": "nba",
 			"name": "Next Best Action",
 			"containerid": "loyalty",
-			"parent": "personalisation",
+			"parent": "personalization",
 			"level": "2",
 			"description": "Description to come soon!"
 		},
 		{
-			"id": "personalisation",
-			"name": "Personalisation",
+			"id": "personalization",
+			"name": "Personalization",
 			"containerid": "loyalty",
 			"parent": "null",
 			"level": "1",
@@ -586,7 +586,7 @@
 			"containerid": "loyalty",
 			"parent": "null",
 			"level": "1",
-			"description": "Recommendations of content, products or services based on behaviour data. When a customer requested content or bought a product, or added to the shopping cart, that data can be used to recommend other content or products that might be relevant and interesting."
+			"description": "Recommendations of content, products or services based on behavior data. When a customer requested content or bought a product, or added to the shopping cart, that data can be used to recommend other content or products that might be relevant and interesting."
 		},
 		{
 			"id": "campaign-management",
@@ -652,7 +652,7 @@
 			"containerid": "platform-services",
 			"parent": "null",
 			"level": "1",
-			"description": "Your organisation and it channels can be used as a platform to partners and suppliers to promote their products and services. These promotions can be jointly offering a proposition for example combining a product from a partner together with a services from your organisation."
+			"description": "Your organization and it channels can be used as a platform to partners and suppliers to promote their products and services. These promotions can be jointly offering a proposition for example combining a product from a partner together with a services from your organization."
 		},
 		{
 			"id": "private-label-product",
@@ -660,7 +660,7 @@
 			"containerid": "products",
 			"parent": "null",
 			"level": "1",
-			"description": "A private label product is one that your organisations gets produced by a third-party but sells under your own brand name."
+			"description": "A private label product is one that your organizations gets produced by a third-party but sells under your own brand name."
 		},
 		{
 			"id": "third-party-products",
@@ -668,7 +668,7 @@
 			"containerid": "products",
 			"parent": "null",
 			"level": "1",
-			"description": "A third party product is one that your organisation buys from a partner and resells using your channels. In this case you are the reseller."
+			"description": "A third party product is one that your organization buys from a partner and resells using your channels. In this case you are the reseller."
 		},
 		{
 			"id": "cart",
@@ -700,7 +700,7 @@
 			"containerid": "sales",
 			"parent": "null",
 			"level": "1",
-			"description": "Description to come soon!"
+			"description": "(Sales) Funnel Management is organizing, tracking, and prioritizing potential customer interactions to understand the winning change of sales. It helps ensure efficient use of time and sales resources."
 		},
 		{
 			"id": "km",
@@ -716,7 +716,7 @@
 			"containerid": "sales",
 			"parent": "null",
 			"level": "1",
-			"description": "Description to come soon!"
+			"description": "A marketplace is a platform where your partners can sell their products and services under your brand or label. The role of a marketplace owner is to bring together the right vendors and the right customers to drive sales through an exceptional multi-vendor platform - sellers have a place to gain visibility and sell their products, and the marketplace owner earns a commission from each sale."
 		},
 		{
 			"id": "quote-management",
@@ -724,7 +724,7 @@
 			"containerid": "sales",
 			"parent": "null",
 			"level": "1",
-			"description": "Description to come soon!"
+			"description": "A quote management solution or configure price quote (CPQ) solution is designed to automate quotations and improve sales efficiency. It helps sales teams effortlessly generate and send quotations, maintain and track shipping information, manage billing, reporting and more."
 		},
 		{
 			"id": "up-cross-sell",
@@ -732,7 +732,7 @@
 			"containerid": "sales",
 			"parent": "null",
 			"level": "1",
-			"description": "Description to come soon!"
+			"description": "Upselling is encouraging customers to purchase a comparable higher-end product than the one in question, while cross-selling invites customers to buy related or complementary items."
 		},
 		{
 			"id": "case-mgt",
@@ -740,7 +740,7 @@
 			"containerid": "service",
 			"parent": "null",
 			"level": "1",
-			"description": "Description to come soon!"
+			"description": "or Ticket Management. Case Management tracks, manage and respond to customer requests or complaints. For each request or complaint a case or ticket is created and tracked against agreed service levels to ensure adequate response. A case or ticket can be create from a call or email to customer service, a contact form on the website, a chat function from a digital platform or a direct message on a social channel."
 		},
 		{
 			"id": "feedback",
@@ -748,15 +748,15 @@
 			"containerid": "service",
 			"parent": "null",
 			"level": "1",
-			"description": "Customer feedback is information provided by customers about their experience with a product or service. Its purpose is to reveal their level of satisfaction and help product, customer success, and marketing teams understand where there is room for improvement. Customer Feedback Management (CFM) is the process of gathering, analysing and taking action on customer feedback with the goal of optimising the online customer experience."
+			"description": "Customer feedback is information provided by customers about their experience with a product or service. Its purpose is to reveal their level of satisfaction and help product, customer success, and marketing teams understand where there is room for improvement. Customer Feedback Management (CFM) is the process of gathering, analyzing and taking action on customer feedback with the goal of optimizing the online customer experience."
 		},
 		{
-			"id": "livechat",
+			"id": "live-chat",
 			"name": "Live chat",
 			"containerid": "service",
 			"parent": "null",
 			"level": "1",
-			"description": "Description to come soon!"
+			"description": "Live chat is a form of customer contact that allows customers to speak directly with a company’s representatives — usually those in customer service and technical support and other roles. Live chat can be integrated to a website or mobile app or connected to a chatbot to takeover an AI conversation."
 		},
 		{
 			"id": "surveys",
@@ -764,7 +764,7 @@
 			"containerid": "service",
 			"parent": "null",
 			"level": "1",
-			"description": "A survey is a method of gathering customer feedback using relevant questions from a (selected) group of customer to understand how they perceive a product or service from the company. Surveys consist of pre-defined questions by the company to measure a specific goal or validate a specific objective. Survey can be face-toface, via telephone conversation or online. Customers are likely to respond faster to your online survey because they can be completed with a few clicks. It’s often necessary to code and adjust the data before analysing, particularly if openended questions were asked. Customers want to give their opinions, not personal details. If you already have a customer's information, don’t ask for it again. If you’re collecting sensitive data, make sure you’ re complying with internal policies, local laws, and GDPR."
+			"description": "A survey is a method of gathering customer feedback using relevant questions from a (selected) group of customer to understand how they perceive a product or service from the company. Surveys consist of pre-defined questions by the company to measure a specific goal or validate a specific objective. Survey can be face-to face, via telephone conversation or online. Customers are likely to respond faster to your online survey because they can be completed with a few clicks. It’s often necessary to code and adjust the data before analyzing, particularly if open-ended questions were asked. Customers want to give their opinions, not personal details. If you already have a customer's information, don’t ask for it again. If you’re collecting sensitive data, make sure you’ re complying with internal policies, local laws, and GDPR."
 		},
 		{
 			"id": "gift-card",
@@ -772,7 +772,7 @@
 			"containerid": "services",
 			"parent": "null",
 			"level": "1",
-			"description": "Description to come soon!"
+			"description": "A gift card is a prepaid debit card that is loaded with a specific amount, which can then be used to make purchases and other financial transactions."
 		},
 		{
 			"id": "home-delivery",
@@ -780,7 +780,7 @@
 			"containerid": "services",
 			"parent": "null",
 			"level": "1",
-			"description": "Description to come soon!"
+			"description": "Home delivery is the bringing of items to the customer's home rather than the customer taking or collecting them from the store."
 		},
 		{
 			"id": "loyalty-services",
@@ -788,7 +788,7 @@
 			"containerid": "services",
 			"parent": "null",
 			"level": "1",
-			"description": "Description to come soon!"
+			"description": "With a loyalty program, companies can offer points or benefits to customers. And in return, they redeem points for discounts, free products, rewards, or insider perks."
 		},
 		{
 			"id": "pick-up-in-store",
@@ -796,7 +796,7 @@
 			"containerid": "services",
 			"parent": "null",
 			"level": "1",
-			"description": "Description to come soon!"
+			"description": "or Click & Collect. Buy online, pick up in store ensures that shoppers come into your store, where they may be tempted to buy more. And customers don’t have to deal with shipping costs, long delivery timelines, and shipping back items that don’t fit or meet their expectations."
 		},
 		{
 			"id": "interest-groups",
@@ -804,8 +804,8 @@
 			"containerid": "stakeholders",
 			"parent": "null",
 			"level": "1",
-			"short_description": "A group of individuals or organisations in close relation to your products or services that attempts to influence public policy in its favour.",
-			"description": "A group of individuals or organisations in close relation to your products or services that attempts to influence public policy in its favour."
+			"short_description": "A group of individuals or organizations in close relation to your products or services that attempts to influence public policy in its favor.",
+			"description": "A group of individuals or organizations in close relation to your products or services that attempts to influence public policy in its favor."
 		},
 		{
 			"id": "labour-unions",
@@ -813,8 +813,8 @@
 			"containerid": "stakeholders",
 			"parent": "null",
 			"level": "1",
-			"short_description": "A labor union is an organization formed by workers in your organisation or market sector for the purpose of improving pay, benefits, and working conditions.",
-			"description": "A labor union is an organization formed by workers in your organisation or market sector for the purpose of improving pay, benefits, and working conditions."
+			"short_description": "A labor union is an organization formed by workers in your organization or market sector for the purpose of improving pay, benefits, and working conditions.",
+			"description": "A labor union is an organization formed by workers in your organization or market sector for the purpose of improving pay, benefits, and working conditions."
 		},
 		{
 			"id": "shareholders",
@@ -822,8 +822,8 @@
 			"containerid": "stakeholders",
 			"parent": "null",
 			"level": "1",
-			"short_description": "A shareholder is a person or institution that has invested money in your organisation in exchange for a “share” of the ownership. That ownership is represented by shares issued by the company and held by the shareholder.",
-			"description": "A shareholder is a person or institution that has invested money in your organisation in exchange for a “share” of the ownership. That ownership is represented by shares issued by the company and held by the shareholder."
+			"short_description": "A shareholder is a person or institution that has invested money in your organization in exchange for a “share” of the ownership. That ownership is represented by shares issued by the company and held by the shareholder.",
+			"description": "A shareholder is a person or institution that has invested money in your organization in exchange for a “share” of the ownership. That ownership is represented by shares issued by the company and held by the shareholder."
 		}
 	],
 	"domains": [
@@ -908,8 +908,8 @@
 			"id": "sales",
 			"name": "Sales",
 			"parent": "null",
-			"short_description": "Sell your products and services to customers and partners.",
-			"description": "Sell your products and services to customers and partners."
+			"short_description": "or Commerce. Sell your products and services to customers and partners.",
+			"description": "or Commerce. Sell your products and services to customers and partners."
 		},
 		{
 			"id": "service",
