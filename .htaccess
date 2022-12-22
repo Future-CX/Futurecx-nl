@@ -4,6 +4,12 @@ RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301]
 RewriteRule ^index.html$ https://www.futurecx.nl [R=301,L]
 
 
+# Page redirects
+
+RedirectMatch 301 /capability-model-cx/capability-model-cx.html /models/capability-model-cx.html
+
+# Error Pages
+
 ErrorDocument 404 /404.html
 
 # all to lowercase
