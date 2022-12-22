@@ -44,3 +44,4 @@ vendor/
 /content/blog-single.html
 /models/capabilities-*.json
 /models/capability-model-*.js
+/.prettierignore
