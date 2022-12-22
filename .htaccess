@@ -1,13 +1,16 @@
 RewriteEngine On
-RewriteRule ^index.html$ https://%{HTTP_HOST}/ [R=301]
+RewriteRule ^index.html$ https://www.futurecx.nl [R=301,L]
+RewriteRule ^(.*)/index.html$ /$1/ [R=301,L]
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+
 ErrorDocument 404 /404.html
 
-# All lowercase
+# All to lowercase
 <IfModule mod_speling.c>
-CheckSpelling on
+    CheckCaseOnly on
+    CheckSpelling on
 </IfModule>
 
 ## EXPIRES CACHING
