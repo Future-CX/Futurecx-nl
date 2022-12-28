@@ -3,8 +3,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
   	$date = date('m/d/Y h:i:s a', time());
 	
-	$headers = 'From: webmaster@example.com'       . "\r\n" .
-                 'Reply-To: webmaster@example.com' . "\r\n" .
+	$headers = 'From: webmaster@futurecx.nl'       . "\r\n" .
+                 'Reply-To: webmaster@futurecx.nl' . "\r\n" .
 					 'X-Mailer: PHP/' . phpversion();
 	$to      = 'm.van.deel@futurecx.nl';
     $subject = 'PostTest at ' + $date;
