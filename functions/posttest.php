@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                  'Reply-To: webmaster@futurecx.nl' . "\r\n" .
 					 'X-Mailer: PHP/' . phpversion();
 	$to      = 'm.van.deel@futurecx.nl';
-    $subject = 'PostTest at ' + $date;
+    $subject = 'PostTest at ' . $date;
     $message = '';
 	
 	foreach ($_POST as $key => $value) {
