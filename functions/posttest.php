@@ -11,14 +11,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = '';
 	
 	foreach ($_POST as $key => $value) {
-        $message += "<tr>";
-        $message += "<td>";
-        $message += $key;
-        $message += "</td>";
-        $message += "<td>";
-        $message += $value;
-        $message += "</td>";
-        $message += "</tr>";
+        $message .= "<tr>";
+        $message .= "<td>";
+        $message .= $key;
+        $message .= "</td>";
+        $message .= "<td>";
+        $message .= $value;
+        $message .= "</td>";
+        $message .= "</tr>";
     }
     
 
