@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					 'X-Mailer: PHP/' . phpversion();
 	$to      = 'm.van.deel@futurecx.nl';
     $subject = 'PostTest at ' . $date;
-    $message = '';
+    $message = 'POST PARAMETERS';
 	
 	foreach ($_POST as $key => $value) {
         $message .= "<tr>";
@@ -20,6 +20,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $message .= "</td>";
         $message .= "</tr>";
     }
+	
+	$message .= 'JSON BODY';
+	
+	$data = json_decode(file_get_contents('php://input'), true);
+	
+	$message .= print_r($data);
     
 
     mail($to, $subject, $message, $headers);
