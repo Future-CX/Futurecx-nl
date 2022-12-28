@@ -1,3 +1,4 @@
+<?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
   foreach ($_POST as $key => $value) {
@@ -12,3 +13,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   
 }
+?>
