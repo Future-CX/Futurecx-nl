@@ -22,10 +22,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 	
 	$message .= 'JSON BODY';
+	$message .= "<pre>";
 	
 	$data = json_decode(file_get_contents('php://input'), true);
 	
-	$message .= print_r($data);
+	$message .= json_encode($data, JSON_PRETTY_PRINT);
+	
+	$message .= "</pre>";
     
 
     mail($to, $subject, $message, $headers);
