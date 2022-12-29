@@ -1,0 +1,33 @@
+{
+	"items": {
+		"items": {
+			"0": {
+				"title": "Going from Architect to Architecting: the Evolution of a Key Role",
+				"link": "https://www.infoq.com/articles/architecture-architecting-role/",
+				"category": "Enterprise Architecture",
+				"contenttype": "article",
+				"description": "This article explores the cultural change of moving towards shared architecture, and the role that the architect has evolved into. Teams might be struggling with the paradigm shift of ownership.",
+				"author": "InfoQ",
+				"date": "Dec 12, 2022"
+			},
+			"1": {
+				"title": "Scaling the Practice of Architecture, Conversationally",
+				"link": "https://martinfowler.com/articles/scaling-architecture-conversationally.html",
+				"category": "Enterprise Architecture",
+				"contenttype": "article",
+				"description": "Scaling architecture through a structured series of conversations",
+				"author": "Martin Fowler",
+				"date": "Dec 12, 2022"
+			},
+			"2": {
+				"title": "Event Driven Architecture - The Complete Guide",
+				"link": "https://www.udemy.com/course/event-driven-architecture-the-complete-guide/",
+				"category": "Event Driven Architecture",
+				"contenttype": "article",
+				"description": "Become an expert in one of the most popular Software Architecture styles in the world!",
+				"author": "Udemy",
+				"date": "Dec 12, 2022"
+			}
+		}
+	}
+}
