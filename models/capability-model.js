@@ -12,7 +12,7 @@ let enableClick = true;
 let showLevel2 = true;
 
 {
-	$.getJSON('capabilities.json')
+	$.getJSON('../data/capabilities.json')
 		.done((data) => {
 			allData = data;
 			//console.log( "Request Done." );

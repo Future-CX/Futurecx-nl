@@ -61,23 +61,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
     // Get the contents of the JSON file 
-    $existingReadinglist = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/models/readinglist.json');
+    $existingReadinglist = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/data/readinglist.json');
     
     
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // STEP 3: Test if url not exist already
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
-    
+    // UPDATE or ADD
 
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // STEP 4: Create updated list
+    // STEP 4a: Create updated list
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
     // Create a backup
     $date = date('Y-m-d', time());
-    copy($_SERVER['DOCUMENT_ROOT'] . '/models/readinglist.json', $_SERVER['DOCUMENT_ROOT'] . '/models/archive/readinglist-'.$date.'.json');
+    copy($_SERVER['DOCUMENT_ROOT'] . '/data/readinglist.json', $_SERVER['DOCUMENT_ROOT'] . '/data/archive/readinglist-'.$date.'.json');
     
     // Convert to array 
     $existingJSON = json_decode($existingReadinglist, true);
@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $newJSON = array("items" => $newJSON);
 
     // Store updated list to server
-    file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/models/readinglist.json', json_encode($newJSON));
+    //file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/data/readinglist.json', json_encode($newJSON));
     
     // return the update list as json
     echo json_encode($newJSON);

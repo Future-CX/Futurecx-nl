@@ -1,20 +1,22 @@
 let html = '';
 let allData = [];
+const items = [];
 const categories = [];
 const reads = [];
 const learnings = [];
 const readsandlearnings = [];
 
 {
-	$.getJSON('/models/readinglist.json')
+	$.getJSON('/data/readinglist.json')
 		.done((data) => {
 			allData = data;
 			//console.log('Request Done.');
 			//console.log(allData);
 			//JSON.parse(allData);
-			readAllCategories();
-			readAllReads();
-			readAllLearnings();
+			readAllItems();
+			// readAllCategories();
+			// readAllReads();
+			// readAllLearnings();
 			buildReadingList();
 		})
 		.fail((jqxhr, textStatus, error) => {
@@ -34,43 +36,57 @@ function buildReadingList(method) {
 	const htmlCategoryReadsAndLearnings =
 		'<div class="col-md-7 offset-xl-1"><div class="accordion" id="faq%id%"><div class="accordion-item border-0 rounded-3 shadow-sm mb-3"><h3 class="accordion-header" id="q1-heading"><button class="accordion-button shadow-none rounded-3"type="button"data-bs-toggle="collapse"data-bs-target="#q%id%1"aria-expanded="true"aria-controls="q%id%1">Interesting reads</button></h3><div id="q%id%1" class="accordion-collapse collapse show" aria-labelledby="q1-heading" data-bs-parent="#faq%id%"><div class="accordion-body fs-sm pt-0">%reads%</div></div></div><div class="accordion-item border-0 rounded-3 shadow-sm mb-3"><h3 class="accordion-header" id="q2-heading"><button class="accordion-button shadow-none rounded-3 collapsed"type="button"data-bs-toggle="collapse"data-bs-target="#q%id%2"aria-expanded="false"aria-controls="q%id%2">Courses</button></h3><div id="q%id%2" class="accordion-collapse collapse" aria-labelledby="q2-heading" data-bs-parent="#faq%id%"><div class="accordion-body fs-sm pt-0">%learnings%</div></div></div></div></div></div></div></section>';
 
-	jQuery.each(categories, (i, category) => {
-		html += htmlCategoryOpener;
-		html += htmlCategoryTitle.replaceAll('%title%', category.title);
-		html += htmlCategoryDescription.replaceAll('%description%', category.description);
-
-		listofreads = '';
-		jQuery.each(reads, (i, read) => {
-			readhtml =
-				'<p><a href="%link%" target="_blank" title="%description%">%title%</a><br/><i>by <strong>%author%</strong>, published on %date%</i></p>';
-			if (read.category == category.title) {
-				listofreads += readhtml
-					.replaceAll('%title%', read.title)
-					.replaceAll('%description%', read.description)
-					.replaceAll('%link%', read.link)
-					.replaceAll('%author%', read.author)
-					.replaceAll('%date%', read.date);
-			}
-		});
-
-		listoflearnings = '';
-		jQuery.each(learnings, (i, learning) => {
-			learninghtml =
-				'<p><a href="%link%" target="_blank" title="%description%">%title%</a><br/><i>by <strong>%author%</strong>, published on %date%</i></p>';
-			if (learning.category == category.title) {
-				listoflearnings += learninghtml
-					.replaceAll('%title%', learning.title)
-					.replaceAll('%description%', learning.description)
-					.replaceAll('%link%', learning.link)
-					.replaceAll('%author%', learning.author)
-					.replaceAll('%date%', learning.date);
-			}
-		});
-
-		html += htmlCategoryReadsAndLearnings.replaceAll('%id%', i).replace('%reads%', listofreads).replace('%learnings%', listoflearnings);
+	jQuery.each(items, (i, item) => {
+		html += '<pre>';
+		html += JSON.stringify(item);
+		html += '</pre>';
 	});
 
-	//document.getElementById('readinglist').innerHTML = html;
+	// jQuery.each(categories, (i, category) => {
+	// 	html += htmlCategoryOpener;
+	// 	html += htmlCategoryTitle.replaceAll('%title%', category.title);
+	// 	html += htmlCategoryDescription.replaceAll('%description%', category.description);
+
+	// 	listofreads = '';
+	// 	jQuery.each(reads, (i, read) => {
+	// 		readhtml =
+	// 			'<p><a href="%link%" target="_blank" title="%description%">%title%</a><br/><i>by <strong>%author%</strong>, published on %date%</i></p>';
+	// 		if (read.category == category.title) {
+	// 			listofreads += readhtml
+	// 				.replaceAll('%title%', read.title)
+	// 				.replaceAll('%description%', read.description)
+	// 				.replaceAll('%link%', read.link)
+	// 				.replaceAll('%author%', read.author)
+	// 				.replaceAll('%date%', read.date);
+	// 		}
+	// 	});
+
+	// 	listoflearnings = '';
+	// 	jQuery.each(learnings, (i, learning) => {
+	// 		learninghtml =
+	// 			'<p><a href="%link%" target="_blank" title="%description%">%title%</a><br/><i>by <strong>%author%</strong>, published on %date%</i></p>';
+	// 		if (learning.category == category.title) {
+	// 			listoflearnings += learninghtml
+	// 				.replaceAll('%title%', learning.title)
+	// 				.replaceAll('%description%', learning.description)
+	// 				.replaceAll('%link%', learning.link)
+	// 				.replaceAll('%author%', learning.author)
+	// 				.replaceAll('%date%', learning.date);
+	// 		}
+	// 	});
+
+	// 	html += htmlCategoryReadsAndLearnings.replaceAll('%id%', i).replace('%reads%', listofreads).replace('%learnings%', listoflearnings);
+	// });
+
+	document.getElementById('readinglist').innerHTML = html;
+}
+
+function readAllItems() {
+	jQuery.each(allData.items, (i, item) => {
+		items.push(item);
+	});
+	//console.log('items');
+	//console.log(items);
 }
 
 function readAllCategories() {
