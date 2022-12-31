@@ -6,8 +6,10 @@
 			"category": "Enterprise Architecture",
 			"contenttype": "article",
 			"description": "This article explores the cultural change of moving towards shared architecture, and the role that the architect has evolved into. Teams might be struggling with the paradigm shift of ownership.",
+			"review": "",
 			"author": "InfoQ",
-			"date": "Dec 12, 2022"
+			"postdate": "Dec 12, 2022",
+			"savedate": "Dec 12, 2022"
 		},
 		{
 			"title": "Scaling the Practice of Architecture, Conversationally",
@@ -15,8 +17,10 @@
 			"category": "Enterprise Architecture",
 			"contenttype": "article",
 			"description": "Scaling architecture through a structured series of conversations",
+			"review": "",
 			"author": "Martin Fowler",
-			"date": "Dec 12, 2022"
+			"postdate": "Dec 12, 2022",
+			"savedate": "Dec 12, 2022"
 		},
 		{
 			"title": "Event Driven Architecture - The Complete Guide",
@@ -24,8 +28,10 @@
 			"category": "Event Driven Architecture",
 			"contenttype": "article",
 			"description": "Become an expert in one of the most popular Software Architecture styles in the world!",
+			"review": "",
 			"author": "Udemy",
-			"date": "Dec 12, 2022"
+			"postdate": "Dec 12, 2022",
+			"savedate": "Dec 12, 2022"
 		}
 	]
 }
