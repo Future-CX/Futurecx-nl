@@ -45,3 +45,4 @@ vendor/
 /models/capabilities-*.json
 /models/capability-model-*.js
 /.prettierignore
+/Silicon

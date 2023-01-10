@@ -16194,6 +16194,21 @@ span.wip {
   border-bottom-left-radius: 10px;
 }
 
+.rotate {
+  transform: rotate(-90deg);
+  /* Legacy vendor prefixes that you probably don't need... */
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+  /* IE */
+  -ms-transform: rotate(-90deg);
+  /* Opera */
+  -o-transform: rotate(-90deg);
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
 @media (max-width: 767.98px) {
   /* X-Small devices (portrait phones, less than 576px) */
   html section.hero,

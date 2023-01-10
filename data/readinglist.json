@@ -1,7 +1,7 @@
 {
 	"items": [
 		{
-			"title": "Going from Architect to Architecting: the Evolution of a Key Role",
+			"title": "Going from Architect to Architecting: <br/>the Evolution of a Key Role",
 			"link": "https://www.infoq.com/articles/architecture-architecting-role/",
 			"category": "Enterprise Architecture",
 			"contenttype": "article",
@@ -14,19 +14,19 @@
 		{
 			"title": "Scaling the Practice of Architecture, Conversationally",
 			"link": "https://martinfowler.com/articles/scaling-architecture-conversationally.html",
-			"category": "Enterprise Architecture",
+			"category": "Capability Modelling",
 			"contenttype": "article",
 			"description": "Scaling architecture through a structured series of conversations",
 			"review": "",
 			"author": "Martin Fowler",
 			"postdate": "Dec 12, 2022",
-			"savedate": "Dec 12, 2022"
+			"savedate": "01 13, 2023"
 		},
 		{
 			"title": "Event Driven Architecture - The Complete Guide",
 			"link": "https://www.udemy.com/course/event-driven-architecture-the-complete-guide/",
 			"category": "Event Driven Architecture",
-			"contenttype": "article",
+			"contenttype": "course",
 			"description": "Become an expert in one of the most popular Software Architecture styles in the world!",
 			"review": "",
 			"author": "Udemy",

@@ -220,7 +220,9 @@
 							<span class="badge bg-faded-primary text-primary fs-base">Enterprise Architecture</span>
 						</div>
 						<div class="fs-sm border-end pe-3 me-3 mb-2" itemprop="datePublished" content="2022-10-25T08:00:00+01:00">October 25, 2022</div>
-						<div class="fs-sm pe-3 me-3 mb-2" itemprop="dateModified" content="2022-12-08T08:00:00+01:00">Updated: Dec 08, 2022</div>
+						<div id="dateModified" class="fs-sm pe-3 me-3 mb-2" itemprop="dateModified" content="2022-12-08T08:00:00+01:00">
+							Updated: Dec 08, 2022
+						</div>
 					</div>
 					<div
 						class="d-none d-sm-block d-flex align-items-center position-relative ps-md-3 pe-lg-5 mb-2"
@@ -239,21 +241,6 @@
 				</div>
 			</section>
 
-			<div class="d-sm-none m-2">
-				<span class="d-block mb-3"
-					><small
-						>7:46 minute read based on
-						<a
-							href="https://www.sciencedirect.com/science/article/abs/pii/S0749596X19300786"
-							target="_blank"
-							title="ScienceDirect: How many words do we read per minute? A review and meta-analysis of reading rate"
-							class="text-reset"
-							>183 words per minute</a
-						></small
-					></span
-				>
-			</div>
-
 			<!-- Post content + Sharing -->
 			<section class="container mb-5 pt-4 pb-2 py-mg-4">
 				<div class="row gy-4">
@@ -266,7 +253,8 @@
 
 						<!-- READINGLIST -->
 						<div id="readinglist">
-							<article class="card shadow-sm overflow-hidden mb-2 filter read ea">
+							<article class="card shadow-sm overflow-hidden mb-2 filter article ea">
+								<time datetime="%savedate%" pubdate="pubdate"></time>
 								<div class="row g-0">
 									<div class="col-sm-8">
 										<div class="card-body">
@@ -281,12 +269,16 @@
 									</div>
 									<div class="col-sm-4">
 										<div class="card-body">
+											<a
+												href="#"
+												class="btn btn-icon btn-light border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
+												onclick="filterSelection('article')"
+											>
+												<i class="bx bx-book"></i>
+											</a>
 											<p class="mb-1">
 												<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection('ea')"
 													>Enterprise Architecture</a
-												>
-												<a href="#" class="badge fs-sm text-light text-nav bg-secondary text-decoration-none" onclick="filterSelection('read')"
-													>Read</a
 												>
 											</p>
 											<p class="fs-sm mb-0">Nov 23, 2022 By <strong>InfoQ</strong></p>
@@ -295,30 +287,30 @@
 								</div>
 							</article>
 
-							<article class="card shadow-sm overflow-hidden mb-2 filter read ea">
+							<article class="card shadow-sm overflow-hidden mb-2 filter %type% %cat%">
+								<time datetime="%savedate%" pubdate="pubdate"></time>
 								<div class="row g-0">
 									<div class="col-sm-8">
 										<div class="card-body">
 											<h2 class="h4 mb-1">
-												<a href="/content/what-you-need-to-know-as-enterprise-architect.html">What you need to know as Enterprise Architect</a>
+												<a href="%link%" target="_blank">%title%</a>
 											</h2>
-											<p class="fs-sm mb-0">
-												As an Enterprise Architect you need to stay ahead on new technology trends. I use this page as a personal reading and learning
-												list. Feel free to read and learn with me.
-											</p>
+											<p class="fs-sm mb-0">%text%</p>
 										</div>
 									</div>
 									<div class="col-sm-4">
 										<div class="card-body">
+											<a
+												href="#"
+												class="btn btn-icon btn-light border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
+												onclick="filterSelection('%type%')"
+											>
+												<i class="bx %typeicon%"></i>
+											</a>
 											<p class="mb-1">
-												<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection('ea')"
-													>Enterprise Architecture</a
-												>
-												<a href="#" class="badge fs-sm text-light text-nav bg-secondary text-decoration-none" onclick="filterSelection('read')"
-													>Read</a
-												>
+												<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection('%cat%')">%category%</a>
 											</p>
-											<p class="fs-sm mb-0">Nov 23, 2022 By <strong>InfoQ</strong></p>
+											<p class="fs-sm mb-0">%date% By <strong>%author%</strong></p>
 										</div>
 									</div>
 								</div>
@@ -433,8 +425,6 @@
 								</div>
 							</section>
 						</div>
-
-						<hr class="mb-4" />
 					</div>
 
 					<!-- Sharing -->
@@ -454,9 +444,14 @@
 							>
 							<h6 class="mt-4">Filters</h6>
 							<div id="filters" class="mb-3">
-								<a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none" onclick="filterSelection('read')">Reads</a>
-								<a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none" onclick="filterSelection('course')">Courses</a><br />
-								<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none selected" onclick="filterSelection('all')">Show all</a>
+								<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none selected" onclick="filterSelection('all')">Show all</a><br />
+								<a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none" onclick="filterSelection('article')"
+									><i class="bx bx-book"></i> Articles</a
+								>
+								<a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none" onclick="filterSelection('course')"
+									><i class="bx bxs-graduation"></i> Courses</a
+								><br />
+
 								<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection('ea')">Enterprise Architecture</a>
 								<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection('cm')">Capability Modelling</a>
 								<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection('vs')">Vendor Selection</a>
@@ -478,27 +473,6 @@
 			</section>
 
 			<section class="container mb-4 pb-2 mb-md-5 pb-lg-5">
-				<div class="row gy-5">
-					<div class="d-none d-sm-block col-lg-3 position-relative">
-						<div class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4" style="top: 70px !important">
-							<div class="row gy-lg-5 gy-4 justify-content-center text-lg-start text-center">
-								<div class="col-lg-12 col-sm-7 col-11">
-									<h6 class="fs-lg">Don’t forget to share it</h6>
-									<div class="mb-4 pb-lg-3">
-										<div
-											class="ss-box ss-outline ss-grow"
-											data-ss-link="https://www.futurecx.nl/content/what-you-need-to-know-as-enterprise-architect.html"
-											data-ss-social="linkedin, twitter, email"
-											data-ss-content="false"
-											data-ss-email="subject:Read 'What you need to know as Enterprise Architect' on Futurecx.nl by Martijn van Deel"
-										></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
 				<div id="contactsuccess" class="card bg-primary border-light shadow-lg py-3 p-sm-4 p-md-5 d-none">
 					<h3>Thank you for your message.</h3>
 					<p>As promised I will send you a reply as soon as possible.</p>
