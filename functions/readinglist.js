@@ -38,7 +38,7 @@ function buildReadingList(method) {
 		'<div class="col-md-7 offset-xl-1"><div class="accordion" id="faq%id%"><div class="accordion-item border-0 rounded-3 shadow-sm mb-3"><h3 class="accordion-header" id="q1-heading"><button class="accordion-button shadow-none rounded-3"type="button"data-bs-toggle="collapse"data-bs-target="#q%id%1"aria-expanded="true"aria-controls="q%id%1">Interesting reads</button></h3><div id="q%id%1" class="accordion-collapse collapse show" aria-labelledby="q1-heading" data-bs-parent="#faq%id%"><div class="accordion-body fs-sm pt-0">%reads%</div></div></div><div class="accordion-item border-0 rounded-3 shadow-sm mb-3"><h3 class="accordion-header" id="q2-heading"><button class="accordion-button shadow-none rounded-3 collapsed"type="button"data-bs-toggle="collapse"data-bs-target="#q%id%2"aria-expanded="false"aria-controls="q%id%2">Courses</button></h3><div id="q%id%2" class="accordion-collapse collapse" aria-labelledby="q2-heading" data-bs-parent="#faq%id%"><div class="accordion-body fs-sm pt-0">%learnings%</div></div></div></div></div></div></div></section>';
 
 	const htmlItem =
-		'<article class="card shadow-sm overflow-hidden mb-2 filter %type% %cat%"><time datetime="%savedate%" pubdate="pubdate"></time><div class="row g-0"><div class="col-sm-8"><div class="card-body"><h2 class="h4 mb-1"><a href="%link%" target="_blank">%title%</a></h2><p class="fs-sm mb-0">%text%</p></div></div><div class="col-sm-4"><div class="card-body"><a href="#" class="btn btn-icon btn-light border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" onclick="filterSelection(\'%type%\')"><i class="bx %typeicon%"></i></a><p class="mb-1"><a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection(\'%cat%\')">%category%</a></p><p class="fs-sm mb-0">%date% By <strong>%author%</strong></p></div></div></div></article>';
+		'<article class="card shadow-sm overflow-hidden mb-2 filter %type% %cat%"><time datetime="%savedate%" pubdate="pubdate"></time><div class="row g-0"><div class="col-sm-8"><div class="card-body"><h2 class="h4 mb-1"><a href="%link%" target="_blank">%title%</a></h2><p class="fs-sm mb-0">%text%</p></div></div><div class="col-sm-4"><div class="card-body"><a href="#" class="btn btn-icon btn-light border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" onclick="filterSelection(\'%type%\')"><i class="bx %typeicon%"></i></a><p class="fs-sm mb-0">%date% By <strong>%author%</strong></p><p class="mb-1"><a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none" onclick="filterSelection(\'%cat%\')">%category%</a></p></div></div></div></article>';
 
 	jQuery.each(items, (i, item) => {
 		//html += '<pre>';
@@ -60,8 +60,12 @@ function buildReadingList(method) {
 		const itemcat = 'ea';
 		const itemPostDate = item.postdate;
 		const itemSaveDate = new Date(item.savedate);
-		const itemSaveDateFormatted = itemSaveDate.toISOString().substring(0, 10);
-		//console.log(itemSaveDateFormatted);
+		// var d = itemSaveDate.getDate();
+		// var m = itemSaveDate.getMonth();
+		// m += 1; // JavaScript months are 0-11
+		// var y = itemSaveDate.getFullYear();
+		// const itemSaveDateFormatted = y + '-' + m + '-' + d; //itemSaveDate.toISOString().substring(0, 10);
+		// console.log(itemSaveDateFormatted);
 		const itemauthor = item.author;
 
 		html += htmlItem
@@ -73,8 +77,7 @@ function buildReadingList(method) {
 			.replaceAll('%cat%', itemcat)
 			.replaceAll('%category%', itemcategory)
 			.replaceAll('%date%', itemPostDate)
-			.replaceAll('%savedate%', itemSaveDateFormatted)
-			.replaceAll('%author%', itemauthor);
+			.replaceAll('%author%', itemauthor); //.replaceAll('%savedate%', itemSaveDateFormatted);
 
 		// Last Post Date
 

@@ -16195,6 +16195,7 @@ span.wip {
 }
 
 .rotate {
+  transform-origin: left bottom 0;
   transform: rotate(-90deg);
   /* Legacy vendor prefixes that you probably don't need... */
   /* Safari */
