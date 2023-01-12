@@ -47,7 +47,7 @@ function w3RemoveClass(element, name) {
 // Add active class to the current control button (highlight it)
 setActive();
 function setActive() {
-	var btnContainer = document.getElementById('filters');
+	var btnContainer = document.getElementById('filtersright');
 	if (!btnContainer) return;
 	var btns = btnContainer.getElementsByClassName('badge');
 	for (var i = 0; i < btns.length; i++) {

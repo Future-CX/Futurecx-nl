@@ -8,18 +8,18 @@
 			"description": "This article explores the cultural change of moving towards shared architecture, and the role that the architect has evolved into. Teams might be struggling with the paradigm shift of ownership.",
 			"review": "",
 			"author": "InfoQ",
-			"postdate": "Dec 12, 2022",
+			"postdate": "Dec 9, 2022",
 			"savedate": "Dec 12, 2022"
 		},
 		{
 			"title": "Scaling the Practice of Architecture, Conversationally",
 			"link": "https://martinfowler.com/articles/scaling-architecture-conversationally.html",
-			"category": "Capability Modelling",
+			"category": "Enterprise Architecture",
 			"contenttype": "article",
 			"description": "Scaling architecture through a structured series of conversations",
 			"review": "",
 			"author": "Martin Fowler",
-			"postdate": "Dec 12, 2022",
+			"postdate": "Dec 15, 2021",
 			"savedate": "01 13, 2023"
 		},
 		{
@@ -30,8 +30,96 @@
 			"description": "Become an expert in one of the most popular Software Architecture styles in the world!",
 			"review": "",
 			"author": "Udemy",
-			"postdate": "Dec 12, 2022",
+			"postdate": "Jan 12, 2023",
 			"savedate": "Dec 12, 2022"
+		},
+		{
+			"title": "The First 100 Days of an Enterprise Architect",
+			"link": "https://www.gartner.com/smarterwithgartner/the-first-100-days-of-an-enterprise-architect",
+			"category": "Enterprise Architecture",
+			"contenttype": "article",
+			"description": "A Gartner roadmap for how enterprise architects can succeed in their new role.",
+			"review": "",
+			"author": "Gartner",
+			"postdate": "April 02, 2018",
+			"savedate": "Jan 12, 2023"
+		},
+		{
+			"title": "14 software architecture design patterns to know",
+			"link": "https://www.redhat.com/architect/14-software-architecture-patterns",
+			"category": "Architecture Patterns",
+			"contenttype": "article",
+			"description": "Architectural patterns increase your productivity: These reusable schemes address common software design challenges.",
+			"review": "",
+			"author": "RedHat",
+			"postdate": "March 16, 2022",
+			"savedate": "Jan 12, 2023"
+		},
+		{
+			"title": "10 nonfunctional requirements to consider in your enterprise architecture",
+			"link": "https://www.redhat.com/architect/nonfunctional-requirements-architecture",
+			"category": "Non Functional Requirements",
+			"contenttype": "article",
+			"description": "Nonfunctional requirements define how a system is supposed to operate, rather than what it's supposed to do, but they still play a vital role in meeting end-users' needs.",
+			"review": "",
+			"author": "RedHat",
+			"postdate": "August 4, 2022",
+			"savedate": "Jan 12, 2023"
+		},
+		{
+			"title": "5 things enterprise architects should know about microservices",
+			"link": "https://www.redhat.com/architect/5-things-microservices",
+			"category": "Microservices",
+			"contenttype": "article",
+			"description": "Microservices are a key part of today's IT environment, and there are five things every enterprise architect should know about them. Six things, if one counts how they are similar to managing rabbit hutches.",
+			"review": "",
+			"author": "RedHat",
+			"postdate": "March 16, 2021",
+			"savedate": "Jan 12, 2023"
+		},
+		{
+			"title": "How to create architectural guidelines that work",
+			"link": "https://www.redhat.com/architect/architectural-guidelines",
+			"category": "Enterprise Architecture",
+			"contenttype": "article",
+			"description": "Architectural guidelines go beyond documentation to show users how to use all the features and capabilities built into technologies.",
+			"review": "",
+			"author": "RedHat",
+			"postdate": "October 11, 2022",
+			"savedate": "Jan 12, 2023"
+		},
+		{
+			"title": "Event-driven architecture for microservices",
+			"link": "https://developers.redhat.com/topics/event-driven",
+			"category": "Event Driven Architecture",
+			"contenttype": "article",
+			"description": "What, Why and How. Event-Driven Architecture (EDA) is a way of designing applications and services to respond to real-time information based on the sending and receiving of information about individual event notifications. ",
+			"review": "",
+			"author": "RedHat",
+			"postdate": "Aug 9, 2022",
+			"savedate": "Jan 12, 2023"
+		},
+		{
+			"title": "Domain Driven Design",
+			"link": "https://martinfowler.com/bliki/DomainDrivenDesign.html",
+			"category": "Domain Driven Design",
+			"contenttype": "article",
+			"description": "Domain-Driven Design is an approach to software development that centers the development on programming a domain model that has a rich understanding of the processes and rules of a domain.",
+			"review": "",
+			"author": "Martin Fowler",
+			"postdate": "April 22, 2020",
+			"savedate": "Jan 12, 2023"
+		},
+		{
+			"title": "What are the differences between enterprise architecture styles, patterns, and design patterns?",
+			"link": "https://www.redhat.com/architect/it-architecture-design-2022",
+			"category": "Enterprise Architecture",
+			"contenttype": "article",
+			"description": "Compare architectural styles, patterns, and design patterns, and get some real-world guidance in our top 15 design articles of 2022.",
+			"review": "",
+			"author": "RedHat",
+			"postdate": "Dec 21, 2022",
+			"savedate": "Jan 12, 2023"
 		}
 	]
 }

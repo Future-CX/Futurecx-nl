@@ -1,4 +1,6 @@
 let html = '';
+let filtershtml =
+	'<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none selected m-1" onclick="filterSelection(\'all\')">Show all</a><a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none m-1" onclick="filterSelection(\'article\')"><i class="bx bx-book"></i> Articles</a><a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none m-1" onclick="filterSelection(\'course\')"><i class="bx bxs-graduation"></i> Courses</a><br/>';
 let allData = [];
 const items = [];
 const categories = [];
@@ -57,7 +59,7 @@ function buildReadingList(method) {
 			itemtypeIcon = 'bxs-graduation';
 		}
 		const itemcategory = item.category;
-		const itemcat = 'ea';
+		const itemcat = shortCategory(itemcategory);
 		const itemPostDate = item.postdate;
 		const itemSaveDate = new Date(item.savedate);
 		// var d = itemSaveDate.getDate();
@@ -79,6 +81,13 @@ function buildReadingList(method) {
 			.replaceAll('%date%', itemPostDate)
 			.replaceAll('%author%', itemauthor); //.replaceAll('%savedate%', itemSaveDateFormatted);
 
+		// push category to list
+		if (!exists(categories, itemcategory)) {
+			category = new Array(itemcategory, itemcat);
+
+			categories.push(category);
+		}
+
 		// Last Post Date
 
 		//console.log(itemSaveDate);
@@ -86,6 +95,8 @@ function buildReadingList(method) {
 			lastPostDate = itemSaveDate;
 		}
 	});
+
+	console.log(categories);
 
 	// jQuery.each(categories, (i, category) => {
 	// 	html += htmlCategoryOpener;
@@ -124,6 +135,15 @@ function buildReadingList(method) {
 	// });
 
 	document.getElementById('readinglist').innerHTML = html;
+
+	const htmlFilterItem =
+		'<a href="#" class="badge fs-sm text-nav bg-primary text-decoration-none m-1" onclick="filterSelection(\'%cat%\')">%category%</a>';
+
+	jQuery.each(categories, (i, category) => {
+		filtershtml += htmlFilterItem.replaceAll('%cat%', category[1]).replaceAll('%category%', category[0]);
+	});
+
+	document.getElementById('filterstop').innerHTML = filtershtml;
 	filterSelection('all');
 
 	var d = lastPostDate.getDate();
@@ -138,6 +158,8 @@ function buildReadingList(method) {
 	});
 
 	lastPostDateFormatted = document.getElementById('dateModified').innerHTML = 'Updated: ' + result;
+
+	setActive2();
 }
 
 function readAllItems() {
@@ -171,4 +193,29 @@ function readAllLearnings() {
 	});
 	//console.log('learnings');
 	//console.log(learnings);
+}
+
+function exists(arr, search) {
+	return arr.some((row) => row.includes(search));
+}
+
+function shortCategory(category) {
+	var matches = category.match(/\b(\w)/g);
+	var acronym = matches.join('');
+	return acronym.toLowerCase();
+}
+
+// Add active class to the current control button (highlight it)
+
+function setActive2() {
+	var btnContainer = document.getElementById('filterstop');
+	if (!btnContainer) return;
+	var btns = btnContainer.getElementsByClassName('badge');
+	for (var i = 0; i < btns.length; i++) {
+		btns[i].addEventListener('click', function () {
+			var current = document.getElementsByClassName('selected');
+			current[0].className = current[0].className.replace(' selected', '');
+			this.className += ' selected';
+		});
+	}
 }
