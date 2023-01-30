@@ -58,3 +58,9 @@ function setActive() {
 		});
 	}
 }
+
+// Copyright
+
+var pCopyright = document.getElementById('copyright');
+var year = new Date().getFullYear();
+pCopyright.innerHTML = '© ' + year + ' Future CX by Martijn van Deel';
