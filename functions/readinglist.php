@@ -160,7 +160,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     SendMail($newJSON);
     
     // Store updated list to server
-    //file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/data/readinglist.json', json_encode($newJSON));
+    file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/data/readinglist.json', json_encode($newJSON));
 
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

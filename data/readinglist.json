@@ -1,6 +1,18 @@
 {
 	"items": [
 		{
+			"title": "Agile Architecture Deliverables for Digital Transformation - TheOpenArch Architecture",
+			"link": "https://theopenarch.com/agile-architecture-deliverables/",
+			"image": "https://theopenarch.com/wp-content/uploads/2020/09/Agile-Architectrue-Deliverables-Bruhati-ADDF-2.png",
+			"category": "Enterprise Architecture",
+			"contenttype": "article",
+			"description": "Do you really need Architecture Deliverables in Agile Transformation? The short answer is yes. Often, organisations that use Agile to deliver large transformation programmes come unprepared and have to spend valuable time and effort in redefining processes and artefacts to govern the programme delivery. This is also true for Architecture teams that are used to steer far from delivery activities and spend most of their time in defining roadmaps to their strategic architecture vision. In this article, we'll drill down in more detail on the Architecture and Design deliverables required to effectively govern a large Agile Transformation.",
+			"review": "",
+			"author": "The Open Arch",
+			"postdate": "Apr 6, 2022",
+			"savedate": "Feb 14, 2023"
+		},
+		{
 			"title": "Going from Architect to Architecting: <br/>the Evolution of a Key Role",
 			"link": "https://www.infoq.com/articles/architecture-architecting-role/",
 			"category": "Enterprise Architecture",
