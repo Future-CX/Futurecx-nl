@@ -12,7 +12,8 @@ const gulp = require('gulp'),
 	babel = require('gulp-babel'),
 	uglify = require('gulp-uglify'),
 	concat = require('gulp-concat'),
-	packageFile = require('./package.json');
+	packageFile = require('./package.json'),
+	log = require('fancy-log');
 
 // Define reusable paths
 
@@ -175,6 +176,35 @@ gulp.task('watch', () => {
 	gulp.watch(path.src_js + '/**/*.js', gulp.series('js'));
 });
 
+var sitemap = require('gulp-sitemap');
+var save = require('gulp-save');
+gulp.task('sitemap', () => {
+	return gulp
+		.src(['*.html', './[content|models]*/*.html'], {
+			read: false,
+		})
+		.pipe(save('before-sitemap'))
+		.pipe(
+			sitemap({
+				siteUrl: 'https://www.futurecx.nl',
+				priority: function (siteUrl, loc, entry) {
+					// Give pages inside root path (i.e. no slashes) a higher priority
+					//log(loc);
+					//log(loc.split('/').length);
+					return loc.split('/').length === 4 ? 1.0 : 0.5;
+				},
+				newline: '',
+			})
+		) // Returns sitemap.xml
+		.pipe(gulp.dest('.'))
+		.pipe(save.restore('before-sitemap')); //restore all files to the state when we cached them
+	// -> continue stream with original html files
+	// ...
+});
+
 // Default task - the dependent tasks will run in parallell / excluding Docs and Components compilation
 
-gulp.task('default', gulp.series('clean', 'vendor', gulp.parallel('js', 'sass:minified', 'sass:expanded'), 'cssBundle', 'jsBundle', 'watch'));
+gulp.task(
+	'default',
+	gulp.series('clean', 'vendor', gulp.parallel('js', 'sass:minified', 'sass:expanded'), 'cssBundle', 'jsBundle', 'sitemap', 'watch')
+);
