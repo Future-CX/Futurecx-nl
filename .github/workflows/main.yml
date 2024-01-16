@@ -27,7 +27,7 @@ jobs:
           # Working directory
           workingDir: '/domains/futurecx.nl/public_html' # optional, default is /
           # Ignore invalid TLS/SSL certificate (1=ignoreSSL)
-          ignoreSSL: '0' # optional, default is 0
+          ignoreSSL: '1' # optional, default is 0
           # Additional command-line options for lftp
           options: '' # optional, default is
         
@@ -63,7 +63,7 @@ jobs:
           # Working directory
           workingDir: '/domains/futurecx.nl/public_html' # optional, default is /
           # Ignore invalid TLS/SSL certificate (1=ignoreSSL)
-          ignoreSSL: '0' # optional, default is 0
+          ignoreSSL: '1' # optional, default is 0
           # Additional command-line options for lftp
           options: '' # optional, default is
 
