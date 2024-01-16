@@ -9,8 +9,7 @@
   "scripts": {
     "dev": "npm-run-all --silent -p styles:minified scripts:minified vendor && npm run watch --silent",
     "build": "npm-run-all --silent -p styles:expanded styles:minified scripts:expanded scripts:minified vendor && npm run validate --silent",
-    "postbuild": "next-sitemap",
-    "sitemap": "next-sitemap",
+    "postbuild": "node build/sitemap.js",
     "styles:expanded": "node build/styles.js expanded",
     "styles:minified": "node build/styles.js minified",
     "scripts:expanded": "node build/scripts.js expanded",
@@ -32,7 +31,6 @@
     "eslint-plugin-prettier": "^5.0.0",
     "fs-extra": "^11.1.1",
     "html-validate": "^8.4.1",
-    "next-sitemap": "^4.2.3",
     "npm-run-all": "^4.1.5",
     "npmlog": "^7.0.1",
     "postcss": "^8.4.30",
@@ -47,6 +45,7 @@
     "bootstrap": "^5.3.2",
     "boxicons": "^2.1.4",
     "cleave.js": "^1.6.0",
+    "directory-tree": "^3.5.1",
     "imagesloaded": "^5.0.0",
     "img-comparison-slider": "^8.0.1",
     "jarallax": "^2.1.4",
@@ -56,9 +55,9 @@
     "prismjs": "^1.29.0",
     "rellax": "^1.12.1",
     "shufflejs": "^6.1.0",
-    "sitemap": "^7.1.1",
     "smooth-scroll": "^16.1.3",
     "swiper": "^8.4.7",
-    "vanilla-tilt": "^1.8.1"
+    "vanilla-tilt": "^1.8.1",
+    "xml-sitemap": "^0.3.2"
   }
 }
