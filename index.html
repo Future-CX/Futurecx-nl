@@ -1,160 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" >
 		<title>Future CX | Martijn van Deel</title>
-		<meta property="og:title" content="Future CX | Martijn van Deel" />
-		<link rel="canonical" href="https://www.futurecx.nl" />
-		<meta property="og:url" content="https://www.futurecx.nl" />
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:creator" content="@jmvandeel" />
+		<meta property="og:title" content="Future CX | Martijn van Deel" >
+		<link rel="canonical" href="https://www.futurecx.nl" >
+		<meta property="og:url" content="https://www.futurecx.nl" >
+		<meta name="twitter:card" content="summary_large_image" >
+		<meta name="twitter:creator" content="@jmvandeel" >
 		<meta
 			name="description"
 			property="og:description"
 			content="Customer Experience is at my heart, as it requires constant change and adapting to new technology. I want to use my knowledge and experience to transform your organisation to Customer First."
-		/>
+		>
 		<meta
 			name="twitter:description"
 			content="Customer Experience is at my heart, as it requires constant change and adapting to new technology. I want to use my knowledge and experience to transform your organisation to Customer First."
-		/>
+		>
 		<meta
 			name="keywords"
 			content="Solution Architect, Enterprise Architect, Product Owner, customer experience, customer engagement, future, enterprise architecture, business capability modelling, IT strategy and roadmap, vendor selection, composable architecture, DevOps"
-		/>
-		<meta name="author" content="Martijn van Deel" />
-		<meta property="og:type" content="website" />
-		<meta property="og:locale" content="en_GB" />
-		<meta property="og:image" itemprop="image" content="https://www.futurecx.nl/assets/img/cover/cover-xxl.jpg" />
-		<meta name="twitter:image" content="https://www.futurecx.nl/assets/img/cover/cover-xxl.jpg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
-		<link rel="manifest" href="assets/favicon/site.webmanifest" />
-		<link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
-		<link rel="alternate icon" sizes="16x16" href="assets/favicon/favicon.ico" />
-		<link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#ffffff" />
-		<meta name="msapplication-TileColor" content="#080032" />
-		<meta name="msapplication-config" content="assets/favicon/browserconfig.xml" />
-		<meta name="theme-color" content="#ffffff" />
-		<link rel="stylesheet" media="screen" href="assets/css/vendors.css" />
-		<link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
-		<style>
-			.page-loading {
-				position: fixed;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				-webkit-transition: all 0.4s 0.2s ease-in-out;
-				transition: all 0.4s 0.2s ease-in-out;
-				background-color: #fff;
-				opacity: 0;
-				visibility: hidden;
-				z-index: 9999;
-			}
-			.dark-mode .page-loading {
-				background-color: #0b0f19;
-			}
-			.page-loading.active {
-				opacity: 1;
-				visibility: visible;
-			}
-			.page-loading-inner {
-				position: absolute;
-				top: 50%;
-				left: 0;
-				width: 100%;
-				text-align: center;
-				-webkit-transform: translateY(-50%);
-				transform: translateY(-50%);
-				-webkit-transition: opacity 0.2s ease-in-out;
-				transition: opacity 0.2s ease-in-out;
-				opacity: 0;
-			}
-			.page-loading.active > .page-loading-inner {
-				opacity: 1;
-			}
-			.page-loading-inner > span {
-				display: block;
-				font-size: 1rem;
-				font-weight: normal;
-				color: #9397ad;
-			}
-			.dark-mode .page-loading-inner > span {
-				color: #fff;
-				opacity: 0.6;
-			}
-			.page-spinner {
-				display: inline-block;
-				width: 2.75rem;
-				height: 2.75rem;
-				margin-bottom: 0.75rem;
-				vertical-align: text-bottom;
-				border: 0.15em solid #b4b7c9;
-				border-right-color: transparent;
-				border-radius: 50%;
-				-webkit-animation: spinner 0.75s linear infinite;
-				animation: spinner 0.75s linear infinite;
-			}
-			.dark-mode .page-spinner {
-				border-color: rgba(255, 255, 255, 0.4);
-				border-right-color: transparent;
-			}
-			@-webkit-keyframes spinner {
-				100% {
-					-webkit-transform: rotate(360deg);
-					transform: rotate(360deg);
-				}
-			}
-			@keyframes spinner {
-				100% {
-					-webkit-transform: rotate(360deg);
-					transform: rotate(360deg);
-				}
-			}
-		</style>
-		<script>
-			let mode = window.localStorage.getItem('mode'),
-				root = document.getElementsByTagName('html')[0];
-			if (mode !== undefined && mode === 'dark') {
-				root.classList.add('dark-mode');
-			} else {
-				root.classList.remove('dark-mode');
-			}
-		</script>
+		>
+		<meta name="author" content="Martijn van Deel" >
+		<meta property="og:type" content="website" >
+		<meta property="og:locale" content="en_GB" >
+		<meta property="og:image" itemprop="image" content="https://www.futurecx.nl/assets/img/cover/cover-xxl.jpg" >
+		<meta name="twitter:image" content="https://www.futurecx.nl/assets/img/cover/cover-xxl.jpg" >
+		<meta name="viewport" content="width=device-width, initial-scale=1" >
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4R2D7JRCEJ"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
-			gtag('config', 'G-4R2D7JRCEJ');
-		</script>
-		<script>
-			(function () {
-				window.onload = function () {
-					const preloader = document.querySelector('.page-loading');
-					preloader.classList.remove('active');
-					setTimeout(function () {
-						preloader.remove();
-					}, 1000);
-				};
-			})();
-		</script>
-	</head>
-	<body>
-		<div class="page-loading active">
-			<div class="page-loading-inner">
-				<div class="page-spinner"></div>
-				<span>Loading...</span>
-			</div>
-		</div>
-		<main class="page-wrapper">
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" >
+		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" >
+		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" >
+		<link rel="manifest" href="assets/favicon/site.webmanifest" >
+		<link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" >
+		<link rel="alternate icon" sizes="16x16" href="assets/favicon/favicon.ico" >
+		<link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#ffffff" >
+		<meta name="msapplication-TileColor" content="#080032" >
+		<meta name="msapplication-config" content="assets/favicon/browserconfig.xml" >
+		<meta name="theme-color" content="#ffffff" >
+
+    <link rel="stylesheet" media="screen" href="assets/css/vendors.css" >
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4R2D7JRCEJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-4R2D7JRCEJ');
+</script>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+    
+
+    <main class="page-wrapper">
 			<header class="header navbar navbar-expand-lg navbar-light position-absolute navbar-sticky">
 				<div class="container px-3">
 					<a href="/" class="navbar-brand pe-3 text-primary"> Future CX </a>
@@ -181,7 +186,7 @@
 						</div>
 					</div>
 					<div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
-						<input type="checkbox" class="form-check-input" id="theme-mode" />
+						<input type="checkbox" class="form-check-input" id="theme-mode" >
 					</div>
 					<button
 						id="toggle"
@@ -203,14 +208,14 @@
 				data-img-position="0% 100%"
 				data-speed="0.5"
 			>
-				<meta itemprop="image" content="https://www.futurecx.nl/assets/img/cover/cover-xxl.jpg" />
+				<meta itemprop="image" content="https://www.futurecx.nl/assets/img/cover/cover-xxl.jpg" >
 				<div class="container position-relative zindex-5 py-5">
 					<div class="row justify-content-md-start justify-content-center">
 						<div class="col-md-6 col-sm-8 order-md-1 order-2 d-flex flex-column justify-content-between mt-4 pt-2 text-md-start text-center">
 							<div class="mb-md-5 pb-xl-5 mb-4">
 								<h1 class="display-2 mb-md-5 mb-3 pb-3">
-									Delivering<br />
-									<span class="text-primary">Customer First</span><br />
+									Delivering<br>
+									<span class="text-primary">Customer First</span><br>
 									solutions
 								</h1>
 								<div class="d-flex flex-column flex-sm-row">
@@ -296,7 +301,7 @@
 			<section id="services" class="container mb-5 py-lg-5 pt-5">
 				<div class="row">
 					<div class="col-lg-5 text-start pb-3 pb-lg-0 mb-4 mb-lg-0">
-						<h2 class="h2 display-5 mb-lg-4">My Experience and Services</h2>
+						<h2 class="h2 display-5 mb-lg-4 text-dark">My Experience and Services</h2>
 						<p class="mb-0 mb-lg-3">
 							I started my career as a web developer and grew into an experienced Solution Architect. In the last 15 years, I have worked with
 							Ecommerce solutions, Markeplaces, Content solutions, Digital Marketing applications, and Customer Service solutions. As a Solution
@@ -333,7 +338,7 @@
 											<i class="bx bx-sm bxs-network-chart"></i>
 										</div>
 										<div class="ps-sm-1 ps-lg-4">
-											<h3 class="h5 pb-2 mb-1">Enterprise<br />Architect</h3>
+											<h3 class="h5 pb-2 mb-1 text-dark">Enterprise<br>Architect</h3>
 											<p class="pb-2 mb-1">Design a Future State Architecture with flexibility to respond to a rapid changing digital world.</p>
 										</div>
 									</div>
@@ -346,7 +351,7 @@
 											<i class="bx bx-sm bx-table"></i>
 										</div>
 										<div class="ps-sm-1 ps-lg-4">
-											<h3 class="h5 pb-2 mb-1">Business<br />Capability Model</h3>
+											<h3 class="h5 pb-2 mb-1 text-dark">Business<br>Capability Model</h3>
 											<p class="pb-2 mb-1">Prioritize initiatives by identifying current and required capabilities for your Digital Ambition.</p>
 										</div>
 									</div>
@@ -359,7 +364,7 @@
 											<i class="bx bx-sm bx-table"></i>
 										</div>
 										<div class="ps-sm-1 ps-lg-4">
-											<h3 class="h5 pb-2 mb-1">Solution<br />Architect</h3>
+											<h3 class="h5 pb-2 mb-1 text-dark">Solution<br>Architect</h3>
 											<p class="pb-2 mb-1">Design and Deliver an innovative and technical solution that customers need.</p>
 										</div>
 									</div>
@@ -372,7 +377,7 @@
 											<i class="bx bx-sm bx-crosshair"></i>
 										</div>
 										<div class="ps-sm-1 ps-lg-4">
-											<h3 class="h5 pb-2 mb-1">Vendor<br />Selection</h3>
+											<h3 class="h5 pb-2 mb-1 text-dark">Vendor<br>Selection</h3>
 											<p class="pb-2 mb-1">Select new solutions and services that are in line with the future state architecture.</p>
 										</div>
 									</div>
@@ -385,7 +390,7 @@
 											<i class="bx bx-sm bx-extension"></i>
 										</div>
 										<div class="ps-sm-1 ps-lg-4">
-											<h3 class="h5 pb-2 mb-1">(Technical)<br />Product Owner</h3>
+											<h3 class="h5 pb-2 mb-1 text-dark">(Technical)<br>Product Owner</h3>
 											<p class="pb-2 mb-1">Deliver a product or service of maximum value with a Squad or DevOps team</p>
 										</div>
 									</div>
@@ -398,7 +403,7 @@
 											<i class="bx bx-sm bx-extension"></i>
 										</div>
 										<div class="ps-sm-1 ps-lg-4">
-											<h3 class="h5 pb-2 mb-1">Move to<br />Composable</h3>
+											<h3 class="h5 pb-2 mb-1 text-dark">Move to<br>Composable</h3>
 											<p class="pb-2 mb-1">Add and replace functionalities with Composable services for flexibitily and lower TCO.</p>
 										</div>
 									</div>
@@ -815,7 +820,7 @@
 									width="154"
 									style="margin-top: 5px; margin-bottom: 5px"
 									alt="Mediq"
-								/>
+								>
 								<span class="client">Mediq</span>
 								<span class="solution">B2C/B2B Ecommerce</span>
 							</a>
@@ -1278,14 +1283,15 @@
 			</section>
 		</main>
 
-		<footer class="footer pt-5 pb-4 pb-lg-5 mt-2 mt-md-0">
+
+    <footer class="footer pt-5 pb-4 pb-lg-5 mt-2 mt-md-0">
 			<div class="container pt-lg-4">
 				<div class="row pb-5">
 					<div class="col-lg-5 col-md-12">
 						<div class="navbar-brand text-dark p-0 me-0 mb-2">Future CX</div>
 						<p class="fs-sm pb-lg-3 mb-4">
 							The technology in the Customer Experience domain is rapidly changing. It requires flexibility and adaptability to keep up with the
-							latest trends and customer demands. Both in technology and people. <br />This is why Customer Experience is at my heart, as it requires
+							latest trends and customer demands. Both in technology and people. <br>This is why Customer Experience is at my heart, as it requires
 							constant change, new technology, and ways of working. Whilst keeping the customer at the center.
 						</p>
 					</div>
@@ -1344,15 +1350,17 @@
 			</div>
 		</footer>
 
-		<a href="#top" class="btn-scroll-top" data-scroll>
+
+    <a href="#top" class="btn-scroll-top" data-scroll>
 			<span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
 			<i class="btn-scroll-top-icon bx bx-chevron-up"></i>
 		</a>
 
-		<script src="assets/js/vendors.js"></script>
+
+    <script src="assets/js/vendors.js"></script>
 		<script src="assets/js/theme.min.js"></script>
 		<script src="/assets/js/user.js"></script>
-		<script>
+    <script>
 			var swiper = new Swiper('.mySwiper', {
 				slidesPerView: 2,
 				navigation: {
@@ -1388,7 +1396,7 @@
 				},
 			});
 		</script>
-		<script>
+    <script>
 			gtag('set', 'screen_resolution', '800x600');
 			gtag('set', 'language', 'en-us');
 			document.getElementById('lnkLinkedin').addEventListener('click', function () {
@@ -1404,5 +1412,5 @@
 				});
 			});
 		</script>
-	</body>
+  </body>
 </html>

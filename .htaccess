@@ -7,6 +7,8 @@ RewriteRule ^index.html$ https://www.futurecx.nl [R=301,L]
 # Page redirects
 
 RedirectMatch 301 /capability-model-cx/capability-model-cx.html /models/capability-model-cx.html
+RedirectMatch 301 /content/%link% /content.html
+RedirectMatch 301 /blogs.html /content.html
 
 # Error Pages
 

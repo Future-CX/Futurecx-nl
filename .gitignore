@@ -1,3 +1,5 @@
+# Globally ignore auto-generated files and npm / bower modules
+# You should customize this list as applicable to your project.
 .env
 .env-development
 .env-production
@@ -11,6 +13,9 @@ yarn-error.log*
 
 # Dependency directories
 node_modules/
+/node_modules
+/bower_components
+bower_components/
 jspm_packages/
 packages/
 
@@ -20,6 +25,8 @@ packages/
 # Random crap
 trash
 .DS_Store
+*/.DS_Store
+.DS_Store?
 Thumbs.db
 .sass-cache
 .tmp
@@ -27,28 +34,28 @@ Thumbs.db
 .trashes
 *~
 .lock
+/.idea
+.bowerrc
+.grunt
+.sass-lint.yml
+*.zip
+*.cfg
+*.jar
+*.log
+*.app
+*.exe
+*.war
 
 # Editor
 .vscode
 .vscode-test
+*.sublime*
 *.sublime-project
 *.sublime-workspace
 sftp-config.json
 
-#project specific
-capability-model-*.js
-*.docx
-*.drawio
-scss/
-vendor/
-/content/blog-single.html
-/models/capabilities-*.json
-/models/capability-model-*.js
-/.prettierignore
-/Silicon
-functions/readinglist.json
-
 #assets from Silicon template
+assets/audio
 assets/img/about/
 assets/img/testimonials/
 assets/img/team/
@@ -71,4 +78,24 @@ assets/img/blog/*.svg
 assets/img/*.png
 assets/img/*.jpg
 assets/img/*.svg
+
+
+
+#project specific
+capability-model-*.js
+*.docx
+*.drawio
+scss/
+vendor/
+/content/blog-single.html
+/models/capabilities-*.json
+/models/capability-model-*.js
+/.prettierignore
+/Silicon
+functions/readinglist.json
+/build
+/components
+/docs
+/pages
+/src
 /sitemap.old.xml
