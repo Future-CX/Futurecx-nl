@@ -2836,7 +2836,7 @@ textarea.form-control-lg {
 }
 .was-validated .form-control:valid:focus, .form-control.is-valid:focus {
   border-color: var(--si-form-valid-border-color);
-  box-shadow: 0 0 0 0 rgba(var(--si-success-rgb), 0.25);
+  box-shadow: var(--si-box-shadow-inset), 0 0 0 0 rgba(var(--si-success-rgb), 0.25);
 }
 
 .was-validated textarea.form-control:valid, textarea.form-control.is-valid {
@@ -2855,7 +2855,7 @@ textarea.form-control-lg {
 }
 .was-validated .form-select:valid:focus, .form-select.is-valid:focus {
   border-color: var(--si-form-valid-border-color);
-  box-shadow: 0 0 0 0 rgba(var(--si-success-rgb), 0.25);
+  box-shadow: var(--si-box-shadow-inset), 0 0 0 0 rgba(var(--si-success-rgb), 0.25);
 }
 
 .was-validated .form-control-color:valid, .form-control-color.is-valid {
@@ -2926,7 +2926,7 @@ textarea.form-control-lg {
 }
 .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
   border-color: var(--si-form-invalid-border-color);
-  box-shadow: 0 0 0 0 rgba(var(--si-danger-rgb), 0.25);
+  box-shadow: var(--si-box-shadow-inset), 0 0 0 0 rgba(var(--si-danger-rgb), 0.25);
 }
 
 .was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {
@@ -2945,7 +2945,7 @@ textarea.form-control-lg {
 }
 .was-validated .form-select:invalid:focus, .form-select.is-invalid:focus {
   border-color: var(--si-form-invalid-border-color);
-  box-shadow: 0 0 0 0 rgba(var(--si-danger-rgb), 0.25);
+  box-shadow: var(--si-box-shadow-inset), 0 0 0 0 rgba(var(--si-danger-rgb), 0.25);
 }
 
 .was-validated .form-control-color:invalid, .form-control-color.is-invalid {
@@ -3048,6 +3048,9 @@ textarea.form-control-lg {
   box-shadow: var(--si-btn-active-shadow);
 }
 .btn-check:checked + .btn:focus-visible, :not(.btn-check) + .btn:active:focus-visible, .btn:first-child:active:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible {
+  box-shadow: var(--si-btn-active-shadow), var(--si-btn-focus-box-shadow);
+}
+.btn-check:checked:focus-visible + .btn {
   box-shadow: var(--si-btn-active-shadow), var(--si-btn-focus-box-shadow);
 }
 .btn:disabled, .btn.disabled, fieldset:disabled .btn {
@@ -4605,7 +4608,6 @@ textarea.form-control-lg {
   --si-accordion-btn-icon-transform: rotate(-180deg);
   --si-accordion-btn-icon-transition: transform 0.2s ease-in-out;
   --si-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256' fill='%23fff'%3e%3cpath d='M225.813 48.907L128 146.72 30.187 48.907 0 79.093l128 128 128-128z'/%3e%3c/svg%3e");
-  --si-accordion-btn-focus-border-color: rgba(255, 192, 0, 0.35);
   --si-accordion-btn-focus-box-shadow: unset;
   --si-accordion-body-padding-x: 1.5rem;
   --si-accordion-body-padding-y: 1rem;
@@ -4663,7 +4665,6 @@ textarea.form-control-lg {
 }
 .accordion-button:focus {
   z-index: 3;
-  border-color: var(--si-accordion-btn-focus-border-color);
   outline: 0;
   box-shadow: var(--si-accordion-btn-focus-box-shadow);
 }
@@ -4681,7 +4682,7 @@ textarea.form-control-lg {
   border-top-left-radius: var(--si-accordion-border-radius);
   border-top-right-radius: var(--si-accordion-border-radius);
 }
-.accordion-item:first-of-type .accordion-button {
+.accordion-item:first-of-type > .accordion-header .accordion-button {
   border-top-left-radius: var(--si-accordion-inner-border-radius);
   border-top-right-radius: var(--si-accordion-inner-border-radius);
 }
@@ -4692,11 +4693,11 @@ textarea.form-control-lg {
   border-bottom-right-radius: var(--si-accordion-border-radius);
   border-bottom-left-radius: var(--si-accordion-border-radius);
 }
-.accordion-item:last-of-type .accordion-button.collapsed {
+.accordion-item:last-of-type > .accordion-header .accordion-button.collapsed {
   border-bottom-right-radius: var(--si-accordion-inner-border-radius);
   border-bottom-left-radius: var(--si-accordion-inner-border-radius);
 }
-.accordion-item:last-of-type .accordion-collapse {
+.accordion-item:last-of-type > .accordion-collapse {
   border-bottom-right-radius: var(--si-accordion-border-radius);
   border-bottom-left-radius: var(--si-accordion-border-radius);
 }
@@ -4705,21 +4706,21 @@ textarea.form-control-lg {
   padding: var(--si-accordion-body-padding-y) var(--si-accordion-body-padding-x);
 }
 
-.accordion-flush .accordion-collapse {
-  border-width: 0;
-}
-.accordion-flush .accordion-item {
+.accordion-flush > .accordion-item {
   border-right: 0;
   border-left: 0;
   border-radius: 0;
 }
-.accordion-flush .accordion-item:first-child {
+.accordion-flush > .accordion-item:first-child {
   border-top: 0;
 }
-.accordion-flush .accordion-item:last-child {
+.accordion-flush > .accordion-item:last-child {
   border-bottom: 0;
 }
-.accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
+.accordion-flush > .accordion-item > .accordion-header .accordion-button, .accordion-flush > .accordion-item > .accordion-header .accordion-button.collapsed {
+  border-radius: 0;
+}
+.accordion-flush > .accordion-item > .accordion-collapse {
   border-radius: 0;
 }
 
@@ -5265,7 +5266,6 @@ textarea.form-control-lg {
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  justify-content: space-between;
   padding: var(--si-modal-header-padding);
   border-bottom: var(--si-modal-header-border-width) solid var(--si-modal-header-border-color);
   border-top-left-radius: var(--si-modal-inner-border-radius);
@@ -6255,14 +6255,11 @@ textarea.form-control-lg {
 .offcanvas-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: var(--si-offcanvas-padding-y) var(--si-offcanvas-padding-x);
 }
 .offcanvas-header .btn-close {
   padding: calc(var(--si-offcanvas-padding-y) * 0.5) calc(var(--si-offcanvas-padding-x) * 0.5);
-  margin-top: calc(-0.5 * var(--si-offcanvas-padding-y));
-  margin-right: calc(-0.5 * var(--si-offcanvas-padding-x));
-  margin-bottom: calc(-0.5 * var(--si-offcanvas-padding-y));
+  margin: calc(-0.5 * var(--si-offcanvas-padding-y)) calc(-0.5 * var(--si-offcanvas-padding-x)) calc(-0.5 * var(--si-offcanvas-padding-y)) auto;
 }
 
 .offcanvas-title {
@@ -17345,44 +17342,53 @@ body::after {
   /*content:url(../../assets/img/cover/cover-dark-s.png) url(../../assets/img/cover/cover-s.png);*/
 }
 
-html section.hero,
-html.dark-mode section.hero {
-  background: url(../../assets/img/cover/cover-s.jpg) no-repeat center center fixed;
+section.hero {
+  background: url(../../assets/img/cover/cover-s.png) no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
 }
 
-html.dark-mode section.hero {
-  background-image: url(../../assets/img/cover/cover-dark-s.jpg) !important;
+[data-bs-theme=dark] section.hero {
+  background-image: url(../../assets/img/cover/cover-dark-s.png) !important;
 }
 
 html h1, html .h1 {
   color: #fff;
 }
 
-html.dark-mode h1, html.dark-mode .h1,
-html.dark-mode h2,
-html.dark-mode .h2,
-html.dark-mode h3,
-html.dark-mode .h3,
-html.dark-mode h4,
-html.dark-mode .h4,
-html.dark-mode h5,
-html.dark-mode .h5,
-html.dark-mode h6,
-html.dark-mode .h6 {
+[data-bs-theme=dark] h1, [data-bs-theme=dark] .h1,
+[data-bs-theme=dark] h2,
+[data-bs-theme=dark] .h2,
+[data-bs-theme=dark] h3,
+[data-bs-theme=dark] .h3,
+[data-bs-theme=dark] h4,
+[data-bs-theme=dark] .h4,
+[data-bs-theme=dark] h5,
+[data-bs-theme=dark] .h5,
+[data-bs-theme=dark] h6,
+[data-bs-theme=dark] .h6 {
   color: #fff !important;
   text-shadow: 0 0 5px #000;
 }
 
-.dark-mode .btn-light,
-.dark-mode .btn-video {
+[data-bs-theme=dark] .btn-light,
+[data-bs-theme=dark] .btn-video {
   background-color: #1a242e;
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0.25);
 }
 
-.dark-mode .btn-light:hover {
+[data-bs-theme=dark] .btn-light:hover {
+  background-color: #ffffff;
+  color: #3e4265;
+}
+
+[data-bs-theme=dark] .btn-outline-dark {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+[data-bs-theme=dark] .btn-outline-dark:hover {
   background-color: #ffffff;
   color: #3e4265;
 }
@@ -17407,24 +17413,24 @@ span.client {
   color: #585c7b;
 }
 
-.dark-mode .card {
+[data-bs-theme=dark] .card {
   background-color: #cccccc;
   color: rgba(255, 255, 255, 0.7);
 }
 
-.dark-mode .contact-cta .text-dark {
+[data-bs-theme=dark] .contact-cta .text-dark {
   color: rgb(26, 36, 46) !important;
 }
 
-html.dark-mode .dark {
+[data-bs-theme=dark] .dark {
   filter: brightness(0) contrast(0.8);
 }
 
-html.dark-mode .light {
+[data-bs-theme=dark] .light {
   filter: brightness(0) invert(0.7);
 }
 
-html.dark-mode .bg-dark {
+[data-bs-theme=dark] .bg-dark {
   background-color: rgb(35, 45, 54) !important;
 }
 
@@ -17504,8 +17510,7 @@ span.wip {
 
 @media (max-width: 767.98px) {
   /* X-Small devices (portrait phones, less than 576px) */
-  html section.hero,
-  html.dark-mode section.hero {
+  section.hero {
     background-attachment: local;
     background-position: 65%;
   }
@@ -17513,7 +17518,7 @@ span.wip {
     background-image: url(../../assets/img/cover/cover-xxl.jpg) !important;
     /*background-image: url('https://dummyimage.com/576x324') !important;*/
   }
-  html.dark-mode section.hero {
+  [data-bs-theme=dark] section.hero {
     background-image: url(../../assets/img/cover/cover-dark-xxl.jpg) !important;
   }
   nav[data-toggle=toc] {
@@ -17531,7 +17536,7 @@ span.wip {
     /*background-image: url('https://dummyimage.com/768x432') !important;*/
     background-attachment: local;
   }
-  html.dark-mode section.hero {
+  [data-bs-theme=dark] section.hero {
     background-image: url(../../assets/img/cover/cover-dark-xxl.jpg) !important;
     background-attachment: local;
   }
@@ -17554,7 +17559,7 @@ span.wip {
     background-image: url(../../assets/img/cover/cover-xxl.jpg) !important;
     /*background-image: url('https://dummyimage.com/992x558') !important;*/
   }
-  html.dark-mode section.hero {
+  [data-bs-theme=dark] section.hero {
     background-image: url(../../assets/img/cover/cover-dark-xxl.jpg) !important;
   }
 }
@@ -17564,7 +17569,7 @@ span.wip {
     background-image: url(../../assets/img/cover/cover-xxl.jpg) !important;
     /*background-image: url('https://dummyimage.com/1200x675') !important;*/
   }
-  html.dark-mode section.hero {
+  [data-bs-theme=dark] section.hero {
     background-image: url(../../assets/img/cover/cover-dark-xxl.jpg) !important;
   }
 }
@@ -17574,7 +17579,7 @@ span.wip {
     background-image: url(../../assets/img/cover/cover-xxl.jpg) !important;
     /*background-image: url('https://dummyimage.com/1400x16:9') !important;*/
   }
-  html.dark-mode section.hero {
+  [data-bs-theme=dark] section.hero {
     background-image: url(../../assets/img/cover/cover-dark-xxl.jpg) !important;
   }
 }

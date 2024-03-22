@@ -40,7 +40,7 @@ function getSitemapUrl(location, datetime) {
 }
 
 function fromDir(startPath, filter, callback) {
-  log.info('Searching in ' + startPath + '/')
+  //log.info('Searching in ' + startPath + '/')
 
   if (!fs.existsSync(startPath)) {
     log.info('no dir ', startPath)
@@ -60,7 +60,7 @@ function fromDir(startPath, filter, callback) {
     'src',
   ]
   if (ignoredDirectories.includes(startPath)) {
-    log.info('ignored ', startPath + '/')
+    //log.info('ignored ', startPath + '/')
     return
   }
 

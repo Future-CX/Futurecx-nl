@@ -45,6 +45,7 @@
     "bootstrap": "^5.3.2",
     "boxicons": "^2.1.4",
     "cleave.js": "^1.6.0",
+    "concat": "^1.0.3",
     "directory-tree": "^3.5.1",
     "imagesloaded": "^5.0.0",
     "img-comparison-slider": "^8.0.1",
