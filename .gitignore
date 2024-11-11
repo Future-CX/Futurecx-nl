@@ -92,8 +92,6 @@ vendor/
 /.prettierignore
 /Silicon
 functions/readinglist.json
-/build/*.js
-!/build/sitemap.js
 /components
 /docs
 /pages
