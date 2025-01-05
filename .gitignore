@@ -84,7 +84,6 @@ assets/img/*.svg
 capability-model-*.js
 *.docx
 *.drawio
-scss/
 vendor/
 /content/blog-single.html
 /models/capabilities-*.json

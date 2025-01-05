@@ -1,0 +1,51 @@
+//
+// user-variables.scss
+// Use this to override Bootstrap and Silicon variables
+//
+
+// Example of a variable override to change Silicon background color
+// Remove the "//" to comment it in and see it in action!
+// $body-bg: #f3f6ff;
+
+
+// Grayscale
+$white: #fff !default;
+$gray-100: #f3f6ff !default;
+$gray-200: #eff2fc !default;
+$gray-300: #e2e5f1 !default;
+$gray-400: #d4d7e5 !default;
+$gray-500: #b4b7c9 !default;
+$gray-600: #9397ad !default;
+$gray-700: #585c7b !default;
+$gray-800: #3e4265 !default;
+$gray-900: rgb(26, 36, 46) !default;
+$black: #000 !default;
+
+// Brand colors
+$primary: rgb(255, 192, 0) !default;
+$secondary: rgb(59, 56, 56) !default;
+$info: #4c82f7 !default;
+$success: #22c55e !default;
+$warning: #ffba08 !default;
+$danger: #ef4444 !default;
+$light: $white !default;
+$dark: $gray-900 !default;
+
+$enable-shadows: true !default;
+$enable-negative-margins: true !default;
+$enable-smooth-scroll: true !default;
+$enable-dark-mode: true !default;
+
+$navbar-color: #000000;
+$navbar-hover-color: $primary;
+$navbar-active-color: $primary;
+
+$navbar-light-color: #000000;
+$navbar-light-hover-color: $primary;
+$navbar-light-active-color: $primary;
+
+$form-switch-checked-bg: #000000;
+
+$path-to-fonts: 'https://fonts.googleapis.com/css2?family=Questrial:wght@400;500;600;700;800&display=swap' !default;
+
+$font-family-sans-serif: 'Questrial', sans-serif !default;
