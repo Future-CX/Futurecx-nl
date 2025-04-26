@@ -2,14 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://www.futurecx.nl/404.html</loc>
-		<lastmod>2022-12-09</lastmod>
+		<lastmod>2024-11-11</lastmod>
+	</url>
+	<url>
+		<loc>https://www.futurecx.nl/content/capability-model-cx.html</loc>
+		<lastmod>2025-01-08</lastmod>
+	</url>
+	<url>
+		<loc>https://www.futurecx.nl/content/create-a-better-capability-model.html</loc>
+		<lastmod>2025-01-08</lastmod>
+	</url>
+	<url>
+		<loc>https://www.futurecx.nl/content/use-domain-driven-design-for-enterprise-architecture.html</loc>
+		<lastmod>2025-01-08</lastmod>
+	</url>
+	<url>
+		<loc>https://www.futurecx.nl/content/use-open-questions-and-context-for-a-better-rfp.html</loc>
+		<lastmod>2025-01-08</lastmod>
+	</url>
+	<url>
+		<loc>https://www.futurecx.nl/content/what-you-need-to-know-as-enterprise-architect.html</loc>
+		<lastmod>2025-01-08</lastmod>
+	</url>
+	<url>
+		<loc>https://www.futurecx.nl/content.html</loc>
+		<lastmod>2025-01-08</lastmod>
 	</url>
 	<url>
 		<loc>https://www.futurecx.nl/cv.html</loc>
-		<lastmod>2024-05-06</lastmod>
+		<lastmod>2024-11-11</lastmod>
 	</url>
 	<url>
 		<loc>https://www.futurecx.nl/index.html</loc>
-		<lastmod>2024-05-06</lastmod>
+		<lastmod>2025-04-26</lastmod>
 	</url>
 </urlset>

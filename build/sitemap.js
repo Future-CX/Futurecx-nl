@@ -6,8 +6,8 @@ let date = new Date().toISOString().split('T')[0]
 let domain = 'https://www.futurecx.nl/'
 
 const GenerateSitemap = async () => {
-  let XmlSitemap = require('xml-sitemap')
-  let sitemap = new XmlSitemap()
+  //let XmlSitemap = require('xml-sitemap')
+  let sitemap = ''
 
   log.info(`Generating Sitemap...`)
 
@@ -64,9 +64,28 @@ function fromDir(startPath, filter, callback) {
     return
   }
 
+  let ignoredFiles = [
+    'blog-single.html',
+    '.old.html',
+    'assets',
+    'build',
+    'components',
+    'docs',
+    'node_modules',
+    'pages',
+    'src',
+  ]
+
   let files = fs.readdirSync(startPath)
   for (let i = 0; i < files.length; i++) {
     let filename = path.join(startPath, files[i])
+    log.info('filename ', startPath + '/' + filename)
+
+    // check if part of the filename is in the ignored files
+    if (ignoredFiles.some((ignoredFile) => filename.includes(ignoredFile))) {
+      continue
+    }
+
     let stat = fs.lstatSync(filename)
     let datetime = stat.mtime
     //log.info('Stats ', stat.mtime)
