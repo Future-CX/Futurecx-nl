@@ -1,0 +1,210 @@
+.container {
+	max-width: 100%;
+}
+
+.domain,
+.layer {
+	z-index: 1;
+	background-color: #2196f3;
+	border-radius: 15px;
+	padding: 10px;
+	margin: 2px;
+}
+
+.subdomain,
+.sublayer {
+	z-index: 2;
+	margin: 2px;
+}
+
+.capability {
+	cursor: pointer;
+	margin: 0px;
+	color: #0e0e0e;
+}
+
+.capabilityl1 {
+	position: relative;
+	background-color: #ffffff;
+	z-index: 3;
+	font-weight: bold;
+	border-radius: 5px;
+	margin-bottom: 5px;
+	padding: 0px;
+	padding-bottom: 5px;
+	min-height: 32px;
+}
+
+.capabilityl2 {
+	z-index: 4;
+	border-top: solid 1px #0e0e0e;
+	background-color: #ffffff;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+h3 {
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+h4,
+div.description-container,
+div.description-subcontainer {
+	font-size: 90%;
+	color: #ffffff;
+	margin-bottom: 20px;
+}
+div.capability-description h4 {
+	color: #0e0e0e;
+}
+
+h5,
+h6 {
+	font-size: 70%;
+}
+
+h4,
+h5,
+h6 {
+	margin-bottom: 0px;
+}
+h5 {
+	font-weight: bold;
+}
+h6 {
+	min-height: 32px;
+	font-weight: normal;
+	padding-top: 3px;
+}
+span.comingsoon {
+	background-color: crimson;
+	width: 10px;
+	height: 10px;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	/*border-radius: 0px 5px 0px 0px;*/
+}
+
+.name {
+	min-height: 32px;
+	position: relative;
+}
+
+#domain-actors {
+	background-color: #ffa159;
+	padding-right: 30px;
+}
+#domain-channels {
+	background-color: #ff8426;
+	margin: 10px 0px 10px -20px;
+	padding-right: 30px;
+}
+#domain-products-services {
+	background-color: #ff760d;
+	margin: 20px 10px 20px -20px;
+	padding-right: 30px;
+}
+#domain-customer {
+	background-color: #38c172;
+	margin: 30px 3px;
+}
+#domain-marketing {
+	background-color: #4dc0b5;
+	margin: 30px 3px;
+}
+#domain-sales {
+	background-color: #3490dc;
+	margin: 30px 3px;
+}
+#domain-service {
+	background-color: #6574cd;
+	margin: 30px 3px;
+}
+#domain-loyalty {
+	background-color: #9561e2;
+	margin: 30px 3px;
+}
+#domain-content {
+	background-color: #f66d9b;
+	margin: 30px 3px;
+}
+
+/* Switch */
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 28px;
+	margin: 3px 0;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: '';
+	height: 20px;
+	width: 20px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(20px);
+	-ms-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 28px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+.label {
+	position: absolute;
+	top: 0;
+	left: 55px;
+	right: 0;
+	bottom: 0;
+	width: 120px;
+	line-height: 28px;
+	font-weight: bold;
+}
+
+/* END Switch */
