@@ -50,6 +50,8 @@ const concatAndCopy = async () => {
     [
       `${path.vendor}/swiper/swiper-bundle.min.js`,
       `${path.vendor}/boxicons/dist/boxicons.js`,
+      `${path.vendor}/imagesloaded/imagesloaded.pkgd.min.js`,
+      `${path.vendor}/shufflejs/dist/shuffle.min.js`,
     ],
     `assets/js/vendors.js`
   )

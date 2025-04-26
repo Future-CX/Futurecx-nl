@@ -85,7 +85,7 @@ capability-model-*.js
 *.docx
 *.drawio
 vendor/
-/content/blog-single.html
+*blog-single*
 /models/capabilities-*.json
 /models/capability-model-*.js
 /.prettierignore
