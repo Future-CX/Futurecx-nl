@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 // Import Google Fonts (Manrope)
-@import url($path-to-fonts); // stylelint-disable-line import-notation
+//@import url($path-to-fonts); // stylelint-disable-line import-notation
 
 html * {
   -webkit-font-smoothing: antialiased;
@@ -29,17 +29,18 @@ body {
 // Links
 a {
   transition: $link-transition;
-  &:focus { outline: none; }
+  &:focus {
+    outline: none;
+  }
 }
 
 // Background transition for links
 /* stylelint-disable selector-no-qualifying-type */
-a[class^="bg-"]:not(.btn),
-a[class*="bg-"]:not(.btn) {
-  transition: background-color .25s ease;
+a[class^='bg-']:not(.btn),
+a[class*='bg-']:not(.btn) {
+  transition: background-color 0.25s ease;
 }
 /* stylelint-enable selector-no-qualifying-type */
-
 
 // Images
 // Responsive images (ensure images don't scale beyond their parents)
@@ -49,8 +50,12 @@ figure {
   height: auto;
   vertical-align: middle;
 }
-svg { max-width: 100%; }
-.dark-mode-img { display: none; }
+svg {
+  max-width: 100%;
+}
+.dark-mode-img {
+  display: none;
+}
 
 // Responsive iframes
 iframe {
@@ -67,7 +72,9 @@ strong {
   font-weight: $font-weight-bold;
 }
 
-small { font-weight: inherit; }
+small {
+  font-weight: inherit;
+}
 
 // Disable button :focus outline
 button:focus {

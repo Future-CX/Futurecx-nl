@@ -7,7 +7,6 @@
 // Remove the "//" to comment it in and see it in action!
 // $body-bg: #f3f6ff;
 
-
 // Grayscale
 $white: #fff !default;
 $gray-100: #f3f6ff !default;
@@ -46,6 +45,7 @@ $navbar-light-active-color: $primary;
 
 $form-switch-checked-bg: #000000;
 
-$path-to-fonts: 'https://fonts.googleapis.com/css2?family=Questrial:wght@400;500;600;700;800&display=swap' !default;
+$path-to-fonts: 'https://fonts.googleapis.com/css2?family=Questrial:wght@400&display=swap' !default;
+$path-to-fonts: '' !default;
 
 $font-family-sans-serif: 'Questrial', sans-serif !default;

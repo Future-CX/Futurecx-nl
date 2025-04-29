@@ -70,9 +70,9 @@
     />
     <meta name="theme-color" content="#ffffff" />
 
-    <link rel="stylesheet" media="screen" href="assets/css/vendors.css" />
+   
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
-    <script src="assets/js/theme-switcher.js"></script>
+    
 
     <!-- Page loading styles -->
     <style>
@@ -1221,7 +1221,7 @@
                 ><img
                 src="assets/img/brands/logo-mediq.png"
                 class="d-block mx-auto logo-mediq recolor"
-                width="154"
+                width="154" height="54"
                 style="margin-top: 5px; margin-bottom: 5px"
                 alt="Mediq"
               /></div>
@@ -1956,28 +1956,28 @@
             <div class="col-lg-6 mt-xl-3 pt-5 pt-lg-4">
               <div class="row row-cols-2 gx-3 gx-lg-4">
                 <div class="col pt-lg-5 mt-lg-1">
-                  <img
-                    src="assets/img/experience/ANWB-Marketplace-workshop.jpg"
-                    class="d-block rounded-3 mb-3 mb-lg-4"
-                    alt="Leading workshops"
-                  />
-                  <img
-                    src="assets/img/experience/ANWB-Marketplace-presentation.jpg"
-                    class="d-block rounded-3"
-                    alt="Presenting to ANWB management"
-                  />
+                  <picture>
+                    <source srcset="assets/img/experience/ANWB-Marketplace-workshop.webp" type="image/webp">
+                    <source srcset="assets/img/experience/ANWB-Marketplace-workshop.jpg" type="image/jpeg"> 
+                    <img src="assets/img/experience/ANWB-Marketplace-workshop.jpg" alt="Leading workshops" width="451" height="338" class="d-block rounded-3 mb-3 mb-lg-4">
+                  </picture>
+                  <picture>
+                    <source srcset="assets/img/experience/ANWB-Marketplace-presentation.webp" type="image/webp">
+                    <source srcset="assets/img/experience/ANWB-Marketplace-presentation.jpg" type="image/jpeg"> 
+                    <img src="assets/img/experience/ANWB-Marketplace-presentation.jpg" alt="Presenting to ANWB management" width="451" height="338" class="d-block rounded-3 mb-3 mb-lg-4">
+                  </picture>
                 </div>
                 <div class="col">
-                  <img
-                    src="assets/img/experience/Podcast-recording.jpg"
-                    class="d-block rounded-3 mb-3 mb-lg-4"
-                    alt="Recording a podcast"
-                  />
-                  <img
-                    src="assets/img/experience/Capgemini-be-a-future-shaper.jpg"
-                    class="d-block rounded-3"
-                    alt="Capgemini Future Shaper"
-                  />
+                  <picture>
+                    <source srcset="assets/img/experience/Podcast-recording.webp" type="image/webp">
+                    <source srcset="assets/img/experience/Podcast-recording.jpg" type="image/jpeg"> 
+                    <img src="assets/img/experience/Podcast-recording.jpg" alt="Recording a podcast" width="451" height="338" class="d-block rounded-3 mb-3 mb-lg-4">
+                  </picture>
+                  <picture>
+                    <source srcset="assets/img/experience/Capgemini-be-a-future-shaper.webp" type="image/webp">
+                    <source srcset="assets/img/experience/Capgemini-be-a-future-shaper.jpg" type="image/jpeg"> 
+                    <img src="assets/img/experience/Capgemini-be-a-future-shaper.jpg" alt="Capgemini Future Shaper" width="451" height="338" class="d-block rounded-3 mb-3 mb-lg-4">
+                  </picture>
                 </div>
               </div>
             </div>
@@ -2164,8 +2164,13 @@
       <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
     </a>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+  integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+  crossorigin="anonymous"></script>
+  <script src="assets/js/theme-switcher.js"></script>
     <script src="/assets/js/vendors.js"></script>
+    <link rel="stylesheet" media="screen" href="assets/css/vendors.css" />
     <script src="/assets/js/theme.min.js"></script>
     <script src="/assets/js/user.js"></script>
     <script>
