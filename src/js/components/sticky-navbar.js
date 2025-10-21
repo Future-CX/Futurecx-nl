@@ -12,6 +12,12 @@ export default (() => {
     navbarH = navbar.offsetHeight,
     scrollOffset = 500
 
+  // Allow per-page override via data attribute
+  const attr = navbar.getAttribute('data-sticky-offset')
+  if (attr && !isNaN(parseInt(attr, 10))) {
+    scrollOffset = parseInt(attr, 10)
+  }
+
   if (navbarClass.contains('position-absolute')) {
     window.addEventListener('scroll', (e) => {
       if (e.currentTarget.pageYOffset > scrollOffset) {

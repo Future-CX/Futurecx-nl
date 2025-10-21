@@ -7048,7 +7048,10 @@
     if (navbar == null) return;
     let navbarClass = navbar.classList,
       navbarH = navbar.offsetHeight,
-      scrollOffset = 500;
+      scrollOffset = (function () {
+        const attr = navbar.getAttribute('data-sticky-offset');
+        return attr && !isNaN(parseInt(attr, 10)) ? parseInt(attr, 10) : 500;
+      })();
     if (navbarClass.contains('position-absolute')) {
       window.addEventListener('scroll', e => {
         if (e.currentTarget.pageYOffset > scrollOffset) {

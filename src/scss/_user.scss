@@ -247,6 +247,39 @@ span.wip {
   }
 }
 
+/* Hide published date on mobile */
+@include media-breakpoint-down(sm) {
+  /* Hide meta row (badge + dates) in cards on mobile */
+  .card-body > .d-flex.align-items-center {
+    display: none !important;
+  }
+
+  [itemprop='datePublished'] {
+    display: none !important;
+  }
+
+  /* Place modified date on its own line below the badge */
+  [itemprop='dateModified'] {
+    order: 1;
+    flex: 0 0 100%;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    border: 0 !important;
+    margin-top: .25rem;
+    display: block;
+  }
+
+  /* Allow wrapping inside the meta row so items can break lines */
+  .card-body > .d-flex.align-items-center {
+    flex-wrap: wrap;
+  }
+
+  /* Tidy the badge spacing when it sits above the modified date */
+  .card-body > .d-flex.align-items-center > .badge {
+    margin-bottom: .25rem;
+  }
+}
+
 @include media-breakpoint-up(md) {
   /*  Small devices (landscape phones, portrait tablets, 576px and up) */
   html section.hero {

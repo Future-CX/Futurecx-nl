@@ -73,7 +73,7 @@
     />
     <meta name="theme-color" content="#ffffff" />
     <script>
-      (function () {
+      ;(function () {
         try {
           var t = localStorage.getItem('theme')
           if (!t) {
@@ -231,6 +231,7 @@
       <!-- Navbar -->
       <header
         class="header navbar navbar-expand-lg navbar-light position-absolute navbar-sticky"
+        data-sticky-offset="150"
       >
         <div class="container px-3">
           <a href="/" class="navbar-brand pe-3 text-primary"> Future CX </a>
@@ -348,40 +349,9 @@
           itemprop="image"
           content="https://www.futurecx.nl/assets/img/cover/cover-xxl.jpg"
         />
-        <div id="filters" class="mb-3 d-none">
-          <a
-            href="#"
-            class="badge fs-sm text-nav bg-primary text-decoration-none selected"
-            onclick="filterSelection('all')"
-            >Show all</a
-          >
-          <a
-            href="#"
-            class="badge fs-sm text-nav bg-primary text-decoration-none"
-            onclick="filterSelection('ea')"
-            >Enterprise Architecture</a
-          >
-          <a
-            href="#"
-            class="badge fs-sm text-nav bg-primary text-decoration-none"
-            onclick="filterSelection('cm')"
-            >Capability Modelling</a
-          >
-          <a
-            href="#"
-            class="badge fs-sm text-nav bg-primary text-decoration-none"
-            onclick="filterSelection('vs')"
-            >Vendor Selection</a
-          >
-          <a
-            href="#"
-            class="badge fs-sm text-nav bg-primary text-decoration-none"
-            onclick="filterSelection('ddd')"
-            >Domain Driven Design</a
-          >
-        </div>
+
         <!-- ITEM -->
-        <article class="card shadow-sm overflow-hidden mb-4 filter ddd">
+        <article class="card shadow-sm overflow-hidden mb-4 ddd">
           <div class="row g-0">
             <div
               class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover"
@@ -403,12 +373,22 @@
                   <a
                     href="#"
                     class="badge fs-sm text-nav bg-primary text-decoration-none"
-                    onclick="filterSelection('ddd')"
                     >Domain Driven Design</a
                   >
-                  <span class="fs-sm text-muted border-start ps-3 ms-3"
-                    >Jan 30, 2023</span
+                  <div
+                    class="fs-sm border-end p-1 pe-3 ms-3 me-3"
+                    itemprop="datePublished"
+                    content="2022-10-28T13:37:58+02:00"
                   >
+                    October 28, 2022
+                  </div>
+                  <div
+                    class="fs-sm p-1 me-3"
+                    itemprop="dateModified"
+                    content="2024-01-16T16:31:22+01:00"
+                  >
+                    Updated: January 16, 2024
+                  </div>
                 </div>
                 <h2 class="h4">
                   <a
@@ -421,226 +401,24 @@
                   to domains and services to build a Business Capability Model
                   and Future State Architecture.
                 </p>
-                <hr class="d-none d-sm-block my-4" />
-                <div
-                  class="d-none d-sm-block d-flex align-items-center justify-content-between"
-                >
-                  <a
-                    href="/#about"
-                    class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3"
-                  >
-                    <img
-                      src="/assets/img/profile/profile-XS.png"
-                      class="rounded-circle me-3"
-                      width="48"
-                      alt="Martijn van Deel"
-                    />
-                    Martijn van Deel
-                  </a>
-                </div>
               </div>
             </div>
           </div>
         </article>
         <!--END ITEM-->
+
         <!-- ITEM -->
-        <article class="card shadow-sm overflow-hidden mb-4 filter ea">
+        <article class="card shadow-sm overflow-hidden mb-4 ddd">
           <div class="row g-0">
             <div
               class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover"
               style="
-                background-image: url(/assets/img/blog/single/midjourney-young-kid-learning.png);
+                background-image: url(/assets/img/blog/single/midjourney-designer-looking-at-board.png);
                 min-height: 15rem;
               "
             >
               <a
-                href="/content/what-you-need-to-know-as-enterprise-architect.html"
-                class="position-absolute top-0 start-0 w-100 h-100"
-                aria-label="Read more"
-              ></a>
-            </div>
-            <div class="col-sm-8">
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-3">
-                  <a
-                    href="#"
-                    class="badge fs-sm text-nav bg-primary text-decoration-none"
-                    onclick="filterSelection('ea')"
-                    >Enterprise Architecture</a
-                  >
-                  <span class="fs-sm text-muted border-start ps-3 ms-3"
-                    >Nov 23, 2022</span
-                  >
-                </div>
-                <h2 class="h4">
-                  <a
-                    href="/content/what-you-need-to-know-as-enterprise-architect.html"
-                    >What you need to know as Enterprise Architect</a
-                  >
-                </h2>
-                <p>
-                  As an Enterprise Architect you need to stay ahead on new
-                  technology trends. I use this page as a personal reading and
-                  learning list. Feel free to read and learn with me.
-                </p>
-                <hr class="d-none d-sm-block my-4" />
-                <div
-                  class="d-none d-sm-block d-flex align-items-center justify-content-between"
-                >
-                  <a
-                    href="/#about"
-                    class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3"
-                  >
-                    <img
-                      src="/assets/img/profile/profile-XS.png"
-                      class="rounded-circle me-3"
-                      width="48"
-                      alt="Martijn van Deel"
-                    />
-                    Martijn van Deel
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <!--END ITEM-->
-        <!-- ITEM -->
-        <article class="card shadow-sm overflow-hidden mb-4 filter cm">
-          <div class="row g-0">
-            <div
-              class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover"
-              style="
-                background-image: url(/assets/img/blog/single/midjourney-women_in_a_shopping_street.png);
-                min-height: 15rem;
-              "
-            >
-              <a
-                href="/content/create-a-better-capability-model.html"
-                class="position-absolute top-0 start-0 w-100 h-100"
-                aria-label="Read more"
-              ></a>
-            </div>
-            <div class="col-sm-8">
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-3">
-                  <a
-                    href="#"
-                    class="badge fs-sm text-nav bg-primary text-decoration-none"
-                    onclick="filterSelection('cm')"
-                    >Capability Modelling</a
-                  >
-                  <span class="fs-sm text-muted border-start ps-3 ms-3"
-                    >Nov 23, 2022</span
-                  >
-                </div>
-                <h2 class="h4">
-                  <a href="/content/create-a-better-capability-model.html"
-                    >Create a better Capability Model</a
-                  >
-                </h2>
-                <p>
-                  A good Capability Model have capabilities grouped in business
-                  domains with the two levels of detail and clear descriptions
-                  of the capabilities to avoid ambiguity and length internal
-                  discssions.
-                </p>
-                <hr class="d-none d-sm-block my-4" />
-                <div
-                  class="d-none d-sm-block d-flex align-items-center justify-content-between"
-                >
-                  <a
-                    href="/#about"
-                    class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3"
-                  >
-                    <img
-                      src="/assets/img/profile/profile-XS.png"
-                      class="rounded-circle me-3"
-                      width="48"
-                      alt="Martijn van Deel"
-                    />
-                    Martijn van Deel
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <!--END ITEM-->
-        <!-- ITEM -->
-        <article class="card shadow-sm overflow-hidden mb-4 filter cm">
-          <div class="row g-0">
-            <div
-              class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover"
-              style="
-                background-image: url(/assets/img/blog/single/future-cx-capability-model-customer-engagement.png);
-                min-height: 15rem;
-              "
-            >
-              <a
-                href="/models/capability-model-cx.html"
-                class="position-absolute top-0 start-0 w-100 h-100"
-                aria-label="Read more"
-              ></a>
-            </div>
-            <div class="col-sm-8">
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-3">
-                  <a
-                    href="#"
-                    class="badge fs-sm text-nav bg-primary text-decoration-none"
-                    onclick="filterSelection('cm')"
-                    >Capability Modelling</a
-                  >
-                  <span class="fs-sm text-muted border-start ps-3 ms-3"
-                    >Nov 23, 2022</span
-                  >
-                </div>
-                <h2 class="h4">
-                  <a href="/models/capability-model-cx.html"
-                    >My Capability Model for Customer Engagement</a
-                  >
-                </h2>
-                <p>
-                  I haven't seen a capability model that focuses on Customer
-                  Engagement with definitions and the right level of detail. So,
-                  I decided to create my own! Interactive, with two levels of
-                  detail and clear definitions.
-                </p>
-                <hr class="d-none d-sm-block my-4" />
-                <div
-                  class="d-none d-sm-block d-flex align-items-center justify-content-between"
-                >
-                  <a
-                    href="/#about"
-                    class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3"
-                  >
-                    <img
-                      src="/assets/img/profile/profile-XS.png"
-                      class="rounded-circle me-3"
-                      width="48"
-                      alt="Martijn van Deel"
-                    />
-                    Martijn van Deel
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <!--END ITEM-->
-        <!-- ITEM -->
-        <article class="card shadow-sm overflow-hidden mb-4 filter ea">
-          <div class="row g-0">
-            <div
-              class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover"
-              style="
-                background-image: url(/assets/img/blog/single/midjourney-architect-looking-at-construction.png);
-                min-height: 15rem;
-              "
-            >
-              <a
-                href="/content/how-to-build-your-future-state-architecture.html"
+                href="/content/blog-single.html"
                 class="position-absolute top-0 start-0 w-100 h-100"
                 aria-label="Read more"
               ></a>
@@ -652,107 +430,31 @@
                   <a
                     href="#"
                     class="badge fs-sm text-nav bg-primary text-decoration-none"
-                    onclick="filterSelection('ea')"
-                    >Enterprise Architecture</a
+                    >Example</a
                   >
-                  <span class="fs-sm text-muted border-start ps-3 ms-3"
-                    >Dec, 2022</span
+                  <div
+                    class="fs-sm border-end p-1 pe-3 ms-3 me-3"
+                    itemprop="datePublished"
+                    content="2022-10-28T13:37:58+02:00"
                   >
+                    October 28, 2022
+                  </div>
+                  <div
+                    class="fs-sm p-1 me-3"
+                    itemprop="dateModified"
+                    content="2024-01-16T16:31:22+01:00"
+                  >
+                    Updated: January 16, 2024
+                  </div>
                 </div>
                 <h2 class="h4">
-                  <a
-                    href="/content/how-to-build-your-future-state-architecture.html"
-                    >How to build your Future State Architecture</a
-                  >
+                  <a href="/content/blog-single.html">Blog Single template</a>
                 </h2>
                 <p>
-                  Tellus sagittis dolor pellentesque vel porttitor magna aliquet
-                  arcu. Interdum risus mauris pulvinar et vel. Morbi tellus,
-                  scelerisque vel metus. Scelerisque arcu egestas ac commodo, ac
-                  nibh. Pretium ac elit sed nulla nec.
+                  Domain Driven Design a great technique to map business process
+                  to domains and services to build a Business Capability Model
+                  and Future State Architecture.
                 </p>
-                <hr class="d-none d-sm-block my-4" />
-                <div
-                  class="d-none d-sm-block d-flex align-items-center justify-content-between"
-                >
-                  <a
-                    href="/#about"
-                    class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3"
-                  >
-                    <img
-                      src="/assets/img/profile/profile-XS.png"
-                      class="rounded-circle me-3"
-                      width="48"
-                      alt="Martijn van Deel"
-                    />
-                    Martijn van Deel
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        <!--END ITEM-->
-        <!-- ITEM -->
-        <article class="card shadow-sm overflow-hidden mb-4 filter vs">
-          <div class="row g-0">
-            <div
-              class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover"
-              style="
-                background-image: url(/assets/img/blog/single/midjourney_future_customer_experience_questions_improve_humans-min.webp);
-                min-height: 15rem;
-              "
-            >
-              <a
-                href="/content/use-open-questions-and-context-for-a-better-rfp.html"
-                class="position-absolute top-0 start-0 w-100 h-100"
-                aria-label="Read more"
-              ></a>
-            </div>
-            <div class="col-sm-8">
-              <div class="card-body">
-                <div class="d-flex align-items-center mb-3">
-                  <a
-                    href="#"
-                    class="badge fs-sm text-nav bg-primary text-decoration-none"
-                    onclick="filterSelection('vs')"
-                    >Vendor Selection</a
-                  >
-                  <span class="fs-sm text-muted border-start ps-3 ms-3"
-                    >Sep 3, 2022</span
-                  >
-                </div>
-                <h2 class="h4">
-                  <a
-                    href="/content/use-open-questions-and-context-for-a-better-rfp.html"
-                    >Use open questions and context for a better RFP</a
-                  >
-                </h2>
-                <p>
-                  I strongly believe in asking open questions to software and
-                  implementation partners as it will give more insight into the
-                  potential solution. And by providing more context on the
-                  business ambition and architectural vision and principles will
-                  turn the RFP from a Request for a Solution into a Request for
-                  a Partner to achieve that ambition.
-                </p>
-                <hr class="d-none d-sm-block my-4" />
-                <div
-                  class="d-none d-sm-block d-flex align-items-center justify-content-between"
-                >
-                  <a
-                    href="/#about"
-                    class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3"
-                  >
-                    <img
-                      src="/assets/img/profile/profile-XS.png"
-                      class="rounded-circle me-3"
-                      width="48"
-                      alt="Martijn van Deel"
-                    />
-                    Martijn van Deel
-                  </a>
-                </div>
               </div>
             </div>
           </div>
@@ -912,7 +614,7 @@
     </a>
 
     <script src="assets/js/vendors.js"></script>
-    <script src="assets/js/theme.min.js"></script>
+    <script src="assets/js/theme.js"></script>
     <script src="assets/js/user.js"></script>
   </body>
 </html>
