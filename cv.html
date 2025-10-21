@@ -37,6 +37,28 @@
 		<meta name="msapplication-TileColor" content="#080032" >
 		<meta name="msapplication-config" content="assets/favicon/browserconfig.xml" >
 		<meta name="theme-color" content="#ffffff" >
+		<script>
+			(function () {
+				try {
+					var t = localStorage.getItem('theme')
+					if (!t) {
+						t =
+							window.matchMedia &&
+							window.matchMedia('(prefers-color-scheme: dark)').matches
+								? 'dark'
+								: 'light'
+					}
+					if (t === 'auto') {
+						t =
+							window.matchMedia &&
+							window.matchMedia('(prefers-color-scheme: dark)').matches
+								? 'dark'
+								: 'light'
+					}
+					document.documentElement.setAttribute('data-bs-theme', t)
+				} catch (e) {}
+			})()
+		</script>
 		<link rel="stylesheet" media="screen" href="assets/css/vendors.css" >
 		<link rel="stylesheet" media="screen" href="assets/css/theme.min.css" >
 		<link rel="stylesheet" href="assets/css/print.css" media="print">

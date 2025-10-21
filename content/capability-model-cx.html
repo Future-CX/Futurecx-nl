@@ -51,6 +51,28 @@
       sizes="16x16"
       href="/assets/favicon/favicon.ico"
     />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme')
+          if (!t) {
+            t =
+              window.matchMedia &&
+              window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+          }
+          if (t === 'auto') {
+            t =
+              window.matchMedia &&
+              window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+          }
+          document.documentElement.setAttribute('data-bs-theme', t)
+        } catch (e) {}
+      })()
+    </script>
     <link rel="stylesheet" media="screen" href="/assets/css/vendors.css" />
     <link rel="stylesheet" media="screen" href="/assets/css/theme.min.css" />
     <link rel="stylesheet" media="screen" href="capability-model.css" />

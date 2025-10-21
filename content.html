@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
   <head>
     <meta charset="utf-8" />
     <title>Content Overview | Future CX | Martijn van Deel</title>
@@ -72,6 +72,28 @@
       content="/assets/favicon/browserconfig.xml"
     />
     <meta name="theme-color" content="#ffffff" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme')
+          if (!t) {
+            t =
+              window.matchMedia &&
+              window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+          }
+          if (t === 'auto') {
+            t =
+              window.matchMedia &&
+              window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+          }
+          document.documentElement.setAttribute('data-bs-theme', t)
+        } catch (e) {}
+      })()
+    </script>
     <link rel="stylesheet" media="screen" href="assets/css/vendors.css" />
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
     <script src="assets/js/theme-switcher.js"></script>

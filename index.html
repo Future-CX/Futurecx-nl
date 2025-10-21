@@ -70,7 +70,28 @@
     />
     <meta name="theme-color" content="#ffffff" />
 
-   
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme')
+          if (!t) {
+            t =
+              window.matchMedia &&
+              window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+          }
+          if (t === 'auto') {
+            t =
+              window.matchMedia &&
+              window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+          }
+          document.documentElement.setAttribute('data-bs-theme', t)
+        } catch (e) {}
+      })()
+    </script>
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
     
 
@@ -2168,7 +2189,7 @@
   src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
   integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
   crossorigin="anonymous"></script>
-  <script src="assets/js/theme-switcher.js"></script>
+  <script src="/assets/js/theme-switcher.js"></script>
     <script src="/assets/js/vendors.js"></script>
     <link rel="stylesheet" media="screen" href="assets/css/vendors.css" />
     <script src="/assets/js/theme.min.js"></script>
