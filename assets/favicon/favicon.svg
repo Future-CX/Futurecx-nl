@@ -1,17 +1,10 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 457">
-    <defs>
-        <style>
-        .cls-1 {
-            font-size: 374.29px;
-            font-family: Futura-Bold, Futura;
-            font-weight: 700;
-            color: #ff0000;
-        }
-        @media ( prefers-color-scheme: dark ) {
-            .cls-1 {
-                color: #00ff00;
-            }
-        }
-        </style>
-    </defs><text class="cls-1" transform="translate(0 328.25) scale(0.93 1)">CX</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny-ps"
+     width="256" height="256" viewBox="0 0 256 256" role="img">
+  <title>Future CX</title>
+  <rect width="256" height="256" fill="#ffffff"/>
+  <g fill="#000000" font-family="Questrial, Futura, Arial, Helvetica, 'DejaVu Sans', sans-serif" text-anchor="middle">
+    <text x="128" y="110" font-size="60">Future</text>
+    <text x="128" y="220" font-size="140">CX</text>
+  </g>
 </svg>
