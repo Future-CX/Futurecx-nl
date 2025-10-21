@@ -146,6 +146,26 @@ svg {
   font-display: swap;
 }
 
+/* Fine-tune back-to-top icon centering */
+:root {
+  --scroll-top-icon-translate-x: 10px; /* global X offset */
+  --scroll-top-icon-translate-y: 10px; /* global Y offset */
+}
+
+.btn-scroll-top .btn-scroll-top-icon {
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  font-weight: 400; /* avoid bold shifting glyph metrics */
+  transform: translate(
+    var(--scroll-top-icon-translate-x),
+    var(--scroll-top-icon-translate-y)
+  );
+}
+
 /* Filter Content */
 
 .filter {

@@ -7,8 +7,9 @@
   "license": "ISC",
   "main": "index.html",
   "scripts": {
-    "dev": "npm-run-all --silent -p styles:minified scripts:minified vendor sitemap && npm run watch --silent",
-    "build": "npm-run-all --silent -p styles:expanded styles:minified scripts:expanded scripts:minified vendor && npm run validate --silent",
+    "dev": "npm-run-all --silent -p styles:minified scripts:minified vendor sitemap && npm run dates --silent && npm run watch --silent",
+    "build": "npm-run-all --silent -p styles:expanded styles:minified scripts:expanded scripts:minified vendor && npm run dates --silent && npm run validate --silent",
+    "dates": "node build/publish-dates.js",
     "postbuild": "node build/sitemap.js",
     "styles:expanded": "node build/styles.js expanded",
     "styles:minified": "node build/styles.js minified",
