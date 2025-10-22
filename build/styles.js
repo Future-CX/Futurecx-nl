@@ -15,10 +15,7 @@ function runScript(alias, script) {
     const stdout = execSync(script)
     log.success(alias)
   } catch (error) {
-    log.error(
-      '',
-      `Task ${alias} hasn't been completed! ${error.stdout.toString()}`
-    )
+    log.error('', `Task ${alias} hasn't been completed! ${error.stdout.toString()}`)
   }
 }
 
@@ -44,7 +41,7 @@ const lintScss = async () => {
 
 const runSass = async (outputStyle) => {
   const outputFile = outputStyle === 'compressed' ? '.min' : ''
-  const sassCommand = `sass --style ${outputStyle} --source-map --embed-sources --no-error-css --load-path=node_modules ${path.scss}/theme.scss:${path.css}/theme${outputFile}.css`
+  const sassCommand = `sass --style ${outputStyle} --source-map --embed-sources --no-error-css --quiet-deps --load-path=node_modules ${path.scss}/theme.scss:${path.css}/theme${outputFile}.css`
 
   log.info(`Building ${outputStyle} CSS...`)
   runScript(`Compile SCSS to CSS (${outputStyle})`, sassCommand)

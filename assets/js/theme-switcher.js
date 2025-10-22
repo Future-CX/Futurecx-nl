@@ -3,23 +3,21 @@
  * Copyright 2023 Createx Studio
  */
 
-(() => {
+;(() => {
   'use strict'
 
   const getStoredTheme = () => localStorage.getItem('theme')
-  const setStoredTheme = theme => localStorage.setItem('theme', theme)
+  const setStoredTheme = (theme) => localStorage.setItem('theme', theme)
 
   const getPreferredTheme = () => {
     const storedTheme = getStoredTheme()
     if (storedTheme) return storedTheme
 
     // Follow the system (browser) preference by default
-    return (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ? 'dark'
-      : 'light'
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
   }
 
-  const setTheme = theme => {
+  const setTheme = (theme) => {
     if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.setAttribute('data-bs-theme', 'dark')
     } else {
@@ -54,14 +52,13 @@
   window.addEventListener('DOMContentLoaded', () => {
     showActiveTheme(getPreferredTheme())
 
-    document.querySelectorAll('[data-bs-toggle="mode"]')
-      .forEach(toggle => {
-        toggle.addEventListener('click', () => {
-          const theme = toggle.querySelector('input[type="checkbox"]').checked === true ? 'dark' : 'light'
-          setStoredTheme(theme)
-          setTheme(theme)
-          showActiveTheme(theme, true)
-        })
+    document.querySelectorAll('[data-bs-toggle="mode"]').forEach((toggle) => {
+      toggle.addEventListener('click', () => {
+        const theme = toggle.querySelector('input[type="checkbox"]').checked === true ? 'dark' : 'light'
+        setStoredTheme(theme)
+        setTheme(theme)
+        showActiveTheme(theme, true)
       })
+    })
   })
 })()

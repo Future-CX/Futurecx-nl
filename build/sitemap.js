@@ -31,11 +31,7 @@ const GenerateSitemap = async () => {
 }
 
 function getSitemapUrl(location, datetime) {
-  let url =
-    '\t<url>\n' +
-    `\t\t<loc>${location}</loc>\n` +
-    `\t\t<lastmod>${datetime}</lastmod>\n` +
-    '\t</url>\n'
+  let url = '\t<url>\n' + `\t\t<loc>${location}</loc>\n` + `\t\t<lastmod>${datetime}</lastmod>\n` + '\t</url>\n'
   return url
 }
 
@@ -48,17 +44,7 @@ function fromDir(startPath, filter, callback) {
   }
 
   // filter unwanted directories
-  let ignoredDirectories = [
-    '.git',
-    '.github',
-    'assets',
-    'build',
-    'components',
-    'docs',
-    'node_modules',
-    'pages',
-    'src',
-  ]
+  let ignoredDirectories = ['.git', '.github', 'assets', 'build', 'components', 'docs', 'node_modules', 'pages', 'src']
   if (ignoredDirectories.includes(startPath)) {
     //log.info('ignored ', startPath + '/')
     return

@@ -26,10 +26,7 @@ const copyDependencies = async () => {
   let errors = 0
   for (const dependency of dependencies) {
     try {
-      await fs.copy(
-        `node_modules/${dependency}`,
-        `${path.vendor}/${dependency}`
-      )
+      await fs.copy(`node_modules/${dependency}`, `${path.vendor}/${dependency}`)
     } catch (error) {
       errors++
       log.error('', `Failed to copy ${dependency}: ${error.message}`)
@@ -53,6 +50,12 @@ const concatAndCopy = async () => {
       `${path.vendor}/imagesloaded/imagesloaded.pkgd.min.js`,
       `${path.vendor}/shufflejs/dist/shuffle.min.js`,
       `${path.vendor}/jarallax/dist/jarallax.min.js`,
+      // lightGallery core + plugins (required by gallery component)
+      `${path.vendor}/lightgallery/lightgallery.min.js`,
+      `${path.vendor}/lightgallery/plugins/zoom/lg-zoom.min.js`,
+      `${path.vendor}/lightgallery/plugins/fullscreen/lg-fullscreen.min.js`,
+      `${path.vendor}/lightgallery/plugins/video/lg-video.min.js`,
+      `${path.vendor}/lightgallery/plugins/thumbnail/lg-thumbnail.min.js`,
     ],
     `assets/js/vendors.js`
   )

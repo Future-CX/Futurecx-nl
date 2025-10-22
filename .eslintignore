@@ -1,2 +1,10 @@
-*/components/*.js
-/src/js/components/*.js
+node_modules/
+assets/vendor/
+assets/img/
+assets/fonts/
+assets/js/vendors.js
+assets/js/theme.min.js
+assets/js/*.map
+assets/js/**/*.map
+*.min.js
+

@@ -75,7 +75,7 @@ function humanDate(iso) {
     'September',
     'October',
     'November',
-    'December'
+    'December',
   ]
   return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`
 }
@@ -91,15 +91,9 @@ function updateFile(filePath) {
       const human = humanDate(iso)
       const newHtml = html
         // Replace or insert content attribute
-        .replace(
-          /(itemprop=["']datePublished["'][^>]*content=["'])[^"]*(["'])/i,
-          `$1${iso}$2`
-        )
+        .replace(/(itemprop=["']datePublished["'][^>]*content=["'])[^"]*(["'])/i, `$1${iso}$2`)
         // Replace visible text immediately after the tag
-        .replace(
-          /(itemprop=["']datePublished["'][^>]*>)([^<]*)/i,
-          (_, pre) => `${pre}${human}`
-        )
+        .replace(/(itemprop=["']datePublished["'][^>]*>)([^<]*)/i, (_, pre) => `${pre}${human}`)
       if (newHtml !== html) {
         html = newHtml
         changed = true
@@ -107,20 +101,14 @@ function updateFile(filePath) {
     }
   }
 
-  // dateModified → last commit date (or mtime)
+  // dateModified → use filesystem modified time (fallbacks retained just in case)
   if (/itemprop=["']dateModified["']/i.test(html)) {
-    const isoMod = gitModifiedISO(filePath) || fsMtimeISO(filePath)
+    const isoMod = fsMtimeISO(filePath) || gitModifiedISO(filePath)
     if (isoMod) {
       const humanMod = humanDate(isoMod)
       const newHtml = html
-        .replace(
-          /(itemprop=["']dateModified["'][^>]*content=["'])[^"]*(["'])/i,
-          `$1${isoMod}$2`
-        )
-        .replace(
-          /(itemprop=["']dateModified["'][^>]*>)([^<]*)/i,
-          (_, pre) => `${pre}Updated: ${humanMod}`
-        )
+        .replace(/(itemprop=["']dateModified["'][^>]*content=["'])[^"]*(["'])/i, `$1${isoMod}$2`)
+        .replace(/(itemprop=["']dateModified["'][^>]*>)([^<]*)/i, (_, pre) => `${pre}Updated: ${humanMod}`)
       if (newHtml !== html) {
         html = newHtml
         changed = true

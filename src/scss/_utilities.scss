@@ -1,6 +1,7 @@
 // Utilities
 // Extend / update default Bootstrap's utility classes
 
+@use "sass:map";
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/variables-dark";
@@ -30,10 +31,10 @@ $utilities: map-merge(
 
     // Background colors
     "background-color": map-merge(
-      map-get($utilities, "background-color"),
+      map.get($utilities, "background-color"),
       (
         values: map-merge(
-          map-get(map-get($utilities, "background-color"), "values"),
+          map.get(map.get($utilities, "background-color"), "values"),
           (
             "secondary": $gray-100,
             "dark":      $gray-900,

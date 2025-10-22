@@ -38,6 +38,8 @@ html h1 {
 [data-bs-theme='dark'] h5,
 [data-bs-theme='dark'] h6 {
   color: $light !important;
+}
+[data-bs-theme='dark'] h1 {
   text-shadow: 0 0 5px #000;
 }
 
@@ -265,7 +267,7 @@ span.wip {
     padding-left: 0 !important;
     margin-left: 0 !important;
     border: 0 !important;
-    margin-top: .25rem;
+    margin-top: 0.25rem;
     display: block;
   }
 
@@ -276,7 +278,7 @@ span.wip {
 
   /* Tidy the badge spacing when it sits above the modified date */
   .card-body > .d-flex.align-items-center > .badge {
-    margin-bottom: .25rem;
+    margin-bottom: 0.25rem;
   }
 }
 

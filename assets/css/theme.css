@@ -632,6 +632,10 @@ legend + * {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
+[type=search]::-webkit-search-cancel-button {
+  cursor: pointer;
+  filter: grayscale(1);
+}
 
 /* rtl:raw:
 [type="tel"],
@@ -682,12 +686,14 @@ progress {
 
 .lead {
   font-size: calc(1.275rem + 0.3vw);
-  font-weight: 400;
 }
 @media (min-width: 1200px) {
   .lead {
     font-size: 1.5rem;
   }
+}
+.lead {
+  font-weight: 400;
 }
 
 .display-1 {
@@ -4566,24 +4572,24 @@ textarea.form-control-lg {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-top,
-  .card-group > .card:not(:last-child) .card-header {
+  .card-group > .card:not(:last-child) > .card-img-top,
+  .card-group > .card:not(:last-child) > .card-header {
     border-top-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-bottom,
-  .card-group > .card:not(:last-child) .card-footer {
+  .card-group > .card:not(:last-child) > .card-img-bottom,
+  .card-group > .card:not(:last-child) > .card-footer {
     border-bottom-right-radius: 0;
   }
   .card-group > .card:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-top,
-  .card-group > .card:not(:first-child) .card-header {
+  .card-group > .card:not(:first-child) > .card-img-top,
+  .card-group > .card:not(:first-child) > .card-header {
     border-top-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-img-bottom,
-  .card-group > .card:not(:first-child) .card-footer {
+  .card-group > .card:not(:first-child) > .card-img-bottom,
+  .card-group > .card:not(:first-child) > .card-footer {
     border-bottom-left-radius: 0;
   }
 }
@@ -5713,6 +5719,7 @@ textarea.form-control-lg {
 .spinner-grow,
 .spinner-border {
   display: inline-block;
+  flex-shrink: 0;
   width: var(--si-spinner-width);
   height: var(--si-spinner-height);
   vertical-align: var(--si-spinner-vertical-align);
@@ -6666,6 +6673,10 @@ textarea.form-control-lg {
 .visually-hidden:not(caption),
 .visually-hidden-focusable:not(:focus):not(:focus-within):not(caption) {
   position: absolute !important;
+}
+.visually-hidden *,
+.visually-hidden-focusable:not(:focus):not(:focus-within) * {
+  overflow: hidden !important;
 }
 
 .stretched-link::after {
@@ -13434,10 +13445,12 @@ label {
   background-color: var(--si-range-slider-bg);
   border: 0;
   box-shadow: none;
-  /* stylelint-disable selector-class-pattern */
 }
 [data-pips] .range-slider-ui {
   margin-bottom: 3.5rem;
+}
+.range-slider-ui {
+  /* stylelint-disable selector-class-pattern */
 }
 .range-slider-ui .noUi-connect {
   background-color: var(--si-range-slider-connect-bg);
@@ -13514,7 +13527,6 @@ html:not([dir=rtl]) .range-slider-ui.noUi-horizontal .noUi-handle {
   background-size: cover;
   background-position: 0 0;
   /* stylelint-disable declaration-no-important */
-  /* stylelint-enable declaration-no-important */
 }
 .credit-card-icon.amex {
   background-position: 0 -52px !important;
@@ -13533,6 +13545,9 @@ html:not([dir=rtl]) .range-slider-ui.noUi-horizontal .noUi-handle {
 }
 .credit-card-icon.visa {
   background-position: 0 -182px !important;
+}
+.credit-card-icon {
+  /* stylelint-enable declaration-no-important */
 }
 
 [data-bs-theme=dark] .form-label,
@@ -17375,6 +17390,9 @@ html h1, html .h1 {
 [data-bs-theme=dark] h6,
 [data-bs-theme=dark] .h6 {
   color: #fff !important;
+}
+
+[data-bs-theme=dark] h1, [data-bs-theme=dark] .h1 {
   text-shadow: 0 0 5px #000;
 }
 
@@ -17484,6 +17502,23 @@ svg {
   font-display: swap;
 }
 
+/* Fine-tune back-to-top icon centering */
+:root {
+  --scroll-top-icon-translate-x: 10px; /* global X offset */
+  --scroll-top-icon-translate-y: 10px; /* global Y offset */
+}
+
+.btn-scroll-top .btn-scroll-top-icon {
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  font-weight: 400; /* avoid bold shifting glyph metrics */
+  transform: translate(var(--scroll-top-icon-translate-x), var(--scroll-top-icon-translate-y));
+}
+
 /* Filter Content */
 .filter {
   display: none; /* Hidden by default */
@@ -17553,6 +17588,34 @@ span.wip {
   }
   nav[data-toggle=toc] .nav .active .nav {
     display: none;
+  }
+}
+/* Hide published date on mobile */
+@media (max-width: 575.98px) {
+  /* Hide meta row (badge + dates) in cards on mobile */
+  .card-body > .d-flex.align-items-center {
+    display: none !important;
+  }
+  [itemprop=datePublished] {
+    display: none !important;
+  }
+  /* Place modified date on its own line below the badge */
+  [itemprop=dateModified] {
+    order: 1;
+    flex: 0 0 100%;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    border: 0 !important;
+    margin-top: 0.25rem;
+    display: block;
+  }
+  /* Allow wrapping inside the meta row so items can break lines */
+  .card-body > .d-flex.align-items-center {
+    flex-wrap: wrap;
+  }
+  /* Tidy the badge spacing when it sits above the modified date */
+  .card-body > .d-flex.align-items-center > .badge {
+    margin-bottom: 0.25rem;
   }
 }
 @media (min-width: 768px) {

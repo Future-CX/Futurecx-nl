@@ -3,8 +3,8 @@ let hash = url.includes('#') ? url.substring(url.indexOf('#') + 1) : ''
 
 // Success hash toggle (no jQuery)
 if (hash === 'success') {
-  var successEl = document.getElementById('contactsuccess')
-  var formEl = document.getElementById('contactform')
+  let successEl = document.getElementById('contactsuccess')
+  let formEl = document.getElementById('contactform')
   if (successEl) successEl.classList.toggle('d-none')
   if (formEl) formEl.classList.toggle('d-none')
 }
@@ -12,8 +12,8 @@ if (hash === 'success') {
 // Copyright
 ;(function () {
   try {
-    var year = new Date().getFullYear()
-    var copyEl = document.getElementById('copyright')
+    let year = new Date().getFullYear()
+    let copyEl = document.getElementById('copyright')
     if (copyEl) {
       copyEl.innerHTML = '© ' + year + ' Future CX by Martijn van Deel'
     }
@@ -23,35 +23,24 @@ if (hash === 'success') {
 // Format published dates from their content attribute (ISO) to human text
 ;(function () {
   function updatePublishedDates() {
-    var targets = document.querySelectorAll('[itemprop="datePublished"]')
+    let targets = document.querySelectorAll('[itemprop="datePublished"]')
     if (!targets || !targets.length) return
 
-    var monthsLong = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December'
-    ]
+    let monthsLong = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
     targets.forEach(function (el) {
-      var src = el.getAttribute('content') || el.textContent || ''
-      var d = new Date(src)
+      let src = el.getAttribute('content') || el.textContent || ''
+      let d = new Date(src)
       if (isNaN(d.getTime())) return
-      var dd = d.getDate()
-      var mm = monthsLong[d.getMonth()]
-      var yyyy = d.getFullYear()
+      let dd = d.getDate()
+      let mm = monthsLong[d.getMonth()]
+      let yyyy = d.getFullYear()
       el.textContent = mm + ' ' + dd + ', ' + yyyy
       // Preserve existing content attr if provided; otherwise add ISO
       if (!el.getAttribute('content')) {
-        try { el.setAttribute('content', d.toISOString()) } catch (e) {}
+        try {
+          el.setAttribute('content', d.toISOString())
+        } catch (e) {}
       }
     })
   }
@@ -66,16 +55,16 @@ if (hash === 'success') {
 // Equalize heights of client grid cards (no jQuery)
 ;(function () {
   function equalHeight() {
-    var items = document.querySelectorAll('.clients-grid-item article')
+    let items = document.querySelectorAll('.clients-grid-item article')
     if (!items || !items.length) return
     // reset heights
     items.forEach(function (el) {
       el.style.height = 'auto'
     })
     // compute max height
-    var max = 0
+    let max = 0
     items.forEach(function (el) {
-      var h = el.offsetHeight
+      let h = el.offsetHeight
       if (h > max) max = h
     })
     // apply max height
@@ -90,9 +79,9 @@ if (hash === 'success') {
     window.addEventListener('resize', equalHeight)
 
     // Recalculate when containers resize (if supported)
-    var containers = document.querySelectorAll('.my-shuffle')
+    let containers = document.querySelectorAll('.my-shuffle')
     if (typeof ResizeObserver !== 'undefined' && containers.length) {
-      var ro = new ResizeObserver(function () {
+      let ro = new ResizeObserver(function () {
         equalHeight()
       })
       containers.forEach(function (c) {
@@ -117,9 +106,7 @@ if (hash === 'success') {
     // LinkedIn
     let lnBtns = document.querySelectorAll('.btn-linkedin')
     if (lnBtns && lnBtns.length) {
-      let lnUrl =
-        'https://www.linkedin.com/sharing/share-offsite/?url=' +
-        encodeURIComponent(url)
+      let lnUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url)
       lnBtns.forEach(function (btn) {
         btn.setAttribute('href', lnUrl)
         btn.setAttribute('target', '_blank')
@@ -130,10 +117,7 @@ if (hash === 'success') {
     // Twitter / X
     let twBtns = document.querySelectorAll('.btn-twitter')
     if (twBtns && twBtns.length) {
-      let twUrl =
-        'https://twitter.com/intent/tweet?url=' +
-        encodeURIComponent(url) +
-        (title ? '&text=' + encodeURIComponent(title) : '')
+      let twUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + (title ? '&text=' + encodeURIComponent(title) : '')
       twBtns.forEach(function (btn) {
         btn.setAttribute('href', twUrl)
         btn.setAttribute('target', '_blank')
@@ -144,9 +128,7 @@ if (hash === 'success') {
     // Facebook
     let fbBtns = document.querySelectorAll('.btn-facebook')
     if (fbBtns && fbBtns.length) {
-      let fbUrl =
-        'https://www.facebook.com/sharer/sharer.php?u=' +
-        encodeURIComponent(url)
+      let fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url)
       fbBtns.forEach(function (btn) {
         btn.setAttribute('href', fbUrl)
         btn.setAttribute('target', '_blank')

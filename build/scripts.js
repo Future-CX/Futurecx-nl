@@ -40,7 +40,7 @@ const bundleJS = async (output) => {
           babelHelpers: 'bundled',
           exclude: 'node_modules/**',
         }),
-        isMinified && terser({ output: { comments: /^!|@author|@version/i } }),
+        isMinified && terser({ format: { comments: /^!|@author|@version/i } }),
       ].filter(Boolean),
       onwarn: (warning, warn) => {
         // Ignore the 'this' at the top level warning
@@ -55,7 +55,7 @@ const bundleJS = async (output) => {
     const outputOptions = {
       file: `${path.js}/${outputFilename}`,
       format: 'iife',
-      sourcemap: true,
+      sourcemap: !isMinified,
       banner: `
 /**
  * Silicon | Multipurpose Bootstrap 5 Template & UI Kit
@@ -73,7 +73,37 @@ const bundleJS = async (output) => {
 
     log.success(`Bundled JavaScript (${output})`)
   } catch (error) {
-    log.error('', error.message)
+    log.error('', error && (error.stack || error.message || String(error)))
+    // Fallback: if minified build fails (e.g., terser crash), retry without terser
+    if (output === 'minified') {
+      log.info('Retrying minified bundle without terser (fallback)...')
+      try {
+        const inputOptionsFallback = {
+          input: `./${path.src_js}/theme.js`,
+          plugins: [nodeResolve(), babel({ babelHelpers: 'bundled', exclude: 'node_modules/**' })],
+          onwarn: (warning, warn) => {
+            if (warning.code === 'THIS_IS_UNDEFINED') return
+            warn(warning)
+          },
+        }
+        const outputOptionsFallback = {
+          file: `${path.js}/theme.min.js`,
+          format: 'iife',
+          sourcemap: false,
+          banner: `
+/**
+ * Silicon | Multipurpose Bootstrap 5 Template & UI Kit
+ * Fallback unminified bundle (terser disabled)
+ */
+          `,
+        }
+        const bundle = await rollup.rollup(inputOptionsFallback)
+        await bundle.write(outputOptionsFallback)
+        log.success('Bundled JavaScript (minified fallback without terser)')
+      } catch (e2) {
+        log.error('', e2 && (e2.stack || e2.message || String(e2)))
+      }
+    }
   }
 }
 
@@ -86,7 +116,7 @@ const buildScripts = async () => {
       log.error('Invalid output key. Use either "minified" or "expanded"')
     }
   } catch (error) {
-    log.error('', error.message)
+    log.error('', error && (error.stack || error.message || String(error)))
   }
 }
 

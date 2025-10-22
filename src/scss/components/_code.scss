@@ -1,3 +1,5 @@
+@use "sass:color";
+
 //
 // Code
 // --------------------------------------------------
@@ -14,7 +16,7 @@ pre {
   --#{$prefix}pre-line-numbers-border-color: #{$pre-line-numbers-border-color};
   --#{$prefix}pre-line-numbers-color: #{$pre-line-numbers-color};
   --#{$prefix}pre-tag-color: #4e54c8;
-  --#{$prefix}pre-comment-color: #{darken($gray-500, 6%)};
+  --#{$prefix}pre-comment-color: #{color.adjust($gray-500, $lightness: -6%)};
   --#{$prefix}pre-attr-name-color: #4091e3;
   --#{$prefix}pre-attr-value-color: #e3116c;
   --#{$prefix}pre-class-name-color: #36acaa;

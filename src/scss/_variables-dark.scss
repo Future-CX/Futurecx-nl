@@ -1,15 +1,19 @@
+
+@use "sass:color";
+@use "sass:map";
+
 // Dark color mode variables
 //
 // Custom variables for the `[data-bs-theme="dark"]` theme.
 
 // Global colors
 
-$primary-text-emphasis-dark:        darken($primary, 5%) !default;
+$primary-text-emphasis-dark:        color.adjust($primary, $lightness: -5%) !default;
 $secondary-text-emphasis-dark:      $gray-200 !default;
-$success-text-emphasis-dark:        darken($success, 5%) !default;
-$info-text-emphasis-dark:           darken($info, 5%) !default;
-$warning-text-emphasis-dark:        darken($warning, 5%) !default;
-$danger-text-emphasis-dark:         darken($danger, 5%) !default;
+$success-text-emphasis-dark:        color.adjust($success, $lightness: -5%) !default;
+$info-text-emphasis-dark:           color.adjust($info, $lightness: -5%) !default;
+$warning-text-emphasis-dark:        color.adjust($warning, $lightness: -5%) !default;
+$danger-text-emphasis-dark:         color.adjust($danger, $lightness: -5%) !default;
 $light-text-emphasis-dark:          $gray-200 !default;
 $dark-text-emphasis-dark:           $white !default;
 
@@ -36,7 +40,7 @@ $body-bg-dark:                      $gray-900 !default;
 $border-color-dark:                 $border-light-color !default;
 $headings-color-dark:               $white !default;
 $link-color-dark:                   $primary !default;
-$link-hover-color-dark:             darken($link-color, 8%) !default;
+$link-hover-color-dark:             color.adjust($link-color, $lightness: -8%) !default;
 
 
 // Image thumbnails
@@ -119,7 +123,7 @@ $nav-link-disabled-color-dark:      rgba($white, .4) !default;
 
 $nav-tabs-link-bg-dark:             rgba($white, .05) !default;
 $nav-tabs-link-color-dark:          rgba($white, .85) !default;
-$nav-tabs-link-hover-bg-dark:       map-get($theme-faded-colors, "primary") !default;
+$nav-tabs-link-hover-bg-dark:       map.get($theme-faded-colors, "primary") !default;
 $nav-tabs-link-hover-color-dark:    $primary !default;
 $nav-tabs-link-active-bg-dark:      $primary !default;
 $nav-tabs-link-active-color-dark:   $white !default;
@@ -194,7 +198,7 @@ $pre-bg-dark:                       rgba($white, .04) !default;
 $pre-line-numbers-border-color-dark: $border-light-color !default;
 $pre-line-numbers-color-dark:       rgba($white, .5) !default;
 $kbd-color-dark:                    $white !default;
-$kbd-bg-dark:                       darken($gray-900, 8%) !default;
+$kbd-bg-dark:                       color.adjust($gray-900, $lightness: -8%) !default;
 
 
 // Carousel

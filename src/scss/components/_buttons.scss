@@ -1,3 +1,5 @@
+@use "sass:color";
+
 //
 // Buttons
 // --------------------------------------------------
@@ -26,10 +28,10 @@
   .btn-#{$color} {
     --#{$prefix}btn-hover-color: #{$btn-color};
     --#{$prefix}btn-active-color: #{$btn-color};
-    --#{$prefix}btn-hover-bg: #{darken($value, 7.5%)};
-    --#{$prefix}btn-active-bg: #{darken($value, 7.5%)};
-    --#{$prefix}btn-hover-border-color: #{darken($value, 7.5%)};
-    --#{$prefix}btn-active-border-color: #{darken($value, 7.5%)};
+    --#{$prefix}btn-hover-bg: #{color.adjust($value, $lightness: -7.5%)};
+    --#{$prefix}btn-active-bg: #{color.adjust($value, $lightness: -7.5%)};
+    --#{$prefix}btn-hover-border-color: #{color.adjust($value, $lightness: -7.5%)};
+    --#{$prefix}btn-active-border-color: #{color.adjust($value, $lightness: -7.5%)};
     --#{$prefix}btn-disabled-color: #{$btn-color};
   }
 }

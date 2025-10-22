@@ -1,317 +1,319 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<title>Future CX | 404 Not Found</title>
+  <head>
+    <meta charset="utf-8" />
+    <title>Future CX | 404 Not Found</title>
 
-		<!-- SEO Meta Tags -->
-		<meta name="description" content="404 Not Found | Future CX | Martijn van Deel" />
-		<meta
-			name="keywords"
-			content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative"
-		/>
-		<meta name="author" content="Martijn van Deel" />
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="404 Not Found | Future CX | Martijn van Deel" />
+    <meta
+      name="keywords"
+      content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative"
+    />
+    <meta name="author" content="Martijn van Deel" />
 
-		<!-- Viewport -->
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!-- Favicon and Touch Icons -->
-		<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
-		<link rel="manifest" href="assets/favicon/site.webmanifest" />
-		<link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
-		<link rel="alternate icon" sizes="16x16" href="assets/favicon/favicon.ico" />
-		<link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#ffffff" />
-		<meta name="msapplication-TileColor" content="#080032" />
-		<meta name="msapplication-config" content="assets/favicon/browserconfig.xml" />
-		<meta name="theme-color" content="#ffffff" />
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="alternate icon" sizes="16x16" href="assets/favicon/favicon.ico" />
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#ffffff" />
+    <meta name="msapplication-TileColor" content="#080032" />
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
 
-		<!-- Vendor Styles -->
-		<link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
-		<!-- Main Theme Styles + Bootstrap -->
-		<link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
 
-		<!-- Page loading styles -->
-		<style>
-			.page-loading {
-				position: fixed;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				-webkit-transition: all 0.4s 0.2s ease-in-out;
-				transition: all 0.4s 0.2s ease-in-out;
-				background-color: #fff;
-				opacity: 0;
-				visibility: hidden;
-				z-index: 9999;
-			}
-			.dark-mode .page-loading {
-				background-color: #0b0f19;
-			}
-			.page-loading.active {
-				opacity: 1;
-				visibility: visible;
-			}
-			.page-loading-inner {
-				position: absolute;
-				top: 50%;
-				left: 0;
-				width: 100%;
-				text-align: center;
-				-webkit-transform: translateY(-50%);
-				transform: translateY(-50%);
-				-webkit-transition: opacity 0.2s ease-in-out;
-				transition: opacity 0.2s ease-in-out;
-				opacity: 0;
-			}
-			.page-loading.active > .page-loading-inner {
-				opacity: 1;
-			}
-			.page-loading-inner > span {
-				display: block;
-				font-size: 1rem;
-				font-weight: normal;
-				color: #9397ad;
-			}
-			.dark-mode .page-loading-inner > span {
-				color: #fff;
-				opacity: 0.6;
-			}
-			.page-spinner {
-				display: inline-block;
-				width: 2.75rem;
-				height: 2.75rem;
-				margin-bottom: 0.75rem;
-				vertical-align: text-bottom;
-				border: 0.15em solid #b4b7c9;
-				border-right-color: transparent;
-				border-radius: 50%;
-				-webkit-animation: spinner 0.75s linear infinite;
-				animation: spinner 0.75s linear infinite;
-			}
-			.dark-mode .page-spinner {
-				border-color: rgba(255, 255, 255, 0.4);
-				border-right-color: transparent;
-			}
-			@-webkit-keyframes spinner {
-				100% {
-					-webkit-transform: rotate(360deg);
-					transform: rotate(360deg);
-				}
-			}
-			@keyframes spinner {
-				100% {
-					-webkit-transform: rotate(360deg);
-					transform: rotate(360deg);
-				}
-			}
-		</style>
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: 0.6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+        vertical-align: text-bottom;
+        border: 0.15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        border-color: rgba(255, 255, 255, 0.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
 
-		<!-- Theme mode -->
-		<script>
-			let mode = window.localStorage.getItem('mode'),
-				root = document.getElementsByTagName('html')[0];
-			if (mode !== null && mode === 'dark') {
-				root.classList.add('dark-mode');
-			} else {
-				root.classList.remove('dark-mode');
-			}
-		</script>
+    <!-- Theme mode -->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+        root = document.getElementsByTagName('html')[0]
+      if (mode !== null && mode === 'dark') {
+        root.classList.add('dark-mode')
+      } else {
+        root.classList.remove('dark-mode')
+      }
+    </script>
 
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-4R2D7JRCEJ"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
-			gtag('config', 'G-4R2D7JRCEJ');
-		</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4R2D7JRCEJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'G-4R2D7JRCEJ')
+    </script>
 
-		<!-- Page loading scripts -->
-		<script>
-			(function () {
-				window.onload = function () {
-					const preloader = document.querySelector('.page-loading');
-					preloader.classList.remove('active');
-					setTimeout(function () {
-						preloader.remove();
-					}, 1000);
-				};
-			})();
-		</script>
-	</head>
+    <!-- Page loading scripts -->
+    <script>
+      ;(function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading')
+          preloader.classList.remove('active')
+          setTimeout(function () {
+            preloader.remove()
+          }, 1000)
+        }
+      })()
+    </script>
+  </head>
 
-	<!-- Body -->
-	<body>
-		<!-- Page loading spinner -->
-		<div class="page-loading active">
-			<div class="page-loading-inner">
-				<div class="page-spinner"></div>
-				<span>Loading...</span>
-			</div>
-		</div>
+  <!-- Body -->
+  <body>
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
 
-		<!-- Page wrapper for sticky footer -->
-		<!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
-		<main class="page-wrapper h-100">
-			<!-- Navbar -->
-				<header class="header navbar navbar-expand-lg navbar-light position-absolute navbar-sticky" data-sticky-offset="150">
-				<div class="container px-3">
-					<a href="/" class="navbar-brand pe-3 text-primary"> Future CX </a>
-					<div id="navbarNav" class="offcanvas offcanvas-end text-dark">
-						<div class="offcanvas-header border-bottom">
-							<h5 class="offcanvas-title">Menu</h5>
-							<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-						</div>
-						<div class="offcanvas-body">
-							<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-								<li class="nav-item">
-									<a href="/#top" data-scroll data-scroll-offset="100" class="nav-link">Home</a>
-								</li>
-								<li class="nav-item">
-									<a href="/#about" data-scroll data-scroll-offset="0" class="nav-link">About me</a>
-								</li>
-								<li class="nav-item">
-									<a href="/#services" data-scroll data-scroll-offset="50" class="nav-link">What I do</a>
-								</li>
-								<li class="nav-item">
-									<a href="/#contact" data-scroll data-scroll-offset="100" class="nav-link">Contact</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
-						<input type="checkbox" class="form-check-input" id="theme-mode" />
-					</div>
-					<button
-						id="toggle"
-						type="button"
-						class="navbar-toggler d-none"
-						data-bs-toggle="offcanvas"
-						data-bs-target="#navbarNav"
-						aria-controls="navbarNav"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<span class="navbar-toggler-icon"></span>
-					</button>
-				</div>
-			</header>
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper h-100">
+      <!-- Navbar -->
+      <header class="header navbar navbar-expand-lg navbar-light position-absolute navbar-sticky" data-sticky-offset="150">
+        <div class="container px-3">
+          <a href="/" class="navbar-brand pe-3 text-primary"> Future CX </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end text-dark">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="/#top" data-scroll data-scroll-offset="100" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/#about" data-scroll data-scroll-offset="0" class="nav-link">About me</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/#services" data-scroll data-scroll-offset="50" class="nav-link">What I do</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/#contact" data-scroll data-scroll-offset="100" class="nav-link">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode" />
+          </div>
+          <button
+            id="toggle"
+            type="button"
+            class="navbar-toggler d-none"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </header>
 
-			<!-- Page content -->
-			<section class="container d-flex flex-column h-75 align-items-center position-relative zindex-5 pt-5">
-				<div class="text-center pt-5 pb-3 mt-auto">
-					<!-- Parallax gfx (Light version) -->
-					<div class="parallax mx-auto d-dark-mode-none" style="max-width: 574px">
-						<div class="parallax-layer" data-depth="-0.15">
-							<img src="/assets/img/404/light/layer01.png" alt="Layer" />
-						</div>
-						<div class="parallax-layer" data-depth="0.12">
-							<img src="/assets/img/404/light/layer02.png" alt="Layer" />
-						</div>
-						<div class="parallax-layer zindex-5" data-depth="-0.12">
-							<img src="/assets/img/404/light/layer03.png" alt="Layer" />
-						</div>
-					</div>
+      <!-- Page content -->
+      <section class="container d-flex flex-column h-75 align-items-center position-relative zindex-5 pt-5">
+        <div class="text-center pt-5 pb-3 mt-auto">
+          <!-- Parallax gfx (Light version) -->
+          <div class="parallax mx-auto d-dark-mode-none" style="max-width: 574px">
+            <div class="parallax-layer" data-depth="-0.15">
+              <img src="/assets/img/404/light/layer01.png" alt="Layer" />
+            </div>
+            <div class="parallax-layer" data-depth="0.12">
+              <img src="/assets/img/404/light/layer02.png" alt="Layer" />
+            </div>
+            <div class="parallax-layer zindex-5" data-depth="-0.12">
+              <img src="/assets/img/404/light/layer03.png" alt="Layer" />
+            </div>
+          </div>
 
-					<!-- Parallax gfx (Dark version) -->
-					<div class="parallax mx-auto d-none d-dark-mode-block" style="max-width: 574px">
-						<div class="parallax-layer" data-depth="-0.15">
-							<img src="/assets/img/404/dark/layer01.png" alt="Layer" />
-						</div>
-						<div class="parallax-layer" data-depth="0.12">
-							<img src="/assets/img/404/dark/layer02.png" alt="Layer" />
-						</div>
-						<div class="parallax-layer zindex-5" data-depth="-0.12">
-							<img src="/assets/img/404/dark/layer03.png" alt="Layer" />
-						</div>
-					</div>
+          <!-- Parallax gfx (Dark version) -->
+          <div class="parallax mx-auto d-none d-dark-mode-block" style="max-width: 574px">
+            <div class="parallax-layer" data-depth="-0.15">
+              <img src="/assets/img/404/dark/layer01.png" alt="Layer" />
+            </div>
+            <div class="parallax-layer" data-depth="0.12">
+              <img src="/assets/img/404/dark/layer02.png" alt="Layer" />
+            </div>
+            <div class="parallax-layer zindex-5" data-depth="-0.12">
+              <img src="/assets/img/404/dark/layer03.png" alt="Layer" />
+            </div>
+          </div>
 
-					<h1 class="visually-hidden">404</h1>
-					<h2 class="display-5">Ooops!</h2>
-					<p class="fs-xl pb-3 pb-md-0 mb-md-5">The page you are looking for is not available.</p>
-					<a href="/" class="btn btn-lg btn-primary shadow-primary w-sm-auto w-100">
-						<i class="bx bx-home-alt me-2 ms-n1 lead"></i>
-						Go to homepage
-					</a>
-				</div>
-			</section>
-		</main>
+          <h1 class="visually-hidden">404</h1>
+          <h2 class="display-5">Ooops!</h2>
+          <p class="fs-xl pb-3 pb-md-0 mb-md-5">The page you are looking for is not available.</p>
+          <a href="/" class="btn btn-lg btn-primary shadow-primary w-sm-auto w-100">
+            <i class="bx bx-home-alt me-2 ms-n1 lead"></i>
+            Go to homepage
+          </a>
+        </div>
+      </section>
+    </main>
 
-		<!-- Footer -->
-		<footer class="footer pt-5 pb-4 pb-lg-5 mt-2 mt-md-0">
-			<div class="container pt-lg-4">
-				<div class="row pb-5">
-					<div class="col-lg-5 col-md-12">
-						<div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">Future CX</div>
-						<p class="fs-sm pb-lg-3 mb-4">
-							Proin ipsum pharetra, senectus eget scelerisque varius pretium platea velit. Lacus, eget eu vitae nullam proin turpis etiam mi sit. Non
-							feugiat feugiat egestas nulla nec. Arcu tempus, eget elementum dolor ullamcorper sodales ultrices eros.
-						</p>
-					</div>
+    <!-- Footer -->
+    <footer class="footer pt-5 pb-4 pb-lg-5 mt-2 mt-md-0">
+      <div class="container pt-lg-4">
+        <div class="row pb-5">
+          <div class="col-lg-5 col-md-12">
+            <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">Future CX</div>
+            <p class="fs-sm pb-lg-3 mb-4">
+              Proin ipsum pharetra, senectus eget scelerisque varius pretium platea velit. Lacus, eget eu vitae nullam proin turpis etiam mi sit. Non feugiat feugiat egestas nulla nec. Arcu tempus,
+              eget elementum dolor ullamcorper sodales ultrices eros.
+            </p>
+          </div>
 
-					<div class="col-lg-3 col-md-6 offset-lg-1m mb-3">
-						<h6 class="mb-2">Connect</h6>
-						<p>Let's get<br />connected</p>
-						<div id="social-links" class="d-flex flex-column flex-sm-row">
-							<a id="lnkLinkedin" href="https://www.linkedin.com/in/jmvandeel/" target="blank" class="fw-medium btn btn-primary shadow-primary btn-lg"
-								><i class="bx bxl-linkedin-square me-3"></i>LinkedIn</a
-							>
-						</div>
-					</div>
+          <div class="col-lg-3 col-md-6 offset-lg-1m mb-3">
+            <h6 class="mb-2">Connect</h6>
+            <p>Let's get<br />connected</p>
+            <div id="social-links" class="d-flex flex-column flex-sm-row">
+              <a id="lnkLinkedin" href="https://www.linkedin.com/in/jmvandeel/" target="blank" class="fw-medium btn btn-primary shadow-primary btn-lg"
+                ><i class="bx bxl-linkedin-square me-3"></i>LinkedIn</a
+              >
+            </div>
+          </div>
 
-					<div class="col-lg-3 col-md-6 mb-3">
-						<h6 class="mb-2">Questions</h6>
-						<p>Send me an email and I promise<br />to send a reply.</p>
-						<div class="d-flex flex-column flex-sm-row">
-							<a id="lnkEmail" href="mailto:m.van.deel@futurecx.nl" class="fw-medium btn btn-primary shadow-primary btn-lg"
-								><i class="bx bx-mail-send me-2"></i>m.van.deel@futurecx.nl</a
-							>
-						</div>
-					</div>
-				</div>
-				<div id="footer-links" class="row py-3 my-4">
-					<ul class="nav justify-content-center border-bottom pb-3 mb-3">
-						<li class="nav-item"><a href="/#top" data-scroll data-scroll-offset="100" class="nav-link d-inline-block px-2 pt-1 pb-2">Home</a></li>
-						<li class="nav-item"><a href="/#about" data-scroll data-scroll-offset="0" class="nav-link d-inline-block px-2 pt-1 pb-2">About me</a></li>
-						<li class="nav-item">
-							<a href="/#services" data-scroll data-scroll-offset="50" class="nav-link d-inline-block px-2 pt-1 pb-2">What I do</a>
-						</li>
-						<li class="nav-item">
-							<a href="/#contact" data-scroll data-scroll-offset="100" class="nav-link d-inline-block px-2 pt-1 pb-2">Contact</a>
-						</li>
-					</ul>
+          <div class="col-lg-3 col-md-6 mb-3">
+            <h6 class="mb-2">Questions</h6>
+            <p>Send me an email and I promise<br />to send a reply.</p>
+            <div class="d-flex flex-column flex-sm-row">
+              <a id="lnkEmail" href="mailto:m.van.deel@futurecx.nl" class="fw-medium btn btn-primary shadow-primary btn-lg"><i class="bx bx-mail-send me-2"></i>m.van.deel@futurecx.nl</a>
+            </div>
+          </div>
+        </div>
+        <div id="footer-links" class="row py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item">
+              <a href="/#top" data-scroll data-scroll-offset="100" class="nav-link d-inline-block px-2 pt-1 pb-2">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/#about" data-scroll data-scroll-offset="0" class="nav-link d-inline-block px-2 pt-1 pb-2">About me</a>
+            </li>
+            <li class="nav-item">
+              <a href="/#services" data-scroll data-scroll-offset="50" class="nav-link d-inline-block px-2 pt-1 pb-2">What I do</a>
+            </li>
+            <li class="nav-item">
+              <a href="/#contact" data-scroll data-scroll-offset="100" class="nav-link d-inline-block px-2 pt-1 pb-2">Contact</a>
+            </li>
+          </ul>
 
-					<div class="col-12 p-0 p-md-3">
-						<p class="text-center text-muted">© 2022 Future CX by Martijn van Deel</p>
-					</div>
+          <div class="col-12 p-0 p-md-3">
+            <p class="text-center text-muted">© 2022 Future CX by Martijn van Deel</p>
+          </div>
 
-					<div class="col-lg-4 col-md-4 p-0 p-md-3">
-						<p class="text-center text-md-end text-muted">KVK: 86444042</p>
-					</div>
+          <div class="col-lg-4 col-md-4 p-0 p-md-3">
+            <p class="text-center text-md-end text-muted">KVK: 86444042</p>
+          </div>
 
-					<div class="col-lg-4 col-md-4 p-0 p-md-3">
-						<p class="text-center text-md-center text-muted">VAT number: NL86 3969 379 B01</p>
-					</div>
+          <div class="col-lg-4 col-md-4 p-0 p-md-3">
+            <p class="text-center text-md-center text-muted">VAT number: NL86 3969 379 B01</p>
+          </div>
 
-					<div class="col-lg-4 col-md-4 p-0 p-md-3">
-						<p class="text-center text-md-start text-muted">IBAN: NL46 RABO 0197 6522 47</p>
-					</div>
-				</div>
-			</div>
-		</footer>
+          <div class="col-lg-4 col-md-4 p-0 p-md-3">
+            <p class="text-center text-md-start text-muted">IBAN: NL46 RABO 0197 6522 47</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-		<!-- Vendor Scripts -->
-		<script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-		<script src="/assets/vendor/parallax-js/dist/parallax.min.js"></script>
+    <!-- Vendor Scripts -->
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="/assets/vendor/parallax-js/dist/parallax.min.js"></script>
 
-		<!-- Main Theme Script -->
-		<script src="/assets/js/theme.js"></script>
-	</body>
+    <!-- Main Theme Script -->
+    <script src="/assets/js/theme.min.js"></script>
+  </body>
 </html>
