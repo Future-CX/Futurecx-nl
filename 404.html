@@ -114,35 +114,35 @@
     <!-- Theme mode -->
     <script>
       let mode = window.localStorage.getItem('mode'),
-        root = document.getElementsByTagName('html')[0]
+        root = document.getElementsByTagName('html')[0];
       if (mode !== null && mode === 'dark') {
-        root.classList.add('dark-mode')
+        root.classList.add('dark-mode');
       } else {
-        root.classList.remove('dark-mode')
+        root.classList.remove('dark-mode');
       }
     </script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4R2D7JRCEJ"></script>
     <script>
-      window.dataLayer = window.dataLayer || []
+      window.dataLayer = window.dataLayer || [];
       function gtag() {
-        dataLayer.push(arguments)
+        dataLayer.push(arguments);
       }
-      gtag('js', new Date())
-      gtag('config', 'G-4R2D7JRCEJ')
+      gtag('js', new Date());
+      gtag('config', 'G-4R2D7JRCEJ');
     </script>
 
     <!-- Page loading scripts -->
     <script>
-      ;(function () {
+      (function () {
         window.onload = function () {
-          const preloader = document.querySelector('.page-loading')
-          preloader.classList.remove('active')
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
           setTimeout(function () {
-            preloader.remove()
-          }, 1000)
-        }
-      })()
+            preloader.remove();
+          }, 1000);
+        };
+      })();
     </script>
   </head>
 

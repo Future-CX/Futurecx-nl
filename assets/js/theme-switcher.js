@@ -3,62 +3,62 @@
  * Copyright 2023 Createx Studio
  */
 
-;(() => {
-  'use strict'
+(() => {
+  'use strict';
 
-  const getStoredTheme = () => localStorage.getItem('theme')
-  const setStoredTheme = (theme) => localStorage.setItem('theme', theme)
+  const getStoredTheme = () => localStorage.getItem('theme');
+  const setStoredTheme = (theme) => localStorage.setItem('theme', theme);
 
   const getPreferredTheme = () => {
-    const storedTheme = getStoredTheme()
-    if (storedTheme) return storedTheme
+    const storedTheme = getStoredTheme();
+    if (storedTheme) return storedTheme;
 
     // Follow the system (browser) preference by default
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-  }
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  };
 
   const setTheme = (theme) => {
     if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.setAttribute('data-bs-theme', 'dark')
+      document.documentElement.setAttribute('data-bs-theme', 'dark');
     } else {
-      document.documentElement.setAttribute('data-bs-theme', theme)
+      document.documentElement.setAttribute('data-bs-theme', theme);
     }
-  }
+  };
 
-  setTheme(getPreferredTheme())
+  setTheme(getPreferredTheme());
 
   const showActiveTheme = (theme) => {
-    const themeSwitcher = document.querySelector('[data-bs-toggle="mode"]')
-    const themeSwitcherCheck = themeSwitcher.querySelector('input[type="checkbox"]')
+    const themeSwitcher = document.querySelector('[data-bs-toggle="mode"]');
+    const themeSwitcherCheck = themeSwitcher.querySelector('input[type="checkbox"]');
 
     if (!themeSwitcher) {
-      return
+      return;
     }
 
     if (theme === 'dark') {
-      themeSwitcherCheck.checked = 'checked'
+      themeSwitcherCheck.checked = 'checked';
     } else {
-      themeSwitcherCheck.checked = false
+      themeSwitcherCheck.checked = false;
     }
-  }
+  };
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    const storedTheme = getStoredTheme()
+    const storedTheme = getStoredTheme();
     if (storedTheme !== 'light' && storedTheme !== 'dark') {
-      setTheme(getPreferredTheme())
+      setTheme(getPreferredTheme());
     }
-  })
+  });
 
   window.addEventListener('DOMContentLoaded', () => {
-    showActiveTheme(getPreferredTheme())
+    showActiveTheme(getPreferredTheme());
 
     document.querySelectorAll('[data-bs-toggle="mode"]').forEach((toggle) => {
       toggle.addEventListener('click', () => {
-        const theme = toggle.querySelector('input[type="checkbox"]').checked === true ? 'dark' : 'light'
-        setStoredTheme(theme)
-        setTheme(theme)
-        showActiveTheme(theme, true)
-      })
-    })
-  })
-})()
+        const theme = toggle.querySelector('input[type="checkbox"]').checked === true ? 'dark' : 'light';
+        setStoredTheme(theme);
+        setTheme(theme);
+        showActiveTheme(theme, true);
+      });
+    });
+  });
+})();

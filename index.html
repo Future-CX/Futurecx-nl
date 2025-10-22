@@ -39,18 +39,18 @@
     <meta name="theme-color" content="#ffffff" />
 
     <script>
-      ;(function () {
+      (function () {
         try {
-          var t = localStorage.getItem('theme')
+          var t = localStorage.getItem('theme');
           if (!t) {
-            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
           }
           if (t === 'auto') {
-            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
           }
-          document.documentElement.setAttribute('data-bs-theme', t)
+          document.documentElement.setAttribute('data-bs-theme', t);
         } catch (e) {}
-      })()
+      })();
     </script>
     <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
 
@@ -135,25 +135,25 @@
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4R2D7JRCEJ"></script>
     <script>
-      window.dataLayer = window.dataLayer || []
+      window.dataLayer = window.dataLayer || [];
       function gtag() {
-        dataLayer.push(arguments)
+        dataLayer.push(arguments);
       }
-      gtag('js', new Date())
-      gtag('config', 'G-4R2D7JRCEJ')
+      gtag('js', new Date());
+      gtag('config', 'G-4R2D7JRCEJ');
     </script>
 
     <!-- Page loading scripts -->
     <script>
-      ;(function () {
+      (function () {
         window.onload = function () {
-          const preloader = document.querySelector('.page-loading')
-          preloader.classList.remove('active')
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
           setTimeout(function () {
-            preloader.remove()
-          }, 1000)
-        }
-      })()
+            preloader.remove();
+          }, 1000);
+        };
+      })();
     </script>
   </head>
 
@@ -1651,38 +1651,38 @@
     <script src="/assets/js/theme.min.js"></script>
     <script src="/assets/js/user.js"></script>
     <script>
-      var Shuffle = window.Shuffle
-      var jQuery = window.jQuery
+      var Shuffle = window.Shuffle;
+      var jQuery = window.jQuery;
 
       var myShuffle = new Shuffle(document.querySelector('.my-shuffle'), {
         itemSelector: '.image-item',
         sizer: '.my-sizer-element',
         buffer: 1,
-      })
+      });
 
       jQuery('input[name="shuffle-filter"]').on('change', function (evt) {
-        var input = evt.currentTarget
+        var input = evt.currentTarget;
         if (input.checked) {
-          myShuffle.filter(input.value)
-          jQuery('input[name="shuffle-filter"]').parent().removeClass('btn-primary')
-          jQuery(this).parent().addClass('btn-primary')
+          myShuffle.filter(input.value);
+          jQuery('input[name="shuffle-filter"]').parent().removeClass('btn-primary');
+          jQuery(this).parent().addClass('btn-primary');
         }
-      })
+      });
     </script>
     <script>
-      gtag('set', 'language', 'en-us')
+      gtag('set', 'language', 'en-us');
       document.getElementById('lnkLinkedin').addEventListener('click', function () {
         gtag('event', 'button_click', {
           btn_name: 'LinkedIn',
           btn_id: 'lnkLinkedin',
-        })
-      })
+        });
+      });
       document.getElementById('lnkEmail').addEventListener('click', function () {
         gtag('event', 'button_click', {
           btn_name: 'Email',
           btn_id: 'lnkEmail',
-        })
-      })
+        });
+      });
     </script>
   </body>
 </html>

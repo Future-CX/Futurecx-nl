@@ -13,9 +13,9 @@ module.exports = {
   },
   ignorePatterns: ['/src/js/components/*.js'],
   rules: {
-    'prettier/prettier': ['warn', { printWidth: 200 }],
+    'prettier/prettier': ['warn', { printWidth: 200, singleQuote: true, trailingComma: 'es5', tabWidth: 2, semi: true }],
     indent: ['error', 2],
-    semi: ['error', 'never'],
+    semi: ['error', 'always'],
     'no-var': 'error',
   },
   overrides: [
@@ -30,4 +30,4 @@ module.exports = {
       },
     },
   ],
-}
+};

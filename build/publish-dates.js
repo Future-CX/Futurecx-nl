@@ -6,130 +6,117 @@
   - Updates the element's content attribute and visible text (e.g., "October 25, 2022").
 */
 
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
-const ROOT = process.cwd()
+const ROOT = process.cwd();
 
 function walk(dir, acc = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-    if (entry.name.startsWith('.')) continue
-    const full = path.join(dir, entry.name)
-    if (entry.isDirectory()) walk(full, acc)
-    else if (entry.isFile() && entry.name.endsWith('.html')) acc.push(full)
+    if (entry.name.startsWith('.')) continue;
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) walk(full, acc);
+    else if (entry.isFile() && entry.name.endsWith('.html')) acc.push(full);
   }
-  return acc
+  return acc;
 }
 
 function gitCreatedISO(filePath) {
   try {
-    const cmd = `git log --diff-filter=A --follow --format=%aI -1 -- ${JSON.stringify(filePath)}`
-    const out = execSync(cmd, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim()
-    return out || null
+    const cmd = `git log --diff-filter=A --follow --format=%aI -1 -- ${JSON.stringify(filePath)}`;
+    const out = execSync(cmd, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
+    return out || null;
   } catch {
-    return null
+    return null;
   }
 }
 
 function fsBirthISO(filePath) {
   try {
-    const st = fs.statSync(filePath)
-    const d = st.birthtime && st.birthtime.getTime() ? st.birthtime : st.mtime
-    return d.toISOString()
+    const st = fs.statSync(filePath);
+    const d = st.birthtime && st.birthtime.getTime() ? st.birthtime : st.mtime;
+    return d.toISOString();
   } catch {
-    return null
+    return null;
   }
 }
 
 function gitModifiedISO(filePath) {
   try {
-    const cmd = `git log --format=%aI -1 -- ${JSON.stringify(filePath)}`
-    const out = execSync(cmd, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim()
-    return out || null
+    const cmd = `git log --format=%aI -1 -- ${JSON.stringify(filePath)}`;
+    const out = execSync(cmd, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
+    return out || null;
   } catch {
-    return null
+    return null;
   }
 }
 
 function fsMtimeISO(filePath) {
   try {
-    const st = fs.statSync(filePath)
-    return st.mtime.toISOString()
+    const st = fs.statSync(filePath);
+    return st.mtime.toISOString();
   } catch {
-    return null
+    return null;
   }
 }
 
 function humanDate(iso) {
-  const d = new Date(iso)
-  const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ]
-  return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`
+  const d = new Date(iso);
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
 }
 
 function updateFile(filePath) {
-  let html = fs.readFileSync(filePath, 'utf8')
-  let changed = false
+  let html = fs.readFileSync(filePath, 'utf8');
+  let changed = false;
 
   // datePublished → file creation date
   if (/itemprop=["']datePublished["']/i.test(html)) {
-    const iso = gitCreatedISO(filePath) || fsBirthISO(filePath)
+    const iso = gitCreatedISO(filePath) || fsBirthISO(filePath);
     if (iso) {
-      const human = humanDate(iso)
+      const human = humanDate(iso);
       const newHtml = html
         // Replace or insert content attribute
         .replace(/(itemprop=["']datePublished["'][^>]*content=["'])[^"]*(["'])/i, `$1${iso}$2`)
         // Replace visible text immediately after the tag
-        .replace(/(itemprop=["']datePublished["'][^>]*>)([^<]*)/i, (_, pre) => `${pre}${human}`)
+        .replace(/(itemprop=["']datePublished["'][^>]*>)([^<]*)/i, (_, pre) => `${pre}${human}`);
       if (newHtml !== html) {
-        html = newHtml
-        changed = true
+        html = newHtml;
+        changed = true;
       }
     }
   }
 
   // dateModified → use filesystem modified time (fallbacks retained just in case)
   if (/itemprop=["']dateModified["']/i.test(html)) {
-    const isoMod = fsMtimeISO(filePath) || gitModifiedISO(filePath)
+    const isoMod = fsMtimeISO(filePath) || gitModifiedISO(filePath);
     if (isoMod) {
-      const humanMod = humanDate(isoMod)
+      const humanMod = humanDate(isoMod);
       const newHtml = html
         .replace(/(itemprop=["']dateModified["'][^>]*content=["'])[^"]*(["'])/i, `$1${isoMod}$2`)
-        .replace(/(itemprop=["']dateModified["'][^>]*>)([^<]*)/i, (_, pre) => `${pre}Updated: ${humanMod}`)
+        .replace(/(itemprop=["']dateModified["'][^>]*>)([^<]*)/i, (_, pre) => `${pre}Updated: ${humanMod}`);
       if (newHtml !== html) {
-        html = newHtml
-        changed = true
+        html = newHtml;
+        changed = true;
       }
     }
   }
 
-  if (changed) fs.writeFileSync(filePath, html)
-  return changed
+  if (changed) fs.writeFileSync(filePath, html);
+  return changed;
 }
 
-const targets = walk(path.join(ROOT, 'content'))
-let updated = 0
+const targets = walk(path.join(ROOT, 'content'));
+let updated = 0;
 for (const f of targets) {
-  if (updateFile(f)) updated++
+  if (updateFile(f)) updated++;
 }
 
 // Also check top-level files like index.html, cv.html, etc.
 for (const name of ['index.html', 'cv.html', 'content.html']) {
-  const f = path.join(ROOT, name)
-  if (fs.existsSync(f)) if (updateFile(f)) updated++
+  const f = path.join(ROOT, name);
+  if (fs.existsSync(f)) if (updateFile(f)) updated++;
 }
 
-console.log(`publish-dates: updated ${updated} file(s).`)
+console.log(`publish-dates: updated ${updated} file(s).`);

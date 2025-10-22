@@ -5,6 +5,6 @@ const path = {
   js: 'assets/js',
   css: 'assets/css',
   vendor: 'assets/vendor',
-}
+};
 
-module.exports = path
+module.exports = path;

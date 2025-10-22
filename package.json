@@ -18,7 +18,7 @@
     "sitemap": "node build/sitemap.js",
     "vendor": "node build/vendor.js",
     "validate": "eslint --cache --cache-location .eslintcache --ext .js,.html .",
-    "lint-fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
+    "lint:fix": "eslint --ext .js,.html --fix .",
     "watch": "node build/watch.js"
   },
   "devDependencies": {

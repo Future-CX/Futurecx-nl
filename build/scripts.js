@@ -1,36 +1,36 @@
-const path = require('./config')
-const rollup = require('rollup')
-const nodeResolve = require('@rollup/plugin-node-resolve')
-const { babel } = require('@rollup/plugin-babel')
-const terser = require('@rollup/plugin-terser')
-const { ESLint } = require('eslint')
-const configureLogger = require('./logger')
+const path = require('./config');
+const rollup = require('rollup');
+const nodeResolve = require('@rollup/plugin-node-resolve');
+const { babel } = require('@rollup/plugin-babel');
+const terser = require('@rollup/plugin-terser');
+const { ESLint } = require('eslint');
+const configureLogger = require('./logger');
 
-const log = configureLogger('Scripts')
+const log = configureLogger('Scripts');
 
-const output = process.argv[2] || 'expanded' // Default to expanded if not provided
+const output = process.argv[2] || 'expanded'; // Default to expanded if not provided
 
 const lintJS = async () => {
-  log.info('Linting JavaScript...')
-  const eslint = new ESLint()
-  const results = await eslint.lintFiles(`${path.src_js}/**/*.js`)
-  const errorResults = ESLint.getErrorResults(results)
+  log.info('Linting JavaScript...');
+  const eslint = new ESLint();
+  const results = await eslint.lintFiles(`${path.src_js}/**/*.js`);
+  const errorResults = ESLint.getErrorResults(results);
 
   if (errorResults.length > 0) {
-    const formatter = await eslint.loadFormatter('stylish')
-    const resultText = formatter.format(errorResults)
-    log.error('', resultText)
-    throw new Error('Linting errors found')
+    const formatter = await eslint.loadFormatter('stylish');
+    const resultText = formatter.format(errorResults);
+    log.error('', resultText);
+    throw new Error('Linting errors found');
   } else {
-    log.success('Lint JavaScript')
+    log.success('Lint JavaScript');
   }
-}
+};
 
 const bundleJS = async (output) => {
-  log.info('Bundling JavaScript...')
+  log.info('Bundling JavaScript...');
   try {
-    const isMinified = output === 'minified'
-    const outputFilename = isMinified ? 'theme.min.js' : 'theme.js'
+    const isMinified = output === 'minified';
+    const outputFilename = isMinified ? 'theme.min.js' : 'theme.js';
 
     const inputOptions = {
       input: `./${path.src_js}/theme.js`,
@@ -45,12 +45,12 @@ const bundleJS = async (output) => {
       onwarn: (warning, warn) => {
         // Ignore the 'this' at the top level warning
         if (warning.code === 'THIS_IS_UNDEFINED') {
-          return
+          return;
         }
         // Show all other warnings
-        warn(warning)
+        warn(warning);
       },
-    }
+    };
 
     const outputOptions = {
       file: `${path.js}/${outputFilename}`,
@@ -66,26 +66,26 @@ const bundleJS = async (output) => {
  * @version 1.6.0
  */
       `,
-    }
+    };
 
-    const bundle = await rollup.rollup(inputOptions)
-    await bundle.write(outputOptions)
+    const bundle = await rollup.rollup(inputOptions);
+    await bundle.write(outputOptions);
 
-    log.success(`Bundled JavaScript (${output})`)
+    log.success(`Bundled JavaScript (${output})`);
   } catch (error) {
-    log.error('', error && (error.stack || error.message || String(error)))
+    log.error('', error && (error.stack || error.message || String(error)));
     // Fallback: if minified build fails (e.g., terser crash), retry without terser
     if (output === 'minified') {
-      log.info('Retrying minified bundle without terser (fallback)...')
+      log.info('Retrying minified bundle without terser (fallback)...');
       try {
         const inputOptionsFallback = {
           input: `./${path.src_js}/theme.js`,
           plugins: [nodeResolve(), babel({ babelHelpers: 'bundled', exclude: 'node_modules/**' })],
           onwarn: (warning, warn) => {
-            if (warning.code === 'THIS_IS_UNDEFINED') return
-            warn(warning)
+            if (warning.code === 'THIS_IS_UNDEFINED') return;
+            warn(warning);
           },
-        }
+        };
         const outputOptionsFallback = {
           file: `${path.js}/theme.min.js`,
           format: 'iife',
@@ -96,28 +96,28 @@ const bundleJS = async (output) => {
  * Fallback unminified bundle (terser disabled)
  */
           `,
-        }
-        const bundle = await rollup.rollup(inputOptionsFallback)
-        await bundle.write(outputOptionsFallback)
-        log.success('Bundled JavaScript (minified fallback without terser)')
+        };
+        const bundle = await rollup.rollup(inputOptionsFallback);
+        await bundle.write(outputOptionsFallback);
+        log.success('Bundled JavaScript (minified fallback without terser)');
       } catch (e2) {
-        log.error('', e2 && (e2.stack || e2.message || String(e2)))
+        log.error('', e2 && (e2.stack || e2.message || String(e2)));
       }
     }
   }
-}
+};
 
 const buildScripts = async () => {
   try {
-    await lintJS()
+    await lintJS();
     if (output === 'expanded' || output === 'minified') {
-      await bundleJS(output)
+      await bundleJS(output);
     } else {
-      log.error('Invalid output key. Use either "minified" or "expanded"')
+      log.error('Invalid output key. Use either "minified" or "expanded"');
     }
   } catch (error) {
-    log.error('', error && (error.stack || error.message || String(error)))
+    log.error('', error && (error.stack || error.message || String(error)));
   }
-}
+};
 
-buildScripts()
+buildScripts();
