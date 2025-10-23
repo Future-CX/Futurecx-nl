@@ -109,18 +109,11 @@ function updateFile(filePath) {
   if (/itemprop=["']dateModified["']/i.test(html)) {
     const existing = extractExistingDateModified(html);
     const lastGit = gitModifiedISO(filePath);
+    const hasUncommittedGitChangesFlag = hasUncommittedGitChanges(filePath);
 
-    let shouldUpdate = false;
-    if (lastGit) {
-      try {
-        if (!existing || new Date(lastGit) > new Date(existing)) shouldUpdate = true;
-      } catch {
-        shouldUpdate = false;
-      }
-    }
-
-    if (shouldUpdate) {
-      const isoMod = lastGit;
+    // Only update when there are uncommitted changes; use filesystem mtime for display
+    if (hasUncommittedGitChangesFlag) {
+      const isoMod = fsMtimeISO(filePath) || lastGit || new Date().toISOString();
       if (isoMod) {
         const humanMod = humanDate(isoMod);
         const newHtml = html
