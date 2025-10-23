@@ -3,23 +3,23 @@
  */
 
 export default (() => {
-  let elements = document.querySelectorAll('.password-toggle')
+  let elements = document.querySelectorAll('.password-toggle');
 
   for (let i = 0; i < elements.length; i++) {
     let passInput = elements[i].querySelector('.form-control'),
-      passToggle = elements[i].querySelector('.password-toggle-btn')
+      passToggle = elements[i].querySelector('.password-toggle-btn');
 
     passToggle.addEventListener(
       'click',
       (e) => {
-        if (e.target.type !== 'checkbox') return
+        if (e.target.type !== 'checkbox') return;
         if (e.target.checked) {
-          passInput.type = 'text'
+          passInput.type = 'text';
         } else {
-          passInput.type = 'password'
+          passInput.type = 'password';
         }
       },
       false
-    )
+    );
   }
-})()
+})();

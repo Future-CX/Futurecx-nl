@@ -21,6 +21,7 @@ packages/
 
 # Optional npm cache directory
 .npm
+.eslintcache
 
 # Random crap
 trash

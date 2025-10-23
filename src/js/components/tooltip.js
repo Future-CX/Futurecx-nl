@@ -5,14 +5,9 @@
  */
 
 export default (() => {
-  const tooltipTriggerList = [].slice.call(
-    document.querySelectorAll('[data-bs-toggle="tooltip"]')
-  )
+  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
 
   /* eslint-disable no-unused-vars, no-undef */
-  const tooltipList = tooltipTriggerList.map(
-    (tooltipTriggerEl) =>
-      new bootstrap.Tooltip(tooltipTriggerEl, { trigger: 'hover' })
-  )
+  const tooltipList = tooltipTriggerList.map((tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl, { trigger: 'hover' }));
   /* eslint-enable no-unused-vars, no-undef */
-})()
+})();

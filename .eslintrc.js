@@ -11,7 +11,7 @@ module.exports = {
     ecmaVersion: 13,
     sourceType: 'module',
   },
-  ignorePatterns: ['/src/js/components/*.js'],
+  ignorePatterns: ['/src/js/components/*.js', '/assets/js/theme.js'],
   rules: {
     'prettier/prettier': ['warn', { printWidth: 200, singleQuote: true, trailingComma: 'es5', tabWidth: 2, semi: true }],
     indent: ['error', 2],

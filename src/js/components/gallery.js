@@ -4,7 +4,7 @@
  */
 
 export default (() => {
-  const gallery = document.querySelectorAll('.gallery')
+  const gallery = document.querySelectorAll('.gallery');
 
   if (gallery.length) {
     for (let i = 0; i < gallery.length; i++) {
@@ -14,7 +14,7 @@ export default (() => {
         defaultPlugins = [lgZoom, lgFullscreen],
         videoPlugin = video ? [lgVideo] : [],
         thumbnailPlugin = thumbnails ? [lgThumbnail] : [],
-        plugins = [...defaultPlugins, ...videoPlugin, ...thumbnailPlugin]
+        plugins = [...defaultPlugins, ...videoPlugin, ...thumbnailPlugin];
 
       lightGallery(gallery[i], {
         selector: '.gallery-item',
@@ -33,8 +33,8 @@ export default (() => {
           portrait: 0,
           color: '6366f1',
         },
-      })
+      });
       /* eslint-enable no-undef */
     }
   }
-})()
+})();

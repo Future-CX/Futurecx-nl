@@ -4,7 +4,7 @@
  */
 
 export default (() => {
-  let button = document.querySelectorAll('[data-bs-toggle="video"]')
+  let button = document.querySelectorAll('[data-bs-toggle="video"]');
   if (button.length) {
     for (let i = 0; i < button.length; i++) {
       /* eslint-disable no-undef */
@@ -23,8 +23,8 @@ export default (() => {
           portrait: 0,
           color: '6366f1',
         },
-      })
+      });
       /* eslint-enable no-undef */
     }
   }
-})()
+})();

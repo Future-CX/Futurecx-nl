@@ -41,10 +41,17 @@ const lintScss = async () => {
 
 const runSass = async (outputStyle) => {
   const outputFile = outputStyle === 'compressed' ? '.min' : '';
-  const sassCommand = `sass --style ${outputStyle} --source-map --embed-sources --no-error-css --quiet-deps --load-path=node_modules ${path.scss}/theme.scss:${path.css}/theme${outputFile}.css`;
+  const sassCommand = `sass --quiet --style ${outputStyle} --source-map --embed-sources --no-error-css --quiet-deps --load-path=node_modules ${path.scss}/theme.scss:${path.css}/theme${outputFile}.css`;
 
   log.info(`Building ${outputStyle} CSS...`);
-  runScript(`Compile SCSS to CSS (${outputStyle})`, sassCommand);
+  try {
+    execSync(sassCommand, {
+      env: { ...process.env, SASS_SILENCE_DEPRECATIONS: 'all' },
+    });
+    log.success(`Compile SCSS to CSS (${outputStyle})`);
+  } catch (error) {
+    log.error('', `Task Compile SCSS to CSS (${outputStyle}) hasn't been completed! ${error.stdout?.toString?.() || error.message}`);
+  }
 
   const cssPath = `${path.css}/theme${outputFile}.css`;
   const cssMapPath = `${path.css}/theme${outputFile}.css.map`;

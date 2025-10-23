@@ -43,7 +43,9 @@ if (hash === 'success') {
       if (!el.getAttribute('content')) {
         try {
           el.setAttribute('content', d.toISOString());
-        } catch (e) {}
+        } catch (e) {
+          // do nothing
+        }
       }
     });
   }
