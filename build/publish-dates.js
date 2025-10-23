@@ -105,16 +105,13 @@ function updateFile(filePath) {
     }
   }
 
-  // dateModified → update only when there are actual Git changes
+  // dateModified → update only when the last committed change is newer
   if (/itemprop=["']dateModified["']/i.test(html)) {
     const existing = extractExistingDateModified(html);
-    const uncommitted = hasUncommittedGitChanges(filePath);
     const lastGit = gitModifiedISO(filePath);
 
     let shouldUpdate = false;
-    if (uncommitted) {
-      shouldUpdate = true;
-    } else if (lastGit) {
+    if (lastGit) {
       try {
         if (!existing || new Date(lastGit) > new Date(existing)) shouldUpdate = true;
       } catch {
@@ -123,7 +120,7 @@ function updateFile(filePath) {
     }
 
     if (shouldUpdate) {
-      const isoMod = fsMtimeISO(filePath) || lastGit;
+      const isoMod = lastGit;
       if (isoMod) {
         const humanMod = humanDate(isoMod);
         const newHtml = html

@@ -63,6 +63,23 @@ html h1 {
   color: #3e4265;
 }
 
+.btn-scroll-next .btn-scroll-next-tooltip {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .25s 
+ease-in-out, visibility .25s 
+ease-in-out;
+    transform: translateY(-50%);
+}
+
+.btn-scroll-next:hover .btn-scroll-next-tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
 .navbar-expand-lg .offcanvas .offcanvas-body {
   display: flex !important;
 }
