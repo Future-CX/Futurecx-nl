@@ -1,5 +1,6 @@
 let html = '';
 let capabilityDescription = '';
+let capabilityName = '';
 let allData = [];
 const allLevelOneLayers = [];
 const allLevelTwoLayers = [];
@@ -29,9 +30,9 @@ let showLevel2 = true;
     });
 }
 
-document.addEventListener('DOMContentLoaded', (event) => {
-  //capabilityModel('update');
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//   capabilityModel('update');
+// });
 
 function capabilityModel(method) {
   //console.log("allData");
@@ -102,19 +103,9 @@ function createContainers() {
 }
 
 function createCapabilities(container) {
-  var stringCapabilityL1 =
-    '<div id="capability-l1-%id%" class="row capabilityl1" onmouseover="setDescription(\'%id%\', \'hover\')" onclick="setDescription(\'%id%\', \'click\')"><div class="name name-capabilityl1"><h5>%name%</h5></div><div class="description description-capabilityl1"><p>%description%</p></div>';
-  var stringCapabilityL2 =
-    '<div id="capability-l2-%id%" class="row capabilityl2" onmouseover="setDescription(\'%id%\', \'hover\')" onclick="setDescription(\'%id%\', \'click\')"><div class="name name-capabilityl2"><h6>%name%</h6></div><div class="description description-capabilityl2"><p>%description%</p></div></div>';
-
-  var stringCapabilityL1 =
-    '<div id="capability-l1-%id%" class="row capabilityl1" onmouseover="setDescription(\'%id%\', \'hover\')" onclick="setDescription(\'%id%\', \'click\')"><div class="name name-capabilityl1"><h5>%name%</h5></div>';
-  var stringCapabilityL2 =
-    '<div id="capability-l2-%id%" class="row capabilityl2" onmouseover="setDescription(\'%id%\', \'hover\')" onclick="setDescription(\'%id%\', \'click\')"><div class="name name-capabilityl2"><h6>%name%</h6></div></div>';
-
-  var stringCapabilityL1 =
+  const stringCapabilityL1 =
     '<div id="capability-l1-%id%" class="row capability capabilityl1 align-middle" data-capability="%id%"><div class="name name-capabilityl1 align-middle"><h5>%name%</h5>%comingsoon%</div>';
-  var stringCapabilityL2 =
+  const stringCapabilityL2 =
     '<div id="capability-l2-%id%" class="row capability capabilityl2 align-middle" data-capability="%id%"><div class="name name-capabilityl2 align-middle"><h6>%name%</h6>%comingsoon%</div></div>';
 
   jQuery.each(allLevelOneCapabilities, (i, capabilityl1) => {

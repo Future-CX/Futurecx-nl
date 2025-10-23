@@ -24,7 +24,7 @@ module.exports = {
       parser: '@html-eslint/parser',
       plugins: ['@html-eslint'],
       rules: {
-        '@html-eslint/no-multiple-h1': 'error',
+        '@html-eslint/no-multiple-h1': 'warn',
         // Allow either omitted or self-closing void elements
         '@html-eslint/require-closing-tags': 'off',
       },

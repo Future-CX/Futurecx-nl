@@ -2,7 +2,7 @@ const fs = require('fs');
 const configureLogger = require('./logger');
 const log = configureLogger('Sitemap');
 let path = require('path');
-let date = new Date().toISOString().split('T')[0];
+//let date = new Date().toISOString().split('T')[0];
 let domain = 'https://www.futurecx.nl/';
 
 const GenerateSitemap = async () => {

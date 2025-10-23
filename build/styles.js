@@ -10,32 +10,28 @@ const log = configureLogger('Styles');
 
 const output = process.argv[2] || 'expanded'; // Default to expanded if not provided
 
-function runScript(alias, script) {
-  try {
-    const stdout = execSync(script);
-    log.success(alias);
-  } catch (error) {
-    log.error('', `Task ${alias} hasn't been completed! ${error.stdout.toString()}`);
-  }
-}
+// function runScript(alias, script) {
+//   try {
+//     const stdout = execSync(script);
+//     log.success(alias);
+//   } catch (error) {
+//     log.error('', `Task ${alias} hasn't been completed! ${error.stdout.toString()}`);
+//   }
+// }
 
 const lintScss = async () => {
   log.info('Linting SCSS...');
-  try {
-    const result = await stylelint.lint({
-      files: `${path.scss}/**/*.scss`,
-      configFile: '.stylelintrc.json',
-    });
+  const result = await stylelint.lint({
+    files: `${path.scss}/**/*.scss`,
+    configFile: '.stylelintrc.json',
+  });
 
-    if (result.errored) {
-      const formattedErrors = stylelint.formatters.string(result.results);
-      log.error('', formattedErrors);
-      throw new Error('Linting errors found');
-    } else {
-      log.success('Lint SCSS');
-    }
-  } catch (error) {
-    throw error;
+  if (result.errored) {
+    const formattedErrors = stylelint.formatters.string(result.results);
+    log.error('', formattedErrors);
+    throw new Error('Linting errors found');
+  } else {
+    log.success('Lint SCSS');
   }
 };
 

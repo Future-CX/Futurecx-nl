@@ -73,10 +73,10 @@ function hasUncommittedGitChanges(filePath) {
   }
 }
 
-function extractExistingDateModified(html) {
-  const m = html.match(/itemprop=["']dateModified["'][^>]*content=["']([^"']+)["']/i);
-  return m ? m[1] : null;
-}
+// function extractExistingDateModified(html) {
+//   const m = html.match(/itemprop=["']dateModified["'][^>]*content=["']([^"']+)["']/i);
+//   return m ? m[1] : null;
+// }
 
 function humanDate(iso) {
   const d = new Date(iso);
@@ -107,7 +107,7 @@ function updateFile(filePath) {
 
   // dateModified → update only when the last committed change is newer
   if (/itemprop=["']dateModified["']/i.test(html)) {
-    const existing = extractExistingDateModified(html);
+    //const existing = extractExistingDateModified(html);
     const lastGit = gitModifiedISO(filePath);
     const hasUncommittedGitChangesFlag = hasUncommittedGitChanges(filePath);
 
