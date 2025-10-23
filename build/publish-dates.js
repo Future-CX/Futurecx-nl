@@ -61,6 +61,23 @@ function fsMtimeISO(filePath) {
   }
 }
 
+function hasUncommittedGitChanges(filePath) {
+  try {
+    const out = execSync(`git status --porcelain -- ${JSON.stringify(filePath)}`, {
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim();
+    return out.length > 0;
+  } catch {
+    return false;
+  }
+}
+
+function extractExistingDateModified(html) {
+  const m = html.match(/itemprop=["']dateModified["'][^>]*content=["']([^"']+)["']/i);
+  return m ? m[1] : null;
+}
+
 function humanDate(iso) {
   const d = new Date(iso);
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -88,17 +105,34 @@ function updateFile(filePath) {
     }
   }
 
-  // dateModified → use filesystem modified time (fallbacks retained just in case)
+  // dateModified → update only when there are actual Git changes
   if (/itemprop=["']dateModified["']/i.test(html)) {
-    const isoMod = fsMtimeISO(filePath) || gitModifiedISO(filePath);
-    if (isoMod) {
-      const humanMod = humanDate(isoMod);
-      const newHtml = html
-        .replace(/(itemprop=["']dateModified["'][^>]*content=["'])[^"]*(["'])/i, `$1${isoMod}$2`)
-        .replace(/(itemprop=["']dateModified["'][^>]*>)([^<]*)/i, (_, pre) => `${pre}Updated: ${humanMod}`);
-      if (newHtml !== html) {
-        html = newHtml;
-        changed = true;
+    const existing = extractExistingDateModified(html);
+    const uncommitted = hasUncommittedGitChanges(filePath);
+    const lastGit = gitModifiedISO(filePath);
+
+    let shouldUpdate = false;
+    if (uncommitted) {
+      shouldUpdate = true;
+    } else if (lastGit) {
+      try {
+        if (!existing || new Date(lastGit) > new Date(existing)) shouldUpdate = true;
+      } catch {
+        shouldUpdate = false;
+      }
+    }
+
+    if (shouldUpdate) {
+      const isoMod = fsMtimeISO(filePath) || lastGit;
+      if (isoMod) {
+        const humanMod = humanDate(isoMod);
+        const newHtml = html
+          .replace(/(itemprop=["']dateModified["'][^>]*content=["'])[^"]*(["'])/i, `$1${isoMod}$2`)
+          .replace(/(itemprop=["']dateModified["'][^>]*>)([^<]*)/i, (_, pre) => `${pre}Updated: ${humanMod}`);
+        if (newHtml !== html) {
+          html = newHtml;
+          changed = true;
+        }
       }
     }
   }
