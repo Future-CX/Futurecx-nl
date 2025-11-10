@@ -27,7 +27,14 @@
     <meta property="article:published_time" content="2025-11-10T12:56:20+01:00" />
     <meta property="article:modified_time" content="2025-11-10T14:09:42.288Z" />
     <meta property="og:type" content="article" />
-    <link rel="preload" as="image" href="/assets/img/blog/single/chatgpt-integration-patterns.png" imagesrcset="/assets/img/blog/single/chatgpt-integration-patterns.png 1920w" imagesizes="100vw" fetchpriority="high">
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/img/blog/single/chatgpt-integration-patterns.png"
+      imagesrcset="/assets/img/blog/single/chatgpt-integration-patterns.png 1920w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
     <meta property="og:image" content="https://www.futurecx.nl/assets/img/blog/single/chatgpt-integration-patterns.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -49,36 +56,36 @@
     <meta name="theme-color" content="#ffffff" />
 
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Integration Patterns and Best Practices for Modern Architecture",
-      "description": "Integration Patterns are proven, reusable solutions to common challenges that arise when connecting systems, applications, and data sources. They describe how systems should interact, exchange data, and handle events in a consistent, reliable way.",
-      "author": {
-        "@type": "Person",
-        "name": "Martijn van Deel",
-        "url": "https://www.futurecx.nl/#about"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Future CX",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.futurecx.nl/assets/img/favicon/favicon-32x32.png"
-        }
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://www.futurecx.nl/content/integration-patterns.html"
-      },
-      "image": "https://www.futurecx.nl/assets/img/blog/single/chatgpt-integration-patterns.png",
-      "datePublished": "2025-11-10T12:56:20+01:00",
-      "dateModified": "2025-11-10T14:09:42.288Z",
-      "url": "https://www.futurecx.nl/content/integration-patterns.html",
-      "articleSection": "Enterprise Architecture",
-      "keywords": ["integration patterns", "system integration", "enterprise architecture", "API design", "event-driven architecture"],
-      "inLanguage": "en"
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Integration Patterns and Best Practices for Modern Architecture",
+        "description": "Integration Patterns are proven, reusable solutions to common challenges that arise when connecting systems, applications, and data sources. They describe how systems should interact, exchange data, and handle events in a consistent, reliable way.",
+        "author": {
+          "@type": "Person",
+          "name": "Martijn van Deel",
+          "url": "https://www.futurecx.nl/#about"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Future CX",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.futurecx.nl/assets/img/favicon/favicon-32x32.png"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.futurecx.nl/content/integration-patterns.html"
+        },
+        "image": "https://www.futurecx.nl/assets/img/blog/single/chatgpt-integration-patterns.png",
+        "datePublished": "2025-11-10T12:56:20+01:00",
+        "dateModified": "2025-11-10T14:09:42.288Z",
+        "url": "https://www.futurecx.nl/content/integration-patterns.html",
+        "articleSection": "Enterprise Architecture",
+        "keywords": ["integration patterns", "system integration", "enterprise architecture", "API design", "event-driven architecture"],
+        "inLanguage": "en"
+      }
     </script>
 
     <script>
@@ -97,10 +104,7 @@
     </script>
     <link rel="stylesheet" media="screen" href="/assets/css/vendors.css" />
     <link rel="stylesheet" media="screen" href="/assets/css/theme.min.css" />
-    <link
-  rel="stylesheet"
-  href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
-/>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
 
     <!-- Page loading styles -->
     <style>
@@ -310,9 +314,7 @@
           <img src="/assets/img/blog/single/logo-ChatGPT.svg" width="50" height="50" class="rounded-circle mt-2" alt="ChatGPT, a generative artificial intelligence chatbot developed by OpenAI" />
         </div>
         <div class="d-none d-sm-block position-absolute bottom-0 start-0 text-center w-100 bg-dark text-white m-0 p-0">
-          <small
-            >This image was generated using <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>, a generative artificial intelligence chatbot developed by OpenAI.</small
-          >
+          <small>This image was generated using <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>, a generative artificial intelligence chatbot developed by OpenAI.</small>
         </div>
       </div>
 
@@ -324,21 +326,20 @@
             <h3 class="h5 mb-2 pb-2 fw-medium" data-toc-skip>
               Integration Patterns are proven, reusable solutions to common challenges that arise when connecting different systems, applications, and data sources.
             </h3>
-            <h3 class="h5 mb-4 pb-2 fw-medium" data-toc-skip>
-              They describe how systems should interact, exchange data, and handle events in a consistent, reliable way.
-            </h3>
+            <h3 class="h5 mb-4 pb-2 fw-medium" data-toc-skip>They describe how systems should interact, exchange data, and handle events in a consistent, reliable way.</h3>
 
             <p class="mb-1 pb-2"><i>For example:</i></p>
             <p class="mb-1 pb-2"><strong>Problem:</strong> You need multiple systems to get real-time updates when a change happens.</p>
             <p class="mb-4 pb-2"><strong>Pattern:</strong> Use a Publish/Subscribe pattern — one system publishes events, and multiple subscribers get notified without direct dependencies.</p>
 
             <p class="mb-4 pb-2">
-              The Integration Patterns are derived from <a href="#integration-principles">Integration Principles</a>. Based on the Integration 'scope' a design direction is given.</p>
+              The Integration Patterns are derived from <a href="#integration-principles">Integration Principles</a>. Based on the Integration 'scope' a design direction is given.
+            </p>
 
             <h2 class="h2" id="categorizing-integrations">Categorizing Integrations</h2>
             <p class="mb-4 pb-2">
-              The <a href="https://www.futurecx.nl/content/how-to-build-your-future-state-architecture.html">North Star Architecture</a> consists of layers; Channels, Engagement, Integration and Foundation. We will categorize the
-              integrations based on these layers, as patterns will differ per category.
+              The <a href="https://www.futurecx.nl/content/how-to-build-your-future-state-architecture.html">North Star Architecture</a> consists of layers; Channels, Engagement, Integration and
+              Foundation. We will categorize the integrations based on these layers, as patterns will differ per category.
             </p>
             <div class="row">
               <div class="col-md-9">
@@ -354,23 +355,50 @@
             </div>
 
             <h2 class="h2" id="integration-patterns">Patterns per category</h2>
-            <p class="mb-1 pb-2">Below, you will find an overview of the integration patterns categorized by their respective layers. Further down, each category is explained in detail with specific examples and guidelines.</p>
-            <img src="/assets/img/models/future-cx-integration-patterns-all.jpg" width="960" height="540" alt="Diagram illustrating various integration patterns categorized by layers such as foundation, engagement, and channel. Each pattern is represented with arrows and labels showing data flow and interaction between components like enterprise solutions, engagement services, and channels." class="mb-0 pb-2" />
-            <p class="mb-4 pb-2 text-muted"
-              >Diagram illustrating various integration patterns categorized by layers such as foundation, engagement, and channel. Each pattern is represented with arrows and labels showing data flow and interaction between components like enterprise solutions, engagement services, and channels.</p>
+            <p class="mb-1 pb-2">
+              Below, you will find an overview of the integration patterns categorized by their respective layers. Further down, each category is explained in detail with specific examples and
+              guidelines.
+            </p>
+            <img
+              src="/assets/img/models/future-cx-integration-patterns-all.jpg"
+              width="960"
+              height="540"
+              alt="Diagram illustrating various integration patterns categorized by layers such as foundation, engagement, and channel. Each pattern is represented with arrows and labels showing data flow and interaction between components like enterprise solutions, engagement services, and channels."
+              class="mb-0 pb-2"
+            />
+            <p class="mb-4 pb-2 text-muted">
+              Diagram illustrating various integration patterns categorized by layers such as foundation, engagement, and channel. Each pattern is represented with arrows and labels showing data flow
+              and interaction between components like enterprise solutions, engagement services, and channels.
+            </p>
 
             <p class="badge bg-blue-green m-0 me-1">FOUNDATION TO ENGAGEMENT</p>
             <h3 class="h3">An Enterprise Solution to deliver 'data' to an Engagement Service via an Integration Component.</h3>
-            <p class="mb-2 pb-2">In pattern 1A the Enterprise solution sends data in a file (.csv) to Integration Platform's internal file system. Integration Platform reads this file, transforms the data into the API format the Engagement Solution needs and then calls the Engagement Solution's API to send the data.</p>
-            <p class="mb-2 pb-2">In pattern 1B the Enterprise solution sends data in a file (.csv) to Integration Platform's internal file system. Integration Platform reads this file, transforms and filters the data and sends this to the (Azure) Service Bus. Any Engagement Solution that is 'subscribed' to the topic, receives a notification that new data is available. The Engagement Solution reads the data, transforms it and stores it to the Engagement Solution.</p>
-            <p class="mb-2 pb-2">In pattern 1C the Enterprise solution sends data in a JSON format to the (Azure) Service Bus directly. Any Engagement Solution that is 'subscribed' to the topic, receives a notification that new data is available. The Engagement Solution reads the data, transforms it and stores it to the Engagement Solution.</p>
-            <p class="mb-2 pb-2">In pattern 1D the Enterprise solution sends a notification that new data is available to the (Azure) Service Bus directly. Any Engagement Solution that is 'subscribed' to the topic, receives a notification that new data is available. The Engagement Solution reads the ID from the notification and calls an API to get the full data based on the ID receives. The Engagement Solution receives the full data from the API, transforms it and stores it to the Engagement Solution.</p>
+            <p class="mb-2 pb-2">
+              In pattern 1A the Enterprise solution sends data in a file (.csv) to Integration Platform's internal file system. Integration Platform reads this file, transforms the data into the API
+              format the Engagement Solution needs and then calls the Engagement Solution's API to send the data.
+            </p>
+            <p class="mb-2 pb-2">
+              In pattern 1B the Enterprise solution sends data in a file (.csv) to Integration Platform's internal file system. Integration Platform reads this file, transforms and filters the data
+              and sends this to the (Azure) Service Bus. Any Engagement Solution that is 'subscribed' to the topic, receives a notification that new data is available. The Engagement Solution reads
+              the data, transforms it and stores it to the Engagement Solution.
+            </p>
+            <p class="mb-2 pb-2">
+              In pattern 1C the Enterprise solution sends data in a JSON format to the (Azure) Service Bus directly. Any Engagement Solution that is 'subscribed' to the topic, receives a notification
+              that new data is available. The Engagement Solution reads the data, transforms it and stores it to the Engagement Solution.
+            </p>
+            <p class="mb-2 pb-2">
+              In pattern 1D the Enterprise solution sends a notification that new data is available to the (Azure) Service Bus directly. Any Engagement Solution that is 'subscribed' to the topic,
+              receives a notification that new data is available. The Engagement Solution reads the ID from the notification and calls an API to get the full data based on the ID receives. The
+              Engagement Solution receives the full data from the API, transforms it and stores it to the Engagement Solution.
+            </p>
 
             <div class="row">
               <div class="col-md-6">
                 <h4 class="h4">Rule of Thumb</h4>
                 <ul class="mb-4 pb-2">
-                  <li class="mb-1">Choose 1a when the enterprise source can only export files, you need strong control/validation/transformation, and there’s a single (or few) known targets with stable APIs.</li>
+                  <li class="mb-1">
+                    Choose 1a when the enterprise source can only export files, you need strong control/validation/transformation, and there’s a single (or few) known targets with stable APIs.
+                  </li>
                   <li class="mb-1">Choose 1b when the source is file-only, but you need fan-out to multiple consumers and looser coupling than 1A.</li>
                   <li class="mb-1">Choose 1c when the enterprise system can publish JSON messages/events directly and you want near real-time, pub/sub distribution.</li>
                   <li class="mb-1">Choose 1d when payloads are large/sensitive or you must always fetch the freshest data from the source; consumers can call back via API.</li>
@@ -383,15 +411,26 @@
               </div>
             </div>
 
-
-
-
             <p class="badge bg-green-blue m-0 me-1">ENGAGEMENT TO FOUNDATION</p>
             <h3 class="h3">An Engagement Service to deliver 'data' to an Enterprise Solution via an Integration Component.</h3>
-            <p class="mb-2 pb-2">In pattern 2A the Engagement Service send the full data to the (Azure) Service Bus. Integration Platform is 'subscribed' to the topic, receives a notification with full data payload. Integration Platform reads the data, transforms the data into the API format the Enterprise Solution needs and then calls the Enterprise Solution's API to send the data.</p>
-            <p class="mb-2 pb-2">In pattern 2B the Engagement Service sends a notification that new data is available to the (Azure) Service Bus directly. Integration Platform is 'subscribed' to the topic, receives a notification that new data is available. The Engagement Solution reads the ID from the notification and calls an API to get the full data based on the ID received. The Engagement Solution receives the full data from the API, transforms it and stores it to the Engagement Solution.</p>
-            <p class="mb-2 pb-2">In pattern 2C the Engagement Service sends send the full data to the (Azure) Service Bus. A custom (Azure) Custom Function is 'subscribed' to the topic, receives a notification with full data payload. The custom (Azure) Custom Function reads the data, transforms the data into the API format the Enterprise Solution needs and then calls the Enterprise Solution's API to send the data.</p>
-            <p class="mb-2 pb-2">In pattern 2D the Engagement Service transforms the data in the format the Enterprise Solution API needs. The Engagement Service calls the Enterprise Solution API, exposed via (Azure) API Manager, to send the data.</p>
+            <p class="mb-2 pb-2">
+              In pattern 2A the Engagement Service send the full data to the (Azure) Service Bus. Integration Platform is 'subscribed' to the topic, receives a notification with full data payload.
+              Integration Platform reads the data, transforms the data into the API format the Enterprise Solution needs and then calls the Enterprise Solution's API to send the data.
+            </p>
+            <p class="mb-2 pb-2">
+              In pattern 2B the Engagement Service sends a notification that new data is available to the (Azure) Service Bus directly. Integration Platform is 'subscribed' to the topic, receives a
+              notification that new data is available. The Engagement Solution reads the ID from the notification and calls an API to get the full data based on the ID received. The Engagement
+              Solution receives the full data from the API, transforms it and stores it to the Engagement Solution.
+            </p>
+            <p class="mb-2 pb-2">
+              In pattern 2C the Engagement Service sends send the full data to the (Azure) Service Bus. A custom (Azure) Custom Function is 'subscribed' to the topic, receives a notification with full
+              data payload. The custom (Azure) Custom Function reads the data, transforms the data into the API format the Enterprise Solution needs and then calls the Enterprise Solution's API to
+              send the data.
+            </p>
+            <p class="mb-2 pb-2">
+              In pattern 2D the Engagement Service transforms the data in the format the Enterprise Solution API needs. The Engagement Service calls the Enterprise Solution API, exposed via (Azure)
+              API Manager, to send the data.
+            </p>
 
             <div class="row">
               <div class="col-md-6">
@@ -409,8 +448,6 @@
                 </a>
               </div>
             </div>
-
-
 
             <p class="badge bg-yellow-green m-0 me-1">CHANNEL TO ENGAGEMENT</p>
             <h3 class="h3">A customer facing Channel connected to an Engagement Service.</h3>
@@ -432,15 +469,20 @@
               </div>
             </div>
 
-
-
-
             <p class="badge bg-green m-0 me-1">ENGAGEMENT TO ENGAGEMENT</p>
             <h3 class="h3">An Engagement Service that connects to another Engagement Service.</h3>
             <p class="mb-2 pb-2">In pattern 4A the Engagement Service sends data to another Engagement Service via an out-of-the-box standard connector.</p>
-            <p class="mb-2 pb-2">In pattern 4B the Engagement Service sends data to a custom (Azure) Custom Function. The (Azure) Custom Function transforms the data and sends it to another Engagement Service API.</p>
-            <p class="mb-2 pb-2">In pattern 4C the Engagement Service sends send the full data to the (Azure) Service Bus. A custom (Azure) Custom Function is 'subscribed' to the topic, receives a notification with full data payload. The custom (Azure) Custom Function reads the data, transforms the data into the API format the Engagement Service needs and then calls the Engagement Service API to send the data.</p>
-            <p class="mb-2 pb-2">Optionally the Service Bus contains only a notification with an ID and the (Azure) Custom Function calls the Engagement Service API to get the full data based on the ID received.</p>
+            <p class="mb-2 pb-2">
+              In pattern 4B the Engagement Service sends data to a custom (Azure) Custom Function. The (Azure) Custom Function transforms the data and sends it to another Engagement Service API.
+            </p>
+            <p class="mb-2 pb-2">
+              In pattern 4C the Engagement Service sends send the full data to the (Azure) Service Bus. A custom (Azure) Custom Function is 'subscribed' to the topic, receives a notification with full
+              data payload. The custom (Azure) Custom Function reads the data, transforms the data into the API format the Engagement Service needs and then calls the Engagement Service API to send
+              the data.
+            </p>
+            <p class="mb-2 pb-2">
+              Optionally the Service Bus contains only a notification with an ID and the (Azure) Custom Function calls the Engagement Service API to get the full data based on the ID received.
+            </p>
 
             <div class="row">
               <div class="col-md-6">
@@ -458,12 +500,18 @@
               </div>
             </div>
 
-
-
             <p class="badge bg-yellow-blue m-0 me-1">CHANNEL TO FOUNDATION</p>
             <h3 class="h3">A Channel that communicates directly with the Enterprise Solution through an Integration Component.</h3>
-            <p class="mb-2 pb-2">In Pattern 5A, the channel (webshop) connects via a Backend-for-Frontend (BFF) to the (Azure) API Manager to retrieve data from the Enterprise Solution APIs. These APIs are exposed through (Azure) API Management, which manages authentication, throttling, and security. The Enterprise Solution APIs return structured data that the channel can directly consume and present.</p>
-            <p class="mb-2 pb-2">In Pattern 5B, the channel (webshop) connects via a BFF and an additional Custom Service to the (Azure) API Manager to request data from the Enterprise Solution APIs. As in 5A, (Azure) API Management handles authentication, throttling, and security. The Custom Service processes and interprets the API responses before sending them to the channel. This approach is particularly useful when the channel cannot interpret the API response directly or when multiple API calls must be orchestrated to deliver a single, aggregated response to the channel.</p>
+            <p class="mb-2 pb-2">
+              In Pattern 5A, the channel (webshop) connects via a Backend-for-Frontend (BFF) to the (Azure) API Manager to retrieve data from the Enterprise Solution APIs. These APIs are exposed
+              through (Azure) API Management, which manages authentication, throttling, and security. The Enterprise Solution APIs return structured data that the channel can directly consume and
+              present.
+            </p>
+            <p class="mb-2 pb-2">
+              In Pattern 5B, the channel (webshop) connects via a BFF and an additional Custom Service to the (Azure) API Manager to request data from the Enterprise Solution APIs. As in 5A, (Azure)
+              API Management handles authentication, throttling, and security. The Custom Service processes and interprets the API responses before sending them to the channel. This approach is
+              particularly useful when the channel cannot interpret the API response directly or when multiple API calls must be orchestrated to deliver a single, aggregated response to the channel.
+            </p>
             <p class="mb-2 pb-2">Both integration patterns are synchronous and follow a request/response communication model.</p>
 
             <div class="row">
@@ -471,7 +519,9 @@
                 <h4 class="h4">Rule of Thumb</h4>
                 <ul class="mb-4 pb-2">
                   <li class="mb-1">Choose 5a when the channel can consume the Enterprise API’s data model as-is, and no cross-system orchestration or heavy transformation is needed.</li>
-                  <li class="mb-1">Choose 5b when the channel needs aggregated responses, protocol adaptation, or interpretation of Enterprise API outputs; multiple calls must be orchestrated into one payload.</li>
+                  <li class="mb-1">
+                    Choose 5b when the channel needs aggregated responses, protocol adaptation, or interpretation of Enterprise API outputs; multiple calls must be orchestrated into one payload.
+                  </li>
                 </ul>
               </div>
               <div class="col-md-6">
@@ -480,11 +530,6 @@
                 </a>
               </div>
             </div>
-
-
-
-
-
 
             <h2 class="h2" id="integration-principles">Integration Principles</h2>
             <p class="mb-4 pb-2">The Integration Patterns are derived from Integration Principles. Based on the Integration 'scope' a design direction is given.</p>
@@ -495,14 +540,24 @@
                   class="col-sm-3 position-relative bg-position-center bg-repeat-0 bg-size-cover"
                   style="background-image: url(/assets/img/blog/single/chatgpt-integration-principles.png); min-height: 2rem"
                 >
-                  <a href="/content/integration-principles.html" title="Integration Principles & Best Practices for Modern Architecture" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                  <a
+                    href="/content/integration-principles.html"
+                    title="Integration Principles & Best Practices for Modern Architecture"
+                    class="position-absolute top-0 start-0 w-100 h-100"
+                    aria-label="Read more"
+                  ></a>
                 </div>
                 <div class="col-sm-9">
                   <div class="card-body">
                     <h3 class="h4">
-                      <a class="text-light" href="/content/integration-principles.html" title="Integration Principles & Best Practices for Modern Architecture">Integration Principles & Best Practices for Modern Architecture</a>
+                      <a class="text-light" href="/content/integration-principles.html" title="Integration Principles & Best Practices for Modern Architecture"
+                        >Integration Principles & Best Practices for Modern Architecture</a
+                      >
                     </h3>
-                    <p class="text-light">Integration Principles are a set of guidelines or best practices that help us design, build, and manage how different systems, applications, and data sources connect and communicate with each other. These principles ensure that integrations are efficient, secure, scalable, and maintainable.</p>
+                    <p class="text-light">
+                      Integration Principles are a set of guidelines or best practices that help us design, build, and manage how different systems, applications, and data sources connect and
+                      communicate with each other. These principles ensure that integrations are efficient, secure, scalable, and maintainable.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -519,8 +574,12 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>They are <strong>high-level guidelines</strong> or rules that define how integrations should be approached (e.g., “keep integrations loosely coupled,” “ensure security by design”).</td>
-                  <td>They are <strong>practical, reusable design templates</strong> that describe how to solve common integration problems (e.g., “Message Broker Pattern,” “Publish/Subscribe Pattern”).</td>
+                  <td>
+                    They are <strong>high-level guidelines</strong> or rules that define how integrations should be approached (e.g., “keep integrations loosely coupled,” “ensure security by design”).
+                  </td>
+                  <td>
+                    They are <strong>practical, reusable design templates</strong> that describe how to solve common integration problems (e.g., “Message Broker Pattern,” “Publish/Subscribe Pattern”).
+                  </td>
                 </tr>
                 <tr>
                   <td>Principles are <strong>why</strong> and <strong>what</strong> you should aim for — the foundation for making smart design decisions.</td>
@@ -531,7 +590,7 @@
                   <td>Example: "You might use the Queue-Based Load Leveling Pattern to achieve scalability and loose coupling."</td>
                 </tr>
                 <tr>
-                  <td>Principles help you decide which patterns to use. </td>
+                  <td>Principles help you decide which patterns to use.</td>
                   <td>Patterns help you apply the principles in a consistent, proven way.</td>
                 </tr>
               </tbody>
@@ -553,17 +612,17 @@
           <div class="col-lg-3 position-relative">
             <div class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4" style="top: 105px !important">
               <span class="d-block mb-3"
-          ><small
-            >8:10 minute read based on
-            <a
-              href="https://doi.org/10.1016/j.jml.2019.104047"
-              target="_blank"
-              title="ScienceDirect: How many words do we read per minute? A review and meta-analysis of reading rate"
-              class="text-reset"
-              >183 words per minute</a
-            ></small
-          ></span
-        >
+                ><small
+                  >8:10 minute read based on
+                  <a
+                    href="https://doi.org/10.1016/j.jml.2019.104047"
+                    target="_blank"
+                    title="ScienceDirect: How many words do we read per minute? A review and meta-analysis of reading rate"
+                    class="text-reset"
+                    >183 words per minute</a
+                  ></small
+                ></span
+              >
               <h6 class="mt-4">Table of Content</h6>
               <nav id="toc" data-toggle="toc"></nav>
 
@@ -619,7 +678,13 @@
               <article class="card border-0 shadow-sm h-100 mx-2">
                 <div class="position-relative">
                   <a href="/content/integration-principles.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-                  <img src="/assets/img/blog/single/chatgpt-integration-principles.png" width="450" height="624" class="card-img-top" alt="Integration Principles & Best Practices for Modern Architecture<" />
+                  <img
+                    src="/assets/img/blog/single/chatgpt-integration-principles.png"
+                    width="450"
+                    height="624"
+                    class="card-img-top"
+                    alt="Integration Principles & Best Practices for Modern Architecture<"
+                  />
                 </div>
                 <div class="card-body pb-4">
                   <div class="d-flex align-items-center justify-content-between mb-3">
@@ -637,7 +702,13 @@
               <article class="card border-0 shadow-sm h-100 mx-2">
                 <div class="position-relative">
                   <a href="/content/how-to-build-your-future-state-architecture.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-                  <img src="/assets/img/blog/single/midjourney-architect-looking-at-construction.png" width="450" height="624" class="card-img-top" alt="How to Build Your Future State Architecture?" />
+                  <img
+                    src="/assets/img/blog/single/midjourney-architect-looking-at-construction.png"
+                    width="450"
+                    height="624"
+                    class="card-img-top"
+                    alt="How to Build Your Future State Architecture?"
+                  />
                 </div>
                 <div class="card-body pb-4">
                   <div class="d-flex align-items-center justify-content-between mb-3">
@@ -680,8 +751,9 @@
             </div>
           </div> -->
 
-          <!-- Pagination (bullets) -->
-          <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+            <!-- Pagination (bullets) -->
+            <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+          </div>
         </div>
       </section>
     </main>
