@@ -41,6 +41,13 @@ $danger: #ef4444 !default;
 $light: $white !default;
 $dark: $gray-900 !default;
 
+// Theme secundary colors
+$blue: #0070C0 !default;
+$green: #00B050 !default;
+$yellow: #ffc000 !default;
+$red: #C00000 !default;
+$gray: $gray-600 !default;
+
 $primary-text-emphasis: color.adjust($primary, $lightness: -10%) !default;
 $secondary-text-emphasis: $gray-700 !default;
 $success-text-emphasis: color.adjust($success, $lightness: -10%) !default;

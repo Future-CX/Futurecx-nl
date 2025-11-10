@@ -240,6 +240,34 @@ span.wip {
   pointer-events: none;
 }
 
+/* blog single content */
+
+.bg-gray {
+  background-color: $gray !important;
+}
+.bg-blue{
+  background-color: $blue !important;
+}
+.bg-green{
+  background-color: $green !important;
+}
+.bg-green-blue{
+  background: linear-gradient(90deg, $green 20%, $blue 80%) !important;
+}
+.bg-yellow{
+  background-color: $yellow !important;
+}
+.bg-blue-green{
+  background: linear-gradient(90deg, $blue 20%, $green 80%) !important;
+}
+.bg-yellow-green{
+  background: linear-gradient(90deg, $yellow 20%, $green 80%) !important;
+}
+.bg-yellow-blue{
+  background: linear-gradient(90deg, $yellow 20%, $blue 80%) !important;
+}
+
+
 @include media-breakpoint-down(md) {
   /* X-Small devices (portrait phones, less than 576px) */
 
