@@ -126,8 +126,6 @@ function updateFile(filePath) {
       }
     }
   }
-
-  if (changed) fs.writeFileSync(filePath, html);
   return changed;
 }
 
