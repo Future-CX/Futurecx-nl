@@ -6,6 +6,8 @@
     <meta property="og:title" content="Content Overview | Future CX | Martijn van Deel" />
     <link rel="canonical" href="https://www.futurecx.nl/content.html" />
     <meta property="og:url" content="https://www.futurecx.nl/content.html" />
+    <meta name="robots" content="index,follow" />
+    <meta name="twitter:site" content="@jmvandeel" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@jmvandeel" />
     <meta
@@ -22,6 +24,8 @@
       content="customer experience, customer engagement, future, enterprise architecture, business capability modelling, IT strategy and roadmap, vendor selection, composable architecture, DevOps"
     />
     <meta name="author" content="Martijn van Deel" />
+    <meta property="og:see_also" content="https://www.futurecx.nl/content/integration-principles.html" />
+    <meta property="og:see_also" content="https://www.futurecx.nl/content/integration-patterns.html" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:image" itemprop="image" content="https://www.futurecx.nl/assets/img/cover/cover-xxl.jpg" />
@@ -37,6 +41,50 @@
     <meta name="msapplication-TileColor" content="#080032" />
     <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Content Overview | Future CX",
+        "url": "https://www.futurecx.nl/content.html",
+        "description": "Overview of Future CX articles on enterprise architecture and integration.",
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "url": "https://www.futurecx.nl/content/integration-principles.html",
+              "name": "Integration Principles & Best Practices for Modern Architecture",
+              "image": "https://www.futurecx.nl/assets/img/blog/single/chatgpt-integration-principles.png"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "url": "https://www.futurecx.nl/content/integration-patterns.html",
+              "name": "Integration Patterns and Best Practices for Modern Architecture",
+              "image": "https://www.futurecx.nl/assets/img/blog/single/chatgpt-integration-patterns.png"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "url": "https://www.futurecx.nl/content/how-to-build-your-future-state-architecture.html",
+              "name": "How to Build Your Future State Architecture?",
+              "image": "https://www.futurecx.nl/assets/img/blog/single/midjourney-architect-looking-at-construction.png"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "url": "https://www.futurecx.nl/content/use-domain-driven-design-for-enterprise-architecture.html",
+              "name": "Use Domain Driven Design for Enterprise Architecture",
+              "image": "https://www.futurecx.nl/assets/img/blog/single/midjourney-designer-looking-at-board.png"
+            }
+          ]
+        }
+      }
+    </script>
+
     <script>
       (function () {
         try {
@@ -257,7 +305,12 @@
               class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover"
               style="background-image: url(/assets/img/blog/single/chatgpt-integration-principles.png); min-height: 15rem"
             >
-              <a href="/content/integration-principles.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+              <a
+                href="/content/integration-principles.html"
+                title="Integration Principles & Best Practices for Modern Architecture"
+                class="position-absolute top-0 start-0 w-100 h-100"
+                aria-label="Read more"
+              ></a>
             </div>
             <div class="col-sm-8">
               <div class="card-body">
@@ -266,7 +319,9 @@
                   <p class="badge fs-sm text-nav bg-primary text-decoration-none ms-2">Software Integration</p>
                 </div>
                 <h2 class="h4">
-                  <a href="/content/integration-principles.html">Integration Principles: Some best practices</a>
+                  <a href="/content/integration-principles.html" title="Integration Principles & Best Practices for Modern Architecture"
+                    >Integration Principles & Best Practices for Modern Architecture</a
+                  >
                 </h2>
                 <p>
                   Integration Principles are a set of guidelines or best practices that help us design, build, and manage how different systems, applications, and data sources connect and communicate
@@ -285,7 +340,12 @@
               class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover"
               style="background-image: url(/assets/img/blog/single/chatgpt-integration-patterns.png); min-height: 15rem"
             >
-              <a href="/content/integration-patterns.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+              <a
+                href="/content/integration-patterns.html"
+                title="Integration Patterns and Best Practices for System Architecture"
+                class="position-absolute top-0 start-0 w-100 h-100"
+                aria-label="Read more"
+              ></a>
             </div>
             <div class="col-sm-8">
               <div class="card-body">
@@ -294,7 +354,7 @@
                   <p class="badge fs-sm text-nav bg-primary text-decoration-none ms-2">Software Integration</p>
                 </div>
                 <h2 class="h4">
-                  <a href="/content/integration-patterns.html">Integration Patterns: Some best practices</a>
+                  <a href="/content/integration-patterns.html" title="Integration Patterns and Best Practices for System Architecture">Integration Patterns: Some best practices</a>
                 </h2>
                 <p>
                   Integration Patterns are proven, reusable solutions to common challenges that arise when connecting different systems, applications, and data sources. They describe how systems
@@ -313,7 +373,12 @@
               class="col-sm-4 position-relative bg-position-center bg-repeat-0 bg-size-cover"
               style="background-image: url(/assets/img/blog/single/midjourney-architect-looking-at-construction.png); min-height: 15rem"
             >
-              <a href="/content/how-to-build-your-future-state-architecture.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+              <a
+                href="/content/how-to-build-your-future-state-architecture.html"
+                title="How to Build Your Future State Architecture?"
+                class="position-absolute top-0 start-0 w-100 h-100"
+                aria-label="Read more"
+              ></a>
               <span class="wip">Work In Progress</span>
             </div>
             <div class="col-sm-8">
@@ -322,7 +387,7 @@
                   <p class="badge fs-sm text-nav bg-primary text-decoration-none">Enterprise Architecture</p>
                 </div>
                 <h2 class="h4">
-                  <a href="/content/how-to-build-your-future-state-architecture.html">How to build your Future State Architecture</a>
+                  <a href="/content/how-to-build-your-future-state-architecture.html" title="How to Build Your Future State Architecture?">How to build your Future State Architecture</a>
                 </h2>
                 <p>Coming soon...</p>
               </div>
