@@ -152,3 +152,59 @@ if (hash === 'success') {
 })();
 
 // (Removed) dateModified runtime update — now handled at build time
+
+// In-page anchor offset (80px) for links without data-scroll
+(function () {
+  let OFFSET = 80;
+
+  function findAnchor(el) {
+    while (el && el.tagName && el.tagName.toLowerCase() !== 'a') {
+      el = el.parentElement;
+    }
+    return el && el.tagName && el.tagName.toLowerCase() === 'a' ? el : null;
+  }
+
+  function isHashLink(a) {
+    if (!a || !a.getAttribute) return false;
+    let href = a.getAttribute('href') || '';
+    return href.startsWith('#') && href.length > 1;
+  }
+
+  function scrollWithOffset(id) {
+    let target = document.getElementById(id);
+    if (!target) return false;
+    let y = target.getBoundingClientRect().top + window.pageYOffset - OFFSET;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+    return true;
+  }
+
+  function handleClick(e) {
+    try {
+      let a = findAnchor(e.target);
+      if (!a) return;
+      if (a.hasAttribute('data-scroll')) return; // let SmoothScroll handle those
+      if (!isHashLink(a)) return;
+      let id = (a.getAttribute('href') || '').slice(1);
+      if (!id) return;
+      if (scrollWithOffset(id)) e.preventDefault();
+    } catch (err) {
+      // no-op
+    }
+  }
+
+  function handleInitialHash() {
+    if (!location.hash) return;
+    let id = decodeURIComponent(location.hash.replace('#', ''));
+    if (!id) return;
+    setTimeout(function () {
+      scrollWithOffset(id);
+    }, 0);
+  }
+
+  document.addEventListener('click', handleClick, true);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', handleInitialHash);
+  } else {
+    handleInitialHash();
+  }
+})();

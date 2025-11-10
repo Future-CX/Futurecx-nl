@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <title>Integration Patterns: Some best practices | Future CX | Martijn van Deel</title>
+    <meta property="og:title" content="Integration Patterns: Some best practices | Future CX | Martijn van Deel" />
+    <link rel="canonical" href="https://www.futurecx.nl/content/integration-patterns.html" />
+    <meta property="og:url" content="https://www.futurecx.nl/content/integration-patterns.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@jmvandeel" />
+    <meta
+      name="description"
+      property="og:description"
+      content="Integration Patterns are proven, reusable solutions to common challenges that arise when connecting different systems, applications, and data sources. They describe how systems should interact, exchange data, and handle events in a consistent, reliable way."
+    />
+    <meta
+      name="twitter:description"
+      content="Integration Patterns are proven, reusable solutions to common challenges that arise when connecting different systems, applications, and data sources. They describe how systems should interact, exchange data, and handle events in a consistent, reliable way."
+    />
+    <meta
+      name="keywords"
+      content="Solution Architect, Enterprise Architect, Product Owner, customer experience, customer engagement, future, enterprise architecture, business capability modelling, IT strategy and roadmap, vendor selection, composable architecture, DevOps"
+    />
+    <meta name="author" content="Martijn van Deel" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:image" itemprop="image" content="https://www.futurecx.nl/assets/img/cover/cover-xxl.jpg" />
+    <meta name="twitter:image" content="https://www.futurecx.nl/assets/img/cover/cover-xxl.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+    <link rel="alternate icon" sizes="16x16" href="/assets/favicon/favicon.ico" />
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#ffffff" />
+    <meta name="msapplication-TileColor" content="#080032" />
+    <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (!t) {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          if (t === 'auto') {
+            t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.setAttribute('data-bs-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" media="screen" href="/assets/css/vendors.css" />
+    <link rel="stylesheet" media="screen" href="/assets/css/theme.min.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+/>
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme='dark'] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme='dark'] .page-loading-inner > span {
+        color: #fff;
+        opacity: 0.6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+        vertical-align: text-bottom;
+        border: 0.15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
+      }
+      [data-bs-theme='dark'] .page-spinner {
+        border-color: rgba(255, 255, 255, 0.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4R2D7JRCEJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-4R2D7JRCEJ');
+    </script>
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Page wrapper for sticky footer -->
+    <main class="page-wrapper">
+      <!-- Navbar -->
+      <header class="header navbar navbar-expand-lg navbar-light position-absolute navbar-sticky" data-sticky-offset="150">
+        <div class="container px-3">
+          <a href="/" class="navbar-brand pe-3 text-primary"> Future CX </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end text-dark">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="/#top" data-scroll data-scroll-offset="100" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/#about" data-scroll data-scroll-offset="0" class="nav-link">About me</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/#services" data-scroll data-scroll-offset="50" class="nav-link">What I do</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/#clients" data-scroll data-scroll-offset="100" class="nav-link">Clients</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/#highlights" data-scroll data-scroll-offset="50" class="nav-link">Highlights</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/content.html" class="nav-link">Content</a>
+                </li>
+                <li class="nav-item">
+                  <a href="/#contact" data-scroll data-scroll-offset="100" class="nav-link">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode" />
+          </div>
+          <button
+            id="toggle"
+            type="button"
+            class="navbar-toggler d-none"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Breadcrumb -->
+      <nav class="container mt-lg-4 pt-5" aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 pt-5">
+          <li class="breadcrumb-item">
+            <a href="/"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="/content.html"><i class="bx bx-list-ul fs-lg me-1"></i>Content</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Integration Patterns: Some best practices</li>
+        </ol>
+      </nav>
+
+      <!-- Post title + Meta  -->
+      <section class="container mt-4 pt-lg-2 pb-sm-0 pb-md-3">
+        <h1 class="pb-sm-0 pb-md-3 text-dark" style="max-width: 970px" itemprop="headline">Integration Patterns: Some best practices</h1>
+        <div class="d-flex flex-md-row flex-column align-items-md-center justify-content-md-between mb-sm-0 mb-md-3">
+          <div class="d-flex align-items-center flex-wrap text-muted mb-sm-0 mb-md-4">
+            <div class="fs-xs border-end pe-3 me-3 mb-2">
+              <span class="badge bg-faded-primary text-primary fs-base">Enterprise Architecture</span>
+            </div>
+            <div class="fs-sm border-end pe-3 me-3 mb-2" itemprop="datePublished" content="2025-10-23T19:15:05.563Z">October 23, 2025</div>
+            <div class="fs-sm pe-3 me-3 mb-2" itemprop="dateModified" content="2025-11-07T13:49:50.838Z">Updated: November 7, 2025</div>
+          </div>
+          <div class="d-none d-sm-block d-flex align-items-center position-relative ps-md-3 pe-lg-5 mb-2" itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <div class="d-flex align-items-center position-relative ps-md-3 pe-lg-5 mb-2">
+              <img src="/assets/img/profile/profile-S.jpg" class="rounded-circle" width="60" height="60" alt="Martijn van Deel" />
+              <div class="ps-3">
+                <h6 class="mb-1">Author</h6>
+                <a href="https://www.futurecx.nl/#about" class="fw-semibold stretched-link text-reset" itemprop="url"><span itemprop="name">Martijn van Deel</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Post image (parallax) -->
+      <div class="jarallax mb-lg-5 m-0 p-0 mb-sm-0 mb-md-4" data-jarallax data-speed="0.35" style="height: 36.45vw; min-height: 300px">
+        <meta itemprop="image" content="https://www.futurecx.nl/assets/img/blog/single/chatgpt-integration-patterns.png" />
+        <div class="jarallax-img" style="background-image: url(/assets/img/blog/single/chatgpt-integration-patterns.png)"></div>
+        <div class="container">
+          <img src="/assets/img/blog/single/logo-ChatGPT.svg" width="50" height="50" class="rounded-circle mt-2" alt="ChatGPT, a generative artificial intelligence chatbot developed by OpenAI" />
+        </div>
+        <div class="d-none d-sm-block position-absolute bottom-0 start-0 text-center w-100 bg-dark text-white m-0 p-0">
+          <small
+            >This image was generated using <a href="https://chatgpt.com/" target="_blank">ChatGTP</a>, a generative artificial intelligence chatbot developed by OpenAI.</small
+          >
+        </div>
+      </div>
+
+      <!-- Post content + Sharing -->
+      <section class="container mb-5 pt-4 pb-2 py-mg-4">
+        <div class="row gy-4">
+          <!-- Content -->
+          <div class="col-lg-9">
+            <h3 class="h5 mb-2 pb-2 fw-medium" data-toc-skip>
+              Integration Patterns are proven, reusable solutions to common challenges that arise when connecting different systems, applications, and data sources.
+            </h3>
+            <h3 class="h5 mb-4 pb-2 fw-medium" data-toc-skip>
+              They describe how systems should interact, exchange data, and handle events in a consistent, reliable way.
+            </h3>
+
+            <p class="mb-1 pb-2"><i>For example:</i></p>
+            <p class="mb-1 pb-2"><strong>Problem:</strong> You need multiple systems to get real-time updates when a change happens.</p>
+            <p class="mb-4 pb-2"><strong>Pattern:</strong> Use a Publish/Subscribe pattern — one system publishes events, and multiple subscribers get notified without direct dependencies.</p>
+
+            <p class="mb-4 pb-2">
+              The Integration Patterns are derived from <a href="#integration-principles">Integration Principles</a>. Based on the Integration 'scope' a design direction is given.</p>
+
+            <h2 class="h2" id="categorizing-integrations">Categorizing Integrations</h2>
+            <p class="mb-4 pb-2">
+              The <a href="https://www.futurecx.nl/content/how-to-build-your-future-state-architecture.html">North Star Architecture</a> consists of layers; Channels, Engagement, Integration and Foundation. We will categorize the
+              integrations based on these layers, as patterns will differ per category.
+            </p>
+            <div class="row">
+              <div class="col-md-9">
+                <ol class="mb-4 pb-2 ps-4">
+                  <li class="mb-1">An Enterprise Solution to deliver 'data' to an Engagement Service via an Integration Component.</li>
+                  <li class="mb-1">An Engagement Service to deliver 'data' to an Enterprise Solution via an Integration Component.</li>
+                  <li class="mb-1">A customer facing Channel connected to an Engagement Service.</li>
+                  <li class="mb-1">An Engagement Service that connects to another Engagement Service.</li>
+                  <li class="mb-1">A Channel that directly communicates to the Enterprise Solution via an Integration Component.</li>
+                </ol>
+              </div>
+              <div class="col-md-3"><img src="/assets/img/blog/single/integration-principles-categorizing-integrations.jpg" width="600" height="400" alt="Integration Diagram" /></div>
+            </div>
+
+            <h2 class="h2" id="integration-patterns">Patterns per category</h2>
+            <p class="mb-1 pb-2">Below, you will find an overview of the integration patterns categorized by their respective layers. Further down, each category is explained in detail with specific examples and guidelines.</p>
+            <img src="/assets/img/models/future-cx-integration-patterns-all.jpg" width="960" height="540" alt="Diagram illustrating various integration patterns categorized by layers such as foundation, engagement, and channel. Each pattern is represented with arrows and labels showing data flow and interaction between components like enterprise solutions, engagement services, and channels." class="mb-0 pb-2" />
+            <p class="mb-4 pb-2 text-muted"
+              >Diagram illustrating various integration patterns categorized by layers such as foundation, engagement, and channel. Each pattern is represented with arrows and labels showing data flow and interaction between components like enterprise solutions, engagement services, and channels.</p>
+
+            <p class="badge bg-blue-green m-0 me-1">FOUNDATION TO ENGAGEMENT</p>
+            <h3 class="h3">An Enterprise Solution to deliver 'data' to an Engagement Service via an Integration Component.</h3>
+            <p class="mb-2 pb-2">In pattern 1A the Enterprise solution sends data in a file (.csv) to Seeburger's internal file system. Seeburger reads this file, transforms the data into the API format the Engagement Solution needs and then calls the Engagement Solution's API to send the data.</p>
+            <p class="mb-2 pb-2">In pattern 1B the Enterprise solution sends data in a file (.csv) to Seeburger's internal file system. Seeburger reads this file, transforms and filters the data and sends this to the Azure Service Bus. Any Engagement Solution that is 'subscribed' to the topic, receives a notification that new data is available. The Engagement Solution reads the data, transforms it and stores it to the Engagement Solution.</p>
+            <p class="mb-2 pb-2">In pattern 1C the Enterprise solution sends data in a JSON format to the Azure Service Bus directly. Any Engagement Solution that is 'subscribed' to the topic, receives a notification that new data is available. The Engagement Solution reads the data, transforms it and stores it to the Engagement Solution.</p>
+            <p class="mb-2 pb-2">In pattern 1D the Enterprise solution sends a notification that new data is available to the Azure Service Bus directly. Any Engagement Solution that is 'subscribed' to the topic, receives a notification that new data is available. The Engagement Solution reads the ID from the notification and calls an API to get the full data based on the ID receives. The Engagement Solution receives the full data from the API, transforms it and stores it to the Engagement Solution.</p>
+
+            <h4 class="h4">Rule of Thumb</h4>
+            <ul class="mb-4 pb-2">
+              <li class="mb-1">Choose 1a when the enterprise source can only export files, you need strong control/validation/transformation, and there’s a single (or few) known targets with stable APIs.</li>
+              <li class="mb-1">Choose 1b when the source is file-only, but you need fan-out to multiple consumers and looser coupling than 1A.</li>
+              <li class="mb-1">Choose 1c when the enterprise system can publish JSON messages/events directly and you want near real-time, pub/sub distribution.</li>
+              <li class="mb-1">Choose 1d when payloads are large/sensitive or you must always fetch the freshest data from the source; consumers can call back via API.</li>
+            </ul>
+
+
+
+
+            <p class="badge bg-green-blue m-0 me-1">ENGAGEMENT TO FOUNDATION</p>
+            <h3 class="h3">An Engagement Service to deliver 'data' to an Enterprise Solution via an Integration Component.</h3>
+            <p class="mb-2 pb-2">In pattern 2A the Engagement Service send the full data to the Azure Service Bus. Seeburger is 'subscribed' to the topic, receives a notification with full data payload. Seeburger reads the data, transforms the data into the API format the Enterprise Solution needs and then calls the Enterprise Solution's API to send the data.</p>
+            <p class="mb-2 pb-2">In pattern 2B the Engagement Service sends a notification that new data is available to the Azure Service Bus directly. Seeburger is 'subscribed' to the topic, receives a notification that new data is available. The Engagement Solution reads the ID from the notification and calls an API to get the full data based on the ID received. The Engagement Solution receives the full data from the API, transforms it and stores it to the Engagement Solution.</p>
+            <p class="mb-2 pb-2">In pattern 2C the Engagement Service sends send the full data to the Azure Service Bus. A custom Azure Function is 'subscribed' to the topic, receives a notification with full data payload. The custom Azure Function reads the data, transforms the data into the API format the Enterprise Solution needs and then calls the Enterprise Solution's API to send the data.</p>
+            <p class="mb-2 pb-2">In pattern 2D the Engagement Service transforms the data in the format the Enterprise Solution API needs. The Engagement Service calls the Enterprise Solution API, exposed via Azure API Manager, to send the data.</p>
+
+            <h4 class="h4">Rule of Thumb</h4>
+            <ul class="mb-4 pb-2">
+              <li class="mb-1">Choose 2a when you need Seeburger’s governed transformations and auditing, and pushing the entire record is acceptable.</li>
+              <li class="mb-1">Choose 2b when you want small messages on the bus and must fetch the freshest state from the Engagement API at transform time.</li>
+              <li class="mb-1">Choose 2c when you need low latency or bespoke logic that doesn’t fit Seeburger, and you want cloud-native scalability/observability.</li>
+              <li class="mb-1">Choose 2d when a synchronous write is required (e.g., immediate confirmation) and the Engagement service can perform target-format mapping.</li>
+            </ul>
+
+
+
+            <p class="badge bg-yellow-green m-0 me-1">CHANNEL TO ENGAGEMENT</p>
+            <h3 class="h3">A customer facing Channel connected to an Engagement Service.</h3>
+            <p class="mb-2 pb-2">In pattern 3A the channel, for example a custom headless frontend, connects to the Engagement Service APIs directly.</p>
+            <p class="mb-2 pb-2">In pattern 3B the channel connects to a Custom Service, for example an Azure Container App or Azure Function, via the Azure API Gateway.</p>
+
+            <h4 class="h4">Rule of Thumb</h4>
+            <ul class="mb-4 pb-2">
+              <li class="mb-1">Choose 3a when the channel can consume the Engagement APIs as-is (data shape, auth, rate limits) and no orchestration or cross-system logic is needed.</li>
+              <li class="mb-1">Choose 3b when you need channel-specific shaping, aggregation, or protocol adaptation; you want to hide backend complexity and manage secrets centrally.</li>
+            </ul>
+
+
+
+
+            <p class="badge bg-green m-0 me-1">ENGAGEMENT TO ENGAGEMENT</p>
+            <h3 class="h3">An Engagement Service that connects to another Engagement Service.</h3>
+            <p class="mb-2 pb-2">In pattern 4A the Engagement Service sends data to another Engagement Service via an out-of-the-box standard connector.</p>
+            <p class="mb-2 pb-2">In pattern 4B the Engagement Service sends data to a custom Azure Function. The Azure Function transforms the data and sends it to another Engagement Service API.</p>
+            <p class="mb-2 pb-2">In pattern 4C the Engagement Service sends send the full data to the Azure Service Bus. A custom Azure Function is 'subscribed' to the topic, receives a notification with full data payload. The custom Azure Function reads the data, transforms the data into the API format the Engagement Service needs and then calls the Engagement Service API to send the data.</p>
+            <p class="mb-2 pb-2">Optionally the Service Bus contains only a notification with an ID and the Azure Function calls the Engagement Service API to get the full data based on the ID received.</p>
+
+            <h4 class="h4">Rule of Thumb</h4>
+            <ul class="mb-4 pb-2">
+              <li class="mb-1">Choose 4a when a vendor-supported out-of-the-box connector exists that meets functional and non-functional needs (throughput, mapping, auth).</li>
+              <li class="mb-1">Choose 4b when you need custom mapping/logic that the standard connector can’t handle, or you must aggregate/sanitize data before calling the target API.</li>
+              <li class="mb-1">Choose 4c when multiple consumers may need the event, you want fan-out and decoupling, or you need near real-time with buffering/retry semantics.</li>
+            </ul>
+
+
+
+            <p class="badge bg-yellow-blue m-0 me-1">CHANNEL TO FOUNDATION</p>
+            <h3 class="h3">A Channel that communicates directly with the Enterprise Solution through an Integration Component.</h3>
+            <p class="mb-2 pb-2">In Pattern 5A, the channel (webshop) connects via a Backend-for-Frontend (BFF) to the Azure API Manager to retrieve data from the Enterprise Solution APIs. These APIs are exposed through Azure API Management, which manages authentication, throttling, and security. The Enterprise Solution APIs return structured data that the channel can directly consume and present.</p>
+            <p class="mb-2 pb-2">In Pattern 5B, the channel (webshop) connects via a BFF and an additional Custom Service to the Azure API Manager to request data from the Enterprise Solution APIs. As in 5A, Azure API Management handles authentication, throttling, and security. The Custom Service processes and interprets the API responses before sending them to the channel. This approach is particularly useful when the channel cannot interpret the API response directly or when multiple API calls must be orchestrated to deliver a single, aggregated response to the channel.</p>
+            <p class="mb-2 pb-2">Both integration patterns are synchronous and follow a request/response communication model.</p>
+
+            <h4 class="h4">Rule of Thumb</h4>
+            <ul class="mb-4 pb-2">
+              <li class="mb-1">Choose 5a when the channel can consume the Enterprise API’s data model as-is, and no cross-system orchestration or heavy transformation is needed.</li>
+              <li class="mb-1">Choose 5b when the channel needs aggregated responses, protocol adaptation, or interpretation of Enterprise API outputs; multiple calls must be orchestrated into one payload.</li>
+            </ul>
+
+
+
+
+
+
+            <h2 class="h2" id="integration-principles">Integration Principles</h2>
+            <p class="mb-4 pb-2">The Integration Patterns are derived from Integration Principles. Based on the Integration 'scope' a design direction is given.</p>
+
+            <article class="card bg-dark shadow-sm overflow-hidden m-5">
+              <div class="row g-0">
+                <div
+                  class="col-sm-3 position-relative bg-position-center bg-repeat-0 bg-size-cover"
+                  style="background-image: url(/assets/img/blog/single/chatgpt-integration-principles.png); min-height: 2rem"
+                >
+                  <a href="/content/integration-principles.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                </div>
+                <div class="col-sm-9">
+                  <div class="card-body">
+                    <h3 class="h4">
+                      <a class="text-light" href="/content/integration-principles.html">Integration Principles: Some best practices</a>
+                    </h3>
+                    <p class="text-light">Integration Principles are a set of guidelines or best practices that help us design, build, and manage how different systems, applications, and data sources connect and communicate with each other. These principles ensure that integrations are efficient, secure, scalable, and maintainable.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <h3 class="h3" id="princples-vs-pattners">Integration Principles vs Patterns</h3>
+
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Integration Principles</th>
+                  <th>Integration Patterns</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>They are <strong>high-level guidelines</strong> or rules that define how integrations should be approached (e.g., “keep integrations loosely coupled,” “ensure security by design”).</td>
+                  <td>They are <strong>practical, reusable design templates</strong> that describe how to solve common integration problems (e.g., “Message Broker Pattern,” “Publish/Subscribe Pattern”).</td>
+                </tr>
+                <tr>
+                  <td>Principles are <strong>why</strong> and <strong>what</strong> you should aim for — the foundation for making smart design decisions.</td>
+                  <td>Patterns are <strong>how</strong> you implement those principles in real-life scenarios.</td>
+                </tr>
+                <tr>
+                  <td>Example: "Integrations should be scalable and loosely coupled."</td>
+                  <td>Example: "You might use the Queue-Based Load Leveling Pattern to achieve scalability and loose coupling."</td>
+                </tr>
+                <tr>
+                  <td>Principles help you decide which patterns to use. </td>
+                  <td>Patterns help you apply the principles in a consistent, proven way.</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Tags -->
+            <hr class="mb-4" />
+            <div class="d-flex flex-sm-row flex-column pt-2">
+              <h6 class="mt-sm-1 mb-sm-2 mb-3 me-2 text-nowrap">Related Tags:</h6>
+              <div>
+                <p class="btn btn-sm btn-outline-secondary me-2 mb-2">#enterprise-architecture</p>
+                <p class="btn btn-sm btn-outline-secondary me-2 mb-2">#software-integration</p>
+                <p class="btn btn-sm btn-outline-secondary me-2 mb-2">#software-engineering</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sharing -->
+          <div class="col-lg-3 position-relative">
+            <div class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4" style="top: 105px !important">
+              <span class="d-block mb-3"
+          ><small
+            >7:46 minute read based on
+            <a
+              href="https://doi.org/10.1016/j.jml.2019.104047"
+              target="_blank"
+              title="ScienceDirect: How many words do we read per minute? A review and meta-analysis of reading rate"
+              class="text-reset"
+              >183 words per minute</a
+            ></small
+          ></span
+        >
+              <h6 class="mt-4">Table of Content</h6>
+              <nav id="toc" data-toggle="toc"></nav>
+
+              <h6>Share this post:</h6>
+              <div class="mb-4 pb-lg-3">
+                <a href="#" class="btn btn-icon btn-outline-secondary btn-linkedin me-2 mb-2" aria-label="LinkedIn">
+                  <i class="bx bxl-linkedin"></i>
+                </a>
+                <a href="#" class="btn btn-icon btn-outline-secondary btn-facebook me-2 mb-2" aria-label="Facebook">
+                  <i class="bx bxl-facebook"></i>
+                </a>
+                <a href="#" class="btn btn-icon btn-outline-secondary btn-twitter me-2 mb-2" aria-label="Twitter">
+                  <i class="bxl bx-twitter-x"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related articles (Slider below lg breakpoint) -->
+      <section class="container mb-5 pt-md-4">
+        <div class="d-flex flex-sm-row flex-column align-items-center justify-content-between mb-4 pb-1 pb-md-3">
+          <h2 class="h2" id="read-more" data-toc-text="Read more">Related Articles</h2>
+          <a href="/content.html" class="btn btn-lg btn-outline-secondary ms-4">
+            All content
+            <i class="bx bx-right-arrow-alt ms-1 me-n1 lh-1 lead"></i>
+          </a>
+        </div>
+
+        <div
+          class="swiper mx-n2"
+          data-swiper-options='{
+          "slidesPerView": 1,
+          "spaceBetween": 8,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          },
+          "breakpoints": {
+            "500": {
+              "slidesPerView": 2
+            },
+            "1000": {
+              "slidesPerView": 3
+            }
+          }
+        }'
+        >
+          <div class="swiper-wrapper">
+            <!-- Item -->
+            <div class="swiper-slide h-auto pb-3">
+              <article class="card border-0 shadow-sm h-100 mx-2">
+                <div class="position-relative">
+                  <a href="/content/integration-principles.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                  <img src="/assets/img/blog/single/chatgpt-integration-principles.png" width="450" height="624" class="card-img-top" alt="Image" />
+                </div>
+                <div class="card-body pb-4">
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Enterprise Architecture</a>
+                  </div>
+                  <h3 class="h5 mb-0" data-toc-skip>
+                    <a href="/content/integration-principles.html">Integration Principles: Some best practices</a>
+                  </h3>
+                </div>
+              </article>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto pb-3">
+              <article class="card border-0 shadow-sm h-100 mx-2">
+                <div class="position-relative">
+                  <a href="/content/how-to-build-your-future-state-architecture.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                  <img src="/assets/img/blog/single/midjourney-architect-looking-at-construction.png" width="450" height="624" class="card-img-top" alt="Image" />
+                </div>
+                <div class="card-body pb-4">
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Enterprise Architecture</a>
+                  </div>
+                  <h3 class="h5 mb-0" data-toc-skip>
+                    <a href="/content/how-to-build-your-future-state-architecture.html">How to Build Your Future State Architecture?</a>
+                  </h3>
+                </div>
+              </article>
+            </div>
+
+            <!-- Item -->
+            <!-- <div class="swiper-slide h-auto pb-3">
+              <article class="card border-0 shadow-sm h-100 mx-2">
+                <div class="position-relative">
+                  <a href="blog-single.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                  <a
+                    href="#"
+                    class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="left"
+                    title="Read later"
+                    aria-label="Read later"
+                  >
+                    <i class="bx bx-bookmark"></i>
+                  </a>
+                  <img src="/assets/img/blog/01.jpg" width="450" height="624" class="card-img-top" alt="Image" />
+                </div>
+                <div class="card-body pb-4">
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Business</a>
+                    <span class="fs-sm text-muted">Sep 16, 2023</span>
+                  </div>
+                  <h3 class="h5 mb-0" data-toc-skip>
+                    <a href="blog-single.html">This Week in Search: New Limits and Exciting Features</a>
+                  </h3>
+                </div>
+              </article>
+            </div>
+          </div> -->
+
+          <!-- Pagination (bullets) -->
+          <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer pt-5 pb-4 pb-lg-5 mt-2 mt-md-0">
+      <div class="container pt-lg-4">
+        <div class="row pb-5">
+          <div class="col-lg-5 col-md-12">
+            <div class="navbar-brand text-dark p-0 me-0 mb-2">Future CX</div>
+            <p class="fs-sm pb-lg-3 mb-4">
+              The technology in the Customer Experience domain is rapidly changing. It requires flexibility and adaptability to keep up with the latest trends and customer demands. Both in technology
+              and people.
+              <br />This is why Customer Experience is at my heart, as it requires constant change, new technology, and ways of working. Whilst keeping the customer at the center.
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 offset-lg-1m mb-3">
+            <h6 class="mb-3">Connect</h6>
+            <p>I am looking forward to connect and build the community on Customer Experience.</p>
+            <div id="social-links" class="d-flex flex-column flex-sm-row">
+              <a id="lnkLinkedin" href="https://www.linkedin.com/in/jmvandeel/" target="blank" class="fw-medium btn btn-primary shadow-primary btn-lg"
+                ><i class="bx bxl-linkedin-square me-3"></i>LinkedIn</a
+              >
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-3">
+            <h6 class="mb-3">Questions</h6>
+            <p>Send me an email and I promise to send a reply as soon as possible.</p>
+            <div class="d-flex flex-column flex-sm-row">
+              <a id="lnkEmail" href="mailto:m.van.deel@futurecx.nl" class="fw-medium btn btn-primary shadow-primary btn-lg"><i class="bx bx-mail-send me-2"></i>m.van.deel@futurecx.nl</a>
+            </div>
+          </div>
+        </div>
+        <div id="footer-links" class="row py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item">
+              <a href="/#top" data-scroll data-scroll-offset="100" class="nav-link d-inline-block px-2 pt-1 pb-2">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/#about" data-scroll data-scroll-offset="0" class="nav-link d-inline-block px-2 pt-1 pb-2">About me</a>
+            </li>
+            <li class="nav-item">
+              <a href="/#services" data-scroll data-scroll-offset="50" class="nav-link d-inline-block px-2 pt-1 pb-2">What I do</a>
+            </li>
+            <li class="nav-item">
+              <a href="/#clients" data-scroll data-scroll-offset="100" class="nav-link d-inline-block px-2 pt-1 pb-2">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a href="/#highlights" data-scroll data-scroll-offset="50" class="nav-link d-inline-block px-2 pt-1 pb-2">Highlights</a>
+            </li>
+            <li class="nav-item">
+              <a href="/content.html" class="nav-link d-inline-block px-2 pt-1 pb-2">Content</a>
+            </li>
+            <li class="nav-item">
+              <a href="/cv.html" class="nav-link d-inline-block px-2 pt-1 pb-2">Full CV</a>
+            </li>
+            <li class="nav-item">
+              <a href="/#contact" data-scroll data-scroll-offset="100" class="nav-link d-inline-block px-2 pt-1 pb-2">Contact</a>
+            </li>
+          </ul>
+
+          <div class="col-12 p-0 p-md-3">
+            <p id="copyright" class="text-center text-muted">© 2025 Future CX by Martijn van Deel</p>
+          </div>
+
+          <div class="col-lg-4 col-md-4 p-0 p-md-3">
+            <p class="text-center text-md-end text-muted">KVK: 86444042</p>
+          </div>
+
+          <div class="col-lg-4 col-md-4 p-0 p-md-3">
+            <p class="text-center text-md-center text-muted">VAT number: NL86 3969 379 B01</p>
+          </div>
+
+          <div class="col-lg-4 col-md-4 p-0 p-md-3">
+            <p class="text-center text-md-start text-muted">IBAN: NL46 RABO 0197 6522 47</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    <link href="https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/assets/js/theme-switcher.js"></script>
+    <script type="application/javascript" src="/assets/js/vendors.js"></script>
+    <script type="application/javascript" src="/assets/js/theme.min.js"></script>
+    <script type="application/javascript" src="/assets/js/user.js"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+  </body>
+</html>

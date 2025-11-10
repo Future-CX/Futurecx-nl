@@ -24,9 +24,19 @@ module.exports = {
       parser: '@html-eslint/parser',
       plugins: ['@html-eslint'],
       rules: {
-        '@html-eslint/no-multiple-h1': 'warn',
         // Allow either omitted or self-closing void elements
         '@html-eslint/require-closing-tags': 'off',
+        '@html-eslint/require-doctype': 'error',
+        '@html-eslint/require-explicit-size': 'error',
+        '@html-eslint/require-img-alt': 'error',
+        // SEO
+        '@html-eslint/no-multiple-h1': 'warn',
+        '@html-eslint/require-lang': 'error',
+        '@html-eslint/require-meta-description': 'error',
+        '@html-eslint/require-open-graph-protocol': 'warn',
+        '@html-eslint/require-title': 'error',
+        // Accessibility
+        '@html-eslint/require-meta-viewport': 'warn',
       },
     },
   ],
