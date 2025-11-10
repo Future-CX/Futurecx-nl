@@ -6,6 +6,9 @@
     <meta property="og:title" content="Future CX | Martijn van Deel" />
     <link rel="canonical" href="https://www.futurecx.nl" />
     <meta property="og:url" content="https://www.futurecx.nl" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:site_name" content="Future CX" />
+    <meta name="twitter:site" content="@jmvandeel" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@jmvandeel" />
     <meta
@@ -24,6 +27,7 @@
     <meta name="author" content="Martijn van Deel" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_GB" />
+    <link rel="preload" as="image" href="/assets/img/cover/cover-xxl.jpg" imagesrcset="/assets/img/cover/cover-xxl.jpg 1920w" imagesizes="100vw" fetchpriority="high" />
     <meta property="og:image" itemprop="image" content="https://www.futurecx.nl/assets/img/cover/cover-xxl.jpg" />
     <meta name="twitter:image" content="https://www.futurecx.nl/assets/img/cover/cover-xxl.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -37,6 +41,26 @@
     <meta name="msapplication-TileColor" content="#080032" />
     <meta name="msapplication-config" content="assets/favicon/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Future CX",
+        "url": "https://www.futurecx.nl",
+        "logo": "https://www.futurecx.nl/assets/favicon/favicon-32x32.png",
+        "sameAs": ["https://twitter.com/jmvandeel", "https://www.linkedin.com/in/martijnvandeel/"]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Martijn van Deel",
+        "url": "https://www.futurecx.nl",
+        "affiliation": { "@type": "Organization", "name": "Future CX" }
+      }
+    </script>
 
     <script>
       (function () {
@@ -1547,7 +1571,7 @@
         </div>
       </section>
 
-      <section id="contact" class="container contact-cta pt-3 pb-4 pb-md-5" style="margin-top: -156px; margin-bottom: 120px; transform: translateY(156px)">
+      <section id="contact" class="container contact-cta pt-3 pb-4 pb-md-5">
         <div class="card border-0 bg-primary bg-dark-secondary mt-5">
           <div class="card-body p-md-5 p-4 bg-size-cover">
             <div class="py-md-5 py-4 text-center">
@@ -1555,6 +1579,96 @@
               <p class="display-6 text-dark">M.VAN.DEEL @ FUTURECX . NL</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="container mb-5 pt-md-4">
+        <div class="d-flex flex-sm-row flex-column align-items-center justify-content-between mb-4 pb-1 pb-md-3">
+          <h2 class="h2" id="read-more" data-toc-text="Read more">Some Articles</h2>
+          <a href="/content.html" class="btn btn-lg btn-outline-secondary ms-4">
+            All content
+            <i class="bx bx-right-arrow-alt ms-1 me-n1 lh-1 lead"></i>
+          </a>
+        </div>
+
+        <div
+          class="swiper mx-n2"
+          data-swiper-options='{
+          "slidesPerView": 1,
+          "spaceBetween": 8,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          },
+          "breakpoints": {
+            "500": {
+              "slidesPerView": 2
+            },
+            "1000": {
+              "slidesPerView": 3
+            }
+          }
+        }'
+        >
+          <div class="swiper-wrapper">
+            
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto pb-3">
+              <article class="card border-0 shadow-sm h-100 mx-2">
+                <div class="position-relative">
+                  <a href="/content/how-to-build-your-future-state-architecture.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                  <img src="/assets/img/blog/single/midjourney-architect-looking-at-construction.png" width="450" height="624" class="card-img-top" alt="How to Build Your Future State Architecture?" />
+                </div>
+                <div class="card-body pb-4">
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Enterprise Architecture</a>
+                  </div>
+                  <h3 class="h5 mb-0" data-toc-skip>
+                    <a href="/content/how-to-build-your-future-state-architecture.html">How to Build Your Future State Architecture?</a>
+                  </h3>
+                </div>
+              </article>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto pb-3">
+              <article class="card border-0 shadow-sm h-100 mx-2">
+                <div class="position-relative">
+                  <a href="/content/integration-principles.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                  <img src="/assets/img/blog/single/chatgpt-integration-principles.png" width="450" height="624" class="card-img-top" alt="Integration Principles & Best Practices for Modern Architecture<" />
+                </div>
+                <div class="card-body pb-4">
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Enterprise Architecture</a>
+                  </div>
+                  <h3 class="h5 mb-0" data-toc-skip>
+                    <a href="/content/integration-principles.html">Integration Principles & Best Practices for Modern Architecture</a>
+                  </h3>
+                </div>
+              </article>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto pb-3">
+              <article class="card border-0 shadow-sm h-100 mx-2">
+                <div class="position-relative">
+                  <a href="/content/integration-patterns.html" title="Integration Patterns and Best Practices for System Architecture" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                  <img src="/assets/img/blog/single/chatgpt-integration-patterns.png" width="450" height="624" class="card-img-top" alt="Integration Patterns and Best Practices for System Architecture" />
+                </div>
+                <div class="card-body pb-4">
+                  <div class="d-flex align-items-center justify-content-between mb-3">
+                    <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Enterprise Architecture</a>
+                  </div>
+                  <h3 class="h5 mb-0" data-toc-skip>
+                    <a href="/content/integration-patterns.html" title="Integration Patterns and Best Practices for System Architecture">Integration Patterns and Best Practices for Modern Architecture</a>
+                  </h3>
+                </div>
+              </article>
+            </div>
+
+          <!-- Pagination (bullets) -->
+          <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
         </div>
       </section>
     </main>
@@ -1606,7 +1720,7 @@
             <li class="nav-item">
               <a href="/#highlights" data-scroll data-scroll-offset="50" class="nav-link d-inline-block px-2 pt-1 pb-2">Highlights</a>
             </li>
-            <li class="nav-item d-none">
+            <li class="nav-item">
               <a href="/content.html" class="nav-link d-inline-block px-2 pt-1 pb-2">Content</a>
             </li>
             <li class="nav-item">
