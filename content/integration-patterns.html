@@ -244,8 +244,8 @@
             <div class="fs-xs border-end pe-3 me-3 mb-2">
               <span class="badge bg-faded-primary text-primary fs-base">Enterprise Architecture</span>
             </div>
-            <div class="fs-sm border-end pe-3 me-3 mb-2" itemprop="datePublished" content="2025-10-23T19:15:05.563Z">October 23, 2025</div>
-            <div class="fs-sm pe-3 me-3 mb-2" itemprop="dateModified" content="2025-11-07T13:49:50.838Z">Updated: November 7, 2025</div>
+            <div class="fs-sm border-end pe-3 me-3 mb-2" itemprop="datePublished" content="2025-11-10T12:56:20+01:00">November 10, 2025</div>
+            <div class="fs-sm pe-3 me-3 mb-2" itemprop="dateModified" content="2025-11-10T14:09:42.272Z">Updated: November 10, 2025</div>
           </div>
           <div class="d-none d-sm-block d-flex align-items-center position-relative ps-md-3 pe-lg-5 mb-2" itemprop="author" itemscope itemtype="https://schema.org/Person">
             <div class="d-flex align-items-center position-relative ps-md-3 pe-lg-5 mb-2">
@@ -318,49 +318,76 @@
 
             <p class="badge bg-blue-green m-0 me-1">FOUNDATION TO ENGAGEMENT</p>
             <h3 class="h3">An Enterprise Solution to deliver 'data' to an Engagement Service via an Integration Component.</h3>
-            <p class="mb-2 pb-2">In pattern 1A the Enterprise solution sends data in a file (.csv) to Seeburger's internal file system. Seeburger reads this file, transforms the data into the API format the Engagement Solution needs and then calls the Engagement Solution's API to send the data.</p>
-            <p class="mb-2 pb-2">In pattern 1B the Enterprise solution sends data in a file (.csv) to Seeburger's internal file system. Seeburger reads this file, transforms and filters the data and sends this to the Azure Service Bus. Any Engagement Solution that is 'subscribed' to the topic, receives a notification that new data is available. The Engagement Solution reads the data, transforms it and stores it to the Engagement Solution.</p>
-            <p class="mb-2 pb-2">In pattern 1C the Enterprise solution sends data in a JSON format to the Azure Service Bus directly. Any Engagement Solution that is 'subscribed' to the topic, receives a notification that new data is available. The Engagement Solution reads the data, transforms it and stores it to the Engagement Solution.</p>
-            <p class="mb-2 pb-2">In pattern 1D the Enterprise solution sends a notification that new data is available to the Azure Service Bus directly. Any Engagement Solution that is 'subscribed' to the topic, receives a notification that new data is available. The Engagement Solution reads the ID from the notification and calls an API to get the full data based on the ID receives. The Engagement Solution receives the full data from the API, transforms it and stores it to the Engagement Solution.</p>
+            <p class="mb-2 pb-2">In pattern 1A the Enterprise solution sends data in a file (.csv) to Integration Platform's internal file system. Integration Platform reads this file, transforms the data into the API format the Engagement Solution needs and then calls the Engagement Solution's API to send the data.</p>
+            <p class="mb-2 pb-2">In pattern 1B the Enterprise solution sends data in a file (.csv) to Integration Platform's internal file system. Integration Platform reads this file, transforms and filters the data and sends this to the (Azure) Service Bus. Any Engagement Solution that is 'subscribed' to the topic, receives a notification that new data is available. The Engagement Solution reads the data, transforms it and stores it to the Engagement Solution.</p>
+            <p class="mb-2 pb-2">In pattern 1C the Enterprise solution sends data in a JSON format to the (Azure) Service Bus directly. Any Engagement Solution that is 'subscribed' to the topic, receives a notification that new data is available. The Engagement Solution reads the data, transforms it and stores it to the Engagement Solution.</p>
+            <p class="mb-2 pb-2">In pattern 1D the Enterprise solution sends a notification that new data is available to the (Azure) Service Bus directly. Any Engagement Solution that is 'subscribed' to the topic, receives a notification that new data is available. The Engagement Solution reads the ID from the notification and calls an API to get the full data based on the ID receives. The Engagement Solution receives the full data from the API, transforms it and stores it to the Engagement Solution.</p>
 
-            <h4 class="h4">Rule of Thumb</h4>
-            <ul class="mb-4 pb-2">
-              <li class="mb-1">Choose 1a when the enterprise source can only export files, you need strong control/validation/transformation, and there’s a single (or few) known targets with stable APIs.</li>
-              <li class="mb-1">Choose 1b when the source is file-only, but you need fan-out to multiple consumers and looser coupling than 1A.</li>
-              <li class="mb-1">Choose 1c when the enterprise system can publish JSON messages/events directly and you want near real-time, pub/sub distribution.</li>
-              <li class="mb-1">Choose 1d when payloads are large/sensitive or you must always fetch the freshest data from the source; consumers can call back via API.</li>
-            </ul>
+            <div class="row">
+              <div class="col-md-6">
+                <h4 class="h4">Rule of Thumb</h4>
+                <ul class="mb-4 pb-2">
+                  <li class="mb-1">Choose 1a when the enterprise source can only export files, you need strong control/validation/transformation, and there’s a single (or few) known targets with stable APIs.</li>
+                  <li class="mb-1">Choose 1b when the source is file-only, but you need fan-out to multiple consumers and looser coupling than 1A.</li>
+                  <li class="mb-1">Choose 1c when the enterprise system can publish JSON messages/events directly and you want near real-time, pub/sub distribution.</li>
+                  <li class="mb-1">Choose 1d when payloads are large/sensitive or you must always fetch the freshest data from the source; consumers can call back via API.</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <a href="/assets/img/models/future-cx-integration-patterns-1.jpg" target="_blank">
+                  <img src="/assets/img/models/future-cx-integration-patterns-1-square.jpg" width="450" height="450" alt="Integration Patterns for Foundation to Engagement" />
+                </a>
+              </div>
+            </div>
 
 
 
 
             <p class="badge bg-green-blue m-0 me-1">ENGAGEMENT TO FOUNDATION</p>
             <h3 class="h3">An Engagement Service to deliver 'data' to an Enterprise Solution via an Integration Component.</h3>
-            <p class="mb-2 pb-2">In pattern 2A the Engagement Service send the full data to the Azure Service Bus. Seeburger is 'subscribed' to the topic, receives a notification with full data payload. Seeburger reads the data, transforms the data into the API format the Enterprise Solution needs and then calls the Enterprise Solution's API to send the data.</p>
-            <p class="mb-2 pb-2">In pattern 2B the Engagement Service sends a notification that new data is available to the Azure Service Bus directly. Seeburger is 'subscribed' to the topic, receives a notification that new data is available. The Engagement Solution reads the ID from the notification and calls an API to get the full data based on the ID received. The Engagement Solution receives the full data from the API, transforms it and stores it to the Engagement Solution.</p>
-            <p class="mb-2 pb-2">In pattern 2C the Engagement Service sends send the full data to the Azure Service Bus. A custom Azure Function is 'subscribed' to the topic, receives a notification with full data payload. The custom Azure Function reads the data, transforms the data into the API format the Enterprise Solution needs and then calls the Enterprise Solution's API to send the data.</p>
-            <p class="mb-2 pb-2">In pattern 2D the Engagement Service transforms the data in the format the Enterprise Solution API needs. The Engagement Service calls the Enterprise Solution API, exposed via Azure API Manager, to send the data.</p>
+            <p class="mb-2 pb-2">In pattern 2A the Engagement Service send the full data to the (Azure) Service Bus. Integration Platform is 'subscribed' to the topic, receives a notification with full data payload. Integration Platform reads the data, transforms the data into the API format the Enterprise Solution needs and then calls the Enterprise Solution's API to send the data.</p>
+            <p class="mb-2 pb-2">In pattern 2B the Engagement Service sends a notification that new data is available to the (Azure) Service Bus directly. Integration Platform is 'subscribed' to the topic, receives a notification that new data is available. The Engagement Solution reads the ID from the notification and calls an API to get the full data based on the ID received. The Engagement Solution receives the full data from the API, transforms it and stores it to the Engagement Solution.</p>
+            <p class="mb-2 pb-2">In pattern 2C the Engagement Service sends send the full data to the (Azure) Service Bus. A custom (Azure) Custom Function is 'subscribed' to the topic, receives a notification with full data payload. The custom (Azure) Custom Function reads the data, transforms the data into the API format the Enterprise Solution needs and then calls the Enterprise Solution's API to send the data.</p>
+            <p class="mb-2 pb-2">In pattern 2D the Engagement Service transforms the data in the format the Enterprise Solution API needs. The Engagement Service calls the Enterprise Solution API, exposed via (Azure) API Manager, to send the data.</p>
 
-            <h4 class="h4">Rule of Thumb</h4>
-            <ul class="mb-4 pb-2">
-              <li class="mb-1">Choose 2a when you need Seeburger’s governed transformations and auditing, and pushing the entire record is acceptable.</li>
-              <li class="mb-1">Choose 2b when you want small messages on the bus and must fetch the freshest state from the Engagement API at transform time.</li>
-              <li class="mb-1">Choose 2c when you need low latency or bespoke logic that doesn’t fit Seeburger, and you want cloud-native scalability/observability.</li>
-              <li class="mb-1">Choose 2d when a synchronous write is required (e.g., immediate confirmation) and the Engagement service can perform target-format mapping.</li>
-            </ul>
+            <div class="row">
+              <div class="col-md-6">
+                <h4 class="h4">Rule of Thumb</h4>
+                <ul class="mb-4 pb-2">
+                  <li class="mb-1">Choose 2a when you need Integration Platform’s governed transformations and auditing, and pushing the entire record is acceptable.</li>
+                  <li class="mb-1">Choose 2b when you want small messages on the bus and must fetch the freshest state from the Engagement API at transform time.</li>
+                  <li class="mb-1">Choose 2c when you need low latency or bespoke logic that doesn’t fit Integration Platform, and you want cloud-native scalability/observability.</li>
+                  <li class="mb-1">Choose 2d when a synchronous write is required (e.g., immediate confirmation) and the Engagement service can perform target-format mapping.</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <a href="/assets/img/models/future-cx-integration-patterns-2.jpg" target="_blank">
+                  <img src="/assets/img/models/future-cx-integration-patterns-2-square.jpg" width="450" height="450" alt="Integration Patterns for Engagement to Foundation" />
+                </a>
+              </div>
+            </div>
 
 
 
             <p class="badge bg-yellow-green m-0 me-1">CHANNEL TO ENGAGEMENT</p>
             <h3 class="h3">A customer facing Channel connected to an Engagement Service.</h3>
             <p class="mb-2 pb-2">In pattern 3A the channel, for example a custom headless frontend, connects to the Engagement Service APIs directly.</p>
-            <p class="mb-2 pb-2">In pattern 3B the channel connects to a Custom Service, for example an Azure Container App or Azure Function, via the Azure API Gateway.</p>
+            <p class="mb-2 pb-2">In pattern 3B the channel connects to a Custom Service, for example an (Azure) Container App or (Azure) Custom Function, via the (Azure) API Gateway.</p>
 
-            <h4 class="h4">Rule of Thumb</h4>
-            <ul class="mb-4 pb-2">
-              <li class="mb-1">Choose 3a when the channel can consume the Engagement APIs as-is (data shape, auth, rate limits) and no orchestration or cross-system logic is needed.</li>
-              <li class="mb-1">Choose 3b when you need channel-specific shaping, aggregation, or protocol adaptation; you want to hide backend complexity and manage secrets centrally.</li>
-            </ul>
+            <div class="row">
+              <div class="col-md-6">
+                <h4 class="h4">Rule of Thumb</h4>
+                <ul class="mb-4 pb-2">
+                  <li class="mb-1">Choose 3a when the channel can consume the Engagement APIs as-is (data shape, auth, rate limits) and no orchestration or cross-system logic is needed.</li>
+                  <li class="mb-1">Choose 3b when you need channel-specific shaping, aggregation, or protocol adaptation; you want to hide backend complexity and manage secrets centrally.</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <a href="/assets/img/models/future-cx-integration-patterns-3.jpg" target="_blank">
+                  <img src="/assets/img/models/future-cx-integration-patterns-3-square.jpg" width="450" height="450" alt="Integration Patterns for Channels to Engagement" />
+                </a>
+              </div>
+            </div>
 
 
 
@@ -368,30 +395,48 @@
             <p class="badge bg-green m-0 me-1">ENGAGEMENT TO ENGAGEMENT</p>
             <h3 class="h3">An Engagement Service that connects to another Engagement Service.</h3>
             <p class="mb-2 pb-2">In pattern 4A the Engagement Service sends data to another Engagement Service via an out-of-the-box standard connector.</p>
-            <p class="mb-2 pb-2">In pattern 4B the Engagement Service sends data to a custom Azure Function. The Azure Function transforms the data and sends it to another Engagement Service API.</p>
-            <p class="mb-2 pb-2">In pattern 4C the Engagement Service sends send the full data to the Azure Service Bus. A custom Azure Function is 'subscribed' to the topic, receives a notification with full data payload. The custom Azure Function reads the data, transforms the data into the API format the Engagement Service needs and then calls the Engagement Service API to send the data.</p>
-            <p class="mb-2 pb-2">Optionally the Service Bus contains only a notification with an ID and the Azure Function calls the Engagement Service API to get the full data based on the ID received.</p>
+            <p class="mb-2 pb-2">In pattern 4B the Engagement Service sends data to a custom (Azure) Custom Function. The (Azure) Custom Function transforms the data and sends it to another Engagement Service API.</p>
+            <p class="mb-2 pb-2">In pattern 4C the Engagement Service sends send the full data to the (Azure) Service Bus. A custom (Azure) Custom Function is 'subscribed' to the topic, receives a notification with full data payload. The custom (Azure) Custom Function reads the data, transforms the data into the API format the Engagement Service needs and then calls the Engagement Service API to send the data.</p>
+            <p class="mb-2 pb-2">Optionally the Service Bus contains only a notification with an ID and the (Azure) Custom Function calls the Engagement Service API to get the full data based on the ID received.</p>
 
-            <h4 class="h4">Rule of Thumb</h4>
-            <ul class="mb-4 pb-2">
-              <li class="mb-1">Choose 4a when a vendor-supported out-of-the-box connector exists that meets functional and non-functional needs (throughput, mapping, auth).</li>
-              <li class="mb-1">Choose 4b when you need custom mapping/logic that the standard connector can’t handle, or you must aggregate/sanitize data before calling the target API.</li>
-              <li class="mb-1">Choose 4c when multiple consumers may need the event, you want fan-out and decoupling, or you need near real-time with buffering/retry semantics.</li>
-            </ul>
+            <div class="row">
+              <div class="col-md-6">
+                <h4 class="h4">Rule of Thumb</h4>
+                <ul class="mb-4 pb-2">
+                  <li class="mb-1">Choose 4a when a vendor-supported out-of-the-box connector exists that meets functional and non-functional needs (throughput, mapping, auth).</li>
+                  <li class="mb-1">Choose 4b when you need custom mapping/logic that the standard connector can’t handle, or you must aggregate/sanitize data before calling the target API.</li>
+                  <li class="mb-1">Choose 4c when multiple consumers may need the event, you want fan-out and decoupling, or you need near real-time with buffering/retry semantics.</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <a href="/assets/img/models/future-cx-integration-patterns-4.jpg" target="_blank">
+                  <img src="/assets/img/models/future-cx-integration-patterns-4-square.jpg" width="450" height="450" alt="Integration Patterns for Engagement to Engagement" />
+                </a>
+              </div>
+            </div>
 
 
 
             <p class="badge bg-yellow-blue m-0 me-1">CHANNEL TO FOUNDATION</p>
             <h3 class="h3">A Channel that communicates directly with the Enterprise Solution through an Integration Component.</h3>
-            <p class="mb-2 pb-2">In Pattern 5A, the channel (webshop) connects via a Backend-for-Frontend (BFF) to the Azure API Manager to retrieve data from the Enterprise Solution APIs. These APIs are exposed through Azure API Management, which manages authentication, throttling, and security. The Enterprise Solution APIs return structured data that the channel can directly consume and present.</p>
-            <p class="mb-2 pb-2">In Pattern 5B, the channel (webshop) connects via a BFF and an additional Custom Service to the Azure API Manager to request data from the Enterprise Solution APIs. As in 5A, Azure API Management handles authentication, throttling, and security. The Custom Service processes and interprets the API responses before sending them to the channel. This approach is particularly useful when the channel cannot interpret the API response directly or when multiple API calls must be orchestrated to deliver a single, aggregated response to the channel.</p>
+            <p class="mb-2 pb-2">In Pattern 5A, the channel (webshop) connects via a Backend-for-Frontend (BFF) to the (Azure) API Manager to retrieve data from the Enterprise Solution APIs. These APIs are exposed through (Azure) API Management, which manages authentication, throttling, and security. The Enterprise Solution APIs return structured data that the channel can directly consume and present.</p>
+            <p class="mb-2 pb-2">In Pattern 5B, the channel (webshop) connects via a BFF and an additional Custom Service to the (Azure) API Manager to request data from the Enterprise Solution APIs. As in 5A, (Azure) API Management handles authentication, throttling, and security. The Custom Service processes and interprets the API responses before sending them to the channel. This approach is particularly useful when the channel cannot interpret the API response directly or when multiple API calls must be orchestrated to deliver a single, aggregated response to the channel.</p>
             <p class="mb-2 pb-2">Both integration patterns are synchronous and follow a request/response communication model.</p>
 
-            <h4 class="h4">Rule of Thumb</h4>
-            <ul class="mb-4 pb-2">
-              <li class="mb-1">Choose 5a when the channel can consume the Enterprise API’s data model as-is, and no cross-system orchestration or heavy transformation is needed.</li>
-              <li class="mb-1">Choose 5b when the channel needs aggregated responses, protocol adaptation, or interpretation of Enterprise API outputs; multiple calls must be orchestrated into one payload.</li>
-            </ul>
+            <div class="row">
+              <div class="col-md-6">
+                <h4 class="h4">Rule of Thumb</h4>
+                <ul class="mb-4 pb-2">
+                  <li class="mb-1">Choose 5a when the channel can consume the Enterprise API’s data model as-is, and no cross-system orchestration or heavy transformation is needed.</li>
+                  <li class="mb-1">Choose 5b when the channel needs aggregated responses, protocol adaptation, or interpretation of Enterprise API outputs; multiple calls must be orchestrated into one payload.</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <a href="/assets/img/models/future-cx-integration-patterns-5.jpg" target="_blank">
+                  <img src="/assets/img/models/future-cx-integration-patterns-5-square.jpg" width="450" height="450" alt="Integration Patterns for Channels to Foundation" />
+                </a>
+              </div>
+            </div>
 
 
 
@@ -466,7 +511,7 @@
             <div class="sticky-top ms-xl-5 ms-lg-4 ps-xxl-4" style="top: 105px !important">
               <span class="d-block mb-3"
           ><small
-            >7:46 minute read based on
+            >8:10 minute read based on
             <a
               href="https://doi.org/10.1016/j.jml.2019.104047"
               target="_blank"

@@ -5,8 +5,9 @@
   - Falls back to fs.stat.birthtime if available; then to mtime.
   - Updates the element's content attribute and visible text (e.g., "October 25, 2022").
 */
-
 const fs = require('fs');
+const configureLogger = require('./logger');
+const log = configureLogger('Dates');
 const path = require('path');
 const { execSync } = require('child_process');
 
@@ -90,12 +91,16 @@ function updateFile(filePath) {
 
   // datePublished → file creation date
   if (/itemprop=["']datePublished["']/i.test(html)) {
-    const iso = gitCreatedISO(filePath) || fsBirthISO(filePath);
-    if (iso) {
-      const human = humanDate(iso);
+    const isoCreated = gitCreatedISO(filePath);
+
+    log.info('filename ', filePath);
+    //log.info(' - isoCreated ', isoCreated);
+
+    if (isoCreated) {
+      const human = humanDate(isoCreated);
       const newHtml = html
         // Replace or insert content attribute
-        .replace(/(itemprop=["']datePublished["'][^>]*content=["'])[^"]*(["'])/i, `$1${iso}$2`)
+        .replace(/(itemprop=["']datePublished["'][^>]*content=["'])[^"]*(["'])/i, `$1${isoCreated}$2`)
         // Replace visible text immediately after the tag
         .replace(/(itemprop=["']datePublished["'][^>]*>)([^<]*)/i, (_, pre) => `${pre}${human}`);
       if (newHtml !== html) {
@@ -109,13 +114,17 @@ function updateFile(filePath) {
   if (/itemprop=["']dateModified["']/i.test(html)) {
     //const existing = extractExistingDateModified(html);
     const lastGit = gitModifiedISO(filePath);
+    //log.info(' - lastGit ', lastGit);
     const hasUncommittedGitChangesFlag = hasUncommittedGitChanges(filePath);
+    log.info(' - hasUncommittedGitChangesFlag ', hasUncommittedGitChangesFlag);
 
     // Only update when there are uncommitted changes; use filesystem mtime for display
     if (hasUncommittedGitChangesFlag) {
       const isoMod = fsMtimeISO(filePath) || lastGit || new Date().toISOString();
+      //log.info(' - isoMod ', isoMod);
       if (isoMod) {
         const humanMod = humanDate(isoMod);
+        log.info(' - humanMod ', humanMod);
         const newHtml = html
           .replace(/(itemprop=["']dateModified["'][^>]*content=["'])[^"]*(["'])/i, `$1${isoMod}$2`)
           .replace(/(itemprop=["']dateModified["'][^>]*>)([^<]*)/i, (_, pre) => `${pre}Updated: ${humanMod}`);
@@ -125,6 +134,10 @@ function updateFile(filePath) {
         }
       }
     }
+  }
+  if (changed) {
+    fs.writeFileSync(filePath, html, 'utf8');
+    log.info(' - updated ', filePath);
   }
   return changed;
 }
