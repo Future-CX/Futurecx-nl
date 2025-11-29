@@ -87,14 +87,14 @@
 /* stylelint-enable stylistic/value-list-max-empty-lines, stylistic/function-max-empty-lines, stylistic/selector-list-comma-newline-after, declaration-no-important, property-no-vendor-prefix */
 :root,
 [data-bs-theme=light] {
-  --si-blue: #0d6efd;
+  --si-blue: #0070C0;
   --si-indigo: #6610f2;
   --si-purple: #6f42c1;
   --si-pink: #d63384;
-  --si-red: #dc3545;
+  --si-red: #C00000;
   --si-orange: #fd7e14;
-  --si-yellow: #ffc107;
-  --si-green: #198754;
+  --si-yellow: #ffc000;
+  --si-green: #00B050;
   --si-teal: #20c997;
   --si-cyan: #0dcaf0;
   --si-black: #000;
@@ -182,7 +182,7 @@
   --si-link-hover-decoration: none;
   --si-code-color: #e3116c;
   --si-highlight-color: #585c7b;
-  --si-highlight-bg: rgb(255, 242.6, 205.4);
+  --si-highlight-bg: rgb(255, 242.4, 204);
   --si-border-width: 1px;
   --si-border-style: solid;
   --si-border-color: #e2e5f1;
@@ -254,13 +254,13 @@
   --si-link-hover-color-rgb: 214, 161, 0;
   --si-code-color: rgb(238.2, 112.2, 166.8);
   --si-highlight-color: rgba(255, 255, 255, 0.7);
-  --si-highlight-bg: rgb(102, 77.2, 2.8);
+  --si-highlight-bg: rgb(102, 76.8, 0);
   --si-border-color: rgba(255, 255, 255, 0.14);
   --si-border-color-translucent: rgba(255, 255, 255, 0.15);
   --si-form-valid-color: #22c55e;
-  --si-form-valid-border-color: rgb(117, 183, 152.4);
+  --si-form-valid-border-color: rgb(102, 207.6, 150);
   --si-form-invalid-color: #ef4444;
-  --si-form-invalid-border-color: rgb(234, 133.8, 143.4);
+  --si-form-invalid-border-color: rgb(217.2, 102, 102);
 }
 
 *,
@@ -17582,6 +17582,39 @@ span.wip {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
+}
+
+/* blog single content */
+.bg-gray {
+  background-color: #9397ad !important;
+}
+
+.bg-blue {
+  background-color: #0070C0 !important;
+}
+
+.bg-green {
+  background-color: #00B050 !important;
+}
+
+.bg-green-blue {
+  background: linear-gradient(90deg, #00B050 20%, #0070C0 80%) !important;
+}
+
+.bg-yellow {
+  background-color: #ffc000 !important;
+}
+
+.bg-blue-green {
+  background: linear-gradient(90deg, #0070C0 20%, #00B050 80%) !important;
+}
+
+.bg-yellow-green {
+  background: linear-gradient(90deg, #ffc000 20%, #00B050 80%) !important;
+}
+
+.bg-yellow-blue {
+  background: linear-gradient(90deg, #ffc000 20%, #0070C0 80%) !important;
 }
 
 @media (max-width: 767.98px) {
