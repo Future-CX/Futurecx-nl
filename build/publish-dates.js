@@ -85,6 +85,27 @@ function humanDate(iso) {
   return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
 }
 
+function toLocalOffsetISOString(iso) {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return iso;
+
+  const pad = (n) => String(Math.abs(Math.trunc(n))).padStart(2, '0');
+
+  const year = d.getFullYear();
+  const month = pad(d.getMonth() + 1);
+  const day = pad(d.getDate());
+  const hours = pad(d.getHours());
+  const minutes = pad(d.getMinutes());
+  const seconds = pad(d.getSeconds());
+
+  const offsetMinutes = -d.getTimezoneOffset(); // e.g. +120 for +02:00
+  const sign = offsetMinutes >= 0 ? '+' : '-';
+  const offsetHours = pad(Math.floor(Math.abs(offsetMinutes) / 60));
+  const offsetMins = pad(Math.abs(offsetMinutes) % 60);
+
+  return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}${sign}${offsetHours}:${offsetMins}`;
+}
+
 function updateFile(filePath) {
   let html = fs.readFileSync(filePath, 'utf8');
   let changed = false;
@@ -102,7 +123,9 @@ function updateFile(filePath) {
         // Replace or insert content attribute
         .replace(/(itemprop=["']datePublished["'][^>]*content=["'])[^"]*(["'])/i, `$1${isoCreated}$2`)
         // Replace visible text immediately after the tag
-        .replace(/(itemprop=["']datePublished["'][^>]*>)([^<]*)/i, (_, pre) => `${pre}${human}`);
+        .replace(/(itemprop=["']datePublished["'][^>]*>)([^<]*)/i, (_, pre) => `${pre}${human}`)
+        // Also update the Open Graph article modified time meta tag, if present
+        .replace(/(property=["']article:published_time["'][^>]*content=["'])[^"']*(["'])/i, `$1${isoCreated}$2`);
       if (newHtml !== html) {
         html = newHtml;
         changed = true;
@@ -123,11 +146,14 @@ function updateFile(filePath) {
       const isoMod = fsMtimeISO(filePath) || lastGit || new Date().toISOString();
       //log.info(' - isoMod ', isoMod);
       if (isoMod) {
+        const isoModLocal = toLocalOffsetISOString(isoMod);
         const humanMod = humanDate(isoMod);
         log.info(' - humanMod ', humanMod);
         const newHtml = html
-          .replace(/(itemprop=["']dateModified["'][^>]*content=["'])[^"]*(["'])/i, `$1${isoMod}$2`)
-          .replace(/(itemprop=["']dateModified["'][^>]*>)([^<]*)/i, (_, pre) => `${pre}Updated: ${humanMod}`);
+          .replace(/(itemprop=["']dateModified["'][^>]*content=["'])[^"]*(["'])/i, `$1${isoModLocal}$2`)
+          .replace(/(itemprop=["']dateModified["'][^>]*>)([^<]*)/i, (_, pre) => `${pre}Updated: ${humanMod}`)
+          // Also update the Open Graph article modified time meta tag, if present
+          .replace(/(property=["']article:modified_time["'][^>]*content=["'])[^"']*(["'])/i, `$1${isoModLocal}$2`);
         if (newHtml !== html) {
           html = newHtml;
           changed = true;
@@ -154,4 +180,4 @@ for (const name of ['index.html', 'cv.html', 'content.html']) {
   if (fs.existsSync(f)) if (updateFile(f)) updated++;
 }
 
-console.log(`publish-dates: updated ${updated} file(s).`);
+log.info(`publish-dates: updated ${updated} file(s).`);
