@@ -63,9 +63,9 @@ jobs:
           # FTP password
           password: ${{ secrets.PASS }}
           # Remote files separated by ; (wildcards accepted)
-          remoteFiles: '.babelrc.js;.browserslistrc;.editorconfig;.eslintignore;.eslintrc.js;.gitignore;.htmlvalidate.json;.prettierrc;.stylelintrc.json;gulpfile.js;package-lock.json;package.json;next-sitemap.config.js;next-sitemap.js;rmcmd;README.md' # default is 
+          remoteFiles: '.babelrc.js;.browserslistrc;.editorconfig;.eslintignore;.eslintrc.js;.gitignore;.htmlvalidate.json;.prettierrc;.stylelintrc.json;gulpfile.js;package-lock.json;package.json;next-sitemap.config.js;next-sitemap.js;rmcmd;README.md;.eslintcache;.htmlvalidateignore' # default is 
           # Directories to delete seperated by ";"
-          remoteDirectories: '.github;cgi-bin' # optional, default is 
+          remoteDirectories: '.github;cgi-bin;build;src' # optional, default is 
           # Working directory
           workingDir: '/domains/futurecx.nl/public_html' # optional, default is /
           # Ignore invalid TLS/SSL certificate (1=ignoreSSL)
