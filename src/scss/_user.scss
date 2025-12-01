@@ -162,8 +162,23 @@ svg {
 
 /* BoxIcons */
 .bx {
-  font-display: swap;
+  font-display: swap !important;
 }
+
+.bx{
+  min-width: 20px;
+  min-height: 20px;
+  
+}
+
+.bxl-twitter-x {
+  background: url('/assets/img/icons/twitter-x.svg') no-repeat center center;
+  background-size: contain; 
+}
+ [data-bs-theme='dark'] .bxl-twitter-x {
+  background: url('/assets/img/icons/twitter-x-white.svg') no-repeat center center;
+}
+
 
 /* Fine-tune back-to-top icon centering */
 :root {

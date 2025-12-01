@@ -49,11 +49,11 @@ const concatAndCopy = async () => {
       `${path.vendor}/shufflejs/dist/shuffle.min.js`,
       `${path.vendor}/jarallax/dist/jarallax.min.js`,
       // lightGallery core + plugins (required by gallery component)
-      `${path.vendor}/lightgallery/lightgallery.min.js`,
-      `${path.vendor}/lightgallery/plugins/zoom/lg-zoom.min.js`,
-      `${path.vendor}/lightgallery/plugins/fullscreen/lg-fullscreen.min.js`,
-      `${path.vendor}/lightgallery/plugins/video/lg-video.min.js`,
-      `${path.vendor}/lightgallery/plugins/thumbnail/lg-thumbnail.min.js`,
+      // `${path.vendor}/lightgallery/lightgallery.min.js`,
+      // `${path.vendor}/lightgallery/plugins/zoom/lg-zoom.min.js`,
+      // `${path.vendor}/lightgallery/plugins/fullscreen/lg-fullscreen.min.js`,
+      // `${path.vendor}/lightgallery/plugins/video/lg-video.min.js`,
+      // `${path.vendor}/lightgallery/plugins/thumbnail/lg-thumbnail.min.js`,
     ],
     `assets/js/vendors.js`
   );
