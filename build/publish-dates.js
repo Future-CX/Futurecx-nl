@@ -112,9 +112,9 @@ function updateFile(filePath) {
 
   // datePublished → file creation date
   if (/itemprop=["']datePublished["']/i.test(html)) {
-    const isoCreated = gitCreatedISO(filePath);
+    const isoCreated = gitCreatedISO(filePath) || fsBirthISO(filePath);
 
-    log.info('filename ', filePath);
+    //log.info('filename ', filePath);
     //log.info(' - isoCreated ', isoCreated);
 
     if (isoCreated) {
@@ -137,13 +137,16 @@ function updateFile(filePath) {
   if (/itemprop=["']dateModified["']/i.test(html)) {
     //const existing = extractExistingDateModified(html);
     const lastGit = gitModifiedISO(filePath);
-    //log.info(' - lastGit ', lastGit);
     const hasUncommittedGitChangesFlag = hasUncommittedGitChanges(filePath);
-    log.info(' - hasUncommittedGitChangesFlag ', hasUncommittedGitChangesFlag);
 
     // Only update when there are uncommitted changes; use filesystem mtime for display
     if (hasUncommittedGitChangesFlag) {
       const isoMod = fsMtimeISO(filePath) || lastGit || new Date().toISOString();
+
+      log.info('filename ', filePath);
+      log.info(' - lastGit ', lastGit);
+      log.info(' - hasUncommittedGitChangesFlag ', hasUncommittedGitChangesFlag);
+
       //log.info(' - isoMod ', isoMod);
       if (isoMod) {
         const isoModLocal = toLocalOffsetISOString(isoMod);
