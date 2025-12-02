@@ -24,16 +24,15 @@
     <meta name="author" content="Martijn van Deel" />
     <meta property="article:author" content="Martijn van Deel" />
     <meta property="article:published_time" content="2025-04-26T16:33:45+02:00" />
-    <meta property="article:modified_time" content="2025-12-01T13:44:23+01:00" />
+    <meta property="article:modified_time" content="2025-12-01T20:17:46+01:00" />
     <meta property="og:type" content="article" />
-    <link
-      rel="preload"
-      as="image"
-      href="/assets/img/blog/single/midjourney-architect-looking-at-construction.webp"
-      imagesrcset="/assets/img/blog/single/midjourney-architect-looking-at-construction.webp 1920w"
-      imagesizes="100vw"
-      fetchpriority="high"
-    />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://ajax.googleapis.com" />
+    <link rel="preconnect" href="https://cdn.rawgit.com" />
+    <link rel="preload" as="style" href="/assets/css/theme.min.css" />
+    <link rel="preload" as="image" href="/assets/img/blog/single/midjourney-architect-looking-at-construction-s.webp" media="(max-width: 479px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/img/blog/single/midjourney-architect-looking-at-construction-m.webp" media="(min-width: 480px) and (max-width: 799px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/img/blog/single/midjourney-architect-looking-at-construction.webp" media="(min-width: 800px)" />
     <meta property="og:image" itemprop="image" content="https://www.futurecx.nl/assets/img/blog/single/midjourney-architect-looking-at-construction.webp" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -101,7 +100,41 @@
         } catch (e) {}
       })();
     </script>
+    <link rel="preload" as="style" href="/assets/css/theme.min.css" />
     <link rel="stylesheet" media="screen" href="/assets/css/theme.min.css" />
+    <style>
+      .hero-jarallax-bg {
+        background-image: url('/assets/img/blog/single/midjourney-architect-looking-at-construction-s.webp');
+        background-size: cover;
+        background-position: center;
+      }
+
+      .jarallax-cover {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        display: block;
+      }
+
+      .jarallax-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      @media (min-width: 480px) {
+        .hero-jarallax-bg {
+          background-image: url('/assets/img/blog/single/midjourney-architect-looking-at-construction-m.webp');
+        }
+      }
+
+      @media (min-width: 800px) {
+        .hero-jarallax-bg {
+          background-image: url('/assets/img/blog/single/midjourney-architect-looking-at-construction.webp');
+        }
+      }
+    </style>
 
     <!-- Page loading styles -->
     <style>
@@ -289,7 +322,7 @@
               <span class="badge bg-faded-primary text-primary fs-base">Enterprise Architecture</span>
             </div>
             <div class="fs-sm border-end pe-3 me-3 mb-2" itemprop="datePublished" content="2025-04-26T16:33:45+02:00">April 26, 2025</div>
-            <div class="fs-sm pe-3 me-3 mb-2" itemprop="dateModified" content="2025-12-01T13:44:23+01:00">Updated: December 1, 2025</div>
+            <div class="fs-sm pe-3 me-3 mb-2" itemprop="dateModified" content="2025-12-01T20:17:46+01:00">Updated: December 1, 2025</div>
           </div>
           <div class="d-none d-sm-block d-flex align-items-center position-relative ps-md-3 pe-lg-5 mb-2" itemprop="author" itemscope itemtype="https://schema.org/Person">
             <div class="d-flex align-items-center position-relative ps-md-3 pe-lg-5 mb-2">
@@ -305,10 +338,15 @@
 
       <!-- Post image (parallax) -->
       <div class="jarallax mb-lg-5 m-0 p-0 mb-sm-0 mb-md-4" data-jarallax data-speed="0.35" style="height: 36.45vw; min-height: 300px">
-        <meta itemprop="image" fetchpriority="high" content="https://www.futurecx.nl/assets/img/blog/single/midjourney-architect-looking-at-construction.webp" />
-        <div class="jarallax-img" style="background-image: url(/assets/img/blog/single/midjourney-architect-looking-at-construction.webp)"></div>
+        <meta itemprop="image" content="/assets/img/blog/single/midjourney-architect-looking-at-construction.webp" />
+        <picture class="jarallax-cover" aria-hidden="true">
+          <source media="(max-width: 479px)" srcset="/assets/img/blog/single/midjourney-architect-looking-at-construction-s.webp" />
+          <source media="(max-width: 799px)" srcset="/assets/img/blog/single/midjourney-architect-looking-at-construction-m.webp" />
+          <img src="/assets/img/blog/single/midjourney-architect-looking-at-construction.webp" width="2000" height="1333" loading="eager" decoding="async" fetchpriority="high" alt="" />
+        </picture>
+        <div class="jarallax-img hero-jarallax-bg"></div>
         <div class="container">
-          <img src="/assets/img/blog/single/logo-midjourney-white.png" width="50" height="50" class="rounded-circle mt-2" alt="Midjourney, an AI image generation tool" />
+          <img src="/assets/img/blog/single/logo-midjourney-white.webp" width="100" height="100" class="rounded-circle mt-2" alt="Midjourney, an AI image generation tool" />
         </div>
         <div class="d-none d-sm-block position-absolute bottom-0 start-0 text-center w-100 bg-dark text-white m-0 p-0">
           <small>This image was generated using <a href="https://midjourney.com/" target="_blank">Midjourney</a>, an AI image generation tool.</small>
@@ -448,7 +486,7 @@
               <div class="row g-0">
                 <div
                   class="col-sm-3 position-relative bg-position-center bg-repeat-0 bg-size-cover"
-                  style="background-image: url(/assets/img/blog/single/chatgpt-integration-principles.webp); min-height: 2rem"
+                  style="background-image: url(/assets/img/blog/single/chatgpt-integration-principles.webp); min-height: 7rem"
                 >
                   <a
                     href="/content/why-composable-architecture-matters.html"
@@ -510,7 +548,7 @@
                 </p>
               </div>
               <div class="col-md-6">
-                <img src="/assets/img/models/future-cx-north-star-layers-942.webp" width="471" height="434" class="mb-4 pb-2" alt="North Star Architecture Layers" />
+                <img loading="lazy" src="/assets/img/models/future-cx-north-star-layers-942.webp" width="471" height="434" class="img-fluid mb-4 pb-2" alt="North Star Architecture Layers" />
               </div>
             </div>
 
@@ -536,7 +574,14 @@
                 </p>
               </div>
               <div class="col-md-6">
-                <img src="/assets/img/models/future-cx-north-star-engagement-services-942.webp" width="471" height="434" class="mb-4 pb-2" alt="Customer Engagement Services for Uniform Experience" />
+                <img
+                  loading="lazy"
+                  src="/assets/img/models/future-cx-north-star-engagement-services-942.webp"
+                  width="471"
+                  height="434"
+                  class="img-fluid mb-4 pb-2"
+                  alt="Customer Engagement Services for Uniform Experience"
+                />
               </div>
             </div>
             <h3 class="h3">Seamless integration of partner services using market standards and APIs.</h3>
@@ -559,10 +604,11 @@
               </div>
               <div class="col-md-6">
                 <img
+                  loading="lazy"
                   src="/assets/img/models/future-cx-north-star-integration-apis-942.webp"
                   width="471"
                   height="434"
-                  class="mb-4 pb-2"
+                  class="img-fluid mb-4 pb-2"
                   alt="Seamless integration using APIs
 "
                 />
@@ -593,10 +639,11 @@
               </div>
               <div class="col-md-6">
                 <img
+                  loading="lazy"
                   src="/assets/img/models/future-cx-north-star-cdp-942.webp"
                   width="471"
                   height="434"
-                  class="mb-4 pb-2"
+                  class="img-fluid mb-4 pb-2"
                   alt="Combining a 360° customer view with real-time data
 "
                 />
@@ -625,10 +672,11 @@
               </div>
               <div class="col-md-6">
                 <img
+                  loading="lazy"
                   src="/assets/img/models/future-cx-north-star-data-foundation.jpg"
                   width="471"
                   height="445"
-                  class="mb-4 pb-2"
+                  class="img-fluid mb-4 pb-2"
                   alt="Enable intelligent processes by centralizing data
 "
                 />
@@ -641,11 +689,12 @@
               comprehensive solution architecture diagram.
             </p>
             <img
+              loading="lazy"
               src="/assets/img/models/future-cx-north-star-solution-blueprint-buildup-1980.webp"
               alt="Building the Future CX North Star Solution Blueprint"
               width="990"
               height="136"
-              class="mb-4 pb-2"
+              class="img-fluid mb-4 pb-2"
             />
             <div class="row">
               <div class="col-md-4">
@@ -691,7 +740,14 @@
             </div>
 
             <p class="mb-2 pb-2">&nbsp;</p>
-            <img src="/assets/img/models/future-cx-north-star-solution-blueprint.jpg" alt="The Future CX North Star Solution Blueprint" width="990" height="557" class="mb-4 pb-2" />
+            <img
+              loading="lazy"
+              src="/assets/img/models/future-cx-north-star-solution-blueprint.jpg"
+              alt="The Future CX North Star Solution Blueprint"
+              width="990"
+              height="557"
+              class="img-fluid mb-4 pb-2"
+            />
             <p class="mb-2 pb-2">&nbsp;</p>
             <p class="mb-2 pb-2">&nbsp;</p>
 
@@ -856,6 +912,7 @@
                 <div class="position-relative">
                   <a href="/content/integration-principles.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
                   <img
+                    loading="lazy"
                     src="/assets/img/blog/single/chatgpt-integration-principles.webp"
                     width="450"
                     height="300"
@@ -885,6 +942,7 @@
                     aria-label="Read more"
                   ></a>
                   <img
+                    loading="lazy"
                     src="/assets/img/blog/single/chatgpt-integration-patterns.webp"
                     width="450"
                     height="300"
@@ -910,7 +968,14 @@
               <article class="card border-0 shadow-sm h-100 mx-2">
                 <div class="position-relative">
                   <a href="why-composable-architecture-matters.html" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
-                  <img src="/assets/img/blog/single/chatgpt-why-composable-matters.webp" width="450" height="300" class="card-img-top" alt="Read more on Why Composable Architecture Matters" />
+                  <img
+                    loading="lazy"
+                    src="/assets/img/blog/single/chatgpt-why-composable-matters.webp"
+                    width="450"
+                    height="300"
+                    class="card-img-top"
+                    alt="Read more on Why Composable Architecture Matters"
+                  />
                 </div>
                 <div class="card-body pb-4">
                   <div class="d-flex align-items-center justify-content-between mb-3">
@@ -1017,11 +1082,11 @@
     <link rel="stylesheet" media="screen" href="/assets/css/vendors.css" />
     <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
 
-    <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script type="application/javascript" src="/assets/js/theme-switcher.js"></script>
-    <script type="application/javascript" src="/assets/js/vendors.js"></script>
-    <script type="application/javascript" src="/assets/js/theme.min.js"></script>
-    <script type="application/javascript" src="/assets/js/user.js"></script>
-    <script type="application/javascript" src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+    <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
+    <script type="application/javascript" src="/assets/js/theme-switcher.js" defer></script>
+    <script type="application/javascript" src="/assets/js/vendors.js" defer></script>
+    <script type="application/javascript" src="/assets/js/theme.min.js" defer></script>
+    <script type="application/javascript" src="/assets/js/user.js" defer></script>
+    <script type="application/javascript" src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js" defer></script>
   </body>
 </html>
