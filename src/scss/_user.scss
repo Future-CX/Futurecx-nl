@@ -337,6 +337,15 @@ span.wip {
   .card-body > .d-flex.align-items-center > .badge {
     margin-bottom: 0.25rem;
   }
+
+  .mobile-top {
+    position:fixed;
+    top: 75px;
+    left: 75px;
+  }
+  .mobile-bottom{
+    margin-top: 500px;
+  }
 }
 
 @include media-breakpoint-up(md) {
