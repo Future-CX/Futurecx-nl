@@ -338,14 +338,10 @@ span.wip {
     margin-bottom: 0.25rem;
   }
 
-  .mobile-top {
-    position:fixed;
-    top: 75px;
-    left: 75px;
+  main.home div.spacer {
+    height: 400px;
   }
-  .mobile-bottom{
-    margin-top: 500px;
-  }
+  
 }
 
 @include media-breakpoint-up(md) {
