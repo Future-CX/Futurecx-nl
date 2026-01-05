@@ -17675,6 +17675,9 @@ span.wip {
   .card-body > .d-flex.align-items-center > .badge {
     margin-bottom: 0.25rem;
   }
+  main.home div.spacer {
+    height: 300px;
+  }
 }
 @media (min-width: 768px) {
   /*  Small devices (landscape phones, portrait tablets, 576px and up) */
