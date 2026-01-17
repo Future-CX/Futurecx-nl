@@ -50,7 +50,7 @@ function fromDir(startPath, filter, callback) {
     return;
   }
 
-  let ignoredFiles = ['blog-single.html', '.old.html'];
+  let ignoredFiles = ['blog-single.html', '.old.html', '404.html'];
 
   let files = fs.readdirSync(startPath);
   for (let i = 0; i < files.length; i++) {
