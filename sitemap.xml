@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://www.futurecx.nl/404.html</loc>
-		<lastmod>2025-12-01</lastmod>
-	</url>
-	<url>
 		<loc>https://www.futurecx.nl/content/capability-model-cx.html</loc>
-		<lastmod>2025-12-01</lastmod>
+		<lastmod>2026-01-17</lastmod>
 	</url>
 	<url>
 		<loc>https://www.futurecx.nl/content/create-a-better-capability-model.html</loc>
@@ -14,7 +10,7 @@
 	</url>
 	<url>
 		<loc>https://www.futurecx.nl/content/ecommerce-trends.html</loc>
-		<lastmod>2025-12-13</lastmod>
+		<lastmod>2026-01-17</lastmod>
 	</url>
 	<url>
 		<loc>https://www.futurecx.nl/content/how-to-build-your-future-state-architecture.html</loc>
@@ -22,11 +18,11 @@
 	</url>
 	<url>
 		<loc>https://www.futurecx.nl/content/integration-patterns.html</loc>
-		<lastmod>2025-12-01</lastmod>
+		<lastmod>2026-01-17</lastmod>
 	</url>
 	<url>
 		<loc>https://www.futurecx.nl/content/integration-principles.html</loc>
-		<lastmod>2025-12-01</lastmod>
+		<lastmod>2026-01-17</lastmod>
 	</url>
 	<url>
 		<loc>https://www.futurecx.nl/content/use-domain-driven-design-for-enterprise-architecture.html</loc>
@@ -34,7 +30,7 @@
 	</url>
 	<url>
 		<loc>https://www.futurecx.nl/content/use-open-questions-and-context-for-a-better-rfp.html</loc>
-		<lastmod>2025-12-15</lastmod>
+		<lastmod>2026-01-17</lastmod>
 	</url>
 	<url>
 		<loc>https://www.futurecx.nl/content/what-you-need-to-know-as-enterprise-architect.html</loc>
@@ -46,14 +42,14 @@
 	</url>
 	<url>
 		<loc>https://www.futurecx.nl/content.html</loc>
-		<lastmod>2025-12-13</lastmod>
+		<lastmod>2026-01-17</lastmod>
 	</url>
 	<url>
 		<loc>https://www.futurecx.nl/cv.html</loc>
-		<lastmod>2025-12-01</lastmod>
+		<lastmod>2026-01-17</lastmod>
 	</url>
 	<url>
 		<loc>https://www.futurecx.nl/index.html</loc>
-		<lastmod>2026-01-06</lastmod>
+		<lastmod>2026-01-17</lastmod>
 	</url>
 </urlset>
