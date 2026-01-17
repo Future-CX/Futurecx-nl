@@ -15,7 +15,7 @@ const GenerateSitemap = async () => {
   sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 
   fromDir('.', /\.html$/, function (filename, datetime) {
-    //log.info('-- found: ', filename)
+    log.info('-- found: ', filename);
 
     filename = filename.replace(/\\/g, '/');
     datetime = datetime.toISOString().split('T')[0];
@@ -50,7 +50,7 @@ function fromDir(startPath, filter, callback) {
     return;
   }
 
-  let ignoredFiles = ['blog-single.html', '.old.html', 'assets', 'build', 'components', 'docs', 'node_modules', 'pages', 'src'];
+  let ignoredFiles = ['blog-single.html', '.old.html'];
 
   let files = fs.readdirSync(startPath);
   for (let i = 0; i < files.length; i++) {
@@ -59,6 +59,7 @@ function fromDir(startPath, filter, callback) {
 
     // check if part of the filename is in the ignored files
     if (ignoredFiles.some((ignoredFile) => filename.includes(ignoredFile))) {
+      log.info('ignored file ', filename);
       continue;
     }
 
