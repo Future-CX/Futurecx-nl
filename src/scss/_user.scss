@@ -14,8 +14,7 @@ body::after {
 }
 
 section.hero {
-  background: url(../../assets/img/cover/cover-s.png) no-repeat center center
-    fixed;
+  background: url(../../assets/img/cover/cover-s.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -64,20 +63,20 @@ html h1 {
 }
 
 .btn-scroll-next .btn-scroll-next-tooltip {
-    position: absolute;
-    top: 50%;
-    right: 100%;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity .25s 
-ease-in-out, visibility .25s 
-ease-in-out;
-    transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    opacity 0.25s ease-in-out,
+    visibility 0.25s ease-in-out;
+  transform: translateY(-50%);
 }
 
 .btn-scroll-next:hover .btn-scroll-next-tooltip {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 .navbar-expand-lg .offcanvas .offcanvas-body {
@@ -162,20 +161,18 @@ svg {
 
 /* BoxIcons */
 
-.bx{
+.bx {
   min-width: 20px;
   min-height: 20px;
-  
 }
 
 .bxl-twitter-x {
   background: url('/assets/img/icons/twitter-x.svg') no-repeat center center;
-  background-size: contain; 
+  background-size: contain;
 }
- [data-bs-theme='dark'] .bxl-twitter-x {
+[data-bs-theme='dark'] .bxl-twitter-x {
   background: url('/assets/img/icons/twitter-x-white.svg') no-repeat center center;
 }
-
 
 /* Fine-tune back-to-top icon centering */
 :root {
@@ -191,10 +188,7 @@ svg {
   width: 1em;
   height: 1em;
   font-weight: 400; /* avoid bold shifting glyph metrics */
-  transform: translate(
-    var(--scroll-top-icon-translate-x),
-    var(--scroll-top-icon-translate-y)
-  );
+  transform: translate(var(--scroll-top-icon-translate-x), var(--scroll-top-icon-translate-y));
 }
 
 /* Filter Content */
@@ -257,28 +251,27 @@ span.wip {
 .bg-gray {
   background-color: $gray !important;
 }
-.bg-blue{
+.bg-blue {
   background-color: $blue !important;
 }
-.bg-green{
+.bg-green {
   background-color: $green !important;
 }
-.bg-green-blue{
+.bg-green-blue {
   background: linear-gradient(90deg, $green 20%, $blue 80%) !important;
 }
-.bg-yellow{
+.bg-yellow {
   background-color: $yellow !important;
 }
-.bg-blue-green{
+.bg-blue-green {
   background: linear-gradient(90deg, $blue 20%, $green 80%) !important;
 }
-.bg-yellow-green{
+.bg-yellow-green {
   background: linear-gradient(90deg, $yellow 20%, $green 80%) !important;
 }
-.bg-yellow-blue{
+.bg-yellow-blue {
   background: linear-gradient(90deg, $yellow 20%, $blue 80%) !important;
 }
-
 
 @include media-breakpoint-down(md) {
   /* X-Small devices (portrait phones, less than 576px) */
@@ -339,9 +332,8 @@ span.wip {
   }
 
   main.home div.spacer {
-    height: 350px;
+    height: 300px;
   }
-  
 }
 
 @include media-breakpoint-up(md) {
