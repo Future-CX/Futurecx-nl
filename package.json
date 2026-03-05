@@ -45,6 +45,9 @@
     "stylelint": "^15.10.3",
     "stylelint-config-twbs-bootstrap": "^11.0.1"
   },
+  "overrides": {
+    "immutable": ">=4.3.8"
+  },
   "dependencies": {
     "@lottiefiles/lottie-player": "^2.0.2",
     "bootstrap": "^5.3.2",
