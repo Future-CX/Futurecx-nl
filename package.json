@@ -7,7 +7,7 @@
   "license": "ISC",
   "main": "index.html",
   "scripts": {
-    "dev": "npm-run-all --silent -p styles:minified scripts:minified vendor sitemap && npm run dates --silent && npm run watch --silent",
+"dev": "npm-run-all --silent -p styles:minified scripts:minified vendor sitemap && npm run dates --silent && npm run watch:all --silent",
     "build": "npm-run-all --silent -p styles:expanded styles:minified scripts:expanded scripts:minified vendor && npm run dates --silent && npm run validate --silent",
     "check": "node build/checkpage.js",
     "dates": "node build/publish-dates.js",
@@ -20,7 +20,9 @@
     "vendor": "node build/vendor.js",
     "validate": "eslint --cache --cache-location .eslintcache --ext .js,.html .",
     "lint:fix": "eslint --ext .js,.html --fix .",
-    "watch": "node build/watch.js"
+    "watch": "node build/watch.js",
+    "php:server": "php -S localhost:8080",
+    "watch:all": "npm-run-all -p watch php:server"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.20",
