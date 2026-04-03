@@ -6,13 +6,13 @@ on:
 jobs:
   Upload-to-SFTP:
     permissions:
-        contents: read
-        pull-requests: write
+      contents: read
+      pull-requests: write
     runs-on: ubuntu-latest
     #timeout-minutes: 30
     steps:
-      - name: 🚚 Get latest code                        # Checkout the latest code
-        uses: actions/checkout@v4
+      - name: 🚚 Get latest code # Checkout the latest code
+        uses: actions/checkout@v6
         with:
           clean: 'true'
           show-progress: 'true'
@@ -27,16 +27,16 @@ jobs:
           # FTP password
           password: ${{ secrets.PASS }}
           # Remote files separated by ; (wildcards accepted)
-          remoteFiles: '*.html' # default is 
+          remoteFiles: '*.html;*.php' # default is
           # Directories to delete seperated by ";"
-          remoteDirectories: 'assets;content;data;functions;models' # optional, default is 
+          remoteDirectories: 'assets;content;functions;models;linkedin' # optional, default is
           # Working directory
           workingDir: '/domains/futurecx.nl/public_html' # optional, default is /
           # Ignore invalid TLS/SSL certificate (1=ignoreSSL)
           ignoreSSL: '1' # optional, default is 0
           # Additional command-line options for lftp
           options: '' # optional, default is
-        
+
       - name: 📂 ftp-action
         uses: sebastianpopp/ftp-action@v2.0.0
         with:
@@ -63,9 +63,9 @@ jobs:
           # FTP password
           password: ${{ secrets.PASS }}
           # Remote files separated by ; (wildcards accepted)
-          remoteFiles: '.babelrc.js;.browserslistrc;.editorconfig;.eslintignore;.eslintrc.js;.gitignore;.htmlvalidate.json;.prettierrc;.stylelintrc.json;gulpfile.js;package-lock.json;package.json;next-sitemap.config.js;next-sitemap.js;rmcmd;README.md;.eslintcache;.htmlvalidateignore' # default is 
+          remoteFiles: '.babelrc.js;.browserslistrc;.editorconfig;.eslintignore;.eslintrc.js;.gitignore;.htmlvalidate.json;.prettierrc;.stylelintrc.json;gulpfile.js;package-lock.json;package.json;next-sitemap.config.js;next-sitemap.js;rmcmd;README.md;.eslintcache;.htmlvalidateignore' # default is
           # Directories to delete seperated by ";"
-          remoteDirectories: '.github;cgi-bin;build;src' # optional, default is 
+          remoteDirectories: '.github;cgi-bin;build;src' # optional, default is
           # Working directory
           workingDir: '/domains/futurecx.nl/public_html' # optional, default is /
           # Ignore invalid TLS/SSL certificate (1=ignoreSSL)
