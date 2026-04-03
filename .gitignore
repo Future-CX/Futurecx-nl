@@ -96,6 +96,7 @@ functions/readinglist.json
 /docs
 /pages
 /sitemap.old.xml
-Futurecx-nl.code-workspace
+*.code-workspace
 *.psd
 *.ai
+*.sqlite
