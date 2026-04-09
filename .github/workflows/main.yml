@@ -27,7 +27,7 @@ jobs:
           # FTP password
           password: ${{ secrets.PASS }}
           # Remote files separated by ; (wildcards accepted)
-          remoteFiles: '*.html;*.php' # default is
+          remoteFiles: '*.html;*.php;*.json' # default is
           # Directories to delete seperated by ";"
           remoteDirectories: 'assets;content;functions;models;linkedin' # optional, default is
           # Working directory

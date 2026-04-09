@@ -1,22 +1,21 @@
 // Root CSS variables
 
 :root,
-[data-bs-theme="light"] {
+[data-bs-theme='light'] {
   --#{$prefix}user-selection-color: #{$user-selection-color};
   --#{$prefix}heading-link-color: #{$nav-link-color};
   --#{$prefix}heading-link-hover-color: #{$nav-link-hover-color};
 }
 
-
 // Dark theme overrides
 
 @if $enable-dark-mode {
   @include color-mode(dark, true) {
-    --#{$prefix}gray-600: rgba(#{to-rgb($white)}, .5);
-    --#{$prefix}gray-700: rgba(#{to-rgb($white)}, .7);
-    --#{$prefix}gray-800: rgba(#{to-rgb($white)}, .85);
+    --#{$prefix}gray-600: rgba(#{to-rgb($white)}, 0.5);
+    --#{$prefix}gray-700: rgba(#{to-rgb($white)}, 0.7);
+    --#{$prefix}gray-800: rgba(#{to-rgb($white)}, 0.85);
     --#{$prefix}gray-900: #{$white};
-    --#{$prefix}secondary-bg: rgba(#{to-rgb($white)}, .04);
+    --#{$prefix}secondary-bg: rgba(#{to-rgb($white)}, 0.04);
     --#{$prefix}heading-link-color: #{$nav-link-color-dark};
     --#{$prefix}heading-link-hover-color: #{$nav-link-hover-color-dark};
     --#{$prefix}nav-link-color: #{$nav-link-color-dark};
