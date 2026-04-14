@@ -80,6 +80,19 @@ assets/img/*.jpg
 assets/img/*.svg
 
 
+#crewai
+__pycache__/
+.venv/
+agents_and_skills/AGENTS.md
+agents_and_skills/config/agents.yaml
+agents_and_skills/config/tasks.yaml
+agents_and_skills/uv.lock
+agents_and_skills/.gitignore
+agents_and_skills/pyproject.toml
+agents_and_skills/README.md
+agents_and_skills/reports/
+agents_and_skills/crew.py
+agents_and_skills/__init__.py
 
 #project specific
 capability-model-*.js
@@ -100,3 +113,4 @@ functions/readinglist.json
 *.psd
 *.ai
 *.sqlite
+

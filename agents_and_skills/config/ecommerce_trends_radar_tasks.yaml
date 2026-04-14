@@ -1,0 +1,232 @@
+research_task:
+  description: >
+    Conduct broad research on {topic} and gather the most relevant findings,
+    trends, claims, and insights. Include some research on {topic} in relation to software architecture.
+  expected_output: >
+    A structured research summary containing:
+    - key findings from trusted URLs
+    - additional findings from external sources
+    - major claims that need fact-checking
+    - emerging themes and noteworthy differences between sources
+
+sources_task:
+  description: >
+    Extract all sources used during research and fact-checking.
+
+    Goals:
+    - collect all URLs used
+    - remove duplicates
+    - remove broken or invalid URLs
+    - group sources logically (trusted vs external)
+
+  expected_output: >
+    A clean markdown file containing:
+    - Trusted sources
+    - Additional sources
+    - Deduplicated list of URLs
+
+fact_check_task:
+  description: >
+    Review the research findings and fact-check the most important claims against
+    the trusted webpages provided in the crew instructions.
+
+    For each important claim:
+    - Verify it using ONLY the trusted URLs
+    - You MUST include a supporting quote from the source
+    - Do not assume correctness without evidence
+    - If not found in trusted sources, mark as "Not verified"
+
+    Classification rules:
+    - Verified → clearly supported by trusted source
+    - Partially verified → somewhat supported but incomplete
+    - Not verified → not found in trusted sources
+    - Contradicted → conflicts with trusted sources
+
+    Rules for citations:
+    - Always include the exact URL used
+    - Include a short, relevant quote from the page
+    - Do not fabricate quotes
+    - If no quote is available, mark as "Not verified"
+  expected_output: >
+    A structured fact-check report in the following format:
+
+    - Claim
+    - Status (Verified / Partially verified / Not verified / Contradicted)
+    - Source:
+      - URL
+      - Quote
+      - Status
+    - Explanation
+
+trend_analysis_task:
+  description: >
+    Extract the key trends from the validated research and fact-check results, and classify each trend according to the Trend Hype Cycle.
+
+    Use only these stages:
+    - Innovators
+    - Early Adopters
+    - Early Majority
+    - Late Majority
+    - Laggards
+
+    Categorise these trends in the following categories
+    - Data & AI
+    - Advertising & Promotion
+    - Content & Experience
+    - CRM & Analytics
+    - Commerce & Sales
+
+    Rules:
+    - Base the classification on the validated research
+    - Do not invent unsupported trends
+    - Use clear, practical naming for each trend
+    - Include a short explanation for why the trend belongs in that stage
+    - Keep the output concise and readable
+
+  expected_output: >
+    A markdown document containing a list of trends, where each trend includes:
+    - Trend name
+    - Category
+    - Hype Cycle stage
+    - Short explanation
+
+trend_radar_task:
+  description: >
+    Read the trends markdown file and create an HTML trend radar visualization.
+
+    Goals:
+    - plot each trend on a radar
+    - use category slices as pies / quadrants
+    - use concentric rings for trend maturity stages
+    - place one dot per trend in the correct category and stage
+    - generate clean HTML output
+
+  expected_output: >
+    A standalone HTML file containing a trend radar visualization based on the trends markdown file.
+
+trends_json_task:
+  description: >
+    Read the trends markdown file and transform it into a structured JSON document.
+
+    Goals:
+    - parse each trend entry from the markdown
+    - preserve the trend name, category, stage, explanation, and sources
+    - normalize the output into a machine-readable JSON format
+    - make the file easy to use for later visualization or validation steps
+
+  expected_output: >
+    A valid JSON document with a top-level "trends" array, where each trend contains:
+    - name
+    - category
+    - stage
+    - summary
+    - sources
+
+blog_writing_task:
+  description: >
+    Write a blog post on {topic} using the research findings and fact-check results.
+
+    Style guidelines:
+    - Write in a natural, flowing blog style (not a report or checklist)
+    - Prefer paragraphs over bullet points
+    - Use bullet points sparingly (max 1 short list per section)
+    - Each section should read like a story with explanation and context
+    - Avoid overly structured “consulting-style” output
+
+    Structure:
+    - Title {title} in H1 
+    - Strong introduction (hook + context)
+    - 3–4 main sections with clear narrative
+    - Each section:
+      - start with a key idea
+      - explain it in 2–3 paragraphs
+      - when possible add a quote from one of the researched articles including a link to the webpages
+        - format: "Quote" - [Source title](URL)
+      - optionally include a short bullet list
+    - Use natural section headings such as:
+        - Why this matters
+        - What we’re seeing in practice
+        - Where this creates impact
+        Vary phrasing when appropriate to keep the article natural and readable.
+        Avoid repeating the same heading pattern across all sections.
+    - Clear conclusion with practical takeaway
+    - List all the used sources and its status
+      - [Source title](URL) [Status]
+
+    Rules:
+    - Use verified findings as the foundation
+    - Do not present unverified claims as established fact
+    - Clearly label uncertainty where needed
+    - Write like a human expert, not a framework
+    - Keep the tone aligned to Future CX: professional, practical, credible, and insightful
+    - At least 70% of the content must be paragraphs, not bullet points
+  expected_output: >
+    A readable, narrative-style blog post with fixed sections that can be transformed directly into Future CX HTML.
+
+seo_task:
+  description: >
+    Analyze the validated markdown blog post and create an SEO layer for publication.
+
+    Goals:
+    - improve search relevance without harming readability
+    - define a strong SEO title
+    - write a compelling meta description
+    - identify focus and secondary keywords
+    - suggest a clean slug
+    - suggest internal linking opportunities
+    - suggest limited heading improvements where helpful
+
+    Rules:
+    - do not invent unsupported claims
+    - stay aligned with the validated article content
+    - keep recommendations practical and publication-ready
+
+  expected_output: >
+    A structured SEO package containing:
+    - SEO title
+    - meta description
+    - focus keyword
+    - secondary keywords
+    - suggested slug
+    - internal link suggestions
+    - optional heading improvement suggestions
+
+html_transform_task:
+  description: >
+    Transform the markdown blog post into clean HTML for the Future CX website.
+
+    Follow these Future CX conventions:
+
+    1. Output only the article body HTML, not a full HTML document.
+    2. Preserve the article structure from markdown and convert it into semantic HTML.
+    3. Use this structure where possible:
+
+       - <h1> for the article title
+       - one metadata block near the top for:
+         - category
+         - published date
+         - updated date if available
+       - one author block
+       - one lead/intro section
+       - <h2> for major sections
+       - <h3> for sub-sections only when needed
+       - <p> for paragraphs
+       - <ul>/<ol>/<li> for lists
+       - <a> for links
+       - <quote> for quotes
+       - a final "Sources" section with all the sources used in research
+
+    4. Keep the HTML editor-friendly and readable.
+    5. Do not add CSS classes unless explicitly provided in the markdown input.
+    6. Do not add inline styles, scripts, or layout wrappers.
+    7. Do not invent new content.
+    8. Preserve citations and source references in a readable way.
+    9. When the markdown contains verified source references, render them in a dedicated
+       Sources section as an unordered list of links.
+    10. When the markdown contains a short introduction or summary paragraph, place it
+        near the top as the lead section.
+    11. If author/date/category values are not provided in the markdown, use sensible placeholders
+        in HTML comments so they can be filled later.
+
+  expected_output: >
+    Clean semantic HTML for a Future CX blog article body, ready to paste into the CMS.
