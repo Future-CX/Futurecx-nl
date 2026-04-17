@@ -1,0 +1,1334 @@
+{
+  "trends": [
+    {
+      "name": "AI Search",
+      "category": "Data & AI",
+      "stage": "Early Adopters",
+      "summary": "Merchants are moving from keyword to semantic search to lift discovery and conversion, with growing proof in production but ongoing work on grounding and evaluation.",
+      "sources": [
+        "https://www.algolia.com/blog/product/ai-search-ecommerce-trends/",
+        "https://www.constructor.io/blog"
+      ]
+    },
+    {
+      "name": "Product Recommendations",
+      "category": "Data & AI",
+      "stage": "Late Majority",
+      "summary": "Recommendations are a widely adopted baseline for ecommerce merchandising, with incremental gains coming from better signals and models rather than net-new adoption.",
+      "sources": [
+        "https://www.nosto.com/resources/blog/",
+        "https://www.adobe.com/commerce/resources/reports.html"
+      ]
+    },
+    {
+      "name": "Generative PDP Content",
+      "category": "Data & AI",
+      "stage": "Early Adopters",
+      "summary": "Generative tools for titles, bullets, and translations are graduating from pilots to production, with teams prioritizing governance and lift measurement.",
+      "sources": [
+        "https://business.adobe.com/blog/basics/what-is-headless-commerce",
+        "https://www.shopify.com/enterprise/commerce-trends"
+      ]
+    },
+    {
+      "name": "Grounded CX Assistants",
+      "category": "Data & AI",
+      "stage": "Early Adopters",
+      "summary": "LLM-powered support is improving deflection and resolution when grounded in accurate order, policy, and product data, but requires tight guardrails.",
+      "sources": [
+        "https://www.zendesk.com/blog/retail/",
+        "https://www.shopify.com/enterprise/commerce-trends"
+      ]
+    },
+    {
+      "name": "Real-Time Personalization",
+      "category": "Data & AI",
+      "stage": "Early Adopters",
+      "summary": "Streaming data pipelines power on-site and in-message personalization; adoption is growing as teams unify identity and events.",
+      "sources": [
+        "https://segment.com/resources/reports/state-of-personalization/",
+        "https://databricks.com/solutions/accelerators/retail"
+      ]
+    },
+    {
+      "name": "AI Fraud Screening",
+      "category": "Data & AI",
+      "stage": "Early Majority",
+      "summary": "Networked decisioning and identity signals help reduce chargebacks and false declines, with broad adoption across ecommerce risk programs.",
+      "sources": [
+        "https://www.signifyd.com/resources/library/",
+        "https://sift.com/resources"
+      ]
+    },
+    {
+      "name": "Lakehouse Analytics",
+      "category": "Data & AI",
+      "stage": "Early Majority",
+      "summary": "Consolidating batch and streaming data into a lakehouse supports retail media, experimentation, and near-real-time insights at scale.",
+      "sources": [
+        "https://www.snowflake.com/blog/category/industry/retail-cpg/",
+        "https://databricks.com/solutions/accelerators/retail"
+      ]
+    },
+    {
+      "name": "AI Guardrails",
+      "category": "Data & AI",
+      "stage": "Early Adopters",
+      "summary": "Teams emphasize grounding, safety, and incremental lift measurement to move AI from demo to dependable production in commerce.",
+      "sources": [
+        "https://www.algolia.com/blog/product/ai-search-ecommerce-trends/",
+        "https://databricks.com/solutions/accelerators/retail"
+      ]
+    },
+    {
+      "name": "Agentic Catalog Onboarding",
+      "category": "Data & AI",
+      "stage": "Innovators",
+      "summary": "Early movers use AI to extract attributes, normalize data, and enrich SKUs during onboarding, reducing manual PIM work while validating accuracy.",
+      "sources": [
+        "https://www.akeneo.com/resources/",
+        "https://www.adobe.com/commerce/resources/reports.html"
+      ]
+    },
+    {
+      "name": "Automated Localization",
+      "category": "Data & AI",
+      "stage": "Early Adopters",
+      "summary": "Automated translation and localization workflows accelerate multi-market launches, with human-in-the-loop for quality.",
+      "sources": [
+        "https://www.contentful.com/resources/",
+        "https://www.akeneo.com/resources/"
+      ]
+    },
+    {
+      "name": "Retail Media Buying",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Brands are shifting trade spend toward retailer-owned ad inventory, leveraging first-party shopper signals and closed-loop reporting.",
+      "sources": [
+        "https://www.criteo.com/insights/retail-media/",
+        "https://www.thetradedesk.com/us/insights/retail-media"
+      ]
+    },
+    {
+      "name": "Onsite Sponsored Listings",
+      "category": "Advertising & Promotion",
+      "stage": "Early Majority",
+      "summary": "Sponsored product placements on retailers and marketplaces have become a standard lever to win digital shelf visibility.",
+      "sources": [
+        "https://www.criteo.com/insights/retail-media/",
+        "https://www.shopify.com/retail/retail-media"
+      ]
+    },
+    {
+      "name": "First-Party Audiences",
+      "category": "Advertising & Promotion",
+      "stage": "Early Majority",
+      "summary": "Privacy shifts push advertisers to build and activate first-party audiences, improving match rates and performance.",
+      "sources": [
+        "https://segment.com/resources/reports/state-of-personalization/",
+        "https://www.thetradedesk.com/us/insights/retail-media"
+      ]
+    },
+    {
+      "name": "Clean Room Measurement",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Data clean rooms enable privacy-safe reach and incrementality analysis across retailer and brand data, but standards are still maturing.",
+      "sources": [
+        "https://www.snowflake.com/blog/category/industry/retail-cpg/",
+        "https://segment.com/resources/articles/retail/"
+      ]
+    },
+    {
+      "name": "Incrementality Testing",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Advertisers use geo and audience holdouts to validate true lift, countering signal loss from fragmented attribution.",
+      "sources": [
+        "https://www.criteo.com/insights/retail-media/",
+        "https://www.shopify.com/retail/retail-media"
+      ]
+    },
+    {
+      "name": "Server-Side Tracking",
+      "category": "Advertising & Promotion",
+      "stage": "Early Majority",
+      "summary": "Moving event collection server-side improves resilience and data quality amid browser restrictions and privacy controls.",
+      "sources": [
+        "https://segment.com/resources/articles/retail/",
+        "https://www.shopify.com/enterprise/commerce-trends"
+      ]
+    },
+    {
+      "name": "Product Feed Optimization",
+      "category": "Advertising & Promotion",
+      "stage": "Early Majority",
+      "summary": "High-quality, channel-specific product feeds are essential to win marketplace, retail media, and shopping placements.",
+      "sources": [
+        "https://www.feedonomics.com/blog/",
+        "https://support.google.com/merchants/answer/10055634"
+      ]
+    },
+    {
+      "name": "Creator Partnerships",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Social discovery continues to rise; brands leverage creators to compress discovery-to-purchase via native shopping features.",
+      "sources": [
+        "https://newsroom.tiktok.com/en-us/tiktok-shop",
+        "https://business.instagram.com/shopping"
+      ]
+    },
+    {
+      "name": "Shoppable Video Ads",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Short-form, shoppable formats enable direct conversion from content, aligning with shifting research habits.",
+      "sources": [
+        "https://newsroom.tiktok.com/en-us/tiktok-shop",
+        "https://newsroom.pinterest.com/en/"
+      ]
+    },
+    {
+      "name": "CTV Retail Tie-Ins",
+      "category": "Advertising & Promotion",
+      "stage": "Innovators",
+      "summary": "Emerging CTV and retail media collaborations promise closed-loop attribution but are nascent in tooling and inventory.",
+      "sources": [
+        "https://www.thetradedesk.com/us/insights/retail-media",
+        "https://www.criteo.com/insights/retail-media/"
+      ]
+    },
+    {
+      "name": "Live Shopping",
+      "category": "Content & Experience",
+      "stage": "Early Adopters",
+      "summary": "Live streams with integrated checkout shorten the path to purchase, with strong traction in select categories and markets.",
+      "sources": [
+        "https://newsroom.tiktok.com/en-us/tiktok-shop",
+        "https://business.instagram.com/shopping"
+      ]
+    },
+    {
+      "name": "Shoppable Video",
+      "category": "Content & Experience",
+      "stage": "Early Adopters",
+      "summary": "Embedded, short-form video on PDPs and collections boosts engagement and intent when paired with clear CTAs.",
+      "sources": [
+        "https://newsroom.tiktok.com/en-us/tiktok-shop",
+        "https://newsroom.pinterest.com/en/"
+      ]
+    },
+    {
+      "name": "Mobile-First UX",
+      "category": "Content & Experience",
+      "stage": "Late Majority",
+      "summary": "Mobile dominates traffic and a growing share of conversions in many markets, making mobile-first UX table stakes.",
+      "sources": [
+        "https://www.jpmorgan.com/payments/global-ecommerce-trends-report",
+        "https://www.shopify.com/enterprise/commerce-trends"
+      ]
+    },
+    {
+      "name": "Omnichannel Carts",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Shoppers expect carts, wishlists, and loyalty to sync across web, app, and store; this consistency directly impacts conversion.",
+      "sources": [
+        "https://www.salesforce.com/resources/research/state-of-commerce/",
+        "https://www.adobe.com/commerce/resources/reports.html"
+      ]
+    },
+    {
+      "name": "Core Web Vitals Focus",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Faster pages, better TTFB, and stability correlate with improved engagement and conversion, elevating performance to a CX priority.",
+      "sources": [
+        "https://web.dev/vitals/",
+        "https://vercel.com/edge-network"
+      ]
+    },
+    {
+      "name": "Size & Fit Guidance",
+      "category": "Content & Experience",
+      "stage": "Early Adopters",
+      "summary": "High-return categories invest in fit tools and richer PDP guidance to reduce returns and increase confidence.",
+      "sources": [
+        "https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html",
+        "https://www.narvar.com/resource-library"
+      ]
+    },
+    {
+      "name": "PDP Content Enrichment",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Richer attributes, imagery, and localized content improve findability and conversion, supported by structured product ops.",
+      "sources": [
+        "https://www.adobe.com/commerce/resources/reports.html",
+        "https://www.akeneo.com/resources/"
+      ]
+    },
+    {
+      "name": "Returns Transparency",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Clear policies, costs, and delivery-return promises influence conversion and loyalty, especially for higher-risk categories.",
+      "sources": [
+        "https://www.fedex.com/en-us/ecommerce.html",
+        "https://www.narvar.com/resource-library"
+      ]
+    },
+    {
+      "name": "Self-Service Returns",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Printerless, boxless, and portal-led returns ease customer effort, requiring smarter prevention to protect margins.",
+      "sources": [
+        "https://www.narvar.com/resource-library",
+        "https://www.aftership.com/blog"
+      ]
+    },
+    {
+      "name": "Real-Time Support Chat",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Fast, context-aware assistance reduces friction and WISMO contacts, improving post-purchase satisfaction.",
+      "sources": [
+        "https://www.zendesk.com/blog/retail/",
+        "https://www.gorgias.com/blog"
+      ]
+    },
+    {
+      "name": "Proactive Order Updates",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Proactive, reliable notifications on shipment and delivery build trust and reduce service contacts.",
+      "sources": [
+        "https://www.zendesk.com/blog/retail/",
+        "https://www.fedex.com/en-us/ecommerce.html"
+      ]
+    },
+    {
+      "name": "CDP Adoption",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Unifying identities and events across channels is a foundation for personalization, analytics, and media collaboration.",
+      "sources": [
+        "https://segment.com/resources/reports/state-of-personalization/",
+        "https://www.snowflake.com/blog/category/industry/retail-cpg/"
+      ]
+    },
+    {
+      "name": "Unified Identity",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Identity resolution across devices and channels enables consistent experiences and better audience quality, but requires data governance.",
+      "sources": [
+        "https://segment.com/resources/articles/retail/",
+        "https://www.snowflake.com/blog/category/industry/retail-cpg/"
+      ]
+    },
+    {
+      "name": "MMM Revival",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Signal loss from privacy changes is reviving econometric models to guide budget allocation at channel and region levels.",
+      "sources": [
+        "https://databricks.com/solutions/accelerators/retail",
+        "https://www.thetradedesk.com/us/insights/retail-media"
+      ]
+    },
+    {
+      "name": "Brand-Merchant Clean Rooms",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Retailers and brands collaborate on privacy-safe reach and measurement, improving match rates and closing the loop.",
+      "sources": [
+        "https://www.snowflake.com/blog/category/industry/retail-cpg/",
+        "https://www.criteo.com/insights/retail-media/"
+      ]
+    },
+    {
+      "name": "Consent Management",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Regulatory expectations push consistent consent and preference capture across touchpoints to sustain addressability.",
+      "sources": [
+        "https://www.oecd.org/digital/e-commerce/",
+        "https://segment.com/resources/articles/retail/"
+      ]
+    },
+    {
+      "name": "Uplift Experimentation",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Holdouts and geo tests quantify true incremental impact across onsite experiences and media investment.",
+      "sources": [
+        "https://www.criteo.com/insights/retail-media/",
+        "https://www.shopify.com/retail/retail-media"
+      ]
+    },
+    {
+      "name": "Event Taxonomy Governance",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Standardized schemas unlock reliable analytics, personalization, and cross-partner data collaboration.",
+      "sources": [
+        "https://segment.com/resources/articles/retail/",
+        "https://www.confluent.io/solutions/retail/"
+      ]
+    },
+    {
+      "name": "Real-Time Dashboards",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Operational and CX dashboards fed by streaming data support faster decisions on inventory, merchandising, and service.",
+      "sources": [
+        "https://www.snowflake.com/blog/category/industry/retail-cpg/",
+        "https://databricks.com/solutions/accelerators/retail"
+      ]
+    },
+    {
+      "name": "LTV Modeling",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Lifetime value models guide acquisition, retention, and budget priorities as CAC and channel economics shift.",
+      "sources": [
+        "https://www.braze.com/resources",
+        "https://databricks.com/solutions/accelerators/retail"
+      ]
+    },
+    {
+      "name": "Churn Prediction",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Predictive churn flags at-risk segments for targeted retention flows and offers, improving CLV.",
+      "sources": [
+        "https://www.braze.com/resources",
+        "https://databricks.com/solutions/accelerators/retail"
+      ]
+    },
+    {
+      "name": "Digital Wallets",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Wallets reduce friction and are gaining share across markets, boosting conversion on mobile and web.",
+      "sources": [
+        "https://www.fisglobal.com/en/insights/what-we-know/2024/worldpay-global-payments-report",
+        "https://www.jpmorgan.com/payments/global-ecommerce-trends-report"
+      ]
+    },
+    {
+      "name": "Local Payment Methods",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Local rails (e.g., A2A and domestic wallets) are essential for cross-border conversion in many regions.",
+      "sources": [
+        "https://www.fisglobal.com/en/insights/what-we-know/2024/worldpay-global-payments-report",
+        "https://www.jpmorgan.com/payments/global-ecommerce-trends-report"
+      ]
+    },
+    {
+      "name": "BNPL Options",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Split-pay remains meaningful in certain demographics and categories, with adoption shaped by local regulation.",
+      "sources": [
+        "https://www.fisglobal.com/en/insights/what-we-know/2024/worldpay-global-payments-report",
+        "https://www.klarna.com/international/insights/"
+      ]
+    },
+    {
+      "name": "One-Click Checkout",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Streamlined checkout, network tokens, and address autocomplete reduce abandonment and drive measurable lift.",
+      "sources": [
+        "https://stripe.com/reports",
+        "https://www.bolt.com/blog/checkout-trends/"
+      ]
+    },
+    {
+      "name": "BOPIS Adoption",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Buy online, pick up in-store remains a durable omnichannel expectation that influences conversion and loyalty.",
+      "sources": [
+        "https://www.salesforce.com/resources/research/shopping-index/",
+        "https://www.ibm.com/thought-leadership/institute-business-value/report/global-consumer-study"
+      ]
+    },
+    {
+      "name": "Curbside Pickup",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Flexible pickups persist post-pandemic as convenience drivers, requiring accurate inventory and slotting.",
+      "sources": [
+        "https://www.salesforce.com/resources/research/shopping-index/",
+        "https://www.ibm.com/thought-leadership/institute-business-value/report/global-consumer-study"
+      ]
+    },
+    {
+      "name": "Cross-Border Localization",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Localized pricing, language, and shipping options are key to unlocking cross-border conversion and TAM.",
+      "sources": [
+        "https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html",
+        "https://www.global-e.com/resources/reports/"
+      ]
+    },
+    {
+      "name": "Duties & Tax Clarity",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Transparent landed costs and no-surprise fees reduce checkout friction for international shoppers.",
+      "sources": [
+        "https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html",
+        "https://www.global-e.com/resources/reports/"
+      ]
+    },
+    {
+      "name": "Marketplace Selling",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Third-party marketplaces and retailer-owned marketplaces extend assortment and reach, requiring strong feed and inventory sync.",
+      "sources": [
+        "https://www.rithum.com/resources/",
+        "https://www.feedonomics.com/blog/"
+      ]
+    },
+    {
+      "name": "Subscriptions & Replenishment",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Subscription and auto-replenishment programs drive predictable revenue and retention in repeat-purchase categories.",
+      "sources": [
+        "https://www.ordergroove.com/resources/",
+        "https://www.salesforce.com/resources/research/state-of-commerce/"
+      ]
+    },
+    {
+      "name": "Composable Commerce",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Teams decouple domain services for speed and optionality, with mainstream momentum and clear trade-offs in integration and ops maturity.",
+      "sources": [
+        "https://www.machalliance.org/library",
+        "https://www.commercetools.com/learn/composable-commerce"
+      ]
+    },
+    {
+      "name": "Headless Storefronts",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Headless frameworks enable content-rich UX and faster experimentation across web and app while improving performance.",
+      "sources": [
+        "https://nextjs.org/commerce",
+        "https://www.shopify.com/plus/solutions/headless-commerce"
+      ]
+    },
+    {
+      "name": "Edge Rendering",
+      "category": "Software Architecture",
+      "stage": "Early Adopters",
+      "summary": "Moving rendering and personalization to the edge reduces latency globally and supports traffic spikes.",
+      "sources": [
+        "https://vercel.com/edge-network",
+        "https://developers.cloudflare.com/workers/"
+      ]
+    },
+    {
+      "name": "Serverless Commerce",
+      "category": "Software Architecture",
+      "stage": "Early Adopters",
+      "summary": "Function-based compute scales elastically for bursty demand and experiment-heavy front ends with lower ops overhead.",
+      "sources": [
+        "https://vercel.com/edge-network",
+        "https://developers.cloudflare.com/workers/"
+      ]
+    },
+    {
+      "name": "API Orchestration",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Gateways and orchestration layers decouple front ends from services and enable vendor swaps without breaking experiences.",
+      "sources": [
+        "https://www.machalliance.org/library",
+        "https://www.sap.com/insights/what-is-composable-commerce.html"
+      ]
+    },
+    {
+      "name": "Event-Driven Commerce",
+      "category": "Software Architecture",
+      "stage": "Early Adopters",
+      "summary": "Event backbones power real-time inventory, personalization, and alerting; they require schema discipline and idempotency.",
+      "sources": [
+        "https://kafka.apache.org/uses",
+        "https://www.confluent.io/solutions/retail/"
+      ]
+    },
+    {
+      "name": "PIM Foundations",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Strong product data management underpins cross-border, marketplaces, and localized catalogs across channels.",
+      "sources": [
+        "https://www.akeneo.com/resources/",
+        "https://www.inriver.com/resources/"
+      ]
+    },
+    {
+      "name": "DAM Workflows",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Centralizing and localizing rich media accelerates launches and consistent UX across markets and channels.",
+      "sources": [
+        "https://www.pimcore.com/en/resources/blog",
+        "https://www.contentful.com/resources/"
+      ]
+    },
+    {
+      "name": "Observability at Scale",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "UX (RUM), API, and data-pipeline observability are required to safely run composable, event-driven stacks.",
+      "sources": [
+        "https://www.hashicorp.com/resources",
+        "https://www.confluent.io/solutions/retail/"
+      ]
+    },
+    {
+      "name": "Security by Design",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Tokenization, consent, and data residency requirements are embedded upfront to meet regulatory and customer trust expectations.",
+      "sources": [
+        "https://www.visa.com/visa-everywhere/blog/bdpai/",
+        "https://www.oecd.org/digital/e-commerce/"
+      ]
+    },
+    {
+      "name": "Core Market Growth",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Ecommerce continues to outpace overall retail growth, reinforcing long-term channel prioritization and investment.",
+      "sources": [
+        "https://www.census.gov/retail/ecommerce.html",
+        "https://www.jpmorgan.com/payments/global-ecommerce-trends-report"
+      ]
+    },
+    {
+      "name": "Mobile Penetration",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Mobile share of commerce is rising in multiple markets, shaping UX patterns and checkout choices.",
+      "sources": [
+        "https://www.jpmorgan.com/payments/global-ecommerce-trends-report",
+        "https://www.shopify.com/enterprise/commerce-trends"
+      ]
+    },
+    {
+      "name": "Social Discovery",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Product research is shifting upstream to social feeds, compressing discovery-to-purchase with native shopping features.",
+      "sources": [
+        "https://newsroom.tiktok.com/en-us/tiktok-shop",
+        "https://business.instagram.com/shopping"
+      ]
+    },
+    {
+      "name": "Cross-Border Expansion",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Brands pursue TAM via cross-border, emphasizing localized payments, logistics clarity, and returns to lift conversion.",
+      "sources": [
+        "https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html",
+        "https://www.jpmorgan.com/payments/global-ecommerce-trends-report"
+      ]
+    },
+    {
+      "name": "Delivery Reliability",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Clear delivery promises and reliable tracking materially impact conversion and post-purchase satisfaction.",
+      "sources": [
+        "https://www.fedex.com/en-us/ecommerce.html",
+        "https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html"
+      ]
+    },
+    {
+      "name": "Returns Prevention",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Retailers invest in better PDPs, sizing, and analytics to reduce avoidable returns and protect margins.",
+      "sources": [
+        "https://www.narvar.com/resource-library",
+        "https://www.aftership.com/blog"
+      ]
+    },
+    {
+      "name": "Identity Risk Controls",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Rising account takeover and friendly fraud drive investment in identity graphing and dynamic friction strategies.",
+      "sources": [
+        "https://sift.com/resources",
+        "https://www.riskified.com/blog/"
+      ]
+    },
+    {
+      "name": "Tokenization Uptake",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Network tokens and stored credentials reduce checkout friction and false declines, improving approval rates.",
+      "sources": [
+        "https://www.visa.com/visa-everywhere/blog/bdpai/",
+        "https://www.adyen.com/knowledge-hub/retail-report"
+      ]
+    },
+    {
+      "name": "Marketplace Operations",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Feed quality, pricing intelligence, and inventory sync become ongoing capabilities as marketplace selling scales.",
+      "sources": [
+        "https://www.feedonomics.com/blog/",
+        "https://www.rithum.com/resources/"
+      ]
+    },
+    {
+      "name": "Edge A/B Routing",
+      "category": "Software Architecture",
+      "stage": "Early Adopters",
+      "summary": "Experiment routing at the edge improves test velocity and performance for global audiences.",
+      "sources": [
+        "https://vercel.com/edge-network",
+        "https://developers.cloudflare.com/workers/"
+      ]
+    },
+    {
+      "name": "Social Commerce Ops",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Deeper integrations for catalog sync, offers, and fulfillment are needed to support platform-native selling.",
+      "sources": [
+        "https://newsroom.tiktok.com/en-us/tiktok-shop",
+        "https://developers.facebook.com/docs/commerce-platform/"
+      ]
+    },
+    {
+      "name": "Regional Carriers Mix",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Diversifying carriers and micro-fulfillment improves elasticity during peaks and regions, reducing delivery risk.",
+      "sources": [
+        "https://www.fedex.com/en-us/ecommerce.html",
+        "https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html"
+      ]
+    },
+    {
+      "name": "Inventory Transparency",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Accurate store and online availability, plus ETA clarity, shape purchase decisions and channel choice.",
+      "sources": [
+        "https://www.salesforce.com/resources/research/state-of-commerce/",
+        "https://www.ibm.com/thought-leadership/institute-business-value/report/global-consumer-study"
+      ]
+    },
+    {
+      "name": "Account-Based Pricing",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "B2B digital buying expects negotiated pricing, approvals, and availability online as procurement digitizes.",
+      "sources": [
+        "https://www.mckinsey.com/industries/retail/our-insights",
+        "https://www.sap.com/insights/commerce-trends.html"
+      ]
+    },
+    {
+      "name": "Punchout Integration",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Procurement systems connect directly to ecommerce catalogs, expanding B2B adoption and share of wallet.",
+      "sources": [
+        "https://www.oracle.com/cx/commerce/resources/",
+        "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/state-of-fashion-technology"
+      ]
+    },
+    {
+      "name": "Image Optimization",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Automated formats, compression, and responsive delivery improve Core Web Vitals and downstream conversion.",
+      "sources": [
+        "https://web.dev/vitals/",
+        "https://vercel.com/edge-network"
+      ]
+    },
+    {
+      "name": "Multi-Store Orchestration",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Multi-market operations require localized catalogs, pricing, and content managed via centralized governance.",
+      "sources": [
+        "https://www.akeneo.com/resources/",
+        "https://www.contentful.com/resources/"
+      ]
+    },
+    {
+      "name": "API Contract Testing",
+      "category": "Software Architecture",
+      "stage": "Early Adopters",
+      "summary": "Contract and chaos testing reduce integration risk in decomposed commerce stacks, improving release safety.",
+      "sources": [
+        "https://www.hashicorp.com/resources",
+        "https://www.machalliance.org/library"
+      ]
+    },
+    {
+      "name": "Returns Analytics",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Diagnosing return drivers at SKU and segment level informs policy, PDP changes, and prevention tactics.",
+      "sources": [
+        "https://www.narvar.com/resource-library",
+        "https://www.aftership.com/blog"
+      ]
+    },
+    {
+      "name": "Duties Calculation",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Upfront landed cost calculation reduces surprises and abandonment in international checkout.",
+      "sources": [
+        "https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html",
+        "https://www.global-e.com/resources/reports/"
+      ]
+    },
+    {
+      "name": "Server-Side Events",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Server-side pipelines harden event quality for analytics and activation under stricter browser policies.",
+      "sources": [
+        "https://segment.com/resources/articles/retail/",
+        "https://www.snowflake.com/blog/category/industry/retail-cpg/"
+      ]
+    },
+    {
+      "name": "Edge Caching Strategy",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Granular caching across pages, APIs, and assets reduces latency and stabilizes performance during peaks.",
+      "sources": [
+        "https://vercel.com/edge-network",
+        "https://developers.cloudflare.com/workers/"
+      ]
+    },
+    {
+      "name": "Payment Optimization",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Smart routing, retries, and tokenization improve authorization rates and reduce false declines.",
+      "sources": [
+        "https://www.visa.com/visa-everywhere/blog/bdpai/",
+        "https://www.adyen.com/knowledge-hub/retail-report"
+      ]
+    },
+    {
+      "name": "Channel Feed Governance",
+      "category": "Advertising & Promotion",
+      "stage": "Early Majority",
+      "summary": "Ongoing feed normalization, pricing, and availability governance is essential to hit channel SLAs and maximize ROAS.",
+      "sources": [
+        "https://www.feedonomics.com/blog/",
+        "https://support.google.com/merchants/answer/10055634"
+      ]
+    },
+    {
+      "name": "Social Catalog Sync",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Reliable catalog synchronization underpins shoppable posts, tags, and in-app checkout on social platforms.",
+      "sources": [
+        "https://developers.facebook.com/docs/commerce-platform/",
+        "https://business.instagram.com/shopping"
+      ]
+    },
+    {
+      "name": "Privacy-First Targeting",
+      "category": "Advertising & Promotion",
+      "stage": "Early Majority",
+      "summary": "With third-party signal loss, strategies shift to contextual and first-party signals for compliant performance.",
+      "sources": [
+        "https://www.thetradedesk.com/us/insights/retail-media",
+        "https://segment.com/resources/reports/state-of-personalization/"
+      ]
+    },
+    {
+      "name": "Real-Time Alerts",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Streaming triggers for inventory, fraud risk, or SLA breaches reduce downstream costs and customer pain.",
+      "sources": [
+        "https://kafka.apache.org/uses",
+        "https://www.confluent.io/solutions/retail/"
+      ]
+    },
+    {
+      "name": "Data Quality SLAs",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Enforcing SLAs and monitoring for event completeness and latency improves trust in downstream analytics and activation.",
+      "sources": [
+        "https://segment.com/resources/articles/retail/",
+        "https://www.hashicorp.com/resources"
+      ]
+    },
+    {
+      "name": "Edge Personalization",
+      "category": "Content & Experience",
+      "stage": "Early Adopters",
+      "summary": "Lightweight audience and content decisions at the edge cut TTFB and raise relevance for global users.",
+      "sources": [
+        "https://vercel.com/edge-network",
+        "https://developers.cloudflare.com/workers/"
+      ]
+    },
+    {
+      "name": "Marketplace Expansion",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Retailer-owned marketplaces extend assortment while protecting margins; brands need scalable ops to participate.",
+      "sources": [
+        "https://www.rithum.com/resources/",
+        "https://www.feedonomics.com/blog/"
+      ]
+    },
+    {
+      "name": "Storefulfillment Sync",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Real-time inventory sync across stores and DCs enables BOPIS, curbside, and accurate ETAs.",
+      "sources": [
+        "https://kafka.apache.org/uses",
+        "https://www.confluent.io/solutions/retail/"
+      ]
+    },
+    {
+      "name": "Loyalty Integration",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Unified loyalty data across channels supports better targeting, offers, and omnichannel recognition.",
+      "sources": [
+        "https://segment.com/resources/articles/retail/",
+        "https://www.salesforce.com/resources/research/state-of-commerce/"
+      ]
+    },
+    {
+      "name": "Performance Budgets",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Teams set performance budgets and monitor vitals alongside revenue metrics to manage regressions proactively.",
+      "sources": [
+        "https://web.dev/vitals/",
+        "https://vercel.com/edge-network"
+      ]
+    },
+    {
+      "name": "Internationalization (i18n)",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "i18n frameworks and content ops enable rapid market rollouts with locale-accurate UX and pricing.",
+      "sources": [
+        "https://www.contentful.com/resources/",
+        "https://www.akeneo.com/resources/"
+      ]
+    },
+    {
+      "name": "Proactive Fraud Workflows",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Balancing friction with risk via step-up verification and adaptive flows protects revenue with minimal CX impact.",
+      "sources": [
+        "https://sift.com/resources",
+        "https://www.forter.com/resources/"
+      ]
+    },
+    {
+      "name": "Returns Policy Tuning",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Merchants iterate on fees, windows, and exchanges to balance CX with reverse logistics costs informed by analytics.",
+      "sources": [
+        "https://www.narvar.com/resource-library",
+        "https://www.aftership.com/blog"
+      ]
+    },
+    {
+      "name": "Creator Affiliates",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Affiliate hybrids on social platforms expand reach and attribute sales more transparently than legacy influencer tactics.",
+      "sources": [
+        "https://newsroom.tiktok.com/en-us/tiktok-shop",
+        "https://developers.facebook.com/docs/commerce-platform/"
+      ]
+    },
+    {
+      "name": "PDP Trust Signals",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Clear shipping, returns, and payment trust indicators reduce hesitation and support higher conversion.",
+      "sources": [
+        "https://www.fedex.com/en-us/ecommerce.html",
+        "https://www.salesforce.com/resources/research/shopping-index/"
+      ]
+    },
+    {
+      "name": "Regional Pricing",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Localized pricing and currency presentation reduce friction and improve acceptance in cross-border checkout.",
+      "sources": [
+        "https://www.jpmorgan.com/payments/global-ecommerce-trends-report",
+        "https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html"
+      ]
+    },
+    {
+      "name": "Catalog Normalization",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Normalized attributes and taxonomy power search, recommendations, and marketplace distribution quality.",
+      "sources": [
+        "https://www.akeneo.com/resources/",
+        "https://www.inriver.com/resources/"
+      ]
+    },
+    {
+      "name": "Experimentation Culture",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Feature flags and A/B frameworks help isolate incremental lift from AI and UX changes across the funnel.",
+      "sources": [
+        "https://www.shopify.com/enterprise/commerce-trends",
+        "https://databricks.com/solutions/accelerators/retail"
+      ]
+    },
+    {
+      "name": "Regional Carrier Mix",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Offering multiple carrier options and clear time windows improves delivery confidence and satisfaction.",
+      "sources": [
+        "https://www.fedex.com/en-us/ecommerce.html",
+        "https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html"
+      ]
+    },
+    {
+      "name": "Clean Data Contracts",
+      "category": "Software Architecture",
+      "stage": "Early Adopters",
+      "summary": "Strong API and event contracts reduce coupling and breakage in composable architectures, speeding delivery.",
+      "sources": [
+        "https://www.machalliance.org/library",
+        "https://www.hashicorp.com/resources"
+      ]
+    },
+    {
+      "name": "Wallet-First Checkout",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Prioritizing wallets and local rails in UI shortens checkout and aligns with regional consumer preferences.",
+      "sources": [
+        "https://www.fisglobal.com/en/insights/what-we-know/2024/worldpay-global-payments-report",
+        "https://www.jpmorgan.com/payments/global-ecommerce-trends-report"
+      ]
+    },
+    {
+      "name": "Hybrid Sales Attribution",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Teams blend MMM with experiment-based and rules-based models to triangulate performance in a privacy-first world.",
+      "sources": [
+        "https://databricks.com/solutions/accelerators/retail",
+        "https://www.criteo.com/insights/retail-media/"
+      ]
+    },
+    {
+      "name": "Edge Image Delivery",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Delivering optimized images and media from the edge reduces load times and improves engagement.",
+      "sources": [
+        "https://web.dev/vitals/",
+        "https://vercel.com/edge-network"
+      ]
+    },
+    {
+      "name": "B2B Reorder Flows",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Lists, quick order, and subscription-like replenishment align with digitized procurement behavior.",
+      "sources": [
+        "https://www.mckinsey.com/industries/retail/our-insights",
+        "https://www.sap.com/insights/commerce-trends.html"
+      ]
+    },
+    {
+      "name": "Performance SLAs",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Teams formalize SLOs for UX, APIs, and data pipelines, connecting them to revenue KPIs.",
+      "sources": [
+        "https://www.hashicorp.com/resources",
+        "https://web.dev/vitals/"
+      ]
+    },
+    {
+      "name": "Social Proof UX",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Ratings, UGC, and badges on PDPs help mitigate risk perception and improve add-to-cart rates.",
+      "sources": [
+        "https://www.salesforce.com/resources/research/shopping-index/",
+        "https://www.adobe.com/commerce/resources/reports.html"
+      ]
+    },
+    {
+      "name": "Lightweight PDPs",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Pruning render-blocking scripts and inlining critical content improves TTFB and conversion.",
+      "sources": [
+        "https://web.dev/vitals/",
+        "https://vercel.com/edge-network"
+      ]
+    },
+    {
+      "name": "SLA-Aware Routing",
+      "category": "Software Architecture",
+      "stage": "Early Adopters",
+      "summary": "Orchestration routes orders to nodes that meet delivery and cost SLAs, improving reliability during peaks.",
+      "sources": [
+        "https://kafka.apache.org/uses",
+        "https://www.confluent.io/solutions/retail/"
+      ]
+    },
+    {
+      "name": "Duty-Inclusive Pricing",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Displaying duty-paid prices upfront reduces abandonment for international customers.",
+      "sources": [
+        "https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html",
+        "https://www.global-e.com/resources/reports/"
+      ]
+    },
+    {
+      "name": "Creator Bundles",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Curated bundles tied to creator content drive AOV and simplify choices in social commerce flows.",
+      "sources": [
+        "https://newsroom.tiktok.com/en-us/tiktok-shop",
+        "https://newsroom.pinterest.com/en/"
+      ]
+    },
+    {
+      "name": "Checkout Autofill",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Address autocomplete and field reduction cut friction and errors, lifting conversion with minimal engineering overhead.",
+      "sources": [
+        "https://stripe.com/reports",
+        "https://www.bolt.com/blog/checkout-trends/"
+      ]
+    },
+    {
+      "name": "Marketplace Data Feeds",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Standardized performance feeds from marketplaces power margin analysis and smart assortment decisions.",
+      "sources": [
+        "https://www.rithum.com/resources/",
+        "https://www.feedonomics.com/blog/"
+      ]
+    },
+    {
+      "name": "Fit Return Loops",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Closing the loop between return reasons and PDP content drives measurable reduction in repeat fit-related returns.",
+      "sources": [
+        "https://www.narvar.com/resource-library",
+        "https://www.aftership.com/blog"
+      ]
+    },
+    {
+      "name": "Multi-Origin Shipping UX",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Transparent ETAs and fees for split shipments maintain trust and reduce checkout surprise.",
+      "sources": [
+        "https://www.fedex.com/en-us/ecommerce.html",
+        "https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html"
+      ]
+    },
+    {
+      "name": "Regional Wallet Priority",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Reordering wallet buttons based on locale and device behavior increases pass-through to authorization.",
+      "sources": [
+        "https://www.fisglobal.com/en/insights/what-we-know/2024/worldpay-global-payments-report",
+        "https://www.jpmorgan.com/payments/global-ecommerce-trends-report"
+      ]
+    },
+    {
+      "name": "Safe Defaults for AI",
+      "category": "Data & AI",
+      "stage": "Early Adopters",
+      "summary": "Conservative generation defaults, test gates, and human review protect CX and brand while AI scales.",
+      "sources": [
+        "https://www.algolia.com/blog/product/ai-search-ecommerce-trends/",
+        "https://databricks.com/solutions/accelerators/retail"
+      ]
+    },
+    {
+      "name": "Edge Error Containment",
+      "category": "Software Architecture",
+      "stage": "Early Adopters",
+      "summary": "Failing fast at the edge with graceful fallbacks maintains UX when upstream services degrade.",
+      "sources": [
+        "https://developers.cloudflare.com/workers/",
+        "https://vercel.com/edge-network"
+      ]
+    },
+    {
+      "name": "Social Checkout",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "In-platform checkout reduces drop-off from app switching, especially for mobile-first audiences.",
+      "sources": [
+        "https://newsroom.tiktok.com/en-us/tiktok-shop",
+        "https://developers.facebook.com/docs/commerce-platform/"
+      ]
+    },
+    {
+      "name": "Regional Content Mix",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Adapting creative, reviews, and merchandising by market improves relevance and trust for cross-border shoppers.",
+      "sources": [
+        "https://www.contentful.com/resources/",
+        "https://www.akeneo.com/resources/"
+      ]
+    },
+    {
+      "name": "Closed-Loop Media",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Linking ad exposure with SKU-level sales informs spend allocation and creative iteration across retail media ecosystems.",
+      "sources": [
+        "https://www.criteo.com/insights/retail-media/",
+        "https://www.thetradedesk.com/us/insights/retail-media"
+      ]
+    },
+    {
+      "name": "Social Proof Ads",
+      "category": "Advertising & Promotion",
+      "stage": "Early Majority",
+      "summary": "Using ratings and UGC snippets in ads improves CTR and intent, aligning content and commerce.",
+      "sources": [
+        "https://www.shopify.com/retail/retail-media",
+        "https://www.criteo.com/insights/retail-media/"
+      ]
+    },
+    {
+      "name": "Post-Purchase CX",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Branded tracking, notifications, and helpful return options reduce service load and increase repeat purchase.",
+      "sources": [
+        "https://www.zendesk.com/blog/retail/",
+        "https://www.fedex.com/en-us/ecommerce.html"
+      ]
+    },
+    {
+      "name": "International Tax Ops",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Tax and duty engines, data residency, and compliance workflows are embedded to support global growth.",
+      "sources": [
+        "https://www.oecd.org/digital/e-commerce/",
+        "https://www.machalliance.org/library"
+      ]
+    },
+    {
+      "name": "Search Relevance Ops",
+      "category": "Data & AI",
+      "stage": "Early Adopters",
+      "summary": "Continuous tuning, synonym management, and feedback loops maintain AI search quality as catalogs evolve.",
+      "sources": [
+        "https://www.algolia.com/blog/product/ai-search-ecommerce-trends/",
+        "https://www.constructor.io/blog"
+      ]
+    },
+    {
+      "name": "Audience Suppression",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Suppressing recent purchasers and low-propensity segments reduces wasted impressions and improves ROAS.",
+      "sources": [
+        "https://segment.com/resources/articles/retail/",
+        "https://www.snowflake.com/blog/category/industry/retail-cpg/"
+      ]
+    },
+    {
+      "name": "Shelf Share Analytics",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Monitoring search rank and share on marketplaces guides spend and content fixes to win the digital shelf.",
+      "sources": [
+        "https://www.feedonomics.com/blog/",
+        "https://www.rithum.com/resources/"
+      ]
+    },
+    {
+      "name": "Regional A/B Catalogs",
+      "category": "Content & Experience",
+      "stage": "Early Adopters",
+      "summary": "Testing localized bundles, variants, and price points reveals market fit faster for cross-border growth.",
+      "sources": [
+        "https://www.contentful.com/resources/",
+        "https://www.akeneo.com/resources/"
+      ]
+    },
+    {
+      "name": "Wallet Trust Signals",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Prominent wallet options and trust badges at checkout increase confidence and completion rates.",
+      "sources": [
+        "https://www.fisglobal.com/en/insights/what-we-know/2024/worldpay-global-payments-report",
+        "https://stripe.com/reports"
+      ]
+    },
+    {
+      "name": "Delivery ETA Accuracy",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Accurate, dynamic ETAs reduce cart abandonment and WISMO contacts, reinforcing reliability.",
+      "sources": [
+        "https://www.fedex.com/en-us/ecommerce.html",
+        "https://www.salesforce.com/resources/research/shopping-index/"
+      ]
+    }
+  ]
+}

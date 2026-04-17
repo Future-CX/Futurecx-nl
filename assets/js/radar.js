@@ -1,5 +1,6 @@
 // Configuration
 const categoriesOrder = ['Data & AI', 'Advertising & Promotion', 'Content & Experience', 'CRM & Analytics', 'Commerce & Sales', 'Software Architecture'];
+// eslint-disable-next-line no-unused-vars
 const categoryColors = {
   'Data & AI': 'var(--c-data-ai)',
   'Advertising & Promotion': 'var(--c-adv-promo)',
@@ -9,7 +10,9 @@ const categoryColors = {
   'Software Architecture': 'var(--c-software-arch)',
 };
 const stageOrder = ['Innovators', 'Early Adopters', 'Early Majority', 'Late Majority']; // for overview display order
+// eslint-disable-next-line no-unused-vars
 const ringOrder = ['Late Majority', 'Early Majority', 'Early Adopters', 'Innovators']; // inner -> outer
+const maxTrendsPerCategoryStage = 10;
 const ringIndexByStage = {
   'Late Majority': 0,
   'Early Majority': 1,
@@ -42,7 +45,19 @@ const seeded = (str) => {
   return ((h >>> 0) % 10000) / 10000;
 };
 
+function limitTrendsPerCategoryStage(trends) {
+  const counts = new Map();
+
+  return trends.filter((trend) => {
+    const key = `${trend.category}|${trend.stage}`;
+    const nextCount = (counts.get(key) || 0) + 1;
+    counts.set(key, nextCount);
+    return nextCount <= maxTrendsPerCategoryStage;
+  });
+}
+
 // Parse markdown to structured data
+// eslint-disable-next-line no-unused-vars
 function parseTrends(md) {
   const lines = md.split('\n');
   const trends = [];
@@ -75,7 +90,10 @@ function parseTrends(md) {
 }
 
 // Radar drawing and layout
+// eslint-disable-next-line no-unused-vars
 function drawRadar(trends) {
+  trends = limitTrendsPerCategoryStage(trends);
+
   const svg = document.getElementById('radar');
   const gGrid = document.getElementById('grid');
   const gLabels = document.getElementById('labels');
@@ -185,6 +203,7 @@ function drawRadar(trends) {
   }
 
   // Place dots
+  // eslint-disable-next-line no-unused-vars
   const positions = new Map();
   for (let s = 0; s < sliceCount; s++) {
     const cat = categoriesOrder[s];
@@ -204,6 +223,7 @@ function drawRadar(trends) {
         let radius;
         if (rIdx < 4) {
           const inner = rIdx * ringThickness;
+          // eslint-disable-next-line no-unused-vars
           const outer = inner + ringThickness;
 
           const sd = seeded(t.name);
@@ -240,10 +260,7 @@ function drawRadar(trends) {
   }
 
   // Interactions
-  const tooltip = document.getElementById('tooltip');
-  const ttName = document.getElementById('ttName');
-  const ttSummary = document.getElementById('ttSummary');
-  const ttMeta = document.getElementById('ttMeta');
+  const tooltip = document.getElementById('radarHoverLabel');
   const card = document.getElementById('detailCard');
   const cardTitle = document.getElementById('cardTitle');
   const cardMeta = document.getElementById('cardMeta');
@@ -256,9 +273,7 @@ function drawRadar(trends) {
   function showTooltipFor(t, evtTarget, evt) {
     if (!t) return;
     hoverId = t.id;
-    ttName.textContent = t.name;
-    ttSummary.textContent = t.summary;
-    ttMeta.textContent = `${t.category} • ${t.stage}`;
+    tooltip.innerHTML = `<span class="stage">${t.stage}</span><span class="title">${t.name}</span>`;
     tooltip.style.display = 'block';
     tooltip.setAttribute('aria-hidden', 'false');
     positionTooltip(evt);
@@ -348,11 +363,6 @@ function drawRadar(trends) {
     }
     showCard(t);
   }
-  function handleTooltipClick() {
-    if (!hoverId) return;
-    const t = byId.get(hoverId);
-    if (t) showCard(t);
-  }
   function handleCardClose() {
     card.classList.remove('visible');
     clearSelections();
@@ -362,7 +372,6 @@ function drawRadar(trends) {
   svg.addEventListener('mousemove', handleDotMove);
   svg.addEventListener('mouseout', handleDotLeave);
   svg.addEventListener('click', handleDotClick);
-  tooltip.addEventListener('click', handleTooltipClick);
   cardClose.addEventListener('click', handleCardClose);
 
   // Keyboard accessibility: Enter/Space to open card
@@ -379,26 +388,20 @@ function drawRadar(trends) {
 
   // Build legends and overview
   buildLegends();
-  buildOverview(trends, byId);
+  buildOverview(trends);
 }
 
 function colorVarForCategory(cat) {
-  switch (cat) {
-    case 'Data & AI':
-      return '--c-data-ai';
-    case 'Advertising & Promotion':
-      return '--c-adv-promo';
-    case 'Content & Experience':
-      return '--c-content-exp';
-    case 'CRM & Analytics':
-      return '--c-crm-analytics';
-    case 'Commerce & Sales':
-      return '--c-commerce-sales';
-    case 'Software Architecture':
-      return '--c-software-arch';
-    default:
-      return '--c-data-ai';
-  }
+  const colorVars = {
+    'Data & AI': '--c-data-ai',
+    'Advertising & Promotion': '--c-adv-promo',
+    'Content & Experience': '--c-content-exp',
+    'CRM & Analytics': '--c-crm-analytics',
+    'Commerce & Sales': '--c-commerce-sales',
+    'Software Architecture': '--c-software-arch',
+  };
+
+  return colorVars[cat] || '--c-data-ai';
 }
 
 function buildLegends() {
@@ -418,7 +421,7 @@ function buildLegends() {
   }
 }
 
-function buildOverview(trends, byId) {
+function buildOverview(trends) {
   const grid = document.getElementById('overviewGrid');
   grid.innerHTML = '';
 
@@ -443,19 +446,15 @@ function buildOverview(trends, byId) {
     col.className = 'col';
 
     const h3 = document.createElement('h3');
-    const swatch = document.createElement('span');
-    swatch.className = 'swatch';
-    swatch.style.background = getComputedStyle(document.documentElement).getPropertyValue(colorVarForCategory(cat)).trim();
-    h3.appendChild(swatch);
-    const title = document.createElement('span');
-    title.textContent = cat;
-    h3.appendChild(title);
+    h3.textContent = cat;
+    h3.style.color = getComputedStyle(document.documentElement).getPropertyValue(colorVarForCategory(cat)).trim();
     col.appendChild(h3);
 
     // Required order
     for (const st of stageOrder) {
       const sec = document.createElement('div');
       sec.className = 'stage';
+      sec.dataset.stageKey = st;
       const sh = document.createElement('h4');
       sh.textContent = st;
       sec.appendChild(sh);
@@ -463,9 +462,15 @@ function buildOverview(trends, byId) {
       (byCatStage.get(cat)[st] || []).forEach((t) => {
         const li = document.createElement('li');
         const btn = document.createElement('button');
+        const dot = document.createElement('span');
+        dot.className = 'trend-dot';
+        dot.style.background = getComputedStyle(document.documentElement).getPropertyValue(colorVarForCategory(t.category)).trim();
+        const label = document.createElement('span');
+        label.textContent = t.name;
         btn.type = 'button';
-        btn.textContent = t.name;
         btn.title = `${t.stage} • ${t.category}`;
+        btn.appendChild(dot);
+        btn.appendChild(label);
         btn.addEventListener('click', () => focusOnTrend(t.id));
         li.appendChild(btn);
         ul.appendChild(li);
@@ -479,6 +484,7 @@ function buildOverview(trends, byId) {
     if (lag.length) {
       const secLag = document.createElement('div');
       secLag.className = 'stage laggards';
+      secLag.dataset.stageKey = 'Laggards';
       const sh = document.createElement('h4');
       sh.textContent = 'Laggards (declining)';
       secLag.appendChild(sh);
@@ -486,9 +492,15 @@ function buildOverview(trends, byId) {
       lag.forEach((t) => {
         const li = document.createElement('li');
         const btn = document.createElement('button');
+        const dot = document.createElement('span');
+        dot.className = 'trend-dot';
+        dot.style.background = getComputedStyle(document.documentElement).getPropertyValue(colorVarForCategory(t.category)).trim();
+        const label = document.createElement('span');
+        label.textContent = t.name;
         btn.type = 'button';
-        btn.textContent = t.name;
         btn.title = `${t.stage} • ${t.category}`;
+        btn.appendChild(dot);
+        btn.appendChild(label);
         btn.addEventListener('click', () => focusOnTrend(t.id));
         li.appendChild(btn);
         ul.appendChild(li);
@@ -500,13 +512,41 @@ function buildOverview(trends, byId) {
     grid.appendChild(col);
   }
 
+  syncOverviewStageHeights(grid);
+  if (!grid.dataset.stageSyncBound) {
+    window.addEventListener('resize', () => syncOverviewStageHeights(grid));
+    grid.dataset.stageSyncBound = 'true';
+  }
+
   function focusOnTrend(id) {
     const svg = document.getElementById('radar');
     const dot = svg.querySelector(`circle[data-id="${CSS.escape(id)}"]`);
     if (!dot) return;
     // simulate click to open card and highlight
     dot.dispatchEvent(new MouseEvent('click', { bubbles: true }));
-    // scroll to radar
-    document.getElementById('radarBoard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    // Scroll high enough to keep the pinned detail card fully in view below the sticky header.
+    const radarBoard = document.getElementById('radarBoard');
+    const header = document.querySelector('.navbar-sticky');
+    const headerOffset = header ? header.getBoundingClientRect().height : 0;
+    const top = window.scrollY + radarBoard.getBoundingClientRect().top - headerOffset - 24;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
   }
+}
+
+function syncOverviewStageHeights(grid) {
+  const stageKeys = [...stageOrder, 'Laggards'];
+
+  stageKeys.forEach((key) => {
+    const sections = [...grid.querySelectorAll(`.stage[data-stage-key="${CSS.escape(key)}"]`)];
+    sections.forEach((section) => {
+      section.style.minHeight = '';
+    });
+
+    if (sections.length < 2) return;
+
+    const maxHeight = Math.max(...sections.map((section) => section.getBoundingClientRect().height));
+    sections.forEach((section) => {
+      section.style.minHeight = `${Math.ceil(maxHeight)}px`;
+    });
+  });
 }

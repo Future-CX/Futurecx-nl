@@ -38,8 +38,8 @@
   --c-adv-promo: #{$danger};
   --c-content-exp: #{$success};
   --c-crm-analytics: #{$info};
-  --c-commerce-sales: #{$warning};
-  --c-software-arch: #a855f7;
+  --c-commerce-sales: #{$violet};
+  --c-software-arch: #{$cyan};
 
   --muted: #{$gray-600};
   --grid: #{$gray-200};
@@ -91,7 +91,7 @@
   display: block;
 }
 .overlay-card h3 {
-  margin: 0 1.75rem 0.25rem 0;
+  margin: 0.25rem 1.75rem 0.25rem 0;
   font-size: 1.05rem;
   line-height: 1.25;
 }
@@ -118,9 +118,11 @@
   color: #6ab0de;
   text-decoration: none;
   text-underline-offset: 2px;
+  text-transform: uppercase;
+  font-size: 0.8em;
 }
 .overlay-card .readmore {
-  color: $gray-300;
+  color: $gray-600;
   font-size: 0.7em;
   text-transform: uppercase;
 }
@@ -138,7 +140,7 @@
 .overlay-card .badge {
   display: inline-block;
   font-size: 0.75rem;
-  padding: 0.15rem 0.5rem;
+  padding: 0.15rem 0.5rem 0.15rem 0;
   border-radius: 0.75rem;
   background: $white;
   border: 1px solid $gray-200;
@@ -246,10 +248,6 @@
 .overview {
   margin-top: 2.25rem;
 }
-.overview h2 {
-  font-size: 1.25rem;
-  margin: 0 0 0.75rem;
-}
 .overview .grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -264,20 +262,17 @@
 .overview .col h3 {
   margin: 0 0 0.35rem;
   font-size: 1.05rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.overview .col h3 .swatch {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06) inset;
-  display: inline-block;
+  font-weight: 700;
+  line-height: 1.25;
+  min-height: 2.5em;
 }
 .overview .stage {
   margin-top: 0.35rem;
+}
+.overview .stage + .stage {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid $gray-200;
 }
 .overview .stage h4 {
   margin: 0.5rem 0 0.25rem;
@@ -299,11 +294,21 @@
   background: transparent;
   border: none;
   color: $dark;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.45rem;
   text-align: left;
   padding: 0;
   cursor: pointer;
   text-decoration: none;
   text-underline-offset: 2px;
+}
+.overview li button .trend-dot {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  margin-top: 0.5rem;
 }
 .overview .stage.laggards h4 {
   color: #9ca3af;
