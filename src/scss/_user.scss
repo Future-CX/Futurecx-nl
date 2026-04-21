@@ -402,6 +402,14 @@ span.wip {
 }
 
 @media print {
+  h1,
+  h2,
+  h3,
+  .h1,
+  .h2,
+  .h3 {
+    color: $dark !important;
+  }
   .d-print-none {
     display: none !important;
   }
@@ -411,4 +419,5 @@ span.wip {
   .container {
     width: auto;
   }
+
 }

@@ -289,24 +289,6 @@
       .print-intro {
         display: none;
       }
-      @media print {
-        .print-intro {
-          display: block;
-        }
-        .resume-hero,
-        .resume-card,
-        .experience-item,
-        .list-panel {
-          background: #fff !important;
-          box-shadow: none !important;
-          border-color: #ddd !important;
-        }
-        .resume-avatar {
-          max-width: 180px;
-          box-shadow: none !important;
-          border: 0 !important;
-        }
-      }
     </style>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4R2D7JRCEJ"></script>
@@ -385,7 +367,7 @@
         </div>
       </header>
 
-      <section class="resume-hero pt-5 pt-lg-6 pb-5">
+      <section class="container resume-hero pt-5 pt-lg-6 pb-5">
         <div class="container pt-5 pt-lg-6">
           <div class="print-intro mb-4">
             <p class="h2 mb-2">Martijn van Deel</p>
@@ -399,17 +381,21 @@
 
           <div class="row align-items-center g-4 g-xl-5">
             <div class="col-lg-8">
-              <div class="fs-xs border-end pe-3 me-3 mb-2">
+              <div class="fs-xs border-end pe-3 me-3 mb-2 d-print-none">
                 <span class="badge bg-faded-primary text-primary fs-base">Updated April 20, 2026</span>
               </div>
-              <h1 class="pb-sm-0 pb-md-3 text-dark">CV / Resume</h1>
+              <h1 class="pb-sm-0 pb-md-3 text-dark">Martijn van Deel</h1>
               <h3 class="h5 mb-4 pb-2 fw-medium" data-toc-skip>
-                I help organizations translate customer experience ambitions into pragmatic composable architecture, API-first roadmaps, and delivery decisions.
+                I help organisations translate customer experience ambitions into pragmatic, composable architecture, API-first roadmaps, and delivery decisions — ensuring that technology choices
+                directly support business strategy.
               </h3>
               <p class="mb-4">
-                I started my career as a web developer and grew into a solution and enterprise architect with roughly two decades of experience across ecommerce, marketplaces, content platforms,
-                digital marketing, CRM, loyalty, and customer data. In recent years I have focused strongly on composable architecture and API-driven delivery, helping organizations combine platforms
-                like commercetools, Algolia, Contentstack, and adjacent services into a practical target landscape that teams can implement in manageable steps.
+                With a background in software development and nearly two decades of experience, I have grown into a solution and enterprise architect operating at the intersection of business and
+                technology. I am often involved early in strategic initiatives, advising senior stakeholders on platform strategy, integration models and data foundations.
+              </p>
+              <p class="mb-4">
+                In recent years, I have focused strongly on composable architecture and API-driven delivery, helping organisations combine platforms such as Commercetools, Algolia and Contentstack
+                into a future-proof landscape that teams can implement in manageable steps.
               </p>
               <div class="d-flex flex-column flex-sm-row gap-3 d-print-none">
                 <a href="https://www.linkedin.com/in/jmvandeel/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg shadow-primary">
@@ -418,9 +404,11 @@
                 <a href="mailto:m.van.deel@futurecx.nl" class="btn btn-outline-dark btn-lg"> <i class="bx bx-mail-send me-2"></i>Email </a>
               </div>
             </div>
+            <div class="d-print-only spacer" style="height: 200px">&nbsp;</div>
             <div class="col-lg-4 text-center">
               <img src="/assets/img/profile/profile-full.jpg" class="resume-avatar rounded-circle img-fluid" width="1400" height="1400" alt="Martijn van Deel" />
             </div>
+            <div class="d-print-only spacer" style="height: 10px">&nbsp;</div>
           </div>
         </div>
       </section>
@@ -429,15 +417,18 @@
         <div class="row g-4">
           <div class="col-lg-8">
             <div class="resume-card p-4 p-md-5">
-              <h2 class="h3 mb-3">Profile</h2>
+              <h2 class="h3 mb-3">Where I Add Most Value</h2>
               <p class="mb-3">
-                As a solution architect, I focus on translating strategy into solution direction, delivery structure, and architectural decisions that teams can actually execute. That includes
-                solution blueprints, integration patterns, capability models, data flows, phased roadmaps, API contracts, and software selection guidance.
+                I am most effective in roles where technology strategy is shaped in close alignment with business ambition. I work best when engaged early in strategic initiatives, translating
+                organisational goals into clear architectural direction and ensuring that technology becomes an enabler of growth rather than a constraint.
+              </p>
+              <p class="mb-3">
+                I bring particular value in advising senior stakeholders on the evolving technology landscape, helping to make informed decisions on platforms, integration strategies and data
+                foundations that support long-term scalability and agility.
               </p>
               <p class="mb-0">
-                My approach is pragmatic by design. I prefer a stepped transformation path, often starting with an MVP and improving iteratively, rather than creating a target state that is elegant on
-                paper but disconnected from budget, change capacity, or implementation reality. That fits especially well in composable programs, where platform boundaries, APIs, search, content, and
-                integration responsibilities need to be clear from the start.
+                Over time, I aim to further grow into a CTO role, where I can take end-to-end responsibility for technology strategy and execution, steering complex transformation programmes and
+                building platforms that directly support business outcomes.
               </p>
             </div>
           </div>
@@ -445,20 +436,21 @@
             <div class="resume-card p-4 p-md-5">
               <h2 class="h3 mb-3">Core Focus</h2>
               <ul class="mt-1 mb-0 ps-4">
-                <li class="mb-2">Solution architecture for composable commerce, ecommerce, marketplaces, CRM, loyalty, content, and customer data</li>
-                <li class="mb-2">Enterprise architecture, capability models, target-state design, and IT roadmaps</li>
-                <li class="mb-2">Vendor and platform selection across composable, SaaS, and suite landscapes</li>
-                <li class="mb-2">API-first and integration-led design across search, content, commerce, and customer services</li>
-                <li class="mb-2">Business and IT alignment through workshops, stakeholder management, and phased delivery</li>
-                <li>Agile leadership for cross-functional and partner-driven delivery teams</li>
+                <li class="mb-2">Technology strategy aligned to business ambition, growth, and transformation priorities</li>
+                <li class="mb-2">Enterprise and solution architecture across customer experience, commerce, and digital platforms</li>
+                <li class="mb-2">Platform, integration, and data strategy for scalability, agility, and long-term adaptability</li>
+                <li class="mb-2">Senior stakeholder advisory on technology landscape, vendor selection, and architectural trade-offs</li>
+                <li class="mb-2">Target-state design, capability modelling, and phased roadmaps from strategy through execution</li>
+                <li>Leadership across cross-functional teams, transformation programmes, and partner ecosystems</li>
               </ul>
+              <div class="d-print-only spacer" style="height: 50px">&nbsp;</div>
             </div>
           </div>
         </div>
       </section>
 
       <section class="container pb-5">
-        <div class="d-flex flex-column flex-lg-row align-items-lg-end justify-content-between mb-4">
+        <div class="row d-flex flex-column flex-lg-row align-items-lg-end justify-content-between mb-4">
           <div>
             <h2 class="h2 mt-4">Selected Experience</h2>
             <p class="text-muted mb-0 section-note">
@@ -819,10 +811,22 @@
               <a href="/#services" data-scroll data-scroll-offset="50" class="nav-link d-inline-block px-2 pt-1 pb-2">What I do</a>
             </li>
             <li class="nav-item">
+              <a href="/#clients" data-scroll data-scroll-offset="100" class="nav-link d-inline-block px-2 pt-1 pb-2">Clients</a>
+            </li>
+            <li class="nav-item">
+              <a href="/#highlights" data-scroll data-scroll-offset="50" class="nav-link d-inline-block px-2 pt-1 pb-2">Highlights</a>
+            </li>
+            <li class="nav-item">
               <a href="/content.html" class="nav-link d-inline-block px-2 pt-1 pb-2">Content</a>
             </li>
             <li class="nav-item">
+              <a href="/cv.html" class="nav-link d-inline-block px-2 pt-1 pb-2">Full CV</a>
+            </li>
+            <li class="nav-item">
               <a href="/#contact" data-scroll data-scroll-offset="100" class="nav-link d-inline-block px-2 pt-1 pb-2">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="/sitemap.xml" target="_blank" data-scroll data-scroll-offset="100" class="nav-link d-inline-block px-2 pt-1 pb-2">Sitemap</a>
             </li>
           </ul>
 
