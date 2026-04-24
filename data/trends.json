@@ -55,6 +55,13 @@
       "sources": ["https://www.snowflake.com/blog/category/industry/retail-cpg/", "https://databricks.com/solutions/accelerators/retail"]
     },
     {
+      "name": "Real-Time Data Streaming",
+      "category": "Data & AI",
+      "stage": "Early Majority",
+      "summary": "Real-time data streaming moves customer, product, inventory, and order events through live pipelines so analytics, personalization, and operations can react immediately.",
+      "sources": ["https://kafka.apache.org/uses", "https://www.confluent.io/solutions/retail/"]
+    },
+    {
       "name": "AI Governance & Guardrails",
       "category": "Data & AI",
       "stage": "Early Adopters",
@@ -83,6 +90,13 @@
       "sources": ["https://www.criteo.com/insights/retail-media/", "https://www.thetradedesk.com/us/insights/retail-media"]
     },
     {
+      "name": "Retail Media Networks 2.0",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Retail media networks 2.0 expand beyond sponsored placements into richer audience products, offsite activation, closed-loop measurement, and data collaboration.",
+      "sources": ["https://www.criteo.com/insights/retail-media/", "https://www.thetradedesk.com/us/insights/retail-media"]
+    },
+    {
       "name": "Sponsored Products",
       "category": "Advertising & Promotion",
       "stage": "Early Majority",
@@ -94,6 +108,13 @@
       "category": "Advertising & Promotion",
       "stage": "Early Majority",
       "summary": "Customer audiences built from consented shopper, loyalty, and behavioral data improve targeting quality, suppression, personalization, and media activation.",
+      "sources": ["https://segment.com/resources/reports/state-of-personalization/", "https://www.thetradedesk.com/us/insights/retail-media"]
+    },
+    {
+      "name": "AI-generated Segments",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "AI-generated segments use behavioral, purchase, and propensity signals to create campaign audiences, lookalikes, suppressions, and media activation groups faster.",
       "sources": ["https://segment.com/resources/reports/state-of-personalization/", "https://www.thetradedesk.com/us/insights/retail-media"]
     },
     {
@@ -141,7 +162,7 @@
     {
       "name": "Retail Media Services",
       "category": "Advertising & Promotion",
-      "stage": "Innovators",
+      "stage": "Early Majority",
       "summary": "Retail media services package managed buying, creative support, measurement, and retailer inventory access for brands that need operational help.",
       "sources": ["https://www.thetradedesk.com/us/insights/retail-media", "https://www.criteo.com/insights/retail-media/"]
     },
@@ -235,6 +256,48 @@
       "stage": "Early Adopters",
       "summary": "A unified customer profile connects identity, behavior, preferences, and transaction history so teams can recognize customers consistently across touchpoints.",
       "sources": ["https://segment.com/resources/articles/retail/", "https://www.snowflake.com/blog/category/industry/retail-cpg/"]
+    },
+    {
+      "name": "Autonomous Customer Journey Orchestration",
+      "category": "CRM & Analytics",
+      "stage": "Innovators",
+      "summary": "Autonomous customer journey orchestration uses AI agents and decisioning models to adapt messages, channels, offers, and service actions across the customer lifecycle.",
+      "sources": ["https://www.braze.com/resources", "https://segment.com/resources/reports/state-of-personalization/"]
+    },
+    {
+      "name": "Decision Intelligence Platforms",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Decision intelligence platforms combine analytics, rules, machine learning, and business context to recommend or automate customer, merchandising, and operational decisions.",
+      "sources": ["https://databricks.com/solutions/accelerators/retail", "https://www.snowflake.com/blog/category/industry/retail-cpg/"]
+    },
+    {
+      "name": "Autonomous Decisioning Layer",
+      "category": "CRM & Analytics",
+      "stage": "Innovators",
+      "summary": "An autonomous decisioning layer evaluates customer context, business rules, and model outputs in real time to trigger next-best actions across channels.",
+      "sources": ["https://segment.com/resources/reports/state-of-personalization/", "https://www.braze.com/resources"]
+    },
+    {
+      "name": "AI Content Generation",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "AI content generation creates and adapts campaign copy, lifecycle messages, subject lines, and audience-specific variants while keeping brand and compliance controls in place.",
+      "sources": ["https://www.braze.com/resources", "https://www.salesforce.com/resources/research/state-of-commerce/"]
+    },
+    {
+      "name": "Content Personalization Engines",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Content personalization engines assemble and optimize messages, modules, offers, and creative variants for each audience or customer using profile and behavior signals.",
+      "sources": ["https://segment.com/resources/reports/state-of-personalization/", "https://www.braze.com/resources"]
+    },
+    {
+      "name": "Content for AI Agents",
+      "category": "CRM & Analytics",
+      "stage": "Innovators",
+      "summary": "Content for AI agents structures product, policy, brand, and customer-facing knowledge so agents can retrieve accurate answers, explain recommendations, and act within approved boundaries.",
+      "sources": ["https://www.contentful.com/resources/", "https://www.shopify.com/enterprise/commerce-trends"]
     },
     {
       "name": "Marketing Mix Modeling (MMM)",
@@ -342,6 +405,34 @@
       "sources": ["https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html", "https://www.global-e.com/resources/reports/"]
     },
     {
+      "name": "Conversational Commerce",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Conversational commerce uses chat, messaging, and AI-assisted selling to guide discovery, answer purchase questions, and complete transactions in the flow of conversation.",
+      "sources": ["https://www.salesforce.com/resources/research/state-of-commerce/", "https://www.shopify.com/enterprise/commerce-trends"]
+    },
+    {
+      "name": "Agentic Commerce",
+      "category": "Commerce & Sales",
+      "stage": "Innovators",
+      "summary": "Agentic commerce enables AI agents to discover products, compare options, build carts, and initiate purchases on behalf of shoppers within governed commerce flows.",
+      "sources": ["https://www.shopify.com/news/winter-26-edition-agentic-storefronts", "https://www.shopify.com/enterprise/commerce-trends"]
+    },
+    {
+      "name": "Sales Automation via AI Agents",
+      "category": "Commerce & Sales",
+      "stage": "Innovators",
+      "summary": "Sales automation via AI agents uses autonomous assistants to qualify demand, answer product questions, recommend next actions, and support quote-to-order workflows.",
+      "sources": ["https://www.salesforce.com/resources/research/state-of-commerce/", "https://www.shopify.com/enterprise/commerce-trends"]
+    },
+    {
+      "name": "Hyper-Personalized Storefronts",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Hyper-personalized storefronts adapt navigation, content, offers, recommendations, and merchandising to each shopper using real-time behavior and customer context.",
+      "sources": ["https://segment.com/resources/reports/state-of-personalization/", "https://www.salesforce.com/resources/research/state-of-commerce/"]
+    },
+    {
       "name": "Transparent Duties & Taxes",
       "category": "Commerce & Sales",
       "stage": "Early Adopters",
@@ -377,6 +468,13 @@
       "sources": ["https://nextjs.org/commerce", "https://www.shopify.com/plus/solutions/headless-commerce"]
     },
     {
+      "name": "Progressive Web Apps",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Progressive web apps use installable, app-like web experiences with service workers, offline support, and push capabilities to improve mobile commerce engagement.",
+      "sources": ["https://web.dev/progressive-web-apps/", "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"]
+    },
+    {
       "name": "Edge-Side Rendering (ESR)",
       "category": "Software Architecture",
       "stage": "Early Adopters",
@@ -403,6 +501,13 @@
       "stage": "Early Adopters",
       "summary": "Event backbones power real-time inventory, personalization, and alerting; they require schema discipline and idempotency.",
       "sources": ["https://kafka.apache.org/uses", "https://www.confluent.io/solutions/retail/"]
+    },
+    {
+      "name": "Zero-Copy Data Integration",
+      "category": "Software Architecture",
+      "stage": "Early Adopters",
+      "summary": "Zero-copy data integration lets teams share and query data across platforms without duplicating datasets, reducing latency, storage cost, and governance overhead.",
+      "sources": ["https://www.snowflake.com/blog/category/industry/retail-cpg/", "https://databricks.com/solutions/accelerators/retail"]
     },
     {
       "name": "PIM Core Services",
@@ -962,6 +1067,13 @@
       "stage": "Late Majority",
       "summary": "Integration patterns standardize how commerce systems exchange data through APIs, events, batch jobs, webhooks, orchestration, and synchronization flows.",
       "sources": ["https://www.machalliance.org/library", "https://kafka.apache.org/uses"]
+    },
+    {
+      "name": "AI Agentic Storefronts",
+      "category": "Data & AI",
+      "stage": "Innovators",
+      "summary": "AI agentic storefronts make products discoverable, explainable, and purchasable inside AI conversations while preserving brand control, checkout, and customer ownership.",
+      "sources": ["https://www.shopify.com/news/winter-26-edition-agentic-storefronts"]
     }
   ]
 }
