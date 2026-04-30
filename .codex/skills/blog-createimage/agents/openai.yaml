@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blog Create Image"
+  short_description: "Create Future CX article images"
+  default_prompt: "Use $blog-createimage to create a Future CX blog image concept and asset plan for this article."

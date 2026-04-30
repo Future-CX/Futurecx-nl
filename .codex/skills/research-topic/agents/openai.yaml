@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Topic"
+  short_description: "Research a topic and structure findings"
+  default_prompt: "Use $research-topic to research this topic, gather credible sources, and return structured findings for fact-checking."

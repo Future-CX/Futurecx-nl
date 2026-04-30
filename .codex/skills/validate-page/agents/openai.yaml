@@ -1,0 +1,4 @@
+interface:
+  display_name: "Validate Page"
+  short_description: "Check HTML pages for quality issues"
+  default_prompt: "Use $validate-page to review this HTML page for structure, SEO, readability, accessibility, and project conventions."
