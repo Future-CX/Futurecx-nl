@@ -1,0 +1,32 @@
+topic: latest-digital-commerce-trends
+title: The Latest Digital Commerce Trends
+current_year: 2026
+author: Martijn van Deel
+category: Architecture
+
+validation_urls:
+  - https://gartner.com/en/sales/trends/future-of-sales
+  - https://commercetools.com/resources/whitepaper/pivotal-trends-and-predictions-in-b2b-digital-commerce
+  - https://commercetools.com/blog/predictions-shaping-b2b-digital-commerce
+  - https://www.forbes.com/sites/pros/2025/06/02/7-trends-shaping-the-future-of-b2b-commerce/
+  - https://www.shopware.com/en/ecom-knowledge/b2b-ecommerce-trends/
+  - https://www.mirakl.com/blog/top-5-ai-trends-in-b2b-reshaping-commerce-in-2026
+  - https://www.gartner.com/en/newsroom/press-releases/2025-08-25-gartner-says-by-2030-that-75-percent-of-b2b-buyers-will-prefer-sales-experiences-that-prioritize-human-interaction-over-ai
+  - https://www.gartner.com/en/articles/strategic-predictions-for-2026
+  - https://www.sendcloud.com/ecommerce-trends/
+  - https://www.gartner.com/en/articles/top-technology-trends-2026
+  - https://www.gartner.com/en/articles/future-of-marketing
+  - https://www.forrester.com/press-newsroom/forrester-b2c-marketing-cx-digital-2026-predictions/
+  - https://www.forrester.com/blogs/predictions-2026-the-agentic-commerce-race-and-some-potential-regrets-in-digital-commerce/
+  - https://www.shopify.com/il/blog/digital-transformation-trends-in-retail
+  - https://www.shopify.com/blog/ecommerce-trends-predictions
+  - https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts
+
+online_pdfs:
+  - https://www.mckinsey.com/~/media/mckinsey/business%20functions/marketing%20and%20sales/our%20insights/future%20of%20b2b%20sales%20the%20big%20reframe/Future-of-B2B-sales-The-big-reframe.pdf
+  - https://go.forrester.com/wp-content/uploads/2025/10/ForresterPredictions2026_B2B_eBook.pdf
+  - https://www.deloittedigital.com/content/dam/digital/global/documents/insights-20260206-b2b-commerce-research-report.pdf
+
+internal_links:
+  - https://www.futurecx.nl/content/integration-principles.html
+  - https://www.futurecx.nl/content/integration-patterns.html
