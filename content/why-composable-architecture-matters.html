@@ -25,7 +25,7 @@
     <meta name="author" content="Martijn van Deel" />
     <meta property="article:author" content="Martijn van Deel" />
     <meta property="article:published_time" content="2025-04-26T16:33:45+02:00" />
-    <meta property="article:modified_time" content="2026-04-30T14:49:07+02:00" />
+    <meta property="article:modified_time" content="2026-05-06T16:52:21+02:00" />
     <meta property="og:type" content="article" />
     <meta property="og:locale" content="en_GB" />
     <link
@@ -67,9 +67,9 @@
           "logo": { "@type": "ImageObject", "url": "https://www.futurecx.nl/assets/favicon/favicon-32x32.png" }
         },
         "datePublished": "2025-04-26T16:33:45+02:00",
-        "dateModified": "2026-04-30T14:39:32+02:00",
+        "dateModified": "2026-05-06T16:52:21+02:00",
         "url": "https://www.futurecx.nl/content/why-composable-architecture-matters.html",
-        "articleSection": "Composable Architecture",
+        "articleSection": "Enterprise Architecture",
         "keywords": [
           "composable architecture",
           "composable commerce",
@@ -285,7 +285,7 @@
               <span class="badge bg-faded-primary text-primary fs-base ms-2">Composable Architecture</span>
             </div>
             <div class="fs-sm border-end pe-3 me-3 mb-2" itemprop="datePublished" content="2025-04-26T16:33:45+02:00">April 26, 2025</div>
-            <div class="fs-sm pe-3 me-3 mb-2" itemprop="dateModified" content="2026-04-30T14:49:07+02:00">Updated: April 30, 2026</div>
+            <div class="fs-sm pe-3 me-3 mb-2" itemprop="dateModified" content="2026-05-06T16:52:21+02:00">Updated: May 6, 2026</div>
           </div>
           <div class="d-none d-sm-block d-flex align-items-center position-relative ps-md-3 pe-lg-5 mb-2" itemprop="author" itemscope itemtype="https://schema.org/Person">
             <div class="d-flex align-items-center position-relative ps-md-3 pe-lg-5 mb-2">
@@ -345,8 +345,9 @@
             <p class="mb-4 pb-2">
               The
               <a href="https://machalliance.org/mach-explained" target="_blank" rel="noopener noreferrer">MACH Alliance</a>
-              describes MACH as an architecture built around microservices, API-first integration, cloud-native SaaS, and headless frontends. Its current principles also emphasise composability,
-              connectedness, incremental change, openness, and autonomy.
+              describes composability as discrete capabilities that can be assembled, replaced, and evolved independently. MACH is often used as shorthand for microservices, API-first integration,
+              cloud-native SaaS, and headless frontends, but the broader point is that each capability should be able to evolve without forcing every other part of the platform to change at the same
+              pace.
             </p>
             <p class="mb-4 pb-2">
               That distinction matters. MACH can be a useful pattern for composable commerce and digital experience platforms, but composable architecture is bigger than a technology label. It is an
@@ -366,7 +367,7 @@
                 >McKinsey describes composable technology stacks</a
               >
               as modular, interchangeable components that help organisations select tools for specific needs, integrate modern and legacy systems, replace underperforming tools more easily, and reduce
-              vendor lock-in.
+              vendor lock-in when data portability, contracts, and integration boundaries are designed well.
             </p>
             <p class="mb-4 pb-2">
               For customer experience, the value is not only in having more tools. The value is in orchestrating the right capabilities around the customer journey. A customer does not care whether
@@ -415,7 +416,7 @@
             <h2 class="h4">Microservices Help, But They Are Not the Whole Answer</h2>
             <p class="mb-4 pb-2">
               Microservices are often part of composable architecture, but they should not be confused with the whole strategy.
-              <a href="https://www.martinfowler.com/articles/microservices.html" target="_blank" rel="noopener noreferrer">Martin Fowler and James Lewis describe microservices</a>
+              <a href="https://www.martinfowler.com/microservices/" target="_blank" rel="noopener noreferrer">Martin Fowler and James Lewis describe microservices</a>
               as independently deployable services organised around business capabilities, using lightweight communication and decentralised control.
             </p>
             <p class="mb-4 pb-2">
@@ -433,9 +434,12 @@
               The answer is usually incremental.
             </p>
             <p class="mb-4 pb-2">
-              <a href="https://martinfowler.com/bliki/StranglerFigApplication.html" target="_blank" rel="noopener noreferrer">Fowler's Strangler Fig Application pattern</a>
-              describes gradually replacing parts of an existing system with a new one over time. That pattern fits composable transformation well. Instead of replacing the entire ecommerce platform
-              or customer experience landscape in one programme, an organisation can identify the capabilities where change pressure is highest and create cleaner boundaries around them.
+              <a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig" target="_blank" rel="noopener noreferrer"
+                >Microsoft's Azure Architecture Center describes the Strangler Fig pattern</a
+              >
+              as a way to incrementally migrate a legacy system by replacing specific pieces of functionality with new applications or services while the existing system continues to run. That pattern
+              fits composable transformation well. Instead of replacing the entire ecommerce platform or customer experience landscape in one programme, an organisation can identify the capabilities
+              where change pressure is highest and create cleaner boundaries around them.
             </p>
             <p class="mb-3">A practical transition might look like this:</p>
             <ol class="mb-4 pb-2">
@@ -463,8 +467,8 @@
               <li>Teams cannot deploy independently because everything is coupled to the same platform release.</li>
             </ul>
             <p class="mb-4 pb-2">
-              In those situations, composable architecture can reduce the friction of change. It can also improve cost control by making components easier to replace and by reducing dependence on one
-              vendor. Those benefits are not automatic. They depend on architecture quality, integration discipline, governance, and the maturity of the delivery organisation.
+              In those situations, composable architecture can reduce the friction of change. It can also improve cost control in specific areas by making components easier to replace and by reducing
+              dependence on one vendor. Those benefits are not automatic. They depend on architecture quality, integration discipline, governance, and the maturity of the delivery organisation.
             </p>
 
             <h2 class="h4">Common Pitfalls</h2>
@@ -533,6 +537,7 @@
               That requires more than MACH terminology or a list of best-of-breed tools. It requires clear business capabilities, strong integration principles, mature product teams, and a future
               state architecture that connects technology decisions to customer value.
             </p>
+            <p class="mb-4 pb-2">Composable architecture is valuable when it helps the organisation move with less friction and more control. That is why it matters.</p>
 
             <!-- Tags -->
             <hr class="mb-4" />
@@ -556,6 +561,7 @@
                   <a
                     href="https://doi.org/10.1016/j.jml.2019.104047"
                     target="_blank"
+                    rel="noopener noreferrer"
                     title="ScienceDirect: How many words do we read per minute? A review and meta-analysis of reading rate"
                     class="text-reset"
                     >183 words per minute</a
@@ -691,7 +697,7 @@
             <h6 class="mb-3">Connect</h6>
             <p>I am looking forward to connect and build the community on Customer Experience.</p>
             <div id="social-links" class="d-flex flex-column flex-sm-row">
-              <a id="lnkLinkedin" href="https://www.linkedin.com/in/jmvandeel/" target="blank" class="fw-medium btn btn-primary shadow-primary btn-lg"
+              <a id="lnkLinkedin" href="https://www.linkedin.com/in/jmvandeel/" target="_blank" rel="noopener noreferrer" class="fw-medium btn btn-primary shadow-primary btn-lg"
                 ><i class="bx bxl-linkedin-square me-3"></i>LinkedIn</a
               >
             </div>

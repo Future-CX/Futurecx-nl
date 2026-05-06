@@ -40,7 +40,26 @@ I am writing a blog on why Composable Architecture matters.
 
 Ask Codex to run it via `Run the workflow in .codex/workflows/blog-composable-architecture.md`
 
-### 1. Research the Topic
+### 1. Align on What to Research
+
+Before running research, use `$grill-me` to ensure we have the same understanding of what should be researched for `{{ blog_title }}`.
+
+Alignment scope:
+
+- Clarify the intended audience, business angle, and practical purpose of the article.
+- Confirm what `{{ topic }}` should and should not cover in this Future CX context.
+- Walk through the research decision tree: objectives, scope, sources, claims to investigate, claims to avoid, and publication risks.
+- Resolve dependencies between research choices before starting `$research-topic`.
+- If a question can be answered by exploring this codebase, existing articles, workflows, skills, or site conventions, inspect those files instead of asking the user.
+- Ask the user only for decisions that cannot be answered from repository context.
+
+Output:
+
+- Produce a short shared-understanding summary for the research task.
+- List resolved decisions, assumptions, deferred questions, and any source or claim risks to watch during research.
+- Use this summary as input for step 2.
+
+### 2. Research the Topic
 
 Before running research:
 
@@ -67,7 +86,7 @@ Output:
 - Include source URLs for every factual claim that depends on external evidence.
 - Mark claims that should be checked with `$fact-check` before publication.
 
-### 2. Fact-Check the Research
+### 3. Fact-Check the Research
 
 Before running fact-check:
 
@@ -96,7 +115,7 @@ Output:
 - Include recommended wording changes for claims that are directionally useful but too strong.
 - List source gaps that must be resolved before `$blog-write` uses the research.
 
-### 3. Write the Blog Draft
+### 4. Write the Blog Draft
 
 Before writing:
 
@@ -133,7 +152,7 @@ Output:
 - Mark any remaining claims that should be checked before HTML publication.
 - Include recommended next step for `$blog-createimage` or `$blog-createhtml` using `{{ filename }}`.
 
-### 4. Create the Blog Image
+### 5. Create the Blog Image
 
 Before creating the image:
 
@@ -169,14 +188,14 @@ Output:
 - Report any missing post-processing, conversion, compression, or responsive variants.
 - Include image usage notes for `$blog-createhtml`.
 
-### 5. Create or Update the HTML Article
+### 6. Create or Update the HTML Article
 
 Before creating or updating HTML:
 
 - Resolve `{{ html_page }}` using `{{ filename }}`.
 - Resolve `{{ image_path }}` using `{{ filename }}`.
 - Check whether the resolved image exists at `{{ image_path }}`.
-- If the image is missing, stop and run step 4 before creating or updating HTML.
+- If the image is missing, stop and run step 5 before creating or updating HTML.
 - Check whether the resolved HTML page already exists.
 - If it exists, update the existing page from `{{ blog_draft }}` and report the resulting diff.
 - If it does not exist, create a new page at `{{ html_page }}` from `{{ blog_draft }}`.
@@ -214,3 +233,28 @@ Output:
 - Report whether `content.html` and `sitemap.xml` were updated.
 - Run `npm run validate` when feasible and report the result.
 - Report any publication blockers, such as missing image variants, unresolved dates, unverified claims, or validation failures.
+
+### 7. Validate the Generated Page
+
+Before validating:
+
+- Resolve `{{ html_page }}` using `{{ filename }}`.
+- Check whether the resolved HTML page exists.
+- If it does not exist, stop and report that step 6 must create the page first.
+
+Use `$validate-page` to validate the generated or updated article page at `{{ html_page }}`.
+
+Validation scope:
+
+- Check page structure, SEO metadata, Open Graph metadata, Twitter metadata, JSON-LD, canonical URL, dates, breadcrumbs, category badges, article image references, source links, internal links, `content.html` inclusion, sitemap inclusion, accessibility, and project conventions.
+- Confirm `{{ image_path }}` is used consistently for the hero image, `og:image`, `twitter:image`, JSON-LD `image`, and overview card where applicable.
+- Confirm external links open in a new tab with `rel="noopener noreferrer"`.
+- Confirm dates are aligned across `article:published_time`, `article:modified_time`, visible article metadata, JSON-LD, and `sitemap.xml`.
+- Run targeted validation for `{{ html_page }}` when feasible, and run `npm run validate` if the final publication check requires the full repo validation.
+
+Output:
+
+- Report findings ordered by severity with file and line references.
+- Report whether `{{ html_page }}`, `content.html`, `sitemap.xml`, and `{{ image_path }}` passed validation.
+- Report validation commands run and their results.
+- Report any remaining publication blockers.
