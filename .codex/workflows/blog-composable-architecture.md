@@ -12,6 +12,8 @@ blog_draft: '.codex/reports/{{ slug }}/blog-draft.md'
 image_path_draft: '.codex/reports/{{ slug }}/{{ filename }}.webp'
 image_path: 'assets/img/blog/single/{{ filename }}.webp'
 html_page: 'content/{{ filename }}.html'
+live_url: 'https://www.futurecx.nl/content/{{ filename }}.html'
+lighthouse_report_dir: '.codex/reports/{{ slug }}/lighthouse'
 ---
 
 # Writing a Blog on Why Composable Architecture Matters
@@ -33,6 +35,8 @@ I am writing a blog on why Composable Architecture matters.
 - `image_path_draft`: `{{ image_path_draft }}`
 - `image_path`: `{{ image_path }}`
 - `html_page`: `{{ html_page }}`
+- `live_url`: `{{ live_url }}`
+- `lighthouse_report_dir`: `{{ lighthouse_report_dir }}`
 
 ## Workflow
 
@@ -258,3 +262,144 @@ Output:
 - Report whether `{{ html_page }}`, `content.html`, `sitemap.xml`, and `{{ image_path }}` passed validation.
 - Report validation commands run and their results.
 - Report any remaining publication blockers.
+
+### 8. Check the HTML Page in Chrome DevTools MCP
+
+Before checking in Chrome DevTools MCP:
+
+- Resolve `{{ html_page }}` using `{{ filename }}`.
+- Resolve `{{ lighthouse_report_dir }}` using `{{ slug }}`.
+- Check whether the resolved HTML page exists.
+- Create `{{ lighthouse_report_dir }}` if Lighthouse artifacts will be written.
+- Check whether the site is available through a local web server.
+- Record whether the local web server was already running before this step.
+- If no local server is running, start the project with `npm run dev` and record that this workflow step started it.
+- If a local server was already running before this step, reuse it and do not stop it after validation.
+- Use the local Google Chrome executable when launching Chrome DevTools MCP on macOS: `CHROME_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"`.
+- If Codex runs inside a sandbox that cannot launch or reach its own browser, connect Chrome DevTools MCP to a running debuggable local Chrome instance instead.
+- To start a debuggable local Chrome instance on macOS, close other Chrome instances first, then run:
+
+  ```bash
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --remote-debugging-port=9222 --user-data-dir=/tmp/chrome-profile-stable
+  ```
+
+- Configure Chrome DevTools MCP to connect to that running Chrome instance with `--browser-url=http://127.0.0.1:9222` (also accepted as `--browserUrl` or `-u`), for example:
+
+  ```json
+  {
+    "mcpServers": {
+      "chrome-devtools": {
+        "command": "npx",
+        "args": ["chrome-devtools-mcp@latest", "--browser-url=http://127.0.0.1:9222"]
+      }
+    }
+  }
+  ```
+
+- Treat the remote debugging port as sensitive: use a temporary `--user-data-dir`, avoid browsing sensitive sites in that Chrome instance, and stop the browser after validation.
+- Use the local URL for the generated page, for example `http://localhost:3000/{{ html_page }}` or the actual URL reported by the local server.
+- If Chrome DevTools MCP is unavailable in the current Codex session, report that clearly and include the static validation results from step 7 instead of inventing browser findings.
+
+Use Chrome DevTools MCP to inspect the generated or updated article page at `{{ html_page }}`.
+
+Browser validation scope:
+
+- Open the generated page in Chrome through DevTools MCP.
+- Confirm the page renders without a blank screen, broken layout, visible template artifacts, overlapping text, or missing hero imagery.
+- Check desktop and mobile viewport widths.
+- Inspect the console for JavaScript errors, failed asset loads, network 404s, mixed-content warnings, and CSP/security warnings.
+- Confirm the hero image, article metadata area, table of contents, related articles, footer, theme switcher, and share controls render as expected.
+- Confirm external links and internal links are present in the DOM with the expected `href`, `target`, and `rel` attributes.
+- Capture screenshots or describe the inspected viewport state when the MCP tooling supports it.
+
+Lighthouse validation scope:
+
+- Run Lighthouse MCP audits for accessibility, SEO, best practices, and agentic browsing when available. Save Lighthouse reports under `{{ lighthouse_report_dir }}`.
+- Do not run local performance traces or report local Core Web Vitals metrics from `localhost`; those numbers are not representative of the live site.
+- If performance or Core Web Vitals evidence is needed, use a separate production check against the live URL instead of this local page validation step.
+- Treat local development-only noise separately from publication blockers, especially BrowserSync requests, analytics calls, cache state, and localhost-only network conditions.
+
+Output:
+
+- Start with a compact status summary table using these visual identifiers:
+  - `PASS` for checks that completed successfully.
+  - `WARN` for checks that passed with caveats or local-development noise.
+  - `FAIL` for checks that found a defect.
+  - `BLOCKED` for checks that could not run.
+- Include the check name, status, evidence, and recommended next action in the status summary table.
+- Report the local URL used for browser validation.
+- Report the artifact directory used for Lighthouse outputs.
+- Report Chrome DevTools MCP findings ordered by severity with page section or DOM reference where possible.
+- Report whether desktop and mobile viewport checks passed.
+- Report any console errors, failed network requests, missing assets, layout issues, or interaction issues.
+- Report Lighthouse MCP audit scores or findings when available, and state which audit modes/devices were used.
+- Report whether Chrome DevTools MCP was unavailable, blocked, or only partially completed.
+- Report any remaining publication blockers after combining Chrome DevTools MCP findings with step 7 validation results.
+- Report whether the local server was already running or started by this step.
+- Stop the local server only when this workflow step started it. Do not stop a server that was already running before step 8 began.
+
+### 9. Check Live Page Web Vitals with PageSpeed Insights API
+
+Use this step only after the article is published or when `{{ live_url }}` already exists.
+
+Before running the live performance check:
+
+- Resolve `{{ live_url }}` using `{{ filename }}`.
+- Resolve `{{ lighthouse_report_dir }}` using `{{ slug }}`.
+- Check whether the live URL exists with an HTTP request before calling the PageSpeed Insights API.
+- Treat `2xx` responses as available. Treat `3xx` responses as available only when the redirect target resolves to the expected canonical live page. Treat `4xx`, `5xx`, DNS failures, TLS failures, and timeouts as `BLOCKED`.
+- Do not use `localhost` for this step.
+- Do not start or stop the local development server for this step.
+- Use the PageSpeed Insights API v5 endpoint: `https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed`.
+- Use `category=PERFORMANCE` and run both `strategy=mobile` and `strategy=desktop` unless the workflow executor is explicitly asked to run only one strategy.
+- Use an API key only when available in the environment as `PAGESPEED_API_KEY`; otherwise call the public endpoint without a key and report any quota or captcha blockers.
+- When this workflow is executed by Codex through chat, check whether `PAGESPEED_API_KEY` is already available in the command environment.
+- If `PAGESPEED_API_KEY` is not available and a repo-local `.env` file exists, load `.env` for the PageSpeed API commands only, without printing the key, committing it, copying it into reports, or exposing it in command output.
+- When loading `.env` from a shell command, source it in the same command invocation that runs the PageSpeed API requests so the variable is available to Codex-run commands, for example:
+
+  ```bash
+  set -a
+  source .env
+  set +a
+  ```
+
+- Include `key=$PAGESPEED_API_KEY` in the PageSpeed API request only after confirming the variable is non-empty.
+
+Live Web Vitals validation scope:
+
+- Call PageSpeed Insights API for the live URL with `strategy=mobile`.
+- Call PageSpeed Insights API for the live URL with `strategy=desktop`.
+- Save the raw mobile JSON response as `{{ lighthouse_report_dir }}/pagespeed-mobile.json`.
+- Save the raw desktop JSON response as `{{ lighthouse_report_dir }}/pagespeed-desktop.json`.
+- Extract Lighthouse lab performance data from `lighthouseResult`, including Performance score, LCP, CLS, Total Blocking Time, Speed Index, First Contentful Paint, and major opportunity or diagnostic audits.
+- Extract field Web Vitals from `loadingExperience` and `originLoadingExperience` when present, including LCP, CLS, INP, FCP, TTFB, and overall category.
+- Prefer page-level field data from `loadingExperience`. If only origin-level data is available through `originLoadingExperience`, label it clearly as origin fallback, not page-specific data.
+- If field data is missing, report field Web Vitals as `BLOCKED` or `WARN` and use Lighthouse lab data as lab evidence only.
+- Save a human-readable live Web Vitals report as `{{ lighthouse_report_dir }}/web-vitals-report.html`.
+- Save a machine-readable summary as `{{ lighthouse_report_dir }}/web-vitals-summary.json`.
+- The HTML report must include:
+  - The tested live URL and timestamp.
+  - A compact status summary table using `PASS`, `WARN`, `FAIL`, and `BLOCKED`.
+  - Separate sections for mobile and desktop Lighthouse lab results.
+  - Separate sections for page-level and origin-level field Web Vitals when available.
+  - Clear labels for lab data versus field data.
+  - The top performance opportunities or diagnostics from Lighthouse, ordered by likely user impact.
+  - Any PageSpeed API blockers, warnings, runtime errors, quota errors, or missing field-data caveats.
+  - Links to `pagespeed-mobile.json`, `pagespeed-desktop.json`, and `web-vitals-summary.json`.
+- The HTML report `<head>` must include this favicon link:
+
+  ```html
+  <link rel="icon" href='data:image/svg+xml;utf8,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="m14 7 10-7 10 7v10h5v7h-5l5 24H9l5-24H9v-7h5V7Z" fill="%23F63"/><path d="M31.561 24H14l-1.689 8.105L31.561 24ZM18.983 48H9l1.022-4.907L35.723 32.27l1.663 7.98L18.983 48Z" fill="%23FFA385"/><path fill="%23FF3" d="M20.5 10h7v7h-7z"/></svg>'>
+  ```
+
+Output:
+
+- Start with a compact status summary table using `PASS`, `WARN`, `FAIL`, and `BLOCKED`.
+- Report whether `{{ live_url }}` exists and which final URL was tested.
+- Report `{{ lighthouse_report_dir }}` as the artifact directory used for PageSpeed and Web Vitals outputs.
+- Report mobile and desktop Lighthouse Performance scores and key lab metrics.
+- Report page-level field Web Vitals when available, and origin-level field Web Vitals when page-level data is unavailable.
+- Report whether each Web Vital is field data, origin fallback data, or lab data.
+- Report the top performance findings ordered by likely user impact.
+- Report whether the Web Vitals HTML report and JSON summary were written.
+- Report any blocked checks and the concrete reason they were blocked.
