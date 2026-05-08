@@ -44,7 +44,7 @@ function fromDir(startPath, filter, callback) {
   }
 
   // filter unwanted directories
-  let ignoredDirectories = ['.git', '.github', 'assets', 'build', 'components', 'docs', 'node_modules', 'pages', 'src'];
+  let ignoredDirectories = ['.codex', '.git', '.github', 'assets', 'build', 'components', 'docs', 'node_modules', 'pages', 'src'];
   if (ignoredDirectories.includes(startPath)) {
     //log.info('ignored ', startPath + '/')
     return;
