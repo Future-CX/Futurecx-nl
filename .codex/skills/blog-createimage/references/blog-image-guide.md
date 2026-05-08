@@ -6,7 +6,8 @@ Use this guide for Future CX article hero images, overview thumbnails, Open Grap
 
 - Main article images live in `assets/img/blog/single/`.
 - Use article-slug-based names for the filename.
-- Common final formats are `.webp`, `.png`, and `.jpg`.
+- The primary website image should be `.webp` when available.
+- Also keep or export a same-basename `.png` or `.jpg` version for LinkedIn and similar social posting workflows.
 - Some hero templates preload responsive variants:
   - `example-s.webp`
   - `example-m.webp`
@@ -17,6 +18,7 @@ Use this guide for Future CX article hero images, overview thumbnails, Open Grap
 ## Recommended Dimensions
 
 - Open Graph / social preview: 1200 x 630.
+- LinkedIn/social posting export: 1200 x 630 `.png` or `.jpg`, using the same crop as the article Open Graph image where possible.
 - Article hero source: at least 1200 px wide; 1920 px wide is useful for full-width hero pages.
 - Overview card image: crop-safe around 4:3 or 16:9, depending on the existing card layout.
 - Responsive variants, when needed:
@@ -73,6 +75,7 @@ Avoid:
 Use clear filenames:
 
 - `article-slug.webp`
+- `article-slug.png` or `article-slug.jpg` for social posting
 - `article-slug-s.webp`
 - `article-slug-m.webp`
 - `article-slug-diagram.png`
@@ -100,3 +103,9 @@ When the image is used in an article page:
 This repo does not define a dedicated image conversion NPM script. If conversion, resizing, or compression is required, use available local tools only when present and approved by the environment. Otherwise report the needed asset work clearly.
 
 Do not claim conversion or optimization happened unless it was actually performed.
+
+For newly generated article hero images, the expected output set is:
+
+- Main website image: `assets/img/blog/single/article-slug.webp`
+- Optional responsive website variants when the template needs them: `article-slug-m.webp` and `article-slug-s.webp`
+- Social sharing export: `assets/img/blog/single/article-slug.png` or `assets/img/blog/single/article-slug.jpg`

@@ -13,10 +13,11 @@ description: Create image concepts, prompts, asset plans, and generated raster i
 4. Choose a visual direction that fits Future CX: professional, architecture-aware, customer-experience oriented, practical, and not decorative-only.
 5. When a new bitmap image is needed, use the system `imagegen` skill/tool. Generate raster imagery rather than SVG unless the request is specifically for a diagram or code-native asset.
 6. Propose or use a stable filename under `assets/img/blog/single/`, usually based on the article slug.
-7. Plan required variants when the target page template references them, such as base `.webp`, `-m.webp`, and `-s.webp`.
-8. Align image usage with `$blog-createhtml`: absolute production URL for `og:image`/`twitter:image`, root-relative `/assets/...` paths in `content/*.html`, and matching `content.html` card image.
-9. Report any required post-processing that was not completed, such as conversion to WebP, resizing, compression, or adding responsive variants.
-10. Recommend `$validate-page` after adding image references to HTML.
+7. Plan required site variants when the target page template references them, such as base `.webp`, `-m.webp`, and `-s.webp`.
+8. Also plan a social-sharing export in `.png` or `.jpg` for LinkedIn and similar platforms. Keep the `.webp` as the main website image, and use the same slug-based basename for the social export unless there is a clear reason not to.
+9. Align image usage with `$blog-createhtml`: absolute production URL for `og:image`/`twitter:image`, root-relative `/assets/...` paths in `content/*.html`, and matching `content.html` card image.
+10. Report any required post-processing that was not completed, such as conversion to WebP, exporting PNG/JPG for social posting, resizing, compression, or adding responsive variants.
+11. Recommend `$validate-page` after adding image references to HTML.
 
 ## Visual Direction
 
@@ -43,7 +44,10 @@ For generation requests, provide the generated asset path or clearly state what 
 
 - Store article images in `assets/img/blog/single/`.
 - Use lowercase, hyphenated filenames.
-- Prefer `.webp` for final article/OG images when available; keep source `.png` or `.jpg` only when useful.
+- Prefer `.webp` for final article images, Open Graph images, Twitter card images, and `content.html` cards when available.
+- For every newly generated main article image, also create or plan one equivalent `.png` or `.jpg` social-sharing export for LinkedIn and similar platforms. Use `.png` when preserving generated-image fidelity matters; use `.jpg` when a smaller photographic sharing asset is preferable.
+- Name the social-sharing export with the same basename as the main image, for example `article-slug.webp` and `article-slug.png` or `article-slug.jpg`.
+- Do not use the PNG/JPG social export as the default website image unless the user explicitly asks for that or WebP is unavailable.
 - Use article slug prefixes where possible, for example `future-state-architecture-platform-map.webp`.
 - Do not overwrite an existing image unless the user explicitly asks for replacement.
 - Check existing filenames before proposing a new one.
