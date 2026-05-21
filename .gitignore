@@ -80,6 +80,8 @@ assets/img/*.jpg
 assets/img/*.svg
 
 
+# Codex generated files
+/.codex/reports/
 
 #project specific
 capability-model-*.js
@@ -96,6 +98,8 @@ functions/readinglist.json
 /docs
 /pages
 /sitemap.old.xml
-Futurecx-nl.code-workspace
+*.code-workspace
 *.psd
 *.ai
+*.sqlite
+

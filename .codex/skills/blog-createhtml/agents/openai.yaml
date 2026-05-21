@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blog Create HTML"
+  short_description: "Create Future CX article HTML"
+  default_prompt: "Use $blog-createhtml to turn this article draft into a Future CX content HTML page."

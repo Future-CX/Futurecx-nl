@@ -30,6 +30,16 @@ $danger: #ef4444 !default;
 $light: $white !default;
 $dark: $gray-900 !default;
 
+// Other colors
+$yellow: $primary; /* Yellow */
+$indigo: #4f46e5; /* Indigo */
+$red: $danger; /* Red */
+$green: $success; /* Green */
+$blue: $info; /* Blue */
+$cyan: #06b6d4; /* Cyan */
+$amber: $warning; /* Amber */
+$violet: #a855f7; /* Violet */
+
 $enable-shadows: true !default;
 $enable-negative-margins: true !default;
 $enable-smooth-scroll: true !default;

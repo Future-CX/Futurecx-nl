@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fact Checker"
+  short_description: "Validate trend claims and sources"
+  default_prompt: "Use $fact-check to validate this trend research output against sources, duplicates, taxonomy, and JSON readiness."

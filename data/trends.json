@@ -1,0 +1,1079 @@
+{
+  "trends": [
+    {
+      "name": "AI Search",
+      "category": "Data & AI",
+      "stage": "Early Adopters",
+      "summary": "Merchants are moving from keyword to semantic search to lift discovery and conversion, with growing proof in production but ongoing work on grounding and evaluation.",
+      "sources": ["https://www.algolia.com/blog/product/ai-search-ecommerce-trends/", "https://www.constructor.io/blog"]
+    },
+    {
+      "name": "Product Recommendations",
+      "category": "Data & AI",
+      "stage": "Late Majority",
+      "summary": "Recommendations are a widely adopted baseline for ecommerce merchandising, with incremental gains coming from better signals and models rather than net-new adoption.",
+      "sources": ["https://www.nosto.com/resources/blog/", "https://www.adobe.com/commerce/resources/reports.html"]
+    },
+    {
+      "name": "AI-generated Product Content",
+      "category": "Data & AI",
+      "stage": "Early Adopters",
+      "summary": "Generative tools for titles, bullets, attributes, and translations are moving into production, with teams prioritizing review workflows and measurable PDP lift.",
+      "sources": ["https://www.adobe.com/commerce/resources/reports.html", "https://www.shopify.com/enterprise/commerce-trends"]
+    },
+    {
+      "name": "Context-Aware AI Assistants",
+      "category": "Data & AI",
+      "stage": "Early Adopters",
+      "summary": "Context-aware AI assistants use order, policy, customer, and product data to improve support resolution while requiring grounding and guardrails.",
+      "sources": ["https://www.zendesk.com/blog/retail/", "https://www.shopify.com/enterprise/commerce-trends"]
+    },
+    {
+      "name": "Real-Time Personalization",
+      "category": "Data & AI",
+      "stage": "Early Adopters",
+      "summary": "Real-time personalization uses live behavior, unified identity, and streaming data to adapt content, offers, recommendations, and messages during the session.",
+      "sources": [
+        "https://segment.com/resources/reports/state-of-personalization/",
+        "https://databricks.com/solutions/accelerators/retail",
+        "https://vercel.com/edge-network",
+        "https://developers.cloudflare.com/workers/"
+      ]
+    },
+    {
+      "name": "AI Fraud Screening",
+      "category": "Data & AI",
+      "stage": "Early Majority",
+      "summary": "Networked decisioning and identity signals help reduce chargebacks and false declines, with broad adoption across ecommerce risk programs.",
+      "sources": ["https://www.signifyd.com/resources/library/", "https://sift.com/resources"]
+    },
+    {
+      "name": "Data & Analytics Platform",
+      "category": "Data & AI",
+      "stage": "Early Majority",
+      "summary": "Modern data and analytics platforms consolidate batch, streaming, and customer data to support experimentation, personalization, and near-real-time decisioning.",
+      "sources": ["https://www.snowflake.com/blog/category/industry/retail-cpg/", "https://databricks.com/solutions/accelerators/retail"]
+    },
+    {
+      "name": "Real-Time Data Streaming",
+      "category": "Data & AI",
+      "stage": "Early Majority",
+      "summary": "Real-time data streaming moves customer, product, inventory, and order events through live pipelines so analytics, personalization, and operations can react immediately.",
+      "sources": ["https://kafka.apache.org/uses", "https://www.confluent.io/solutions/retail/"]
+    },
+    {
+      "name": "AI Governance & Guardrails",
+      "category": "Data & AI",
+      "stage": "Early Adopters",
+      "summary": "AI governance and guardrails define approval flows, grounding rules, safety checks, monitoring, and lift measurement for dependable customer-facing AI.",
+      "sources": ["https://www.algolia.com/blog/product/ai-search-ecommerce-trends/", "https://databricks.com/solutions/accelerators/retail"]
+    },
+    {
+      "name": "AI-assisted Product Onboarding",
+      "category": "Data & AI",
+      "stage": "Innovators",
+      "summary": "AI-assisted product onboarding extracts attributes, normalizes supplier data, and enriches SKUs faster while keeping validation controls in place.",
+      "sources": ["https://www.akeneo.com/resources/", "https://www.adobe.com/commerce/resources/reports.html"]
+    },
+    {
+      "name": "AI-Driven Localization",
+      "category": "Data & AI",
+      "stage": "Early Adopters",
+      "summary": "AI-driven localization combines translation, terminology control, and market adaptation to accelerate launches while preserving human review for nuance.",
+      "sources": ["https://www.contentful.com/resources/", "https://www.akeneo.com/resources/"]
+    },
+    {
+      "name": "Retail Media Management",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Retail media management coordinates spend, audiences, sponsored placements, measurement, and retailer relationships as budgets move into commerce media.",
+      "sources": ["https://www.criteo.com/insights/retail-media/", "https://www.thetradedesk.com/us/insights/retail-media"]
+    },
+    {
+      "name": "Retail Media Networks 2.0",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Retail media networks 2.0 expand beyond sponsored placements into richer audience products, offsite activation, closed-loop measurement, and data collaboration.",
+      "sources": ["https://www.criteo.com/insights/retail-media/", "https://www.thetradedesk.com/us/insights/retail-media"]
+    },
+    {
+      "name": "Sponsored Products",
+      "category": "Advertising & Promotion",
+      "stage": "Early Majority",
+      "summary": "Sponsored product placements on retailers and marketplaces have become a standard lever to win digital shelf visibility.",
+      "sources": ["https://www.criteo.com/insights/retail-media/", "https://www.shopify.com/retail/retail-media"]
+    },
+    {
+      "name": "Customer Audiences",
+      "category": "Advertising & Promotion",
+      "stage": "Early Majority",
+      "summary": "Customer audiences built from consented shopper, loyalty, and behavioral data improve targeting quality, suppression, personalization, and media activation.",
+      "sources": ["https://segment.com/resources/reports/state-of-personalization/", "https://www.thetradedesk.com/us/insights/retail-media"]
+    },
+    {
+      "name": "AI-generated Segments",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "AI-generated segments use behavioral, purchase, and propensity signals to create campaign audiences, lookalikes, suppressions, and media activation groups faster.",
+      "sources": ["https://segment.com/resources/reports/state-of-personalization/", "https://www.thetradedesk.com/us/insights/retail-media"]
+    },
+    {
+      "name": "Privacy-Safe Customer Insights",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Privacy-safe customer insights combine retailer, brand, and customer data in controlled environments to support analysis without exposing raw personal data.",
+      "sources": ["https://www.snowflake.com/blog/category/industry/retail-cpg/", "https://segment.com/resources/articles/retail/"]
+    },
+    {
+      "name": "ROI Validation Testing",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "ROI validation testing uses holdouts, geo experiments, and incrementality methods to prove which media and commerce investments create measurable lift.",
+      "sources": ["https://www.criteo.com/insights/retail-media/", "https://www.shopify.com/retail/retail-media"]
+    },
+    {
+      "name": "Server-Side Behaviour Tracking",
+      "category": "Advertising & Promotion",
+      "stage": "Early Majority",
+      "summary": "Server-side behaviour tracking captures consented events through controlled pipelines, improving data resilience and quality under browser restrictions.",
+      "sources": ["https://segment.com/resources/articles/retail/", "https://www.shopify.com/enterprise/commerce-trends"]
+    },
+    {
+      "name": "Product Data Quality Management",
+      "category": "Advertising & Promotion",
+      "stage": "Early Majority",
+      "summary": "Product data quality management keeps attributes, titles, prices, availability, and taxonomy accurate enough to perform across ads and marketplaces.",
+      "sources": ["https://www.feedonomics.com/blog/", "https://support.google.com/merchants/answer/10055634"]
+    },
+    {
+      "name": "Creator Collaborations",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Creator collaborations pair brand goals with creator content, audience trust, and native shopping features to shorten discovery-to-purchase journeys.",
+      "sources": ["https://newsroom.tiktok.com/en-us/tiktok-shop", "https://business.instagram.com/shopping"]
+    },
+    {
+      "name": "Interactive Video Shopping",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Interactive video shopping uses paid short-form formats, product tags, and direct checkout paths to turn media engagement into measurable demand.",
+      "sources": ["https://newsroom.tiktok.com/en-us/tiktok-shop", "https://newsroom.pinterest.com/en/"]
+    },
+    {
+      "name": "Retail Media Services",
+      "category": "Advertising & Promotion",
+      "stage": "Early Majority",
+      "summary": "Retail media services package managed buying, creative support, measurement, and retailer inventory access for brands that need operational help.",
+      "sources": ["https://www.thetradedesk.com/us/insights/retail-media", "https://www.criteo.com/insights/retail-media/"]
+    },
+    {
+      "name": "Interactive Live Shopping",
+      "category": "Content & Experience",
+      "stage": "Early Adopters",
+      "summary": "Interactive live shopping combines real-time product demos, audience interaction, and integrated checkout to shorten the path from inspiration to purchase.",
+      "sources": ["https://newsroom.tiktok.com/en-us/tiktok-shop", "https://business.instagram.com/shopping"]
+    },
+    {
+      "name": "Interactive Video",
+      "category": "Content & Experience",
+      "stage": "Early Adopters",
+      "summary": "Interactive video on owned pages adds product tags, CTAs, and guided discovery to help shoppers move from content to product decisions.",
+      "sources": ["https://newsroom.tiktok.com/en-us/tiktok-shop", "https://newsroom.pinterest.com/en/"]
+    },
+    {
+      "name": "Mobile-First Experience Design",
+      "category": "Content & Experience",
+      "stage": "Late Majority",
+      "summary": "Mobile-first experience design prioritizes navigation, product discovery, content hierarchy, and checkout flows for smaller screens and touch interactions.",
+      "sources": ["https://www.jpmorgan.com/payments/global-ecommerce-trends-report", "https://www.shopify.com/enterprise/commerce-trends"]
+    },
+    {
+      "name": "Cross-Channel Persistent Cart",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Cross-channel persistent carts keep baskets, wishlists, and customer context synchronized across web, app, and store so shoppers can resume anywhere.",
+      "sources": ["https://www.salesforce.com/resources/research/state-of-commerce/", "https://www.adobe.com/commerce/resources/reports.html"]
+    },
+    {
+      "name": "Website Performance Optimization",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Website performance optimization improves speed, stability, TTFB, and Core Web Vitals so digital journeys load reliably and convert better.",
+      "sources": ["https://web.dev/vitals/", "https://vercel.com/edge-network"]
+    },
+    {
+      "name": "Size & Fit Assistance",
+      "category": "Content & Experience",
+      "stage": "Early Adopters",
+      "summary": "Size and fit assistance uses fit tools, guidance, measurements, and product context to increase confidence and reduce avoidable returns.",
+      "sources": ["https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html", "https://www.narvar.com/resource-library"]
+    },
+    {
+      "name": "Rich Product Content",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Rich product content combines complete attributes, imagery, video, localized copy, and decision-support details to improve findability and conversion.",
+      "sources": ["https://www.adobe.com/commerce/resources/reports.html", "https://www.akeneo.com/resources/"]
+    },
+    {
+      "name": "Clear Returns Policy & Process",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Clear returns policy and process information sets expectations on windows, costs, steps, refunds, and exchanges before shoppers commit.",
+      "sources": ["https://www.fedex.com/en-us/ecommerce.html", "https://www.narvar.com/resource-library"]
+    },
+    {
+      "name": "Self-Service Returns",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Printerless, boxless, and portal-led returns ease customer effort, requiring smarter prevention to protect margins.",
+      "sources": ["https://www.narvar.com/resource-library", "https://www.aftership.com/blog"]
+    },
+    {
+      "name": "Real-Time Support Chat",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Fast, context-aware assistance reduces friction and WISMO contacts, improving post-purchase satisfaction.",
+      "sources": ["https://www.zendesk.com/blog/retail/", "https://www.gorgias.com/blog"]
+    },
+    {
+      "name": "Proactive Order Updates",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Proactive, reliable notifications on shipment and delivery build trust and reduce service contacts.",
+      "sources": ["https://www.zendesk.com/blog/retail/", "https://www.fedex.com/en-us/ecommerce.html"]
+    },
+    {
+      "name": "Customer Data Platform",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "A customer data platform unifies profiles, events, consent, and segments across channels to support personalization, analytics, and media activation.",
+      "sources": ["https://segment.com/resources/reports/state-of-personalization/", "https://www.snowflake.com/blog/category/industry/retail-cpg/"]
+    },
+    {
+      "name": "Unified Customer Profile",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "A unified customer profile connects identity, behavior, preferences, and transaction history so teams can recognize customers consistently across touchpoints.",
+      "sources": ["https://segment.com/resources/articles/retail/", "https://www.snowflake.com/blog/category/industry/retail-cpg/"]
+    },
+    {
+      "name": "Autonomous Customer Journey Orchestration",
+      "category": "CRM & Analytics",
+      "stage": "Innovators",
+      "summary": "Autonomous customer journey orchestration uses AI agents and decisioning models to adapt messages, channels, offers, and service actions across the customer lifecycle.",
+      "sources": ["https://www.braze.com/resources", "https://segment.com/resources/reports/state-of-personalization/"]
+    },
+    {
+      "name": "Decision Intelligence Platforms",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Decision intelligence platforms combine analytics, rules, machine learning, and business context to recommend or automate customer, merchandising, and operational decisions.",
+      "sources": ["https://databricks.com/solutions/accelerators/retail", "https://www.snowflake.com/blog/category/industry/retail-cpg/"]
+    },
+    {
+      "name": "Autonomous Decisioning Layer",
+      "category": "CRM & Analytics",
+      "stage": "Innovators",
+      "summary": "An autonomous decisioning layer evaluates customer context, business rules, and model outputs in real time to trigger next-best actions across channels.",
+      "sources": ["https://segment.com/resources/reports/state-of-personalization/", "https://www.braze.com/resources"]
+    },
+    {
+      "name": "AI Content Generation",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "AI content generation creates and adapts campaign copy, lifecycle messages, subject lines, and audience-specific variants while keeping brand and compliance controls in place.",
+      "sources": ["https://www.braze.com/resources", "https://www.salesforce.com/resources/research/state-of-commerce/"]
+    },
+    {
+      "name": "Content Personalization Engines",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Content personalization engines assemble and optimize messages, modules, offers, and creative variants for each audience or customer using profile and behavior signals.",
+      "sources": ["https://segment.com/resources/reports/state-of-personalization/", "https://www.braze.com/resources"]
+    },
+    {
+      "name": "Content for AI Agents",
+      "category": "CRM & Analytics",
+      "stage": "Innovators",
+      "summary": "Content for AI agents structures product, policy, brand, and customer-facing knowledge so agents can retrieve accurate answers, explain recommendations, and act within approved boundaries.",
+      "sources": ["https://www.contentful.com/resources/", "https://www.shopify.com/enterprise/commerce-trends"]
+    },
+    {
+      "name": "Marketing Mix Modeling (MMM)",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Marketing mix modeling estimates the contribution of channels, campaigns, and regions when granular attribution signals are incomplete or restricted.",
+      "sources": ["https://databricks.com/solutions/accelerators/retail", "https://www.thetradedesk.com/us/insights/retail-media"]
+    },
+    {
+      "name": "Partner Data Collaboration",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Partner data collaboration lets retailers, brands, and media partners combine permissioned signals for insight, activation, and measurement.",
+      "sources": ["https://www.snowflake.com/blog/category/industry/retail-cpg/", "https://www.criteo.com/insights/retail-media/"]
+    },
+    {
+      "name": "Customer Consent Management",
+      "category": "CRM & Analytics",
+      "stage": "Late Majority",
+      "summary": "Customer consent management captures, stores, and applies permissions and preferences consistently across channels to sustain compliant personalization.",
+      "sources": ["https://www.oecd.org/digital/e-commerce/", "https://segment.com/resources/articles/retail/"]
+    },
+    {
+      "name": "Conversion Testing",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Conversion testing uses A/B tests, holdouts, and controlled experiments to identify which journeys, offers, and media changes produce measurable lift.",
+      "sources": ["https://www.criteo.com/insights/retail-media/", "https://www.shopify.com/retail/retail-media"]
+    },
+    {
+      "name": "Event Tracking Standards",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Event tracking standards define consistent naming, properties, ownership, and validation rules so analytics and activation data remains trustworthy.",
+      "sources": ["https://segment.com/resources/articles/retail/", "https://www.confluent.io/solutions/retail/"]
+    },
+    {
+      "name": "Real-Time Dashboards",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Operational and CX dashboards fed by streaming data support faster decisions on inventory, merchandising, and service.",
+      "sources": ["https://www.snowflake.com/blog/category/industry/retail-cpg/", "https://databricks.com/solutions/accelerators/retail"]
+    },
+    {
+      "name": "Customer Lifetime Value Insights",
+      "category": "CRM & Analytics",
+      "stage": "Late Majority",
+      "summary": "Customer lifetime value insights help prioritize acquisition, retention, merchandising, and service investments by expected long-term customer value.",
+      "sources": ["https://www.braze.com/resources", "https://databricks.com/solutions/accelerators/retail"]
+    },
+    {
+      "name": "Customer Retention Insights",
+      "category": "CRM & Analytics",
+      "stage": "Late Majority",
+      "summary": "Customer retention insights identify churn risks, loyalty opportunities, and next-best actions that protect repeat purchase and customer value.",
+      "sources": ["https://www.braze.com/resources", "https://databricks.com/solutions/accelerators/retail"]
+    },
+    {
+      "name": "One-Tap Wallet Payments",
+      "category": "Commerce & Sales",
+      "stage": "Late Majority",
+      "summary": "One-tap wallet payments use trusted wallet buttons and stored credentials to shorten authorization, reduce form friction, and improve mobile checkout completion.",
+      "sources": ["https://www.fisglobal.com/en/insights/what-we-know/2024/worldpay-global-payments-report", "https://www.jpmorgan.com/payments/global-ecommerce-trends-report"]
+    },
+    {
+      "name": "Market-Specific Payment Methods",
+      "category": "Commerce & Sales",
+      "stage": "Late Majority",
+      "summary": "Market-specific payment methods, including local wallets, bank transfers, and account-to-account rails, improve checkout trust and regional conversion.",
+      "sources": ["https://www.fisglobal.com/en/insights/what-we-know/2024/worldpay-global-payments-report", "https://www.jpmorgan.com/payments/global-ecommerce-trends-report"]
+    },
+    {
+      "name": "Buy Now, Pay Later",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Buy Now, Pay Later gives shoppers flexible installment options in selected markets and categories, with adoption shaped by regulation and margin impact.",
+      "sources": ["https://www.fisglobal.com/en/insights/what-we-know/2024/worldpay-global-payments-report", "https://www.klarna.com/international/insights/"]
+    },
+    {
+      "name": "Express (One-Click) Checkout",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Express one-click checkout shortens payment and address entry with stored credentials, tokens, and consented profile data while preserving fraud controls.",
+      "sources": ["https://stripe.com/reports", "https://www.bolt.com/blog/checkout-trends/"]
+    },
+    {
+      "name": "Buy Online, Pick Up In Store",
+      "category": "Commerce & Sales",
+      "stage": "Late Majority",
+      "summary": "Buy Online, Pick Up In Store connects digital orders with store fulfillment, giving shoppers convenience while driving store traffic and loyalty.",
+      "sources": ["https://www.salesforce.com/resources/research/shopping-index/", "https://www.ibm.com/thought-leadership/institute-business-value/report/global-consumer-study"]
+    },
+    {
+      "name": "Same-Day Pickup (In Store)",
+      "category": "Commerce & Sales",
+      "stage": "Late Majority",
+      "summary": "Same-day in-store pickup gives shoppers immediate access to online purchases, dependent on accurate inventory, slotting, and store execution.",
+      "sources": ["https://www.salesforce.com/resources/research/shopping-index/", "https://www.ibm.com/thought-leadership/institute-business-value/report/global-consumer-study"]
+    },
+    {
+      "name": "Localized Commerce Experiences",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Localized commerce experiences adapt language, pricing, payments, shipping, returns, and content to match each market's expectations.",
+      "sources": ["https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html", "https://www.global-e.com/resources/reports/"]
+    },
+    {
+      "name": "Conversational Commerce",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Conversational commerce uses chat, messaging, and AI-assisted selling to guide discovery, answer purchase questions, and complete transactions in the flow of conversation.",
+      "sources": ["https://www.salesforce.com/resources/research/state-of-commerce/", "https://www.shopify.com/enterprise/commerce-trends"]
+    },
+    {
+      "name": "Agentic Commerce",
+      "category": "Commerce & Sales",
+      "stage": "Innovators",
+      "summary": "Agentic commerce enables AI agents to discover products, compare options, build carts, and initiate purchases on behalf of shoppers within governed commerce flows.",
+      "sources": ["https://www.shopify.com/news/winter-26-edition-agentic-storefronts", "https://www.shopify.com/enterprise/commerce-trends"]
+    },
+    {
+      "name": "Sales Automation via AI Agents",
+      "category": "Commerce & Sales",
+      "stage": "Innovators",
+      "summary": "Sales automation via AI agents uses autonomous assistants to qualify demand, answer product questions, recommend next actions, and support quote-to-order workflows.",
+      "sources": ["https://www.salesforce.com/resources/research/state-of-commerce/", "https://www.shopify.com/enterprise/commerce-trends"]
+    },
+    {
+      "name": "Hyper-Personalized Storefronts",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Hyper-personalized storefronts adapt navigation, content, offers, recommendations, and merchandising to each shopper using real-time behavior and customer context.",
+      "sources": ["https://segment.com/resources/reports/state-of-personalization/", "https://www.salesforce.com/resources/research/state-of-commerce/"]
+    },
+    {
+      "name": "Transparent Duties & Taxes",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Transparent duties and taxes show landed costs before payment, reducing surprise fees and making cross-border checkout decisions easier.",
+      "sources": ["https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html", "https://www.global-e.com/resources/reports/"]
+    },
+    {
+      "name": "Marketplace Selling",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Selling through third-party marketplaces expands reach, but requires disciplined feed quality, pricing rules, inventory accuracy, and margin monitoring.",
+      "sources": ["https://www.rithum.com/resources/", "https://www.feedonomics.com/blog/"]
+    },
+    {
+      "name": "Subscriptions & Replenishment",
+      "category": "Commerce & Sales",
+      "stage": "Late Majority",
+      "summary": "Subscription and auto-replenishment programs drive predictable revenue and retention in repeat-purchase categories.",
+      "sources": ["https://www.ordergroove.com/resources/", "https://www.salesforce.com/resources/research/state-of-commerce/"]
+    },
+    {
+      "name": "Composable Commerce",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Teams decouple domain services for speed and optionality, with mainstream momentum and clear trade-offs in integration and ops maturity.",
+      "sources": ["https://www.machalliance.org/library", "https://www.commercetools.com/learn/composable-commerce"]
+    },
+    {
+      "name": "Headless Storefronts",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Headless frameworks enable content-rich UX and faster experimentation across web and app while improving performance.",
+      "sources": ["https://nextjs.org/commerce", "https://www.shopify.com/plus/solutions/headless-commerce"]
+    },
+    {
+      "name": "Progressive Web Apps",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Progressive web apps use installable, app-like web experiences with service workers, offline support, and push capabilities to improve mobile commerce engagement.",
+      "sources": ["https://web.dev/progressive-web-apps/", "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"]
+    },
+    {
+      "name": "Edge-Side Rendering (ESR)",
+      "category": "Software Architecture",
+      "stage": "Early Adopters",
+      "summary": "Edge-side rendering serves dynamic storefront content from edge locations, reducing latency while supporting personalization and traffic spikes.",
+      "sources": ["https://vercel.com/edge-network", "https://developers.cloudflare.com/workers/"]
+    },
+    {
+      "name": "Serverless Architecture",
+      "category": "Software Architecture",
+      "stage": "Early Adopters",
+      "summary": "Serverless architecture uses managed functions and event-driven compute to scale commerce workloads elastically with lower infrastructure overhead.",
+      "sources": ["https://vercel.com/edge-network", "https://developers.cloudflare.com/workers/"]
+    },
+    {
+      "name": "API Orchestration",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Gateways and orchestration layers decouple front ends from services and enable vendor swaps without breaking experiences.",
+      "sources": ["https://www.machalliance.org/library", "https://www.sap.com/insights/what-is-composable-commerce.html"]
+    },
+    {
+      "name": "Event-Driven Commerce",
+      "category": "Software Architecture",
+      "stage": "Early Adopters",
+      "summary": "Event backbones power real-time inventory, personalization, and alerting; they require schema discipline and idempotency.",
+      "sources": ["https://kafka.apache.org/uses", "https://www.confluent.io/solutions/retail/"]
+    },
+    {
+      "name": "Zero-Copy Data Integration",
+      "category": "Software Architecture",
+      "stage": "Early Adopters",
+      "summary": "Zero-copy data integration lets teams share and query data across platforms without duplicating datasets, reducing latency, storage cost, and governance overhead.",
+      "sources": ["https://www.snowflake.com/blog/category/industry/retail-cpg/", "https://databricks.com/solutions/accelerators/retail"]
+    },
+    {
+      "name": "PIM Core Services",
+      "category": "Software Architecture",
+      "stage": "Late Majority",
+      "summary": "PIM core services manage product attributes, taxonomy, enrichment, and validation as reusable foundations for catalogs across channels.",
+      "sources": ["https://www.akeneo.com/resources/", "https://www.inriver.com/resources/"]
+    },
+    {
+      "name": "Digital Asset Management Services",
+      "category": "Software Architecture",
+      "stage": "Late Majority",
+      "summary": "Digital asset management services centralize images, video, metadata, rights, transformations, and localization for consistent content delivery.",
+      "sources": ["https://www.pimcore.com/en/resources/blog", "https://www.contentful.com/resources/"]
+    },
+    {
+      "name": "Observability at Scale",
+      "category": "Software Architecture",
+      "stage": "Late Majority",
+      "summary": "UX (RUM), API, and data-pipeline observability are required to safely run composable, event-driven stacks.",
+      "sources": ["https://www.hashicorp.com/resources", "https://www.confluent.io/solutions/retail/"]
+    },
+    {
+      "name": "Security by Design",
+      "category": "Software Architecture",
+      "stage": "Late Majority",
+      "summary": "Tokenization, consent, and data residency requirements are embedded upfront to meet regulatory and customer trust expectations.",
+      "sources": ["https://www.visa.com/visa-everywhere/blog/bdpai/", "https://www.oecd.org/digital/e-commerce/"]
+    },
+    {
+      "name": "Ecommerce Channel Performance",
+      "category": "Commerce & Sales",
+      "stage": "Late Majority",
+      "summary": "Ecommerce channel performance focuses on profitability, conversion, resilience, and operating quality as digital commerce becomes a mature core channel.",
+      "sources": ["https://www.census.gov/retail/ecommerce.html", "https://www.jpmorgan.com/payments/global-ecommerce-trends-report"]
+    },
+    {
+      "name": "Mobile Conversion Optimization",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Mobile conversion optimization reduces small-screen friction across product pages, forms, payment options, speed, and checkout completion.",
+      "sources": ["https://www.jpmorgan.com/payments/global-ecommerce-trends-report", "https://www.shopify.com/enterprise/commerce-trends"]
+    },
+    {
+      "name": "Social Shopping",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Social shopping moves product discovery, validation, and purchase closer together through social feeds, creator content, product tags, and in-app journeys.",
+      "sources": ["https://newsroom.tiktok.com/en-us/tiktok-shop", "https://business.instagram.com/shopping"]
+    },
+    {
+      "name": "Multi-Market Commerce Expansion",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Multi-market commerce expansion scales sales across regions by localizing payments, pricing, logistics, returns, and compliance.",
+      "sources": [
+        "https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html",
+        "https://www.jpmorgan.com/payments/global-ecommerce-trends-report"
+      ]
+    },
+    {
+      "name": "On-Time Delivery",
+      "category": "Content & Experience",
+      "stage": "Late Majority",
+      "summary": "On-time delivery depends on reliable promises, fulfillment execution, carrier performance, and tracking that meets the expectation set at checkout.",
+      "sources": ["https://www.fedex.com/en-us/ecommerce.html", "https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html"]
+    },
+    {
+      "name": "Returns Prevention",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Retailers invest in better PDPs, sizing, and analytics to reduce avoidable returns and protect margins.",
+      "sources": ["https://www.narvar.com/resource-library", "https://www.aftership.com/blog"]
+    },
+    {
+      "name": "Identity Security & Risk Management",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Identity security and risk management balances account protection, fraud detection, and step-up verification with low-friction customer journeys.",
+      "sources": ["https://sift.com/resources", "https://www.riskified.com/blog/"]
+    },
+    {
+      "name": "Frictionless Payments",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Frictionless payments use tokens, stored credentials, smart routing, and retry logic to improve authorization while minimizing checkout effort.",
+      "sources": ["https://www.visa.com/visa-everywhere/blog/bdpai/", "https://www.adyen.com/knowledge-hub/retail-report"]
+    },
+    {
+      "name": "Marketplace Orchestration",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Marketplace orchestration coordinates catalog feeds, pricing, inventory, orders, and service workflows as marketplace participation scales.",
+      "sources": ["https://www.feedonomics.com/blog/", "https://www.rithum.com/resources/"]
+    },
+    {
+      "name": "Edge Experiment Routing",
+      "category": "Software Architecture",
+      "stage": "Early Adopters",
+      "summary": "Edge experiment routing assigns variants close to the shopper, improving test performance, consistency, and global rollout control.",
+      "sources": ["https://vercel.com/edge-network", "https://developers.cloudflare.com/workers/"]
+    },
+    {
+      "name": "Social Commerce Enablement",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Social commerce enablement connects catalogs, offers, content, checkout, and fulfillment so brands can sell effectively inside social platforms.",
+      "sources": ["https://newsroom.tiktok.com/en-us/tiktok-shop", "https://developers.facebook.com/docs/commerce-platform/"]
+    },
+    {
+      "name": "Multi-Carrier Shipping",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Multi-carrier shipping improves regional coverage, peak resilience, service levels, and delivery-cost control through flexible carrier selection.",
+      "sources": ["https://www.fedex.com/en-us/ecommerce.html", "https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html"]
+    },
+    {
+      "name": "Inventory Transparency",
+      "category": "Content & Experience",
+      "stage": "Late Majority",
+      "summary": "Accurate store and online availability, plus ETA clarity, shape purchase decisions and channel choice.",
+      "sources": ["https://www.salesforce.com/resources/research/state-of-commerce/", "https://www.ibm.com/thought-leadership/institute-business-value/report/global-consumer-study"]
+    },
+    {
+      "name": "Customer-Specific Pricing",
+      "category": "Commerce & Sales",
+      "stage": "Late Majority",
+      "summary": "Customer-specific pricing presents negotiated prices, contract terms, discounts, and availability online for B2B and account-based buying.",
+      "sources": ["https://www.mckinsey.com/industries/retail/our-insights", "https://www.sap.com/insights/commerce-trends.html"]
+    },
+    {
+      "name": "eProcurement Integration (Punchout)",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "eProcurement integration via punchout connects buyer procurement systems directly to approved ecommerce catalogs, pricing, and ordering workflows.",
+      "sources": ["https://www.oracle.com/cx/commerce/resources/", "https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/state-of-fashion-technology"]
+    },
+    {
+      "name": "Adaptive Image Delivery",
+      "category": "Content & Experience",
+      "stage": "Late Majority",
+      "summary": "Adaptive image delivery selects the right format, size, compression, and resolution for each device and context to improve speed and visual quality.",
+      "sources": ["https://web.dev/vitals/", "https://vercel.com/edge-network"]
+    },
+    {
+      "name": "Multi-Store Orchestration",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Multi-market operations require localized catalogs, pricing, and content managed via centralized governance.",
+      "sources": ["https://www.akeneo.com/resources/", "https://www.contentful.com/resources/"]
+    },
+    {
+      "name": "API Contract Testing",
+      "category": "Software Architecture",
+      "stage": "Early Adopters",
+      "summary": "Contract and chaos testing reduce integration risk in decomposed commerce stacks, improving release safety.",
+      "sources": ["https://www.hashicorp.com/resources", "https://www.machalliance.org/library"]
+    },
+    {
+      "name": "Returns Analysis & Reporting",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Returns analysis and reporting surfaces return drivers by SKU, segment, channel, and reason code to guide prevention and policy decisions.",
+      "sources": ["https://www.narvar.com/resource-library", "https://www.aftership.com/blog"]
+    },
+    {
+      "name": "Import Cost Calculation",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Import cost calculation automates duties, taxes, fees, and landed-cost estimates before payment, reducing manual rules and checkout surprises.",
+      "sources": ["https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html", "https://www.global-e.com/resources/reports/"]
+    },
+    {
+      "name": "Server-Side Event Tracking",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Server-side event tracking routes consented behavioral and conversion events through controlled pipelines for more resilient analytics and activation.",
+      "sources": ["https://segment.com/resources/articles/retail/", "https://www.snowflake.com/blog/category/industry/retail-cpg/"]
+    },
+    {
+      "name": "Edge Caching Strategy",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Granular caching across pages, APIs, and assets reduces latency and stabilizes performance during peaks.",
+      "sources": ["https://vercel.com/edge-network", "https://developers.cloudflare.com/workers/"]
+    },
+    {
+      "name": "Payment Optimization",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Smart routing, retries, and tokenization improve authorization rates and reduce false declines.",
+      "sources": ["https://www.visa.com/visa-everywhere/blog/bdpai/", "https://www.adyen.com/knowledge-hub/retail-report"]
+    },
+    {
+      "name": "Product Data Governance",
+      "category": "Advertising & Promotion",
+      "stage": "Early Majority",
+      "summary": "Product data governance defines ownership, quality rules, approval flows, and monitoring for attributes, prices, availability, and channel readiness.",
+      "sources": ["https://www.feedonomics.com/blog/", "https://support.google.com/merchants/answer/10055634"]
+    },
+    {
+      "name": "Social Channel Catalog Integration",
+      "category": "Advertising & Promotion",
+      "stage": "Early Majority",
+      "summary": "Reliable catalog synchronization keeps product tags, availability, prices, and in-app checkout states accurate across social platforms.",
+      "sources": ["https://developers.facebook.com/docs/commerce-platform/", "https://business.instagram.com/shopping"]
+    },
+    {
+      "name": "Consent-Driven Targeting",
+      "category": "Advertising & Promotion",
+      "stage": "Early Majority",
+      "summary": "Consent-driven targeting uses permissioned customer signals, preferences, and contextual data to maintain performance while respecting privacy constraints.",
+      "sources": ["https://www.thetradedesk.com/us/insights/retail-media", "https://segment.com/resources/reports/state-of-personalization/"]
+    },
+    {
+      "name": "Real-Time Notifications",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Real-time notifications use streaming triggers to alert teams or customers about inventory, fraud risk, order status, and service issues.",
+      "sources": ["https://kafka.apache.org/uses", "https://www.confluent.io/solutions/retail/"]
+    },
+    {
+      "name": "Data Quality Analytics",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Data quality analytics monitors completeness, latency, accuracy, and schema drift so teams can trust reporting and activation data.",
+      "sources": ["https://segment.com/resources/articles/retail/", "https://www.hashicorp.com/resources"]
+    },
+    {
+      "name": "Marketplace Integration",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Marketplace integration connects catalogs, pricing, availability, orders, and service workflows so brands can participate in retailer marketplaces at scale.",
+      "sources": ["https://www.rithum.com/resources/", "https://www.feedonomics.com/blog/"]
+    },
+    {
+      "name": "Fulfillment Orchestration Services",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Fulfillment orchestration services coordinate inventory, stores, distribution centers, routing rules, and delivery promises across fulfillment nodes.",
+      "sources": ["https://kafka.apache.org/uses", "https://www.confluent.io/solutions/retail/"]
+    },
+    {
+      "name": "Loyalty Platform Integration",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Loyalty platform integration connects points, tiers, offers, and recognition across commerce, service, store, and marketing touchpoints.",
+      "sources": ["https://segment.com/resources/articles/retail/", "https://www.salesforce.com/resources/research/state-of-commerce/"]
+    },
+    {
+      "name": "Speed & Performance Targets",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "Speed and performance targets define measurable limits for page weight, latency, Core Web Vitals, and regressions tied to revenue impact.",
+      "sources": ["https://web.dev/vitals/", "https://vercel.com/edge-network"]
+    },
+    {
+      "name": "Internationalization Services",
+      "category": "Software Architecture",
+      "stage": "Late Majority",
+      "summary": "Internationalization services provide locale, language, currency, formatting, translation, and market rules for scalable global storefronts.",
+      "sources": ["https://www.contentful.com/resources/", "https://www.akeneo.com/resources/"]
+    },
+    {
+      "name": "Real-Time Fraud Protection",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Real-time fraud protection evaluates identity, behavior, payment, and order signals during checkout to block risk with minimal customer friction.",
+      "sources": ["https://sift.com/resources", "https://www.forter.com/resources/"]
+    },
+    {
+      "name": "Returns Policy Optimization",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Returns policy optimization tunes fees, windows, exchanges, and exceptions to balance customer experience with reverse-logistics cost.",
+      "sources": ["https://www.narvar.com/resource-library", "https://www.aftership.com/blog"]
+    },
+    {
+      "name": "Influencer Affiliate Marketing",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Influencer affiliate marketing links creator reach with trackable offers, commission models, and commerce attribution for more accountable social sales.",
+      "sources": ["https://newsroom.tiktok.com/en-us/tiktok-shop", "https://developers.facebook.com/docs/commerce-platform/"]
+    },
+    {
+      "name": "Trust Elements on Product Pages",
+      "category": "Content & Experience",
+      "stage": "Late Majority",
+      "summary": "Trust elements on product pages, such as reviews, delivery promises, returns, payment security, and guarantees, reduce hesitation before purchase.",
+      "sources": ["https://www.fedex.com/en-us/ecommerce.html", "https://www.salesforce.com/resources/research/shopping-index/"]
+    },
+    {
+      "name": "Market-Specific Pricing",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Market-specific pricing adapts currency, price points, tax display, promotions, and willingness-to-pay assumptions by region.",
+      "sources": [
+        "https://www.jpmorgan.com/payments/global-ecommerce-trends-report",
+        "https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html"
+      ]
+    },
+    {
+      "name": "Product Data Services",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Product data services expose normalized attributes, taxonomy, availability, and enrichment data to search, recommendations, channels, and marketplaces.",
+      "sources": ["https://www.akeneo.com/resources/", "https://www.inriver.com/resources/"]
+    },
+    {
+      "name": "Experimentation Culture",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Feature flags and A/B frameworks help isolate incremental lift from AI and UX changes across the funnel.",
+      "sources": ["https://www.shopify.com/enterprise/commerce-trends", "https://databricks.com/solutions/accelerators/retail"]
+    },
+    {
+      "name": "Flexible Delivery Options",
+      "category": "Content & Experience",
+      "stage": "Late Majority",
+      "summary": "Flexible delivery options give shoppers clear choices for home delivery, pickup points, time windows, and carriers without adding checkout complexity.",
+      "sources": ["https://www.fedex.com/en-us/ecommerce.html", "https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html"]
+    },
+    {
+      "name": "Data Contract Services",
+      "category": "Software Architecture",
+      "stage": "Early Adopters",
+      "summary": "Data contract services define, validate, and monitor API and event schemas so teams can integrate independently without breaking downstream consumers.",
+      "sources": ["https://www.machalliance.org/library", "https://www.hashicorp.com/resources"]
+    },
+    {
+      "name": "Cross-Channel Sales Insights",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "Cross-channel sales insights combine media, web, marketplace, store, and CRM signals to explain where demand is created and converted.",
+      "sources": ["https://databricks.com/solutions/accelerators/retail", "https://www.criteo.com/insights/retail-media/"]
+    },
+    {
+      "name": "High-Performance Image Delivery",
+      "category": "Content & Experience",
+      "stage": "Early Majority",
+      "summary": "High-performance image delivery uses responsive assets, modern formats, caching, and edge delivery to reduce load times without degrading visual quality.",
+      "sources": ["https://web.dev/vitals/", "https://vercel.com/edge-network"]
+    },
+    {
+      "name": "B2B Repeat Ordering",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "B2B repeat ordering uses reorder lists, quick order, saved baskets, and replenishment flows to simplify recurring procurement.",
+      "sources": ["https://www.mckinsey.com/industries/retail/our-insights", "https://www.sap.com/insights/commerce-trends.html"]
+    },
+    {
+      "name": "Performance Service Levels",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Performance service levels define measurable reliability, latency, UX, API, and data-pipeline targets linked to conversion and service outcomes.",
+      "sources": ["https://www.hashicorp.com/resources", "https://web.dev/vitals/"]
+    },
+    {
+      "name": "Reviews & Ratings",
+      "category": "Content & Experience",
+      "stage": "Late Majority",
+      "summary": "Reviews and ratings provide social proof, product validation, and risk reduction on product pages, helping shoppers make confident decisions.",
+      "sources": ["https://www.salesforce.com/resources/research/shopping-index/", "https://www.adobe.com/commerce/resources/reports.html"]
+    },
+    {
+      "name": "High-Performance Product Pages",
+      "category": "Content & Experience",
+      "stage": "Late Majority",
+      "summary": "High-performance product pages reduce scripts, optimize rendering, prioritize critical content, and keep product decision paths fast.",
+      "sources": ["https://web.dev/vitals/", "https://vercel.com/edge-network"]
+    },
+    {
+      "name": "SLA-Based Routing",
+      "category": "Software Architecture",
+      "stage": "Innovators",
+      "summary": "SLA-based routing directs orders, requests, or traffic to services and fulfillment nodes that can meet cost, capacity, latency, and delivery commitments.",
+      "sources": ["https://kafka.apache.org/uses", "https://www.confluent.io/solutions/retail/"]
+    },
+    {
+      "name": "Transparent Total Pricing",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Transparent total pricing combines product price, shipping, tax, duty, and fees into a clear checkout promise before payment.",
+      "sources": ["https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html", "https://www.global-e.com/resources/reports/"]
+    },
+    {
+      "name": "Creator-Assisted Merchandising",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Creator-assisted merchandising uses creator taste, bundles, edits, and recommendations to simplify product choice and raise social-commerce intent.",
+      "sources": ["https://newsroom.tiktok.com/en-us/tiktok-shop", "https://newsroom.pinterest.com/en/"]
+    },
+    {
+      "name": "Smart Checkout Autofill",
+      "category": "Commerce & Sales",
+      "stage": "Late Majority",
+      "summary": "Smart checkout autofill uses address lookup, stored profile data, and field reduction to cut errors and speed completion.",
+      "sources": ["https://stripe.com/reports", "https://www.bolt.com/blog/checkout-trends/"]
+    },
+    {
+      "name": "Marketplace Catalog Integration",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Marketplace catalog integration keeps product data, pricing, availability, and performance signals aligned between commerce systems and marketplace channels.",
+      "sources": ["https://www.rithum.com/resources/", "https://www.feedonomics.com/blog/"]
+    },
+    {
+      "name": "Returns Feedback Loop",
+      "category": "CRM & Analytics",
+      "stage": "Early Adopters",
+      "summary": "A returns feedback loop turns return reasons into product content, sizing, quality, and policy improvements that reduce repeat issues.",
+      "sources": ["https://www.narvar.com/resource-library", "https://www.aftership.com/blog"]
+    },
+    {
+      "name": "Seamless Multi-Delivery Experience",
+      "category": "Content & Experience",
+      "stage": "Early Adopters",
+      "summary": "A seamless multi-delivery experience explains split shipments, origins, ETAs, fees, and tracking clearly when orders arrive in multiple parts.",
+      "sources": ["https://www.fedex.com/en-us/ecommerce.html", "https://www.dhl.com/global-en/microsites/ec/ecommerce-insights/insights/reports/2025-ecommerce-trends-report.html"]
+    },
+    {
+      "name": "Market-Specific Payment Options",
+      "category": "Commerce & Sales",
+      "stage": "Early Majority",
+      "summary": "Market-specific payment options reorder and present payment methods by locale, device, customer behavior, and regional trust patterns.",
+      "sources": ["https://www.fisglobal.com/en/insights/what-we-know/2024/worldpay-global-payments-report", "https://www.jpmorgan.com/payments/global-ecommerce-trends-report"]
+    },
+    {
+      "name": "AI Governance Controls",
+      "category": "Data & AI",
+      "stage": "Early Adopters",
+      "summary": "AI governance controls use conservative defaults, test gates, monitoring, auditability, and human review to protect brand, compliance, and CX.",
+      "sources": ["https://www.algolia.com/blog/product/ai-search-ecommerce-trends/", "https://databricks.com/solutions/accelerators/retail"]
+    },
+    {
+      "name": "Resilience & Isolation Layer",
+      "category": "Software Architecture",
+      "stage": "Innovators",
+      "summary": "A resilience and isolation layer contains failures with circuit breakers, fallbacks, caching, timeouts, and graceful degradation across commerce services.",
+      "sources": ["https://developers.cloudflare.com/workers/", "https://vercel.com/edge-network"]
+    },
+    {
+      "name": "Social Commerce Checkout",
+      "category": "Commerce & Sales",
+      "stage": "Early Adopters",
+      "summary": "Social commerce checkout lets shoppers complete purchases inside social journeys, reducing drop-off from app switching and context changes.",
+      "sources": ["https://newsroom.tiktok.com/en-us/tiktok-shop", "https://developers.facebook.com/docs/commerce-platform/"]
+    },
+    {
+      "name": "Regional Content Optimization",
+      "category": "Content & Experience",
+      "stage": "Early Adopters",
+      "summary": "Regional content optimization adapts creative, copy, reviews, merchandising, and proof points to local market expectations and buying behavior.",
+      "sources": ["https://www.contentful.com/resources/", "https://www.akeneo.com/resources/"]
+    },
+    {
+      "name": "Media Performance Tracking",
+      "category": "Advertising & Promotion",
+      "stage": "Early Adopters",
+      "summary": "Media performance tracking connects exposure, spend, creative, and SKU-level sales signals to guide budget allocation and campaign optimization.",
+      "sources": ["https://www.criteo.com/insights/retail-media/", "https://www.thetradedesk.com/us/insights/retail-media"]
+    },
+    {
+      "name": "Social Proof Advertising",
+      "category": "Advertising & Promotion",
+      "stage": "Early Majority",
+      "summary": "Using ratings and UGC snippets in ads improves CTR and intent, aligning content and commerce.",
+      "sources": ["https://www.shopify.com/retail/retail-media", "https://www.criteo.com/insights/retail-media/"]
+    },
+    {
+      "name": "After-Sales Experience",
+      "category": "Content & Experience",
+      "stage": "Late Majority",
+      "summary": "After-sales experience covers tracking, notifications, support, returns, exchanges, and follow-up moments that shape loyalty after purchase.",
+      "sources": ["https://www.zendesk.com/blog/retail/", "https://www.fedex.com/en-us/ecommerce.html"]
+    },
+    {
+      "name": "International Tax Services",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "International tax services calculate regional taxes, duties, exemptions, reporting needs, and compliance rules for cross-border commerce.",
+      "sources": ["https://www.oecd.org/digital/e-commerce/", "https://www.machalliance.org/library"]
+    },
+    {
+      "name": "Search Performance Management",
+      "category": "Data & AI",
+      "stage": "Early Adopters",
+      "summary": "Search performance management monitors relevance, zero-result rates, synonyms, ranking rules, and conversion feedback as catalogs and intent change.",
+      "sources": ["https://www.algolia.com/blog/product/ai-search-ecommerce-trends/", "https://www.constructor.io/blog"]
+    },
+    {
+      "name": "Smart Customer Audiences",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Smart customer audiences use propensity, lifecycle, purchase, and suppression signals to improve targeting efficiency and reduce wasted spend.",
+      "sources": ["https://segment.com/resources/articles/retail/", "https://www.snowflake.com/blog/category/industry/retail-cpg/"]
+    },
+    {
+      "name": "Product Visibility Analytics",
+      "category": "CRM & Analytics",
+      "stage": "Early Majority",
+      "summary": "Product visibility analytics tracks search rank, shelf share, content quality, and marketplace presence to improve discoverability and sales.",
+      "sources": ["https://www.feedonomics.com/blog/", "https://www.rithum.com/resources/"]
+    },
+    {
+      "name": "Regional Catalog Variants",
+      "category": "Content & Experience",
+      "stage": "Innovators",
+      "summary": "Regional catalog variants tailor assortments, bundles, product variants, merchandising, and price points to local demand and market fit.",
+      "sources": ["https://www.contentful.com/resources/", "https://www.akeneo.com/resources/"]
+    },
+    {
+      "name": "Trust Signals at Checkout",
+      "category": "Commerce & Sales",
+      "stage": "Late Majority",
+      "summary": "Trust signals at checkout make payment security, delivery, returns, guarantees, and support assurances visible when shoppers are ready to pay.",
+      "sources": ["https://www.fisglobal.com/en/insights/what-we-know/2024/worldpay-global-payments-report", "https://stripe.com/reports"]
+    },
+    {
+      "name": "Accurate Delivery Estimates",
+      "category": "Content & Experience",
+      "stage": "Late Majority",
+      "summary": "Accurate delivery estimates use inventory, carrier, fulfillment, and location signals to set reliable expectations before and after checkout.",
+      "sources": ["https://www.fedex.com/en-us/ecommerce.html", "https://www.salesforce.com/resources/research/shopping-index/"]
+    },
+    {
+      "name": "Edge compute platforms",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Edge compute platforms run commerce logic closer to customers, reducing latency for rendering, personalization, routing, and resilient storefront experiences.",
+      "sources": ["https://vercel.com/edge-network", "https://developers.cloudflare.com/workers/"]
+    },
+    {
+      "name": "API Management",
+      "category": "Software Architecture",
+      "stage": "Late Majority",
+      "summary": "API management governs commerce APIs with gateways, security, versioning, rate limits, analytics, and developer workflows across composable platforms.",
+      "sources": ["https://www.machalliance.org/library", "https://www.sap.com/insights/what-is-composable-commerce.html"]
+    },
+    {
+      "name": "Event-Driven Integrations",
+      "category": "Software Architecture",
+      "stage": "Early Majority",
+      "summary": "Event-driven architecture uses event streams and asynchronous messaging to connect commerce services, improve responsiveness, and decouple operational workflows.",
+      "sources": ["https://kafka.apache.org/uses", "https://www.confluent.io/solutions/retail/"]
+    },
+    {
+      "name": "Integration Principles",
+      "category": "Software Architecture",
+      "stage": "Late Majority",
+      "summary": "Integration principles define standards for APIs, events, contracts, error handling, security, and ownership across composable commerce landscapes.",
+      "sources": ["https://www.machalliance.org/library", "https://www.sap.com/insights/what-is-composable-commerce.html"]
+    },
+    {
+      "name": "Integration Patterns",
+      "category": "Software Architecture",
+      "stage": "Late Majority",
+      "summary": "Integration patterns standardize how commerce systems exchange data through APIs, events, batch jobs, webhooks, orchestration, and synchronization flows.",
+      "sources": ["https://www.machalliance.org/library", "https://kafka.apache.org/uses"]
+    },
+    {
+      "name": "AI Agentic Storefronts",
+      "category": "Data & AI",
+      "stage": "Innovators",
+      "summary": "AI agentic storefronts make products discoverable, explainable, and purchasable inside AI conversations while preserving brand control, checkout, and customer ownership.",
+      "sources": ["https://www.shopify.com/news/winter-26-edition-agentic-storefronts"]
+    }
+  ]
+}

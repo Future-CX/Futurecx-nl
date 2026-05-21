@@ -1,0 +1,4 @@
+interface:
+  display_name: "Trend Research"
+  short_description: "Find and structure emerging trend signals"
+  default_prompt: "Use $trend-research to scan the web for emerging ecommerce trends and return structured findings."

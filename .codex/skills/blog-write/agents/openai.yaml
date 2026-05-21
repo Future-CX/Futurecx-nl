@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blog Write"
+  short_description: "Draft Future CX blog articles"
+  default_prompt: "Use $blog-write to draft a Future CX article from this topic and outline."
