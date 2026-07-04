@@ -1,0 +1,38 @@
+# Future CX
+
+> Future CX is the personal website of Martijn van Deel, an independent solution and enterprise architect focused on customer experience, composable commerce, API-driven architecture, ecommerce platforms, capability models, vendor selection, and IT roadmaps.
+
+This file lists the most useful public pages for language models and agents. The canonical website is https://www.futurecx.nl. Public HTML pages are the primary source; this site does not currently provide separate Markdown versions of pages.
+
+## Core Pages
+
+- [Future CX home](https://www.futurecx.nl/): Overview of Martijn van Deel's customer experience, architecture, ecommerce, and transformation focus.
+- [Content overview](https://www.futurecx.nl/content.html): Curated overview of Future CX articles and interactive content.
+- [CV / Resume](https://www.futurecx.nl/cv.html): Profile, experience, skills, certifications, and work history for Martijn van Deel.
+
+## Architecture And Integration Articles
+
+- [How I Use the AI Architecture Toolkit](https://www.futurecx.nl/content/how-i-use-the-ai-architecture-toolkit.html): How reusable agents, skills, templates, decisions, diagrams, and governance workflows support architecture work.
+- [How to Build Your Future State Architecture](https://www.futurecx.nl/content/how-to-build-your-future-state-architecture.html): Guidance for defining future-state architecture that aligns business ambition, stakeholders, and technology choices.
+- [Integration Principles & Best Practices for Modern Architecture](https://www.futurecx.nl/content/integration-principles.html): Integration principles for scalable, secure, future-proof systems using APIs, events, and composable architecture.
+- [Integration Patterns and Best Practices for System Architecture](https://www.futurecx.nl/content/integration-patterns.html): Reusable integration patterns for connecting systems, applications, and data sources.
+- [Why Composable Architecture Matters](https://www.futurecx.nl/content/why-composable-architecture-matters.html): Why modular capabilities, cleaner integrations, and customer-first platforms reduce change friction.
+- [What You Need to Know as Enterprise Architect](https://www.futurecx.nl/content/what-you-need-to-know-as-enterprise-architect.html): Practical guidance for enterprise architects working across strategy, technology, and delivery.
+
+## Ecommerce And Customer Experience
+
+- [The Latest Ecommerce Trends](https://www.futurecx.nl/content/ecommerce-trends.html): Ecommerce trends shaping digital experiences, including composable commerce, AI, real-time data, and omnichannel journeys.
+- [Ecommerce Trends Radar 2026](https://www.futurecx.nl/content/ecommerce-trends-radar.html): Interactive ecommerce trends radar covering AI, composable commerce, marketplaces, CRM, payments, and digital customer experience.
+- [Capability Model Customer Experience](https://www.futurecx.nl/content/capability-model-cx.html): Interactive capability model for customer experience and customer engagement domains.
+- [Create a Better Capability Model](https://www.futurecx.nl/content/create-a-better-capability-model.html): How to structure business capabilities with clear domains, two levels of detail, and unambiguous descriptions.
+
+## Requirements And Domain Modelling
+
+- [Use Open Questions and Context for a Better RFP](https://www.futurecx.nl/content/use-open-questions-and-context-for-a-better-rfp.html): How open questions and business context improve software and implementation partner selection.
+- [Use Domain Driven Design for Enterprise Architecture](https://www.futurecx.nl/content/use-domain-driven-design-for-enterprise-architecture.html): Using domain-driven design to map business processes to domains and services for capability models and future-state architecture.
+
+## Optional
+
+- [Sitemap](https://www.futurecx.nl/sitemap.xml): XML sitemap of indexable public HTML pages.
+- [Robots file](https://www.futurecx.nl/robots.txt): Crawling reference for automated clients.
+- [Ecommerce trends data](https://www.futurecx.nl/data/trends.json): Structured trend data used by the ecommerce trends radar.
