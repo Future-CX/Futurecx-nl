@@ -34,7 +34,7 @@
     "@rollup/plugin-terser": "^0.1.0",
     "autoprefixer": "^10.4.16",
     "browser-sync": "^3.0.4",
-    "cssnano": "^6.0.1",
+    "cssnano": "^9.9.0",
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
@@ -45,8 +45,8 @@
     "prettier": "^3.0.3",
     "rollup": "^3.29.3",
     "sass": "^1.68.0",
-    "stylelint": "^15.10.3",
-    "stylelint-config-twbs-bootstrap": "^11.0.1"
+    "stylelint": "^17.16.0",
+    "stylelint-config-twbs-bootstrap": "^16.1.0"
   },
   "overrides": {
     "immutable": ">=4.3.8"
